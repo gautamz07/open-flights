@@ -1,0 +1,84 @@
+.promo-form {
+  * {
+    box-sizing: border-box;
+  }
+  .back-to-list-btn {
+    padding: 1rem;
+    float: left;
+    border: 1px solid silver;
+    border-radius: 5px;
+  }
+  .save-btn {
+    padding: 1rem;
+    float: right;
+    border: 1px solid silver;
+    border-radius: 5px;
+  }
+  .title {
+    text-align: center;
+  }
+  .promo-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    .promo-profile {
+      flex-grow: 3;
+      flex-shrink: 1;
+      flex-basis: 480px;
+      vertical-align: top;
+      border: 5px solid lightgray;
+      padding: 1rem;
+      display: block;
+      @include PromoTitle;
+      @include PromoeCode;
+      @include LimitCapacity;
+      @include DateRange;
+      @include Description;
+    }
+    .discount-types {
+      flex-grow: 2;
+      flex-shrink: 1;
+      flex-basis: 250px;
+      vertical-align: top;
+      border: 5px solid pink;
+      padding: 1rem;
+      @include DiscountTypesReadOnly;
+      @include DiscountByPercentage;
+      @include DiscountByValue;
+    }
+  }
+
+  .multiple-choices-area {
+    border: 5px solid skyblue;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    & > .customer-types {
+      flex-grow: 2;
+      flex-shrink: 0;
+      flex-basis: auto;
+    }
+    & > .regions {
+      flex-grow: 2;
+      flex-shrink: 0;
+      flex-basis: auto;
+    }
+    & > .partners {
+      flex-grow: 2;
+      flex-shrink: 0;
+      flex-basis: auto;
+    }
+    & > .packages-or-plans {
+      flex-grow: 3;
+      flex-shrink: 0;
+      flex-basis: 320px;
+    }
+    @include CustomerTypes;
+    @include Regions;
+    @include Partners;
+    @include PackagesOrPlans;
+  }
+}

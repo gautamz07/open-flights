@@ -1,0 +1,18 @@
+@mixin InputBox {
+  width: 300px;
+  
+  .context {
+    padding: 20px;
+    p { margin-bottom: 16px; }
+    input {
+      -webkit-border-radius: 6px;
+              border-radius: 6px;
+    }
+    input.blink-warning {
+      border-color: red;
+      transition-duration: 0.3s;
+      transition-property: border-color;
+    }
+  }
+
+}

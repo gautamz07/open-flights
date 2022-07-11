@@ -1,0 +1,71 @@
+@mixin third-party-login-divider {
+  .login-divider {
+    text-align: center;
+    font-size: 17px;
+    color: #171616;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .login-line {
+      border-bottom: 1px solid #dddddd;
+      width: 43%;
+      margin-top: 10px;
+      &:first-child { float: left; }
+      &:last-child { float: right; }
+    }
+  }
+}
+
+@mixin third-party-access($form-width: 400px) {
+  .third-party-login {
+    height: 50px;
+
+    .third-party-login-name {
+      padding-left: 5px;
+    }
+
+    .third-party-signup-name {
+      padding-left: 5px;
+    }
+
+    .facebook_login, .google_login {
+      border-radius: 3px;
+      height: 45px;
+      font-family: 'ProximaNova', 'Helvetica', 'Arial', sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      font-smoothing: antialiased;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: 0px;
+      text-align: center;
+      padding-top: 12px;
+      text-decoration: none;
+    }
+
+    .facebook_login {
+      box-shadow: 0px 6px 11px rgba(0, 0, 0, 0.15);
+      width: 170px;
+      background: #3b5998;
+      float: left;
+      color: #ffffff;
+    }
+
+    .google_login {
+      box-shadow: 0px 6px 11px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      background: #ffffff;
+      float: right;
+      color: #4b4b4b;
+    }
+
+  }
+
+  @media (max-width: $form-width - 1) {
+    .third-party-login {
+      // height: 125px;
+      .facebook_login, .google_login { margin: 10px 0; width: 100%; font-size: 12px; }
+    }
+    .link-to-login { padding-left: 0 !important; padding-right: 0 !important; }
+  }
+
+}

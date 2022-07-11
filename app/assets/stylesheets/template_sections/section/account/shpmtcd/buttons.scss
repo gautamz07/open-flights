@@ -1,0 +1,260 @@
+@import '../../../../checkout/shpmtcd/settings.scss';
+
+/* Button [start] */
+.shpmtc-button{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    min-width: 75px;
+    padding: 6px $spacing-md;
+    border-radius: $borderRadius-rg;
+    border: 1px solid $DarkColor10a;
+    outline: none;
+    // font-family: 'ProximaNova-Medium';
+    cursor: pointer;
+    @include transtion($time:md);
+    @extend %fontSize14px;
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 0;
+        left: -1px;
+        top: -1px;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        border-radius: 3px;
+        background-color: $AlphaColor;
+    }
+    &:hover{
+        box-shadow: 0 2px 4px 0 $DarkColor10a;
+    }
+    &:disabled{
+        pointer-events: none;
+        &:hover{
+            box-shadow: 0 2px 4px 0 $AlphaColor;
+        }
+    }
+
+    // Block type
+    &.block{
+        width: 100%;
+    }
+
+    // Elements
+    &__content{
+        display: inline-block;
+        &__text{
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .shpmtc-loader{
+        vertical-align: initial;
+        &__spin{
+            width: 18px;
+            height: 18px;
+            margin-top: -1px;
+            margin-left: $spacing-xs;
+            margin-right: $spacing-xs;
+        }
+    }
+
+    // Modifier
+    &--full{
+        width: 100%;
+    }
+    &--default{
+        color: $NeutralColor06;
+        @extend %GradientLight;
+        &:hover{
+            border: 1px solid $NeutralColor04;
+            @extend %GradientLightDarken;
+        }
+        &:active{
+            &:before{
+                opacity: 0.35;
+                background-color: #E2E5EA;
+            }
+        }
+        &:disabled{
+            color: $NeutralColor05;
+            background: $NeutralColor02;
+        }
+        .shpmtc-loader{
+            &__spin{
+                border: 2px solid $DarkColor20a;
+                border-top-color: $PrimaryColor;
+            }
+        }
+    }
+    &--primary{
+        color: $LightColor;
+        @extend %GradientPrimary;
+        &:active{
+            &:before{
+                background-color: $DarkColor20a;
+            }
+        }
+        &:disabled{
+            color: $LightColor;
+            &:before{
+                background-color: $LightColor60a;
+            }
+        }
+        .shpmtc-loader{
+            &__spin{
+                border: 2px solid $LightColor20a;
+                border-top-color: $LightColor;
+            }
+        }
+    }
+    &--warning{
+        color: $LightColor;
+        background-color: $FunColorDanger;
+        &:active{
+            &:before{
+                background-color: $DarkColor20a;
+            }
+        }
+        &:disabled{
+            color: $LightColor;
+            &:before{
+                background-color: $LightColor60a;
+            }
+        }
+        .shpmtc-loader{
+            &__spin{
+                border: 2px solid $LightColor20a;
+                border-top-color: $LightColor;
+            }
+        }
+    }
+    &--grey{
+        color: $LightColor;
+        @extend %GradientGrey;
+        &:active{
+            &:before{
+                background-color: $DarkColor20a;
+            }
+        }
+        &:disabled{
+            color: $NeutralColor05;
+            background: $NeutralColor02;
+        }
+    }
+    &--ghost{
+        padding: 6px 15px 6px 12px;
+        color: $NeutralColor06;
+        border: 1px solid $DarkColor10a;
+        background-color: $AlphaColor;
+        &:hover{
+            border: 1px solid $DarkColor20a;
+            box-shadow: 0 2px 4px 0 $AlphaColor;
+            background-color: $LightColor20a;
+        }
+        .shpmtc-button__content__text{
+            i{
+                display: inline-block;
+                margin-right: 8px;
+                vertical-align: middle;
+                line-height: 16px;
+                font-size: 16px;
+                transform: scale(1.35);
+                color: $NeutralColor05;
+            }
+            p, span{
+                width: calc(100% - 28px);
+                display: inline;
+                vertical-align: middle;
+                text-align: left;
+                margin-bottom: 0;
+                line-height: 14px;
+            }
+        }
+    }
+    &--dropdown{
+        padding: 7px 15px;
+        .shpmtc-button__content{
+            display: block;
+        }
+        .shpmtc-button__content__text{
+            text-align: left;
+            margin-right: 5px;
+            min-width: 70px;
+            display: inline-block;
+            vertical-align: middle;
+            width: calc(100% - 20px);
+            line-height: 14px;
+        }
+    }
+    &--icon{
+        padding: 7px 7px;
+        min-width: auto;
+        color: $NeutralColor06;
+        border: 1px solid transparent !important;
+        opacity: 1;
+        background-color: transparent;
+        @include transtion($time:sm);
+        &:hover{
+            color: $PrimaryColor;
+            box-shadow: 0 2px 4px 0 transparent;
+            background-color: transparent;
+            opacity: 0.9;
+            .shpmtc-button__content__text i{
+                color: $PrimaryColor;
+            }
+        }
+        .shpmtc-button__content__text{
+            i{
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 16px;
+                font-size: 16px;
+                color: $NeutralColor07;
+                opacity: 1;
+                @include transtion($time:sm);
+            }
+            p, span{
+                display: inline-block;
+                vertical-align: middle;
+                text-align: left;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &--text{
+        padding: 0px;
+        min-width: auto;
+        color: $PrimaryColor;
+        border: none;
+        background-color: transparent;
+        // font-family: 'ProximaNova-Semibold';
+        vertical-align: initial;
+        &:hover{
+            box-shadow: none;
+            span{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // Size
+    &--small{
+        min-width: 60px;
+        padding: 4px $spacing-sm;
+        font-size: 12px !important;
+        line-height: 14px !important;
+        p{
+            font-size: 12px !important;
+            line-height: 14px !important;
+        }
+        .shpmtc-icon{
+            margin-right: 4px !important;
+            transform: scale(1.1) !important;
+            line-height: 14px !important;
+        }
+    }
+    
+}   /* Button [end] */

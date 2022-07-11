@@ -1,0 +1,93 @@
+.guide-layout {
+  height: 100%;
+  padding-top: 20px;
+  .left-block {
+    background-color: #EFF3F7;
+    overflow: scroll;
+    .row:first-child {
+      padding: 30px 48px;
+      text-align: left;
+    }
+  }
+  .right-block {
+    background-color: #fff;
+    overflow: scroll;
+    .row:first-child {
+      padding: 70px 48px 30px;
+      text-align: left;
+    }
+  }
+
+  // grid-setting
+  display: block;
+  @include min-desktop {
+    display: -webkit-flex;
+    display: flex;
+    .left-block {
+      -webkit-flex: 1;
+              flex: 1;
+    }
+    .right-block {
+      -webkit-flex: 2;
+              flex: 2;
+    }
+  }
+
+  .back {
+    font-size: 2rem;
+    button {
+      position: relative;
+      left: -10px;
+      opacity: .6;
+      &:hover { opacity: 1; }
+      &:focus { outline: none; }
+      -webkit-transition: all .3s ease;
+         -moz-transition: all .3s ease;
+          -ms-transition: all .3s ease;
+           -o-transition: all .3s ease;
+              transition: all .3s ease;
+    }
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 30px;
+    margin: 10px 0 10px;
+  }
+  p {
+    color: #575757;
+  }
+  input {
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+  }
+
+  input[type='text'] {
+    height: 50px;
+    padding: 1px 15px;
+    margin-bottom: 1rem;
+    border: 0;
+    &:focus { outline-style: none; }
+  }
+  input[type='submit'] {
+    height: 50px;
+    width: 100%;
+    font-size: 1rem;
+  }
+  input[type='submit']:disabled {
+    color: black;
+  }
+
+  #ninjavan-account-modal{
+    .shpmtc-input{
+      margin-bottom: 1rem;
+      .shpmtc-input__group{
+        border-radius: 0;
+      }
+      input[type='text']{
+        margin-bottom: 0px;
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,38 @@
+@mixin OrderStatusBlock {
+  .order__status {
+    &__list {
+      font-size: 0.87rem;
+      padding: 1rem 1.25rem;
+      background: #fff;
+      box-shadow: $boxShadowMinor;
+      border-radius: $borderRadiusMinor;
+      list-style: none;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+
+      @include min-tablet {
+        >li:not(:last-child) {
+          margin-right: 1.25rem;
+        }  
+      }
+      >li {
+        >span:first-child {
+          margin-right: 0.625rem;
+          font-family: $fontSemiBold;
+        }
+      }
+
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+
+        >li:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }  
+      }
+    }
+  }    
+}

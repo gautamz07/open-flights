@@ -1,0 +1,11 @@
+@mixin BlockTag {
+  .tagBlock {
+    color: $textVariationOne; 
+    display: inline-block; 
+    padding: 2px 10px; 
+    border-radius: 4px; 
+    background: $textLightVariationOne; 
+    font-size: 12px; 
+    font-family: $fontMedium
+  }
+}

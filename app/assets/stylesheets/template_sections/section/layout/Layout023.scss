@@ -1,0 +1,31 @@
+.Layout023 {
+  .grid-image {
+    margin: 25px auto;
+    padding: 0 20px;
+    text-align: center;
+    .Img { object-fit: cover; height: 100%; width: 100%; margin: 25px auto;}
+  }
+
+  .grid-description {
+    padding: 0 50px;
+    margin: 0 auto 50px auto;
+    vertical-align: middle;
+  }
+
+  .block_1, .block_2, .block_3 {
+    min-height: 750px;
+    padding: 50px 0;
+    padding-bottom: 1437px;
+    margin-bottom: -1437px;
+  }
+  @include tablet {
+    .grid-description {
+      margin-bottom: 70px;
+    }
+  }
+  @include mobile {
+    .grid-description {
+      margin-bottom: 70px;
+    }
+  }
+}

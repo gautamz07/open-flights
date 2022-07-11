@@ -1,0 +1,55 @@
+.add-product-hint-cover {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  .add-product-hint-content {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .add-product-hint-icon {
+      background: image-url('on_board/page/cloth_icon.png');
+      background-size: 151px 141px;
+      width: 151px;
+      height: 141px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .add-product-hint-title {
+      font-size: 22pt;
+      padding-bottom: 6px;
+      padding-top: 7px;
+      font-family: "ProximaNova-Light";
+    }
+
+    .add-product-hint-description {
+      font-size: 12pt;
+      width: 230px;
+      text-align: center;
+      color: #777;
+    }
+
+    .add-product-button {
+      width: 134px;
+      height: 45px;
+      border-radius: 3px;
+      background-color: #4ba4ea;
+      font-size: 15px;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      margin-top: 19px;
+      margin-bottom: 10vh;
+    }
+  }
+}
+

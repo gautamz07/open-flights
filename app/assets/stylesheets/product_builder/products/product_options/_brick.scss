@@ -1,0 +1,83 @@
+@mixin bricks {
+  $size: 45px;
+  $close-btn-size: 15px;
+  $image-brick-margin: 15px;
+  $text-brick-margin: 10px;
+  .image-brick,
+  .color-brick {
+    display: block;
+    float: left;
+    position: relative;
+    width: $size;
+    height: $size;
+    margin-right: $image-brick-margin;
+    margin-bottom: $image-brick-margin;
+    .remove-brick {
+      color: white;
+      background-color: #96A7B6;
+      position: absolute;
+      border-radius: 50%;
+      top: -($close-btn-size / 2);
+      right: -($close-btn-size / 2);
+      width: $close-btn-size;
+      height: $close-btn-size;
+      line-height: $close-btn-size;
+      text-align: center;
+    }
+    .remove-brick:before {
+      text-decoration: none;
+      font-size: 12px;
+      top: -1px;
+      left: 0.5px;
+      position: relative;
+      line-height: 15px;
+    }
+    .uploading {
+      $uploading_margin: 8px;
+      width: $size - $uploading_margin * 2;
+      height: $size - $uploading_margin * 2;
+      margin: $uploading_margin;
+      background: image-url('ajax-spinner.svg') no-repeat center;
+      background-size: contain;
+      z-index: 140;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+  }
+
+  .image-brick {
+    background: image-url('missing.jpg') no-repeat center;
+    background-size: cover;
+  }
+
+  .text-brick {
+    float: left;
+    position: relative;
+    max-width: 100%;
+    color: #fff;
+    background-color: #4ba4ea;
+    margin-right: $text-brick-margin;
+    margin-bottom: $text-brick-margin;
+    border-radius: 3px;
+    padding: 2px;
+    font-size: 14px;
+    // font-family: 'ProximaNova-Regular';
+    * {
+      line-height: 21px;
+    }
+    .text {
+      display: table-cell;
+      word-break: break-all;
+      padding-left: 8px;
+    }
+    .ico-close {
+      display: table-cell;
+      width: 30px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+}

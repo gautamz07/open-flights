@@ -1,0 +1,183 @@
+@import '../../../../checkout/shpmtcd/settings.scss';
+
+.shpmtc-input{
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+
+    /* Modifer */
+    &--error{
+        .shpmtc-input__group{
+            border: 1px solid $FunColorDanger !important;
+        }
+    }
+    &--disabled{
+        .shpmtc-input__group{
+            background: $NeutralColor02;
+            input{
+                color: $NeutralColor05;
+                -webkit-text-fill-color: $NeutralColor06;
+            }
+        }
+    }
+    &--required {
+        .shpmtc-input__label-group__label {
+            &:before {
+                content: '*';
+                margin-right: 5px;
+            }
+        }
+    }
+
+    /* Input Label */
+    &__label-group{
+        display: table;
+        width: 100%;
+        padding-bottom: 5px;
+
+        &__label{
+            display: table-cell;
+            margin: 0 0 5px 0;
+            color: $NeutralColor06;
+            // font-family: 'ProximaNova-Regular';
+            @extend %fontSize14px;
+        }
+    
+        &__surlabel{
+            display: table-cell;
+            // font-family: 'ProximaNova-Semibold';
+            text-align: right;
+            margin: 0 0 5px 0;
+            color: $NeutralColor05;
+            @extend %fontSize12px;
+        }
+
+    }
+
+    /* Input Group */
+    &__group{
+        display: table;
+        width: 100%;
+        padding: 0px;
+        overflow: hidden;
+        border-radius: $borderRadius-rg;
+        border: 1px solid $NeutralColor04;
+        background-color: $LightColor;
+        @include transtion($time:sm);
+
+        &:focus, &:focus-within{
+            outline: none;
+            border: 1px solid $PrimaryColor;
+        }
+
+        input{
+            display: table-cell;
+            width: 100%;
+            height: 34px;
+            padding: 6px 10px;
+            margin-bottom: 0px;
+            font-weight: $fontWeightMedium;
+            color: $NeutralColor07;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            background: transparent;  
+            @extend %fontSize14px;          
+            &::placeholder {
+                color: $NeutralColor05;
+            }
+            &:focus, &:focus-within, &:active, &:focus{
+                outline: none;
+                box-shadow: none;
+                border: none;
+            }
+        }
+
+        textarea{
+            display: table-cell;
+            width: 100%;
+            min-height: 36px;
+            font-weight: $fontWeightMedium;
+            color: $NeutralColor07;
+            outline: none;
+            border: none;
+            box-shadow: none;
+            border-top: 0px;
+            border-left: 0px;
+            border-bottom: 2px solid transparent;
+            border-right: 2px solid transparent;
+            padding: 6px 10px;
+            background: transparent;
+            overflow: auto;
+            resize: vertical;
+            @extend %fontSize14px;
+            &::placeholder {
+                color: $NeutralColor05;
+            }
+            &:focus, &:focus-within, &:active, &:focus{
+                outline: none;
+                box-shadow: none;
+                border: none;
+            }
+        }
+
+        /* Prefix, Suffix */
+        .prefixText, .suffixText{
+            padding: 0px 10px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            width: 1px;
+            white-space: nowrap;
+            background-color: $NeutralColor01;
+            @extend %fontSize14px;
+        }
+        .prefixText{
+            border-right: 1px solid $NeutralColor04;
+        }
+        .suffixText{
+            border-left: 1px solid $NeutralColor04;
+        }
+
+        .prefixIcon, .suffixIcon{
+            display: table-cell;
+            width: 1px;
+            color: $NeutralColor05;
+            @extend %fontSize14px;
+            &:before{
+                transform: scale(1.4);
+                vertical-align: middle;
+            }
+        }
+        .prefixIcon{
+            padding-left: 15px;
+        }
+        .suffixIcon{
+            padding-right: 15px;
+        }
+
+        .suffixGroup{
+            display: table-cell;
+            vertical-align: middle;
+            .prefixText, .suffixText{
+                padding: 6px 10px;
+            }
+            .prefixIcon{
+                padding: 6px 0px 6px 6px;
+            }
+            .suffixIcon{
+                padding: 6px 6px 6px 0px;
+            }
+        }
+
+    }
+
+    /* Error Message */
+    &__error-msg{
+        display: inline-block;
+        margin-top: 3px;
+        color: $FunColorDanger;
+    }
+
+}
+

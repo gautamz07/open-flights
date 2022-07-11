@@ -1,0 +1,11 @@
+.LayoutM01 {
+  .shipping-returns-context {
+    max-width: 700px;
+    margin: auto;
+    
+    .last-update:before {
+      content: 'Last Updated：';
+      display: inline;
+    }
+  }
+}

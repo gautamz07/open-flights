@@ -1,0 +1,86 @@
+.Subscribe001 { 
+
+  .main-header {
+    >.H {
+      margin-bottom: 1rem;
+      line-height: 1;
+      color: #000;
+    }
+  }
+
+  .sub-heading {
+    >.P {
+      margin-bottom: 1em;
+      line-height: 1;
+      color: #000;
+    }
+  }
+
+  .form-elements-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      margin-bottom: 0;
+    }
+  }
+
+  input[type='text'],
+  input[type='tel'],
+  input[type='email'] {
+    border-radius: 5px;
+    border-color: #CACACA;
+    padding-left: 1rem;
+    font-size: 0.88rem;
+    background:#fff;
+  }
+
+  input[type='submit'] {
+    font-size: 0.88rem;
+    border-radius: 5px;
+    width:100%;
+    background: #35495D;
+  }
+
+  @include max-tablet {
+    .form-elements-container {
+      flex-direction: column;
+      width: 100%;
+
+      .form-group{
+        margin-bottom:0.624rem;
+      }
+
+      .input-wrapper, .submit-wrapper {
+        width:100%;
+      }
+    }
+  }
+
+  @include min-desktop {
+    input[type='text'],
+    input[type='tel'] {
+      min-width: 190px;
+    }
+
+    input[type='email'] {
+      min-width: 280px;
+    }
+
+    .form-elements-container {
+      .input-wrapper {
+        >.form-group{
+          margin-left:0.312rem;
+          margin-right:0.312rem;
+        }
+      }
+  
+      .submit-wrapper {
+        margin-left:0.312rem;
+      }
+    }
+
+  }
+
+}

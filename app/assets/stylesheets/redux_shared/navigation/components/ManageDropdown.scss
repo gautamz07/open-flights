@@ -1,0 +1,15 @@
+@import "./manageDropdown/*";
+
+@mixin ManageDropdown {
+  .manage-dropdown {
+    @include CurrentList;
+    @include ManageDropList;
+
+    position: relative;
+    padding-left: 20px;
+
+    @include max-tablet {
+      padding-left: 8px;
+    }
+  }
+}

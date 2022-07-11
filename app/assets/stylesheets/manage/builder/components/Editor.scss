@@ -1,0 +1,30 @@
+@mixin Editor {
+  .editor {
+    height: 100%;
+
+    iframe {
+      border: none;
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+      margin-bottom: -5px; // a hack to prevent showing scroll bar on #content
+    }
+
+    &:after {
+      content: '';
+      transition: opacity 0.5s;
+      opacity: 0;
+      position: absolute;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+    }
+    &[data-loading=true]:after {
+      opacity: 1;
+      transition: opacity 0.075s;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@mixin SettingField {
+  .setting-background {
+    // font-family: 'ProximaNova-Regular';
+
+    .icon-button {
+      cursor: pointer;
+    }
+
+    .dropdown {
+        text-align: left;
+    }
+  }  
+  
+  .setting-field {  
+    // font-family: 'ProximaNova-Regular';  
+      
+    .dropdown {
+      text-align: left;
+    }
+
+    .dropdown-controll {
+      padding: 1.25rem 1rem;
+    }
+
+    .panel-header {
+      font-size: 1.125rem;
+      display: block;
+      margin-bottom: 0.75rem;
+      line-height: 1;
+    }
+
+    .panel-subheader {
+      font-size: 0.875rem;
+      margin-bottom: 1.125rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .ant-checkbox-wrapper {
+      margin-bottom: 0.625rem;
+      vertical-align: middle;
+      >span {
+          display: table-cell;
+          vertical-align: middle;
+      }  
+      >span:first-child{
+          border-right: 10px solid transparent;
+          >input[type='checkbox'] {
+            margin-bottom:0;
+          }
+      }  
+      >span:last-child {
+          border-radius: 3px;
+          background: #333333;
+          color: #fff;
+          padding: 0.625rem;
+          width: 100%;
+          line-height: 1;
+      }
+    }
+
+    label:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

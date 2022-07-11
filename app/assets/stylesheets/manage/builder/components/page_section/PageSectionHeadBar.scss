@@ -1,0 +1,44 @@
+@mixin PageSectionHeadBar($headbar_height) {
+  .head-bar {
+    height: $headbar_height;
+    border-bottom: 1px solid #eeeeee;
+    padding-left: 30px;
+    padding-right: 30px;
+    .active-section {
+      text-align: center;
+    }
+    .add-a-section {
+      text-align: left;
+    }
+    .title {
+      color: #3f3f3f;
+      font-size: 14px;
+      font-family: "ProximaNova-Semibold", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      line-height: 50px;
+    }
+    button {
+      &:focus, &:active {
+        outline: none;
+      }
+      &.back-btn {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      &.dismiss-btn {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        font-size: 20px;
+        cursor: pointer;
+        .ico-close{
+          font-size: 16px;
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,64 @@
+@mixin ActionPanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .orderNote {
+    font-family: $fontMedium;
+    // color: $textVariationOne;
+    &__checkbox {
+      color: $textVariationOne;
+    }
+    &__tooltip {
+      display: inline-block;
+    }
+  }
+  .orders__searchExport {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .export {
+      font-family: $fontMedium;
+      margin-right: 1rem;
+      &-btn {
+        @include ButtonLink;
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    @include mobile {
+      flex-direction: column;
+
+      .export {
+        margin-bottom: 0.25rem;
+        margin-right: 0;
+      }
+    }
+  }
+  .search-input {
+    position: relative;
+    button {
+      @include ButtonLink;
+      position: absolute;
+      left:0;
+      top:0;
+      bottom: 0;
+      padding: 0 1rem;
+    }
+    input {
+      padding-left: 3rem;
+      min-width: 300px;
+      @include placeholder-color {
+        font-family: $fontMedium;
+      }
+    }
+  }
+}

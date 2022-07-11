@@ -1,0 +1,68 @@
+#tax_options {
+  @import '../common/legacy/form_control';
+  @import '../common/legacy/checkbox';
+
+  @include leave-top-for-flash-messages;
+
+  .page-header {
+    $dividerPadding: 12px;
+
+    margin-bottom: 0px;
+
+    label {
+      margin-left: $dividerPadding;
+      input[type='checkbox']::before { left: 10px; }
+    }
+  }
+
+  .checkbox input[type=checkbox] {
+    margin-left: -35px;
+  }
+
+  form.taxes-form {
+    h1.ico-tax {
+      &:before { margin-right: 5px; color: #A2ACBF; font-size: 40px; }
+      &:after { content: ""; border-right: 1px solid #A2ACBF; padding-left: 15px; }
+    }
+
+    ul.list-inline {
+      li { padding-left: 4%; padding-right: 4%; }
+      .input-group {
+        margin-left: 20px;
+        padding: 4px 10px;
+        width: 70px;
+        transition: all .3s ease-out;
+          -webkit-border-radius: 2px;
+                  border-radius: 2px;
+        border: 1px solid #d7d7d7;
+        &:hover { border-color: #4ba4ea; }
+        input, .input-group-addon { border: none; }
+        input { text-align: right; }
+        .input-group-addon {
+          width: 20px;
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          margin: auto; padding: 0;
+          border: none;
+        }
+      }
+      .tax_options_form_gst_number, .tax_options_form_vat_number {
+        .input-group {
+          input {
+            padding-left: 20px;
+            width: 300px;
+            text-align: left;
+          }
+        }
+      }
+
+      @import './_in_gst';
+    }
+  }
+
+  .btn-save {
+    @include default-button;
+  }
+
+}

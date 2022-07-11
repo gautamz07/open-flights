@@ -1,0 +1,16 @@
+.export-btn {
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: solid 1px #e1e1e1;
+  padding: 7px 14px;
+  color: #444444;
+
+  i.ico-export {
+    position: relative;
+    top: -2px;
+
+    &::before {
+      font-size: 18px;
+    }
+  }
+}

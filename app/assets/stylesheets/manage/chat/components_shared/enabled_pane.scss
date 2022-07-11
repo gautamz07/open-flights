@@ -1,0 +1,23 @@
+.disable-pane {
+  float: right;
+  margin-top: 6px;
+  margin-right: 12px;
+
+  @import "./icon_check";
+  .to-disable-split {
+    display: inline-block;
+    width: 1px;
+    background: #e4ebef;
+    height: 19px;
+    margin: 0 20px;
+    position: relative;
+    top: 5px;
+  }
+  .disable-btn {
+    font-family: ProximaNova;
+    font-size: 14px;
+    line-height: 1.14;
+    color: #575757;
+    cursor: pointer;
+  }
+}

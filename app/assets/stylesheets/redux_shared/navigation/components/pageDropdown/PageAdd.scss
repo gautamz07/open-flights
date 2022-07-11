@@ -1,0 +1,23 @@
+@mixin PageAdd {
+  button, input {
+    color: #000;
+    outline: none;
+    display: inline-block;
+    font-size: 14px;
+  }
+  button {
+    width: 10%;
+    cursor: pointer;
+    opacity: .5;
+    padding: 0 6px;
+    &:hover, &:active { opacity: 1; }
+  }
+  input {
+    width: 80%;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+}

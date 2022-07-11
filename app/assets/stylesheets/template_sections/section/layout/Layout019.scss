@@ -1,0 +1,18 @@
+.Layout019 {
+  .grid-description {
+    overflow: hidden;
+    margin: 25px auto;
+    border-bottom: 1px solid #ddd;
+    .icons {
+      max-width: 150px;
+      .Img { width: 100%; }
+    }
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
+
+  .P, .Img { margin-bottom: 20px; }
+}

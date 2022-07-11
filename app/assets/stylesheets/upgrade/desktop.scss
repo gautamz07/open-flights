@@ -1,0 +1,75 @@
+.upgrade {
+  .upgrading-block, .waiting-list-block {
+    padding-top: 61px;
+    height: 795px;
+    .shopmatic-logo {
+      width: 182px;
+      height: 41px;
+      margin-bottom: 13px;
+    }
+    .heading {
+      font-size: 40px;
+      line-height: 42px;
+      width: 482px;
+      margin-bottom: 11px;
+    }
+    .description {
+      font-size: 16px;
+      line-height: 24px;
+      width: 512px;
+      margin-bottom: 19px;
+    }
+    .actions {
+      @include actions-responsive;
+      width: 411px;
+    }
+    .device-image {
+      @include device-image(924px, -16px, -57px);
+    }
+  }
+
+  .waiting-list-block {
+    .heading {
+      font-size: 40px;
+      line-height: 42px;
+      width: 688px;
+      margin-bottom: 11px;
+    }
+    .description {
+      font-size: 16px;
+      line-height: 24px;
+      width: 512px;
+      margin-bottom: 19px;
+    }
+    .device-image {
+      @include device-image(924px, -16px, -69px);
+    }
+  }
+
+  .features-block {
+    .heading {
+      font-size: 36px;
+      margin-bottom: 2px;
+      margin-top: 64px;
+    }
+    .description {
+      font-size: 16px;
+      line-height:25px;
+    }
+    .cases {
+      margin-bottom: 5em;
+      .tabs {
+        width: 280px;
+        height: 50px;
+        margin-top: 19px;
+        margin-bottom: 19px;
+        @include grouped-tabs(280px, 50px, $theme-color, #4098df, 5px);
+        .tab {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

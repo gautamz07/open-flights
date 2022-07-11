@@ -1,0 +1,46 @@
+@import "magnific-popup/dist/magnific-popup";
+
+// popup animate
+.mfp-fade {
+  &.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out; 
+    -moz-transition: all 0.15s ease-out; 
+    transition: all 0.15s ease-out;
+    &.mfp-ready { opacity: .8; }
+    &.mfp-removing { opacity: 0; }
+  }
+
+  &.mfp-wrap {
+    .mfp-content {
+      opacity: 0;
+      -webkit-transition: all 0.15s ease-out; 
+      -moz-transition: all 0.15s ease-out; 
+      transition: all 0.15s ease-out;
+    }
+    &.mfp-ready .mfp-content { opacity: 1; }
+    &.mfp-removing .mfp-content { opacity: 0; }
+  }
+}
+
+.youtube-play-button {
+  position: relative;
+  display: block;
+  width: 66px;
+  height: 55px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  mask: asset_url('page_builder/youtube_play_button.svg') no-repeat 100% 100%;
+  -webkit-mask: asset_url('page_builder/youtube_play_button.svg') no-repeat 100% 100%;
+  
+  &:hover { background-color: rgba(255, 255, 255, 1); }
+
+  -webkit-transition: ease all .5s;
+     -moz-transition: ease all .5s;
+      -ms-transition: ease all .5s;
+       -o-transition: ease all .5s;
+          transition: ease all .5s;
+}

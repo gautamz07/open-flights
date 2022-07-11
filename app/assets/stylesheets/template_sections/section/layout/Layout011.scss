@@ -1,0 +1,14 @@
+.Layout011 {
+  .section-container {
+    padding: 50px 70px;
+    @include mobile {  padding: 50px 20px; }
+
+    > .row {
+      display: table;
+      width: 100%;
+    }
+  }
+  .layout-vertical-middle {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,173 @@
+// start cart payment
+.checkout-container.cart-payment {
+  h1, h2, h3, p { font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif; }
+  letter-spacing:0px;
+  color:#333333;
+
+  hr { margin: 20px 0; }
+  h3 { font-size:15px; margin: 0px 0 18px 0; }
+
+  .checkout-payment-methods {
+    margin: 30px 0;
+    .have_payment_methods {
+      h3 { clear: both; padding-top: 10px; font-size: 16px; }
+      @include small-mobile {
+        .col-xs-4 {
+          width: 50%; height: 160px;
+          &.paypal-india { height: 200px; }
+        }
+      }
+    }
+
+    // start each payment method
+    .payment-method {
+      padding-bottom: 12px;
+
+      .btn-payment {
+        background: #ffffff;
+        border: 1px solid #e4e4e4;
+        border-radius: 3px;
+
+        white-space: normal;
+        display: table;
+        height: 100px;
+        padding: 22px 0 15px 0;
+        &:hover, &.active {
+          border: 1px solid #199ED9;
+          -webkit-box-shadow: none;
+                  box-shadow: none;
+          .btn-payment-inner img {
+            -webkit-filter: none;
+                    filter: none;
+          }
+        }
+      }
+
+      .btn-payment-inner {
+        display: table-cell;
+        vertical-align: middle;
+        img {
+          margin-bottom: 15px;
+          -webkit-filter: grayscale(1);
+                  filter: grayscale(1);
+          height: 26px;
+        }
+
+        img.payment-cash {
+          padding: 3px;
+          opacity: .75;
+        }
+      }
+
+      .btn-payment-inner-inner {
+        font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+        margin: auto;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        font-size: 10px;
+        color: #333333;
+        width: 130px;
+        height: 30px;
+      }
+
+      .bottom-text {
+        text-align: center;
+        margin: auto;
+        line-height: 16px;
+        p { width: 80%; font-size:12px; margin: 10px auto 0 auto;}
+        a {
+          width: 100%;
+          display: block;
+          &:hover, &:focus { text-decoration: none; outline: none }
+        }
+        a.icon-info:before {
+          content: '\2139';
+          height: 16px;
+          width: 16px;
+          background-color: #a7a7a7;
+          color: #fff;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%;
+          font-family: Georgia-Italic;
+          font-size: 16px;
+          line-height: 16px;
+          text-align: center;
+          vertical-align: middle;
+          padding-right: 1px;
+          cursor: pointer;
+          margin-top: 5px;
+        }
+      }
+
+      .btn-payment, .btn-payment-inner img{
+        -webkit-transition: all .2s ease-out;
+           -moz-transition: all .2s ease-out;
+            -ms-transition: all .2s ease-out;
+             -o-transition: all .2s ease-out;
+                transition: all .2s ease-out;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+      }
+
+      &.paypal-india, &.paypal-international { .btn-payment-inner-inner { line-height: 30px; } }
+
+    } // end each payment method
+
+  }
+
+  .payment-instructions {
+    margin: 30px 0;
+    white-space: pre-wrap;
+  }
+
+  .checkout-payment-methods + .payment-instructions {
+    margin: -20px 0 30px 0;
+  }
+
+} // end of cart payment
+
+// for citurs pay
+.checkout.citrus-pays {
+  .bank_transfer .payment-method.bank,
+  .credit_card .payment-method.card {
+    a.btn-payment { border: 1px solid #199ED9; }
+    .btn-payment-inner img { -webkit-filter: none; filter: none; }
+  }
+
+  #citrusAvailableOptions {  margin-bottom: 20px; }
+  .form-actions { margin-bottom: 10px; }
+}
+
+// for paytm
+.checkout.paytms  {
+  .payment-method.paytm {
+    a.btn-payment { border: 1px solid #199ED9; }
+    .btn-payment-inner img { -webkit-filter: none; filter: none; }
+  }
+}
+
+// for cash on delivery
+.checkout.cash-on-deliveries  {
+  .payment-method.cod {
+    a.btn-payment { border: 1px solid #199ED9; }
+    .btn-payment-inner img { -webkit-filter: none; filter: none; }
+  }
+}
+
+// for offline-payment-domestic
+.checkout.offline-payment-domestics {
+  .payment-method.offline-payment-domestic {
+    a.btn-payment { border: 1px solid #199ED9; }
+    .btn-payment-inner img { -webkit-filter: none; filter: none; }
+  }
+}
+
+// for offline-payment-international
+.checkout.offline-payment-internationals  {
+  .payment-method.offline-payment-international {
+    a.btn-payment { border: 1px solid #199ED9; }
+    .btn-payment-inner img { -webkit-filter: none; filter: none; }
+  }
+}

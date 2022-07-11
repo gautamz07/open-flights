@@ -1,0 +1,18 @@
+@mixin ScaleBtnSize($base: 16, $scale: 1) {
+  $radius: if( 6 * $scale < 3, 3, 6 * $scale);
+  &.btn-size-s {
+    font-size: #{12 / $base * $scale}rem;
+    padding: #{.656 * $scale}rem #{1.17 * $scale}rem;
+    border-radius: #{$radius}px;
+  }
+  &.btn-size-m {
+    font-size: #{16 / $base * $scale}rem;
+    padding: #{.875 * $scale}rem #{1.56 * $scale}rem;
+    border-radius: #{$radius}px;
+  }
+  &.btn-size-l {
+    font-size: #{24 / $base * $scale}rem;
+    padding: #{1.3125 * $scale}rem #{2.34 * $scale}rem;
+    border-radius: #{$radius}px;
+  }
+}

@@ -1,0 +1,23 @@
+@mixin LoginForm {
+  .login-form {
+    .email-field {
+      margin-bottom: 12px;
+    }
+    .password-field {
+      margin-bottom: 12px;
+    }
+    .form-validation-result {
+      text-align: center;
+      background-color: #faf3f5;
+      border: 1px solid #eed3d7;
+      border-radius: 4px;
+      line-height: 40px;
+      height: 40px;
+      color: red;
+      .ico-info {
+        font-size: 24px;
+        vertical-align: middle;
+      }
+    }
+  }
+}

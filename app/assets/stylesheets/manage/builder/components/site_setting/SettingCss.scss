@@ -1,0 +1,43 @@
+@import 'redux_shared/mixin/transition';
+
+@mixin SettingCss {
+  $headbar_height: 50px;
+  $caution_height: 36px;
+  .setting-css {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    @include transition-basic(left);
+    &.slide-left {
+      left: -300px;
+    }
+    @include SettingHeader($headbar_height);
+    .caution {
+      height: $caution_height;
+      padding: 10px;
+      font-size: 12px;
+      text-align: center;
+      background-color: #fdf3c9;
+      color: #3f3f3f;
+      top: -1px;
+      position: relative;
+      .title {
+        font-family: "ProximaNova-Bold", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+        font-weight: bold;
+      }
+    }
+    @include ScrollWindow($headbar_height - 36px);
+    .css-content {
+      padding: 1rem;
+      margin: 0;
+      border: 0;
+      border-right: 1px solid #eeeeee;
+      height: calc(100% - #{$headbar_height} - #{$caution_height});
+      box-shadow: none;
+    }
+  }
+}

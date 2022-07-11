@@ -1,0 +1,17 @@
+.icon-check {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #69be7b;
+  font-weight: 600;
+  display: inline;
+}
+
+.icon-check:before {
+  content: '';
+  // background: image_url('ui/icon-check.svg') no-repeat 100% 100%;
+  display: inline-block;
+  vertical-align: middle;
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}

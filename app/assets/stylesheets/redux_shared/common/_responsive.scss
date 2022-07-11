@@ -1,0 +1,60 @@
+// Media query break point
+$screen-xlarge: 1200px; // large, wide-desktop
+$screen-large: 992px; // medium, desktop
+$screen-medium: 768px; // small, tablet
+$screen-small: 0px; // xs, mobile
+
+// Correspond to Boostrap responsive break point
+@mixin wide-desktop { // lg, equal min-wide-desktop
+  @media (min-width: $screen-xlarge) {
+    @content;
+  }
+}
+@mixin desktop { // md
+  @media (min-width: $screen-large) and (max-width: $screen-xlarge - 1) {
+    @content;
+  }
+}
+@mixin tablet { // sm
+  @media (min-width: $screen-medium) and (max-width: $screen-large - 1) {
+    @content;
+  }
+}
+@mixin mobile { // xs, equal max-mobile
+  @media (max-width: $screen-medium - 1) {
+    @content;
+  }
+}
+
+// boostrap not have 480px break point
+// should write behind mobile mixin if both mobile & small-mobile mixin exist
+$screen-small-mobile: 480px; 
+@mixin small-mobile {
+  @media (min-width: $screen-small) and (max-width: $screen-small-mobile - 1) {
+    @content;
+  }
+}
+
+@mixin max-desktop {
+  @media (max-width: $screen-xlarge - 1) {
+    @content;
+  }
+}
+
+@mixin max-tablet {
+  @media (max-width: $screen-large - 1) {
+    @content;
+  }
+}
+
+@mixin min-desktop {
+  @media (min-width: $screen-large) {
+    @content;
+  }
+}
+
+@mixin min-tablet {
+  @media (min-width: $screen-medium) {
+    @content;
+  }
+}

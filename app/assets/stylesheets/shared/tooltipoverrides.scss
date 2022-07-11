@@ -1,0 +1,13 @@
+@mixin Tooltip {
+  .ant-tooltip-inner {
+    background: #fff;
+    color: #666666;
+  }
+  .ant-tooltip-arrow {
+    border-top-color: #fff !important;
+  }
+}
+
+.tooltip__default {
+  @include Tooltip
+}

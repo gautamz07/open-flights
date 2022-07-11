@@ -1,0 +1,37 @@
+// Font Size
+%fontSize32px {
+  font-size: 32px; line-height: 36px;
+}
+
+%fontSize28px {
+  font-size: 28px; line-height: 34px;
+}
+
+%fontSize26px {
+  font-size: 26px; line-height: 32px;
+}
+
+%fontSize21px {
+  font-size: 21px; line-height: 26px;
+}
+
+%fontSize18px {
+  font-size: 18px; line-height: 26px;
+}
+
+%fontSize15px {
+  font-size: 15px; line-height: 24px;
+}
+
+%fontSize14px {
+  font-size: 14px; line-height: 22px;
+}
+
+%fontSize12px {
+  font-size: 12px; line-height: 20px;
+}
+
+// Font Weight
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightSemibold: 600;

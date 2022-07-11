@@ -1,0 +1,30 @@
+@mixin RegionalFilterButton {
+  .regional-filter-button {
+    margin: 0 1px;
+    padding: 5px 17px 5px 15px;
+    position: relative;
+    font-size: 14px;
+    color: #666666;
+    background-color: transparent;
+    transition: none;
+    font-family: ProximaNova-Semibold;
+
+    i:before {
+      font-size: 25px;
+    }
+
+    &.active, &:hover {
+      border-radius: 3px;
+      background-color: #ffffff;
+
+      &::after {
+        content: '';
+        border: 8px solid transparent;
+        border-top-color: #ffffff;
+        position: absolute;
+        bottom: -15px;
+        left: 40%;
+      }
+    }
+  }
+}

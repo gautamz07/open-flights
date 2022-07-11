@@ -1,0 +1,20 @@
+@mixin SettingHeaderSetup {
+  .setting-header-setup {
+    // font-family: 'ProximaNova-Regular';
+    
+    .dropdown-content {
+      padding: 20px 15px;
+    }
+
+    .checkbox-primary {
+      margin-bottom: 10;
+      &:last-child { margin-bottom: 0 }
+    }
+
+    .slider-input {
+      h4 {
+        text-align: left;
+      }
+    }
+  }
+}

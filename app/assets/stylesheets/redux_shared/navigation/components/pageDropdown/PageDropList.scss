@@ -1,0 +1,57 @@
+@import "redux_shared/mixin/triangle";
+
+@import "./../../mixin/list_decoration";
+@import "./../../plugin/sortable_custom";
+
+@import "./PageEditList";
+
+@mixin PageDropList {
+  @include sortable-custom;
+
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+  color: #000;
+  
+  li {
+    @include disable-select;
+    @include page-list-decoration;
+
+    .ico-nav-top-reorder {
+      position: absolute;
+      top: 0; left: 10px;
+      cursor: move;
+      opacity: .5;
+      padding: 0 4px;
+      font-size: 12px;
+    }
+
+    &[data-visible='false'] .page-name { opacity: .5; }
+    .page-name {
+      width: 100%;
+      display: inline-block;
+      cursor: pointer;
+      padding: 0 5px;
+    }
+    
+    &.active .page-edit-group { display: inline-block; }
+    .page-edit-group {
+      display: none;
+      position: absolute;
+      top: -1px;
+      right: 10px;
+      .ico-more {
+        &:before {
+          background-color: #fff;
+          border-radius: 50%;
+          width: 22px;
+          height: 22px;
+          line-height: 22px;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+      .page-edit-list { @include PageEditList; }
+    }
+  }
+}

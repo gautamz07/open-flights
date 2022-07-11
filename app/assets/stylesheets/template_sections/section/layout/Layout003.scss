@@ -1,0 +1,17 @@
+.Layout003 {
+  .block_2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 50px;
+  }
+  @include mobile {
+    .block_1 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .block_2 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}

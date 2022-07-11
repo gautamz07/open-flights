@@ -1,0 +1,24 @@
+body.page_editor {
+  // Only display Unknown block when use page_editor layout
+  .Unknown { display: block !important; }
+}
+
+.Unknown {
+  display: none; // only show when use page_editor layout
+
+  h1, h2, h3, p {
+    font-family: 'ProximaNova-Regular', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif !important;
+    position: relative;
+    color: #ffffff;
+  }
+
+  p {
+    font-size: 28px;
+  }
+
+  div {
+    background: none !important;
+    background-color: none !important;
+    background-image: none !important;
+  }
+}

@@ -1,0 +1,14 @@
+@mixin device-image ($device-image-width, $left, $bottom) {
+  $origin-width: 897px;
+  $origin-height: 477px;
+  $ratio: 477px / 897px;
+  $device-image-height: $device-image-width * $ratio;
+  bottom: $bottom;
+  left: $left;
+  right: 0;
+  width: $device-image-width;
+  height: $device-image-height;
+  background-image: image_url('upgrade/device.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,16 @@
+// TODO: remove this file after shopfront/product refactor
+//= require 'template_factory/foundation_and_overrides'
+//= require 'slick.min'
+//= require 'slick-theme.min'
+//= require shopfront/chat_btns
+//= require shopfront.scss
+
+@import "common/fonts";
+@import "common/font/*";
+
+@import "redux_shared/common/base";
+
+@import "template_sections/index";
+@import "template_elements/index";
+@import "checkout/index";
+@import "shopfront_redux/legacy_overwrite";

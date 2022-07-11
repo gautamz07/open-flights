@@ -1,0 +1,66 @@
+@import "./_variables";
+@import "./mixin/*";
+
+@import './section/**/*';
+@import "../checkout/shpmtcd/settings.scss";
+
+html {
+  font-size: 16px;
+}
+body {
+  height: auto;
+  min-height: 100%;
+  background-color: #f7f7f7;
+  overflow-y: initial;
+}
+
+#template-header {
+  z-index: 3;
+  position: relative;
+  background-color: #f7f7f7;
+  &[data-readonly='false'] { // disable UI trigger on page_builder
+    ul ul { display: none !important; }
+    .slider-controll,
+    .cart-dropdown-btn {
+      pointer-events: none !important;
+    }
+  }
+  section { overflow: visible !important; }
+}
+#template-article {
+  z-index: 1;
+  position: relative;
+  background-color: #f7f7f7;
+
+  transition: filter .5s;
+
+  &, section { overflow: hidden; }
+}
+#template-footer {
+  z-index: 2;
+  position: relative;
+  background-color: #f7f7f7;
+
+  section { overflow: visible !important; }
+}
+
+.template-sections {
+  section {
+    position: relative;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+.section-container {
+  position: static;
+  padding: 50px 70px;
+  word-break: break-word;
+  @include mobile {
+    padding: 50px 20px;
+  }
+}
+
+.columns { position: relative; padding-left: 0.9375rem; padding-right: 0.9375rem; min-height: 1px; }
+
+

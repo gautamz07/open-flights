@@ -1,0 +1,12 @@
+.Layout007 {
+  .Img, .ImageWithVideo {
+    width: 100%;
+    margin: 25px auto;
+  }
+  @include mobile {
+    .block_1, .block_2, .block_3 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

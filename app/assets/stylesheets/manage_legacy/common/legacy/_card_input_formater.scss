@@ -1,0 +1,47 @@
+// use for credit card inputs (billing(IN)/overdue/duepaymeny/checkout-citrus)
+.billing_form_card_number,
+.input-card-number-parent {
+  &:before, &:after {
+    content: '';
+    top: 0;
+    width: 40px;
+    height: 60%;
+    position: absolute;
+    -webkit-filter: grayscale(1) opacity(.4);
+  }
+  &:before{
+    //  background: image_url('ui/icon-visa.svg') no-repeat 100% 100%;
+     right: 60px;
+  }
+  &:after{
+    // background: image_url('ui/icon-mastercard.svg') no-repeat 100% 100%;
+    right: 20px;
+  }
+  &.card_for_visa:before, &[data-card-issuer='visa']:before {  -webkit-filter: none; }
+  &.card_for_mastercard:after, &[data-card-issuer='mastercard']:after {  -webkit-filter: none; }
+}
+
+.input-card-cvv-parent {
+  &:before {
+    // background: image_url('ui/icon-creditcard.svg') no-repeat 100% 100%;
+    content: '';
+    width: 40px;
+    height: 60%;
+    position: absolute;
+    top: 0;
+    right: 20px
+  }
+}
+
+input.input-formater-control {
+  &[data-input-check='valid'] {
+    color: $defaultGreen !important;
+    text-shadow: 0 0 0 $defaultGreen !important;
+    &:focus {text-shadow: 0 0 0 $defaultGreen !important;}
+  }
+  &[data-input-check='invalid'] {
+    color: $defaultRed !important;
+    text-shadow: 0 0 0 $defaultRed !important;
+    &:focus {text-shadow: 0 0 0 $defaultRed !important;}
+  }
+}

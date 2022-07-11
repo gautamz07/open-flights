@@ -1,0 +1,74 @@
+.checkbox-primary {
+  label {
+    height: 1.25em;
+    line-height: 1.25em;
+  }
+
+  /* Base for label styling */
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  [type="checkbox"]+ label:before,
+  [type="checkbox"]+ label:after {
+    width: 1.25em;
+    height: 1.25em;
+    position: absolute;
+    left: 0; top: -1px;
+  }
+
+  /* checkbox aspect */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    content: '';
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 3px;
+  }
+  [type="checkbox"]:checked + label:after {
+    background-color: $newManageBlue;
+    border: none;
+  }
+
+  /* checked mark aspect */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    z-index: 1;
+    font-size: 1.3em;
+    color: #fff;
+    transition: all .2s;
+  }
+
+  /* checked mark aspect changes */
+  [type="checkbox"]:not(:checked) + label:before {
+    opacity: 0;
+    transform: scale(0);
+  }
+  [type="checkbox"]:checked + label:before {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* disabled checkbox */
+  [type="checkbox"]:disabled:not(:checked) + label:after,
+  [type="checkbox"]:disabled:checked + label:after {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+  [type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+  }
+  [type="checkbox"]:disabled + label {
+    color: #aaa;
+  }
+
+}

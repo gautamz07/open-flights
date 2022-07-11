@@ -1,0 +1,13 @@
+@import "redux_shared/mixin/base";
+@import "./components/**/*";
+
+#page-builder {
+  height: 100vh;
+
+  // Components
+  @include EditorFrame
+  @include Editor
+
+  @include PageSectionSidebar
+  @include SiteSettingSidebar
+}

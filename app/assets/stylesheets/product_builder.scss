@@ -1,0 +1,88 @@
+//= require 'product_builder/foundation_and_overrides'
+
+@import 'common/fonts';
+@import 'common/font/icons-base';
+@import 'common/font/icons';
+@import 'common/variables';
+@import 'common/mixins/*';
+// overwrite .ReactModalPortal__Callout for show flash message on rails & redux mixed layout
+@import 'common/overwrite_callout';
+
+@import 'plugins/image_cropper';
+
+@import 'product_builder/mixins/*';
+@import 'product_builder/utils/*';
+@import 'product_builder/side-nav/*';
+@import 'product_builder/products/*';
+@import 'product_builder/products/product_options/*';
+@import 'product_builder/products/fields/*';
+
+@import "redux_shared/common/base";
+@import "redux_shared/promiseModal/index";
+@import "redux_shared/navigation/index";
+@import "redux_shared/callout/index";
+@import "redux_shared/tutorial_guide/index";
+
+@import "on_board/navigation/index";
+
+@import 'product_builder/redux_component/index';
+
+@import 'redux_shared/image_uploader/ImageEditor/index';
+
+@import "white_label/floating_brand_name";
+
+#product_builder {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &[data-onboard=false] {
+    // !! onboarding overwrite
+    // because there has not seperate product_builder for onboard
+    .disable-mask {
+      background-color: transparent !important;
+    }
+  }
+
+  // layout
+  #content {
+    .navbar-container {
+      position: fixed;
+      top: $nav-height;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: $side-nav-width;
+      height: calc(100% - #{$nav-height});
+      overflow: hidden;
+      #builder-side-nav {
+        @include fill-parent;
+        overflow-x: hidden;
+      }
+      #builder-products-pane {
+
+      }
+      color: $side-nav-text-color;
+      background-color: white;
+      box-shadow: -4px 0px 16px rgba(27, 39, 51, 0.16);
+      z-index: 201;
+    }
+    .builder {
+      position: fixed;
+      top: $nav-height;
+      left: $side-nav-width;
+      right: 0;
+      bottom: 0;
+      height: calc(100% - #{$nav-height});
+      overflow: hidden;
+      z-index: 200;
+      .has-builder-tooltip{
+        display: none;
+      }
+    }
+
+    @include mobile {
+      .navbar-container { width: 100% }
+      .builder { display: none }
+    }
+  }
+}

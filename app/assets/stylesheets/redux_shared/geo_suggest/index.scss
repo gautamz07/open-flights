@@ -1,0 +1,90 @@
+.Geosuggest {
+  position: relative;
+
+  .Geosuggest-icon {
+    position: absolute;
+    top: 5px;
+    right: 19px;
+    font-size: 19px;
+    color: #808f9e;
+    cursor: pointer;
+  }
+
+  .Geosuggest-input {
+    background: white;
+    display: table;
+    height: 36px;
+    max-height: 36px;
+    overflow: hidden;
+    line-height: 35px;
+    border-radius: 4px;
+    padding: 0 13px !important;
+    font-size: 14px;
+    border: solid 1px #c4cdd5 !important;
+    outline: none !important;
+    &:hover, &:active,
+    &.hover, &.active {
+      border-color: #4ba4ea !important;
+    }
+  }
+
+  .Geosuggest-suggests {
+    left: 0;
+    right: 0;
+    background-image: image-url('redux_shared/geosuggest/powered_by_google');
+    background-position: calc(100% - 8px) calc(100% - 7px);
+    background-repeat: no-repeat;
+    padding: 1px 0 30px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    margin: 0;
+    background-size: auto 14px;
+    background-color: white;
+    // position: absolute;
+  }
+
+  .Geosuggest-suggest-item {
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    border-bottom: rgba(196, 205, 213, .4) solid 1px;
+    background-image: image-url('redux_shared/geosuggest/location_mark');
+    background-repeat: no-repeat;
+    padding-left: 34px;
+    background-position: 16px 9px;
+    background-size: auto 16px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .Geosuggest-suggest-item-active {
+    background-color: #ebf2fe;
+    background-image: image-url('redux_shared/geosuggest/location_mark_active');
+  }
+
+  .Geosuggest-icon-preload {
+    background-image: image-url('redux_shared/geosuggest/location_mark');
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+  }
+
+  .Geosuggest-icon-preload2 {
+    background-image: image-url('redux_shared/geosuggest/location_mark_active');
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+  }
+
+  @include mobile {
+    .Geosuggest-input {
+      font-size: 16px;
+    }
+  }
+}

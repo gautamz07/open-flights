@@ -1,0 +1,57 @@
+@mixin SelectDropdown {
+
+  .select-dropdown {
+    $background-color: lighten($edit-panel-background-color, 15%);
+
+    position: relative;
+    &[data-dropdown-open='true'] > .dropdown-toggle {
+      color: $edit-panel-tool-active-color-deep;
+    }
+
+    button.dropdown-toggle {
+      background-color: $background-color;
+      padding: 7.5px 10px;
+      display: block;
+      width: 100%;
+      font-size: .875rem;
+      outline: none;
+      -webkit-border-radius: 3px;
+              border-radius: 3px;
+      span {
+        float: left;
+        line-height: 25px;
+        &:first-child {
+          text-align: left;
+          padding: 0 8px;
+          width: calc(100% - 20px);
+        }
+        &:last-child { width: 20px; }
+      }
+    }
+
+    ul.dropdown-collection {
+      background-color: $background-color !important;
+      margin: 0;
+      padding: 10px;
+      height: 140px;
+      overflow-y: scroll;;
+      list-style: none;
+      li {
+        font-size: .875rem;
+        cursor: pointer;
+        padding: 4px 8px;
+        color: $edit-panel-color;
+        &:hover { background-color: darken($background-color, 15%); }
+      }
+    }
+
+    .dropdown{
+      margin-left: 0; margin-right: 0;
+      .dropdown-controll {
+        top: calc(100% - 6px);
+        left: 0 !important;
+      }
+    }
+
+  }
+}

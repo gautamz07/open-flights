@@ -1,0 +1,22 @@
+.Text001 {
+  .section-container {
+
+    .H, .P { margin-bottom: 25px; }
+
+    padding: 0 55px;
+
+    @include mobile {
+      padding: 0 10px;
+    }
+  }
+}
+
+// legacy reserve
+.Element001 + .Text001,
+.Element002 + .Text001,
+.Element003 + .Text001,
+.Element004 + .Text001, {
+  .section-container { padding-top: 50px; }
+}
+.Text001:last-child .section-container { padding-bottom: 50px; }
+// legacy reserve

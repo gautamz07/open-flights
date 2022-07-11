@@ -1,0 +1,9 @@
+@import "redux_shared/mixin/base";
+@import "./components/**/*";
+
+#chat {
+
+  // Components
+  @include FbMessengerPanel
+  @include WhatsAppPanel
+}

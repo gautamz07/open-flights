@@ -1,0 +1,28 @@
+@mixin form-actions-navs {
+  position: fixed;
+  z-index: 900;
+  left: $navbar-width;
+  right: 0;
+  margin-bottom: 0;
+
+  @include transition-basic(left);
+
+  .btn, .btn.btn-default {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+.form-actions {
+  margin: 15px 0;
+
+  &.form-actions-bottom {
+    bottom: 0;
+    @include form-actions-navs;
+  }
+
+  &.form-actions-top {
+    top: 0;
+    @include form-actions-navs;
+  }
+}

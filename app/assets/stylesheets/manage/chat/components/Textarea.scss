@@ -1,0 +1,32 @@
+@mixin Textarea {
+  .textarea {
+    position: relative;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: solid 1px #e4ebef;
+    margin-bottom: 10px;
+
+    & > .placeholder {
+      position: absolute;
+      font-size: 14px;
+      padding: 10px;
+      line-height: 1.29;
+      text-align: left;
+      color: #798c9c;
+    }
+
+    & > textarea {
+      resize: none;
+      border: none;
+      box-shadow: none;
+      padding: 10px;
+      font-size: 14px;
+      line-height: 1.29;
+      color: #222222;
+      background: none;
+      &[disabled] {
+        opacity: 0.7;
+      }
+    }
+  }
+}

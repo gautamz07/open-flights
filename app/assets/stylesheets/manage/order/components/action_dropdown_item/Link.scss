@@ -1,0 +1,11 @@
+@mixin ActionsDropdownLinkItem {
+  .actions-dropdown-link-item {
+    @import "../../components_shared/action_dropdown_item";
+
+    @include action-dropdown-item;
+    
+    &.disabled a {
+      @include disabled
+    }
+  }
+}

@@ -1,0 +1,18 @@
+// Use this with webpacker to have assets defined in rails asset pipeline.
+//
+//   stylesheet_link_tag 'common', media: 'all'
+//   stylesheet_pack_tag 'checkout2', media: 'all'
+
+@import 'common/fonts';
+@import 'common/font/index';
+
+@import "redux_shared/common/variables";
+@import "redux_shared/common/fontello";
+@import "redux_shared/common/modals";
+@import "redux_shared/common/compatibility";
+@import "redux_shared/common/responsive";
+@import "redux_shared/common/responsive_class";
+@import "redux_shared/common/triangle";
+
+@import 'redux_shared/form/index';
+@import 'redux_shared/promiseModal/index';

@@ -1,0 +1,12 @@
+@import "./../../mixin/list_decoration";
+
+@mixin SignOut {
+  .sign-out {
+    @include manage-list-decoration;
+
+    color: black;
+    transition: background-color 0.3s ease-in-out;
+    &:hover{ color: black; background-color: #f7f9fa;; }
+    &:focus { outline: none; }
+  }
+}

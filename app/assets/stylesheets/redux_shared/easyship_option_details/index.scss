@@ -1,0 +1,118 @@
+@import "./mixin";
+@import './successful_modal';
+
+$separator-color: #d4d4d4;
+
+.easyship-option-details {
+  max-width: none;
+  .integration-fields {
+    padding: 0px 3rem;
+    background-color: #eff3f7;
+    min-height: 450px;
+    overflow: auto;
+    $gap: 1rem;
+    .previous-page {
+      font-size: 28px;
+      color: black;
+      line-height: 4rem;
+      margin-left: -10px;
+    }
+    .title {
+      line-height: 50px;
+      .title-image {
+        display: inline-block;
+        vertical-align: middle;
+        img {
+          width: 150px;
+          height: auto;
+          margin-left: -10px;
+        }
+      }
+      .title-text {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 24px;
+        .seperator {
+          margin-right: 20px;
+          @include seperator-line;
+        }
+      }
+      margin-bottom: $gap;
+    }
+    .description {
+      margin-bottom: $gap;
+      color: #575757;
+    }
+    .api-key {
+      @include integration-field-control;
+      margin-bottom: $gap;
+    }
+    .api-secret {
+      @include integration-field-control;
+      margin-bottom: $gap;
+    }
+    .access-token {
+      @include integration-field-control;
+      margin-bottom: $gap;
+    }
+    .save-btn {
+      @include integration-field-control;
+      margin-bottom: $gap;
+      border-radius: 3px;
+    }
+  }
+  .guides {
+    padding: 4rem 3rem;
+    background-color: #ffffff;
+    min-height: 500px;
+    .page-indicator {
+      overflow: auto;
+      line-height: 30px;
+      .ico-dot {
+        @include page-dot;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+    .page-next {
+      line-height: 30px;
+      .go-next-page {
+        .ico-arrow-right:before {
+          vertical-align: baseline;
+        }
+        float: right;
+      }
+    }
+    .page-window {
+      position: relative;
+      .page {
+        @include page-active-visibility;
+        .header {
+          font-size: 24px;
+          .page-number {
+            display: inline-block;
+            width: 40px;
+            text-align: center;
+            padding-right: 10px;
+            margin-right: 10px;
+            @include seperator-line;
+          }
+        }
+        &.guide-1 {
+          .button {
+            border-radius: 4px;
+          }
+          .sign-up-to-easyship {
+            background-color: white;
+            color: black;
+            border: 1px solid #cccccc;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+
+}

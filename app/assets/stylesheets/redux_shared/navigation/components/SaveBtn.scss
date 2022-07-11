@@ -1,0 +1,8 @@
+@mixin SaveBtn {
+  .save-btn{
+    a {
+      margin: 0 3px;
+      @include max-tablet { margin: 0; }
+    }
+  }
+}

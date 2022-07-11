@@ -1,0 +1,142 @@
+@import 'fonts';
+@import 'radio';
+
+@mixin triangle ($height, $width, $color: black) {
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 $width/2 $height $width/2;
+  border-color: transparent transparent $color transparent;
+}
+
+@mixin invisible-radio {
+  visibility: hidden;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+@mixin hide-webkit-input-spinner {
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@mixin underline-input-field {
+  border-radius: 0;
+  border-width: 0 0 1px 0;
+  border-color: transparent transparent #d7d7d7 transparent;
+  box-shadow: none;
+  &:hover {
+    border-color: transparent transparent $newManageBlue transparent;
+  }
+}
+
+#discounts {
+  @include fonts;
+  .form {
+    abbr[title=required] { display: none; }
+
+    color: #999999;
+    label {
+      font-weight: normal;
+    }
+    input[type='text'] {
+      @include underline-input-field;
+    }
+    input[type='number'] {
+      border-radius: 0;
+      border-width: 0 0 1px 0;
+      border-color: transparent transparent #d7d7d7 transparent;
+      box-shadow: none;
+      @include underline-input-field;
+      @include hide-webkit-input-spinner;
+    }
+    select {
+      @include underline-input-field;
+      -webkit-appearance: none;
+    }
+    .input-group:hover {
+      .input-group-addon {
+        border-color: transparent transparent $newManageBlue transparent;
+      }
+    }
+    .input-group-addon {
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      border-bottom: 1px solid #d7d7d7;
+    }
+    .discount-types {
+
+      text-align: center;
+      cursor: pointer;
+
+      .discount-types-option {
+
+        label { width: 100%; }
+
+        .panel {
+
+          cursor: pointer;
+          padding: 100px 10px 5px;
+          background-color: #f4f7fa;
+          position: relative;
+          box-shadow: none;
+          .panel-body {
+            color: black;
+            font-weight: normal;
+            padding: 15px;
+            min-height: 80px;
+          }
+          .activated-triangle {
+            display: none;
+          }
+          &.active {
+            .activated-triangle {
+              position: absolute;
+              left: 50%;
+              right: 0;
+              top: auto;
+              bottom: 0;
+              margin-left: -15px;
+              @include triangle(15px, 30px, white);
+              transform: rotate(180deg);
+              transform-origin: bottom;
+            }
+          }
+        }
+
+        input[type='radio'] {
+          @include invisible-radio;
+          &:checked + .panel { background-color: white; }
+          &:hover + .panel { background-color: white; }
+        }
+
+        &.discount-types-option-1 .panel { background: #f4f7fa image_url('manage/discounts/icon-discount-1.svg') no-repeat 50% 20%; }
+        &.discount-types-option-2 .panel { background: #f4f7fa image_url('manage/discounts/icon-discount-2.svg') no-repeat 50% 20%; }
+        &.discount-types-option-3 .panel { background: #f4f7fa image_url('manage/discounts/icon-discount-3.svg') no-repeat 50% 20%; }
+
+      }
+
+    }
+    .calculator-type {
+      label {
+        font-weight: 600;
+        color: #444444;
+        display: block;
+        font-size: 16px;
+        min-height: 24px;
+        input[type='radio'] {
+          @include invisible-radio;
+        }
+      }
+    }
+  }
+  .back-action {
+    margin-left: -5px;
+    a.ico-arrow-left { color: black; }
+  }
+}

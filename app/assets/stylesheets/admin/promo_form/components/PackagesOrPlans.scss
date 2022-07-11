@@ -1,0 +1,5 @@
+@mixin PackagesOrPlans {
+  .packages-or-plans {
+    @include MultipleChoices;
+  }
+}

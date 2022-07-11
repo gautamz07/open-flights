@@ -1,0 +1,16 @@
+.empty-cart {
+  padding-top: 105px;
+  padding-bottom: 40px;
+  // background-image: image_url('ui/cart.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 35px;
+  & > span {
+    background: none;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    color: #2A1E17 !important;
+    font-weight: initial;
+  }
+}

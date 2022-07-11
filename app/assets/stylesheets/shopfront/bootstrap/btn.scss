@@ -1,0 +1,125 @@
+.btn-default {
+
+  background-color: $defaultBtnColor;
+  color: $defaultBtnFontColor;
+
+  border: 1px solid $defaultMenuDivider;
+  border-radius: 8px;
+
+  &:hover, &:active, &:focus {
+    color: $defaultBtnHoverFontColor;
+    background-color: $defaultBtnHoverColor;
+    outline: none;
+  }
+
+  &[disabled] {
+    &, &:hover, &:active, &:focus {
+      opacity: 0.6;
+      color: $defaultBtnHoverFontColor;
+      background-color: $defaultBtnHoverColor;
+      outline: none;
+    }
+  }
+
+}
+
+.dropdown-caret {
+
+  background-color: transparent;
+  border: none;
+
+  &:hover, &:active, &:focus {
+    outline: none;
+    background-color: transparent;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .btn-default {
+    font-size: 14px;
+    padding: 11px 15px;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .btn-default {
+    font-size: 12px;
+    padding: 10px 11px;
+  }
+
+}
+
+.btn-clear {
+
+  background: transparent;
+  color: #2e2e30;
+  border: 1px solid #fff;
+
+  &:hover, &:active, &:focus{
+    background-color: #2e2e30;
+    color: #fff;
+  }
+
+}
+
+.btn-dark {
+
+  background-color: #2e2e30;
+  color: #fff;
+  border: 1px solid #fff;
+
+  &:hover, &:active, &:focus{
+    background-color: #fff;
+    color: #2e2e30;
+  }
+
+}
+
+.btn-clear-white {
+
+  background:transparent;
+  color: #fff;
+  border: 1px solid #fff;
+
+  &:hover, &:focusm &:active{
+    background-color: #fff;
+    color: #2e2e30;
+    border:1px solid #2e2e30;
+  }
+
+}
+
+.btn-white {
+
+  background-color: #fff;
+  color: #2e2e30;
+
+  &:hover, &:active, &:focus{
+    background-color: #2e2e30;
+    color: #fff;
+  }
+
+}
+
+.btn-cart-remove {
+  border: 1px solid;
+  border-radius: 100%;
+}
+
+.no-border-btn {
+
+  border: none;
+  background-color: transparent;
+  color: inherit;
+
+  &:hover, &:active, &:focus{
+    background-color: transparent;
+    color: #2e2e30;
+    text-decoration: underline;
+  }
+
+}

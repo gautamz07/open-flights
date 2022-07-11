@@ -1,0 +1,69 @@
+.table-backend {
+
+  margin-top: -2px;
+
+  thead {
+
+    th {
+      border: 0;
+      color: #444;
+      padding: 25px 12px 15px;
+    }
+
+  }
+
+  tbody td {
+
+    padding: 12px;
+
+    a {
+      text-decoration: none;
+      color: $defaultBlue;
+    }
+
+    a:hover { color: $defaultBlue; }
+
+  }
+
+  tbody tr {
+    &:hover { background-color: #eef7fa; }
+  }
+
+  tfoot { background-color: #f5f6f7; }
+
+  td.product-thumbnail { width: 120px; }
+
+  .thumbnail {
+
+    width: 50px;
+    height: 50px;
+
+    display: inline-block;
+    margin: 5px 0 0;
+
+    border: 0;
+    background-color: transparent;
+
+    img {
+      border: 2px solid #ddd;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  .grand-total {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+}
+
+.manage .table-backend.table-striped {
+
+  tbody tr, tbody td {
+    border: 0;
+  }
+
+}

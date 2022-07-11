@@ -1,0 +1,7 @@
+@mixin TextInputOverwrite {
+  input[type='text'] {
+    // border: 1px solid #cad5da;
+    border: 1px solid #d7d7d7;
+    border-radius: 2px;
+  }
+}

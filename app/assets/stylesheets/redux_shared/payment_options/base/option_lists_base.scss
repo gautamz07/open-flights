@@ -1,0 +1,46 @@
+@import "redux_shared/mixin/fonts";
+
+@mixin option-lists-base {
+  .option-lists-base {
+    [class^="ico-"]:before, [class*=" ico-"]:before {
+      line-height: 0;
+      font-size: 25px;
+      vertical-align: sub;
+      margin-right: 5px;
+    }
+
+    ._locale_title {
+      background-color: transparent !important;
+      h4, h5, h6 { font-size: 18px; }
+
+      @include mobile {
+        h4, h5, h6 {
+          font-size: 20px;
+          padding: 10px 0 0px;
+        }
+      }
+    }
+
+    ._main-container {
+      font-family: $fontBase;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #4c5667;
+      background-color: #fcfbfc;
+      padding: 25px 40px 1px;
+      margin-top: 20px;
+      .row {
+        background-color: #fff;
+      }
+    }
+
+    @include mobile {
+      ._main-container {
+        background: transparent;
+        padding: 0 0 50px 0;
+        margin-top: 0;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,38 @@
+@mixin SettingHeader($headbar_height) {
+  .setting-header {
+    height: $headbar_height;
+    border-bottom: 1px solid #eeeeee;
+    padding-left: 30px;
+    padding-right: 50px;
+    text-align: center;
+    .title {
+      color: #3f3f3f;
+      font-size: 14px;
+      font-family: "ProximaNova-Semibold", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      line-height: $headbar_height;
+    }
+    button {
+      &:hover {
+        cursor: pointer;
+      }
+      &:focus, &:active {
+        outline: none;
+      }
+      &.back-btn {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      &.save-btn {
+        color: #4ba4ea;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+}

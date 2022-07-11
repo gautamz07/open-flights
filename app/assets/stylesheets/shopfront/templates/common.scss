@@ -1,0 +1,87 @@
+body { background-color: #F7F7F7; }
+
+body a { color: #33bba9; }
+
+.btn-default {
+
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 6px;
+  border: none;
+  background-color: #34495E;
+
+  &:hover, &:active, &:focus {
+    color: #fff;
+    background-color: #2a3d4f;
+  }
+
+}
+
+.btn-remove, .btn-link {
+
+  color: #33bba9;
+
+  &:hover, &:focus, &:active { color: darken(#33bba9, 5); }
+
+}
+
+.btn-xs {
+  font-size: 12px;
+  padding: 10px 25px !important;
+}
+
+.btn-sm{
+  font-size: 14px;
+  padding: 14px 25px !important;
+}
+
+.btn-lg {
+  font-size: 18px;
+  padding: 18px 25px 20px 25px !important;
+}
+
+.pagination {
+
+  font-size: 10px;
+  font-weight: 600;
+  margin-bottom: 50px;
+
+  .prev, .next, .page {
+
+    a, &.current { background-color: white; }
+
+    &:hover a, &.current, &.current:hover {
+      color: white;
+      background-color: #2ea797;
+    }
+
+  }
+
+}
+
+.product_sale_label {
+  padding: 4px 12px;
+  position: absolute;
+  top: 0; right: 0;
+  z-index: 2;
+
+  font-family: 'Helvetica-Bold', 'Arial-Bold', sans-serif;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  text-align:left;
+  
+  &.red { background-color: #e22727; }
+  &.black { background-color: #303030; }
+}
+
+.shopfront.carts {
+
+  .panel-default {
+    border: 0;
+    box-shadow: none;
+  }
+
+}
+
+#payment-btn[disabled] { background-color: #34495E; }

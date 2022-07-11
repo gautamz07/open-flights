@@ -1,0 +1,111 @@
+#site-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 20em;
+  padding-top: 4.5rem;
+
+  &.loading {
+    &:after {
+      content: '';
+      background: image-url('ajax-spinner.svg') no-repeat right;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: translateY(-50%);
+      color: #bbb;
+      z-index: 10;
+    }
+  }
+}
+
+#preview-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.5rem;
+  min-width: 20em;
+  overflow: hidden;
+  background-color: white;
+  border-bottom: 1px solid #f7f7f7;
+  padding: 0.8rem 1rem;
+  @media screen and (min-width: 40em) {
+    padding: 0.8rem 3rem;
+  }
+
+  h4 {
+    margin-bottom: 0;
+    text-align: center;
+    color: black;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    padding: 0 2rem;
+    @media screen and (min-width: 20em) {
+      padding: 0 3.2rem;
+    }
+    @media screen and (min-width: 25em) {
+      padding: 0 5rem;
+    }
+    @media screen and (min-width: 30em) {
+      line-height: 2.8rem;
+      padding: 0;
+    }
+  }
+
+  .button {
+    border-radius: 25px;
+    margin-bottom: 0;
+    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    &:focus, &:hover {
+      outline: none;
+    }
+  }
+
+  .back-to-select {
+    width: 5.5rem;
+    color: #343539;
+    background-color: #E7EAEF;
+    padding-left: 0.5rem;
+    &::after {
+      content: 'Back';
+    }
+    @media screen and (min-width: 50em) {
+      width: 230px;
+      &::after {
+        content: 'Back to layout selection';
+      }
+    }
+  }
+
+  .next-to-edit {
+    width: 5.5rem;
+    background-color: #E32037;
+    float: right;
+    padding-right: 0.5rem;
+    &::before {
+      content: 'Edit';
+    }
+    @media screen and (min-width: 50em) {
+      width: 170px;
+      &::before {
+        content: 'Edit this layout';
+      }
+    }
+  }
+}
+
+#preview-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin-bottom: -5px;
+}

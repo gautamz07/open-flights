@@ -1,0 +1,47 @@
+@mixin TextInputGroup {
+  .text-input-group {
+    margin: 0;
+    text-align: left;
+    font-size: 0.875rem;
+
+    p {
+      font-size: inherit;
+      color: $edit-panel-color;
+      margin-bottom: 10px;
+      &.active { color: #449FDE; }
+    }
+    input, button {
+      margin: 0;
+      float: left;
+      outline: none;
+      height: 2.5rem;
+      box-shadow: none;
+      display: block;
+    }
+    input {
+      width: calc(100% - 70px);
+      color: #888888;
+      background: #222;
+      border-radius: 3px 0 0 3px;
+      border: 1px solid #555;
+      padding: 6px 12px;
+      font-size: 0.875rem;
+      letter-spacing: .6px;
+      transition: border-color .3s linear;
+      &:focus { color:white; border-color: #0d99cd; }
+      &::placeholder { color:#666 !important; }
+    }
+    button {
+      width: 70px;
+      padding: 0;
+      color: $edit-panel-color;
+      background-color: #3b9be3;
+      border-radius: 0 3px 3px 0;
+      cursor: pointer;
+      &:hover {
+        font-weight: 900;
+        background-color: darkness(#3b9be3, .2);
+      }
+    }
+  }
+}

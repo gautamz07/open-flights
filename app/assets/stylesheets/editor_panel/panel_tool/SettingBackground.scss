@@ -1,0 +1,58 @@
+@mixin SettingBackground {
+  .setting-background {
+    // font-family: 'ProximaNova-Regular';
+
+    .icon-button {
+      cursor: pointer;
+    }
+
+    .slider-input {
+      h4 {
+        color: rgba(255,255,255,0.8);
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+
+    .dropdown-controll > h4 {
+      font-size: 1rem;
+      padding-top: 10px;
+      // font-family: 'ProximaNova-Semibold';
+    }
+
+    .button-group{
+      text-align: left;
+    }
+
+    .button {
+      -webkit-border-radius: 3px;
+              border-radius: 3px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      font-size: 0.875rem;
+      width: 90px;
+      padding: 10px 0;
+      &.grey{
+        margin-right: 0px;
+        background-color: #717171;
+        &:hover{
+          background-color: #4b4b4b;
+        }
+      }
+      &.link{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0px;
+        background-color: #4b4b4b;
+        &:hover{
+          background-color: #5d5d5d;
+        }
+        &:last-child{
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .front { padding: 0 20px; }
+  }
+}

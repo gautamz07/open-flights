@@ -1,0 +1,42 @@
+@mixin ButtonList {
+  height: 50px;
+  button {
+    float: left;
+    height: 100%;
+    font-size: 16px;
+    color: #2199e8;
+    padding: 0;
+    background-color: white;
+    border-style: none;
+    outline: none !important;
+    -webkit-transition: all .3s ease-out;
+       -moz-transition: all .3s ease-out;
+        -ms-transition: all .3s ease-out;
+         -o-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    &.cancel-btn {
+      color: #444;
+      background-color: #e8e8e8;
+      &:focus, &:hover { background-color: #c8c8c8; }
+    }
+    &.confirm-btn {
+      color: #FFF;
+      background-color: #4ba4ea;
+      &:focus, &:hover { background-color: #2199e8; }
+    }
+  }
+
+  &[data-count='1'] {
+    button {
+      width: 100%;
+    }
+  }
+
+  &[data-count='2'] {
+    button {
+      width: 50%;
+    }
+  }
+}

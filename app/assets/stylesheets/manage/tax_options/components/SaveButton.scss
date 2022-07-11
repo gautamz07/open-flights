@@ -1,0 +1,16 @@
+@mixin SaveButton {
+  .save-btn {
+    // font-family: 'ProximaNova-Semibold';
+    background-color: #4ba4ea;
+    border-radius: 3px;
+    border: 0;
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    height: 40px;
+    padding: 12px 24px;
+    &:focus, &:active {
+      outline: none;
+    }
+  }
+}

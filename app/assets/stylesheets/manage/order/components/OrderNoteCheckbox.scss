@@ -1,0 +1,48 @@
+@mixin OrderNoteCheckbox {
+  $tooltip-bg-color: white;
+  $tooltip-width: 255px;
+  $tooltip-shadow-color: rgba(0,0,0,0.12);
+  $squares-width: 10px;
+  $triangle-height: ($squares-width * 1.414 / 2 - 1);
+
+  .order-note {
+    .checkbox-primary {
+      display: inline-block;
+      label {
+        font-family: 'ProximaNova-Bold';
+        color: #444444;
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .order-note-tooltip {
+    width: $tooltip-width;
+    height: 62.4px;
+    padding: 15px;
+    border-radius: 3px;
+    background-color: $tooltip-bg-color;
+    box-shadow: $tooltip-shadow-color 0 1px 3px 0 ;
+    border: solid 1px #e0e0e0;
+    opacity: 1;
+    &:after {
+      display: none;
+    }
+    .triangle-shape {
+      height: $squares-width;
+      width: $squares-width;
+      background-color: $tooltip-bg-color;
+      transform: rotateZ(45deg);
+      transform-origin: center;
+      position: absolute;
+      top: auto;
+      left: ($tooltip-width)-22;
+      right: auto;
+      bottom: (-$triangle-height)+2px;
+      &.at-bottom {
+        box-shadow: $tooltip-shadow-color 2px 2px 2px 0;
+      }
+    }
+  }
+}

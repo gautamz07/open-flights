@@ -1,0 +1,120 @@
+#refunds {
+  @import '../common/index';
+  @import '../common/legacy/table_backend';
+  @mixin text-field {
+    border-radius: 3px;
+    border: 1px solid #deecef;
+    box-shadow: none;
+  }
+
+  .panel-heading {
+    background-color: #f3f7fb;
+    border: none;
+    padding-top: 20px;
+    padding-left: 30px;
+    height: 70px;
+    font-size: 21px;
+    .order-numbers {
+      color: $newManageBlue;
+    }
+  }
+
+  .page-header.compact-top { margin-bottom: 0; }
+
+  .table-backend {
+    td:first-child, th:first-child { padding-left: 30px; }
+    td:last-child, th:last-child { padding-right: 30px; }
+
+    thead {
+      th {
+        padding-top: 40px;
+        font-weight: normal;
+        @include bold;
+      }
+    }
+
+    tbody {
+      tr {
+        background-color: #f7f9fa;
+      }
+      tr:nth-of-type(odd) {
+        background-color: #ffffff;
+      }
+      td {
+        padding: 8px 12px;
+        @include bold;
+        &:nth-child(2) {
+          width: 30%;
+        }
+        .form-group {
+          margin-bottom: 0;
+          input.form-control {
+            @include text-field;
+          }
+        }
+      }
+      .product-thumbnail {
+        width: 90px;
+      }
+    }
+
+    tfoot {
+      border-top: 1px solid #ddd;
+      background-color: transparent;
+      margin-top: 15px;
+
+      td {
+        border: none;
+        padding-bottom: 0;
+      }
+
+      tr:first-child td { padding-top: 20px; }
+      tr:last-child td { padding-bottom: 20px; }
+
+      .form_restock { margin-bottom: 0; }
+      .checkbox { margin: 0; }
+    }
+
+    td.fees-details {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .refund-panel {
+    .panel-body {
+      padding: 15px 30px;
+    }
+    label {
+      color: #9b9b9b;
+      font-weight: normal;
+    }
+    #form_amount {
+      @include text-field;
+    }
+    .form_amount {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .form-actions-bottom {
+      display: inline-block;
+      .btn.btn-default {
+        height: auto;
+        border-radius: 3px;
+      }
+    }
+    .form_reason textarea {
+      border: none;
+      box-shadow: none;
+      border-bottom: 1px solid #d7d7d7;
+      border-radius: 0;
+      max-width: 100%;
+      &:focus, &:active {
+        border-bottom-color: $newManageBlue;
+      }
+    }
+    .refundable {
+      padding: 20px 35px 20px 35px;
+      background-color: #f3f7fa;
+    }
+  }
+}

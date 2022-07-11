@@ -1,0 +1,17 @@
+@mixin ManageDropdown {
+  .manage-dropdown.tutoring {
+    a.current-list {
+      cursor: default;
+      color: #aaa;
+      &:hover { color: #aaa; }
+    }
+    li.link-list {
+      color: $inactive-text-color;
+      pointer-events: none;
+    }
+    li.link-list.active {
+      color: $nav-red;
+      pointer-events: all;
+    }
+  }
+}

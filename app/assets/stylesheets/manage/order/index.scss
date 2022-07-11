@@ -1,0 +1,52 @@
+
+@import "react-table";
+@import "./components/**/*";
+
+#order {
+  margin: 0px 20px 50px;
+
+  @include mobile {
+    margin: 0px 0 50px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include BulkActionsDropdown;
+  @include ActionsDropdownTd;
+  @include OrderTable;
+  @include OrderList;
+  @include OrderNoteCheckbox;
+  @include RegionalFilter;
+  @include RegionalFilterButton;
+  @include SearchBox;
+  @include StatusFilter;
+  @include FilterTab;
+  @include OrderPagination;
+  @include NoOrder;
+  @include Order;
+  @include Refund;
+  @include OrderActionBlock;
+  @include OrderStatusBlock;
+  @include BlockTag;
+  @include PageBackButton;
+  @include TabFilters;
+
+  .orders__actionpanel {
+    @include ActionPanel;
+  }
+
+
+  @include mobile {
+    .br-tablet {
+      display: none;
+    }
+  }
+}
+
+@include ActionsDropdown;
+@include ActionBtn;
+
+.order-invoice.fullscreen.printable {
+  @include Invoice;
+  @include PrintableInvoice;
+}

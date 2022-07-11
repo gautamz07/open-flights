@@ -1,0 +1,39 @@
+.HeaderContainer {
+  &.fixed_header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+
+  .current-inherit {
+    & {
+      color: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+      border-color: inherit;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .customer-name{
+    color: inherit;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 6px;
+  }
+
+  .deep-inherit {
+    &, div, p, span, a, nav, ul, li {
+      color: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+      border-color: inherit;
+    }
+    hr {
+      border-color: inherit;
+    }
+  }
+}

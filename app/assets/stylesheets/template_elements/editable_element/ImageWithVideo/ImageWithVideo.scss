@@ -1,0 +1,13 @@
+.ImageWithVideo {
+
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+}

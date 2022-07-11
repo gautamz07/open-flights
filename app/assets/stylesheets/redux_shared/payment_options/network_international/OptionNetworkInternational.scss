@@ -1,0 +1,12 @@
+@import 'redux_shared/payment_options/mixin/row';
+
+@mixin OptionNetworkInternational {
+  .option-network-international {
+    @include custom-vertical-center(210px);
+    .logo{
+      width: 120px;
+      margin-bottom: 0px;
+      margin-top: 20px;
+    }
+  }
+}

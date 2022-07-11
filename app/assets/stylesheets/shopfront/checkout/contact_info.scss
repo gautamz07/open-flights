@@ -1,0 +1,134 @@
+.cart-shipping-details {
+  abbr { display: none; }
+  .switchery { margin: 0; }
+
+  #new_carts_check_email_form {
+    width: 70%;
+    margin: auto;
+  }
+
+  // start form
+  form.checkout-contact-info-form {
+    .select2with-container .select2-arrow { display: none; }
+    .select2-container-active { border-bottom: 1px solid #3FB5F3; }
+
+    .contact-email-row {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      input { line-height: 30px; }
+    }
+
+    .checkbox {
+      display: flex;
+    }
+
+    .checkout-login-link {
+      background: #f1f1f1;
+      font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+      font-size: 13px;
+      color: #333333;
+      letter-spacing:0px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-left: -20px;
+      margin-right: -20px;
+      a { color: #333; // font-family: 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif; }
+    }
+
+    .row.full-name { padding-top: 10px; }
+    #phone-number { padding-right: 0; }
+
+    // start Login Account info form list
+    .cart-styled-title {
+      letter-spacing:0px;
+      text-align:left;
+      h3 {
+        font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif;
+        font-size: 20px;
+        color:#333333;
+        line-height:21px;
+        margin-top: 30px;
+      }
+      p {
+        font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+        font-size:13px;
+        color:#333333;
+        line-height:21px;
+        opacity:0.7;
+      }
+    }
+
+    .cart-styled-checkbox {
+      margin: 20px 0;
+      position: relative;
+
+      a.delete-button {
+        position: absolute;
+        right: -11px;
+        top: -11px;
+        z-index: 10;
+      }
+
+      .cart-styled-checkbox-input {
+        display: none;
+
+        &:checked + label {
+          border: 1px solid #3b9be3;
+          &:before { content: '\f10c'; }
+          .contact-info-option-title span.ico-arrow-down:before {
+            content: '\f10a';
+            overflow: hidden;
+          }
+          .contact-info-option-form { display: block; background: #FFF; }
+        }
+      }
+
+      label.contact-info-option {
+        font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+        position: relative;
+        cursor: pointer;
+        display: block;
+        padding: 16px 20px;
+        border-radius: 5px;
+        border: 1px solid #cecfcf;
+
+        &:before {
+          font-family: 'icons';
+          content: '';
+          color: #2C98F0;
+          height: 30px;
+          overflow: auto;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 20px;
+          font-size: 24px;
+          z-index: 1;
+        }
+
+        .contact-info-option-title {
+          opacity: .5;
+          span {
+            font-size: 22px;
+            &.ico-plus { margin-right: 10px; }
+            &.ico-arrow-down { float: right; }
+          }
+        }
+
+        .contact-info-option-form {
+          margin-top: 20px;
+          position: relative;
+          z-index: 5;
+          display: none;
+        }
+      }
+
+    }
+    // end Login Account info form list
+
+  } // end form
+
+}

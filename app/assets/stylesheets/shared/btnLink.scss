@@ -1,0 +1,18 @@
+@mixin ButtonLink {
+  background: none;
+  padding: 0;
+  min-width: auto;
+  border: none;
+  font-family: inherit;
+  color: #2199e8;
+  
+  &:hover {
+    box-shadow: none;
+    border:none;
+    background: none;
+  }
+}
+
+.btn--link {
+  @include ButtonLink
+}

@@ -1,0 +1,177 @@
+@import './mixin';
+
+.business_info {
+
+  max-width: 42rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 60px;
+
+  input[type='text'] {
+    margin-bottom: 0;
+    padding: 1.5rem;
+    border: none;
+    &:focus, &:active {
+      outline: 1px solid #4ba4ea;
+      box-shadow: none;
+    }
+  }
+
+  .errors {
+    input {
+      @include placeholder-color(#ff0000)
+      // background-color: #ffeeee;
+    }
+    .Select-control {
+      .Select-value .Select-value-label,
+      .Select-placeholder {
+        color: #ff0000;
+      }
+    }
+  }
+
+  .highlight {
+    input {
+      outline: 1px solid #4ba4ea;
+    }
+  }
+
+  .business-name {
+    &[data-validity='valid'],
+    &[data-validity*='success'] {
+      color: #69be7b;
+    }
+    &[data-validity*='invalid'],
+    &[data-validity*='failure'] {
+      color: #d62a41;
+    }
+    &[data-validity*='failure']:after {
+      content: attr(data-message);
+      line-height: 20px;
+      display: block;
+      text-align: center;
+      width: 100%;
+      height: 20px;
+      color: inherit;
+    }
+    &.success {
+      color: #69be7b;
+    }
+    &.errors {
+      color: #d62a41;
+    }
+    input {
+      color: inherit;
+    }
+  }
+
+  .district, .city, .province {
+    @include react-select
+    input[readonly] {
+      background-color: #fefefe;
+      cursor: text;
+    }
+  }
+
+  .description {
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 2rem;
+    img {
+      width: 290px;
+      margin-bottom: 0;
+    }
+    h3 {
+      font-family: 'ProximaNova-Light';
+      font-size: 28px;
+      line-height: 30px;
+      font-weight: 300;
+      font-style: normal;
+      margin: 1rem auto 0.5rem;
+      color: #171616;
+    }
+    p {
+      color: #707070;
+      margin: 0 auto;
+      font-size: 15px;
+    }
+
+    @include mobile {
+      h3 { font-size: 24px }
+      p { font-size: 16px }
+    }
+
+    // iphone5
+    @media (max-width: 320px) {
+      h3 { font-size: 21px }
+      p { font-size: 14px }
+    }
+  }
+
+  .business-phone {
+    position: relative;
+    span {
+      position: absolute;
+      top: 0.75rem;
+      left: 1.5rem;
+    }
+    input {
+      padding-left: 4rem;
+    }
+  }
+
+  .next {
+    height: 36px;
+    .button {
+      height: 100%;
+      margin-top: 1rem;
+      border-radius: 0.2rem;
+      font-weight: bold;
+    }
+  }
+
+  .seperate-line {
+    margin-top: 9px;
+    height: 1px;
+    opacity: 0.7;
+    border-bottom: solid 1px #c4cdd5;
+  }
+
+  .skip-geo-link {
+    text-align: center;
+    font-size: 14px;
+    color: #627382;
+
+    a {
+      color: #ff5c47;
+    }
+  }
+
+  .column, .columns {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 14px;
+  }
+
+  .BusinessInfoFormTab {
+    transition: .4s;
+    transform: translateX(10%);
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+
+    &.in {
+      opacity: 1;
+      transform: translateX(0px);
+      pointer-events: unset;
+      height: initial;
+    }
+
+    &.out {
+      transform: translateX(-10%);
+      overflow: hidden;
+      height: 0;
+    }
+  }
+
+}

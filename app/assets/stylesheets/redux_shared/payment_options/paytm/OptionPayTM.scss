@@ -1,0 +1,8 @@
+@import 'redux_shared/payment_options/mixin/row';
+
+@mixin OptionPayTM {
+  .option-paytm {
+    @include custom-vertical-center(130px);
+    @include logo(116px);
+  }
+}

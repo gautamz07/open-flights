@@ -1,0 +1,8 @@
+
+@mixin ScrollWindow($top_offset_down: 0px, $bottom_offset_up: 0px) {
+  .scroll-window {
+    position: relative;
+    height: calc(100% - #{$top_offset_down} - #{$bottom_offset_up});
+    overflow-y: scroll;
+  }
+}

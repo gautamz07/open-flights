@@ -1,0 +1,105 @@
+@mixin displayMovingAnimate {
+  &[data-tab] {
+    #example-color, #custom-color {
+      left: 100%;
+      transition: left .5s ease;
+    }
+  }
+  &[data-tab='example-color'] {
+    #example-color { left: 0; }
+    #custom-color { position: absolute; }
+  }
+  &[data-tab='custom-color'] {
+    #custom-color { left: 0; }
+    #example-color { position: absolute; }
+  }
+}
+
+@mixin displayToggleAnimate {
+  &[data-tab] {
+    #example-color, #custom-color {
+      left: 0;
+    }
+  }
+  &[data-tab='example-color'] {
+    #example-color { display: block; }
+    #custom-color { display: none; }
+  }
+  &[data-tab='custom-color'] {
+    #custom-color { display: block; }
+    #example-color { display: none; }
+  }
+}
+
+
+@mixin ColorPicker {
+  $width: 230px;
+  $padding-space: 19px;
+
+  .color-picker {
+    @include react_color_overwrite;
+
+    input { color: #000 !important; } // picker input
+    hr { margin: .8rem auto; border-color: #555; }
+
+    width: $width;
+    height: 100%;
+    background-color: inherit;
+
+    @include displayToggleAnimate;
+    &[data-tab] {
+      #example-color, #custom-color {
+        position: relative;
+        top: 0;
+        padding: $padding-space $padding-space 0 $padding-space;
+        background-color: inherit;
+      }
+    }
+
+    .tab-nav {
+      margin-bottom: 15px;
+      text-align: left;
+      cursor: pointer;
+
+      span {
+        display: inline-block;
+        font-size: 0.875rem;
+        font-weight: 300;
+        vertical-align: middle;
+      }
+      span.current-color {
+        position: relative;
+        margin-right: 14px;
+        width: 22px; height: 22px;
+        border: rgba(255, 255, 255, 0.4) 1px solid;
+        border-radius: 50%;
+        &:before, &:after {
+          @include abso-full-content;
+          content: '';
+          border-radius: 50%;
+        }
+        &:before { background: #fff; }
+        &:after { background: inherit; }
+        &[title~='transaprent'],
+        &[title~='rgba(0, 0, 0, 0)'],
+        &[title^='rgba'][title$=', 0)'] {
+          background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMUlEQVQ4T2NkYGAQYcAP3uCTZhw1gGGYhAGBZIA/nYDCgBDAm9BGDWAAJyRCgLaBCAAgXwixzAS0pgAAAABJRU5ErkJggg==") left center !important;
+        }
+      }
+
+      span.ico-arrow-right {
+        float: right;
+        font-size: 24px;
+        position: relative;
+        top: 0px;
+      }
+      span.ico-arrow-left {
+        font-size: 24px;
+        margin-right: 5px;
+        position: relative;
+        top: 0px;
+      }
+    }
+
+  }
+}

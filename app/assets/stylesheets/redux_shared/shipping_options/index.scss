@@ -1,0 +1,68 @@
+@import 'components/*';
+@import '../../shared/tooltipoverrides.scss';
+
+.ReactModalPortal { @import 'legacy_common/modal'; }
+.payment-shipping-integration {
+  @import 'legacy_common/base';
+  @import 'legacy_common/icons';
+
+  .button.enable {
+    border-radius: 3px;
+  }
+
+  .option-container {
+    margin-bottom: 20px;
+  }
+
+  h1{
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 300;
+    font-style: normal;
+    @include light;
+  }
+
+  & h1 {
+    text-align: left;
+
+    @mixin desktop {
+      text-align: center;
+    }
+
+    @mixin tablet {
+      text-align: center;
+    }
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+}
+
+#shipping_options {
+  @import './common/*'; // overwrite common
+  @import '../../shared/btnLink.scss';
+
+  & > .description {
+    @include OnboardDescription;
+  }
+
+  .main-container {
+    @include CourierGroup;
+    @include OptionEasyship;
+    @include OptionAramex;
+    @include OptionOwnShipping;
+    @include OptionSelfCollect;
+    @include OptionShipyaari;
+    @include OptionNinjavan;
+    @include ShippingCostForm;
+  }
+}
+
+.ReactModalPortal {
+  .react-form-modal-overlay {
+    .react-modal {
+      @include ModalEasyship;
+    }
+  }
+}

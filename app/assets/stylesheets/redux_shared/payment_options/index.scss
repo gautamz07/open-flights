@@ -1,0 +1,44 @@
+@import './base/*';
+@import 'components/*';
+
+@import './cash_on_delivery/*';
+@import './citrus_pay/*';
+@import './paypal/*';
+@import './offline_payment/*';
+@import './network_international/*';
+@import './ipay88/*';
+@import './paytm/*';
+@import './payu/*';
+
+#payment_options {
+  @include mobile {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @include Buttons;
+  @include IntroDescription;
+
+  @include option-lists-base;
+  @include option-list-base;
+  @include OptionCashOnDelivery;
+  @include OptionCitruspay;
+  @include OptionPaypal;
+  @include OptionOfflinePayment;
+  @include OptionNetworkInternational;
+  @include OptionPayTM;
+  @include OptionPayu;
+}
+
+.ReactModalPortal {
+  @include PaymentOptionPopupModal;
+
+  @include modal-content-choose-options-base;
+  @include ChooseOptionsPaypal;
+  @include ChooseOptionsCitrusPay;
+  
+  @include modal-input-form-base;
+  @include EditModalPaypal;
+  @include EditModalPayTM;
+  @include EditModalIPay88;
+}

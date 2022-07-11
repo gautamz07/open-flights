@@ -1,0 +1,68 @@
+@mixin SliderInput {
+  .slider-input {
+    padding: 10px 7px;
+
+    h4 {
+      // font-family: 'ProximaNova-Regular';
+      text-align: center;
+      font-size: .875rem;
+      line-height: 2.5;
+    }
+
+    &[data-disable='true'] {
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    // rc_slider overwrite
+    @include rc_slider;
+    .rc-slider-handle {
+      margin-top: -6px;
+      width: 16px; height: 16px;
+      border: none;
+      box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.9);
+    }
+    .rc-slider-rail {
+      height: 2px;
+      background-color: transparent;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#236ea0+0,38d0ff+100&0.1+0,1+70 */
+      background: -moz-linear-gradient(left, rgba(35,110,160,0.1) 0%, rgba(50,179,227,1) 70%, rgba(56,208,255,1) 100%); /* FF3.6-15 */
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(35,110,160,0.1)), color-stop(70%,rgba(50,179,227,1)), color-stop(100%,rgba(56,208,255,1))); /* Chrome4-9,Safari4-5 */
+      background: -webkit-linear-gradient(left, rgba(35,110,160,0.1) 0%,rgba(50,179,227,1) 70%,rgba(56,208,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: -o-linear-gradient(left, rgba(35,110,160,0.1) 0%,rgba(50,179,227,1) 70%,rgba(56,208,255,1) 100%); /* Opera 11.10-11.50 */
+      background: -ms-linear-gradient(left, rgba(35,110,160,0.1) 0%,rgba(50,179,227,1) 70%,rgba(56,208,255,1) 100%); /* IE10 preview */
+      background: linear-gradient(to right, rgba(35,110,160,0.1) 0%,rgba(50,179,227,1) 70%,rgba(56,208,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a236ea0', endColorstr='#38d0ff',GradientType=1 ); /* IE6-9 */
+    }
+    .rc-slider-track {
+      background-color: transparent;
+      // background-color: $edit-panel-tool-active-color-deep;
+      // background-color: $edit-panel-tool-active-color;
+    }
+
+    // custom-tooltip
+    .rc-slider-handle:hover .custom-tooltip { opacity: 1; }
+    .custom-tooltip {
+      $width: 24px;
+      $height: 22px;
+      $pointer-height: 4px;
+      $bgColor: rgba(0, 0, 0, .7);
+      position: absolute;
+      top: - ($height + $pointer-height + 10px);
+      left: - ($width/2/2);
+      background-color: $bgColor;
+      font-size: 12px;
+      border-radius: 4px;
+      width: 24px; height: 24px; line-height: 24px;
+      &:before {
+        @include arrow-down($pointer-height, $bgColor);
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        margin: auto;
+      }
+      &[data-dragging] { opacity: 0; transition: opacity .2s ease-in; }
+      &[data-dragging='true'] { opacity: 1; }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@mixin SettingLinkGroup {
+  .inbound-select-dropdwon-group {
+    p {
+      font-size: 0.875rem;
+      color: $edit-panel-color;
+      margin-bottom: 8px;
+      &.active { color: #449FDE; }
+    }
+  }
+
+  .external-add-link-group {
+    p {
+      font-size: 0.875rem;
+      color: $edit-panel-color;
+      margin-bottom: 8px;
+      &.active { color: #449FDE; }
+    }
+
+    .input-group {
+      margin: 0;
+      input, button {
+        margin: 0;
+        float: left;
+        outline: none;
+        height: 2.5rem;
+        box-shadow: none;
+        display: block;
+      }
+      input {
+        width: calc(100% - 70px);
+        color: lighten($edit-panel-border-color, 20%);
+        background: #222;
+        border-radius: 3px 0 0 3px;
+        border: 1px solid #555;
+        padding: 6px 12px;
+        font-size: 0.875rem;
+        letter-spacing: .6px;
+        transition: border-color .3s linear;
+        &:focus { color:white; border-color: #0d99cd; }
+        &::placeholder { color:#666 !important; }
+      }
+      button {
+        width: 70px;
+        padding: 0;
+        color: $edit-panel-color;
+        background-color: darkness($edit-panel-tool-active-color-deep, .2);
+        border-radius: 0 3px 3px 0;
+        cursor: pointer;
+        &:active { font-weight: 900; background-color: #449FDE; }
+      }
+    }
+  }
+}

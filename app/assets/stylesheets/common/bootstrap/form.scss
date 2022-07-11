@@ -1,0 +1,32 @@
+.form, .simple_form {
+
+  .form-actions { margin-bottom: 32px; }
+
+  .has-error {
+
+    .form-control, .input-group-addon {
+      box-shadow: none;
+      border-bottom-color: #a94442;
+    }
+
+    .control-label { color: #a94442; }
+
+    .help-block {
+      font-size: 12px;
+      color: #e95664;
+    }
+
+  }
+
+  .panel{
+
+    .panel-heading{
+      padding:0 0;
+
+      h2{
+        font-weight: 400;
+      }
+    }
+  }
+
+}

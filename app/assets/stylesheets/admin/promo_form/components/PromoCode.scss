@@ -1,0 +1,9 @@
+@mixin PromoeCode {
+  .promo-code {
+    @include CommonField;
+    .field {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

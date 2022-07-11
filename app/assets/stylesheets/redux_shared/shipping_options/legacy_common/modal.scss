@@ -1,0 +1,149 @@
+@import 'redux_shared/shipping_options/mixin/base';
+@import 'redux_shared/shipping_options/mixin/row';
+@import 'redux_shared/shipping_options/mixin/react_select';
+
+.react-form-modal-overlay {
+    @include icon-base;
+    @include react_select;
+
+    overflow: scroll;
+    padding: 130px 50px 80px 50px;
+
+    .react-modal {
+      background-color: #FFF;
+      .splitter {
+        border-right: 1px solid rgba(151, 151, 151, 0.4);
+      }
+
+      &.aramex { 
+        width: 590px;
+        .Select-menu {
+          max-height: 160px;
+        }
+      }
+
+      &.shipyaari-edit, &.paypal-edit{ width: 440px; }
+      &.aramex-details {
+        width: 619px;
+        border: 0;
+        padding: 0;
+        padding-bottom: 20px;
+      }
+
+      width: 494px;
+      color: $descriptionColor;
+      padding-top: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 30px;
+
+      p { font-size: 14px; color: #666; }
+
+      input[type='text'] {
+        font-size: 16px;
+        height: 45px;
+      }
+
+      .title {
+        color: #000;
+        font-size: 24px;
+        margin-right: 15px;
+        &.edit { margin-left: 15px; }
+      }
+
+      .modal-title {
+        margin-bottom: 20px;
+        @include logo(110px);
+      }
+
+      .button {
+        line-height: 1.5;
+        width: 100%;
+        outline: none;
+        &.edit {
+          background: white;
+          color: #222222;
+          border: 1px solid #d1d1d1;
+        }
+      }
+
+      .citruspay {
+        .modal-title { @include logo(90px); }
+      }
+
+      .paypal, .shipyaari {
+        img.logo { max-width: none; }
+      }
+
+      .aramex {
+        @include logo(128px);
+
+        .modal-title {
+          @include logo(130px);
+          .logo {
+            margin-top: 5px;
+          }
+        }
+
+        &.details {
+          label {
+            color: #aaa;
+            font-size: 12px;
+            font-weight: 200;
+          }
+          input {
+            padding: 0;
+            border: 0;
+            border-bottom: 1px solid #d7d7d7;
+            border-radius: 0;
+            background-color: transparent;
+            text-shadow: 0px 0px 0px #000;
+            box-shadow: none;
+          }
+
+          .modal-title {
+            font-size: 21px;
+            padding-top: 15px;
+          }
+
+          .description {
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
+
+        .Select-control {
+          font-size: 16px;
+          margin: 0 0 1rem;
+        }
+      }
+
+      .shipyaari {
+        @include custom-vertical-center(66px);
+        @include logo(45px);
+        .logo { margin-top: 3px; }
+        .logo-title, .logo-sub-title { margin-left: -10px; }
+        .logo-title {
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .logo-title:nth-child(2) {
+          margin-top: -3px;
+          margin-bottom: 6px;
+        }
+        .logo-sub-title {
+          font-size: 12px;
+          opacity: 0.6;
+          color: #444444;
+        }
+
+        &.edit { .title { font-size: 21px; } }
+      }
+
+    }
+
+    @include mobile {
+      // padding: 130px 10px 80px 10px;
+      .react-modal { width: 100%; }
+    }
+  }

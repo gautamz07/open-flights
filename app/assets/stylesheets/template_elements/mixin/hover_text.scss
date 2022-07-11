@@ -1,0 +1,27 @@
+@mixin hover_text {
+  visibility: hidden;
+  z-index: 1;
+  content: 'Click to edit';
+  position: absolute;
+  top: 0;
+  left: 0; right: 0;
+  margin: auto;
+  max-width: 96px;
+  line-height: 1;
+  padding: 8px 5px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  background-color: $editable-outline-color;
+  opacity: .95;
+  pointer-events: none;
+  font-family: 'ProximaNova-Regular' !important;
+}
+
+@mixin hover_text_display($visible) {
+  &::before { visibility: $visible !important; }
+}
+
+@mixin hover_text_position($top) {
+  &::before { top: $top; }
+}

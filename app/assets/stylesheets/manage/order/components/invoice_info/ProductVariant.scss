@@ -1,0 +1,31 @@
+$circle-width: 15px;
+$image-width: 15px;
+
+@mixin ProductVariant {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .visual {
+    font-size: 0;
+    line-height: 0;
+    padding: 3px 0;
+    margin: 0 5px 0 0;
+    .image {
+      display: inline-block;
+      width: $image-width;
+      height: $image-width;
+      background-size: contain;
+      border-radius: $borderRadiusMinor;
+    }
+    .color {
+      display: inline-block;
+      width: $circle-width;
+      height: $circle-width;
+      border-radius: $borderRadiusMinor;
+    }
+  }
+  .text {
+    font-size: 0.7rem;
+    color: $textVariationOne;
+  }
+}

@@ -1,0 +1,25 @@
+@mixin IconButton {
+  .icon-button {
+    button {
+      span {
+        font-size: 12px;
+        margin-left: 5px;
+        font-family: 'ProximaNova-Light';
+      }
+    }
+
+    &.active button:before {
+      border-radius: 5px;
+      background-color: #f4f4f4;
+    }
+
+    @include max-tablet {
+      font-size: 14px;
+      button { display: inline-block; }
+    }
+  }
+  .new-tag-top {
+    position: absolute;
+    top: 10%;
+  }
+}

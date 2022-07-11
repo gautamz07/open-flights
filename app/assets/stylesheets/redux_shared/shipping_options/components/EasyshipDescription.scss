@@ -1,0 +1,10 @@
+@mixin EasyshipDescription {
+  .easyship-option-description {
+    .links {
+      .divide-line {
+        margin: 0 10px;
+        color: #e2e7ea;
+      }
+    }
+  }
+}

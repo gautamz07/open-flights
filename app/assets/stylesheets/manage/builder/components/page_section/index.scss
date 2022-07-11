@@ -1,0 +1,23 @@
+@mixin PageSectionSidebar {
+  $headbar_height: 50px;
+
+  .page-section-sidebar {
+    width: 100%;
+    background: #ffffff;
+    border-right: 1px solid #eeeeee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @include PageSectionHeadBar($headbar_height);
+    @include PageSectionTypeList;
+    @include PageSectionList;
+    .scroll-window {
+      position: relative;
+      height: calc(100% - #{$headbar_height});
+      overflow-x: hidden;
+    }
+  }
+}

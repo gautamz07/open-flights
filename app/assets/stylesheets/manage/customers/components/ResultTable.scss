@@ -1,0 +1,47 @@
+@mixin ResultTable {
+  .custom-table {
+    .ant-table-thead,
+    .ant-table-tbody {
+      >tr {
+        >th:first-child {
+          text-align: left;
+          padding-left:0;
+        }
+        >th {
+          text-align: center;
+        }
+        >th:last-child {
+          text-align: right;
+        }
+        >td:first-child {
+          text-align: left;
+          padding-left:0;
+        }
+        >td {
+          text-align: center;
+        }
+        >td:last-child {
+          text-align: center;
+        }
+        >td.order-actions {
+          text-align: right;
+        }
+
+        >td.customer_name,
+        >td.order_status,
+        >td.payment_status {
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    .no__record {
+      >p {
+        color: #637381;
+        font-size: 1.31rem;
+        margin-bottom: 1rem;
+        font-family: $fontBase;
+      }
+    }
+  }
+}

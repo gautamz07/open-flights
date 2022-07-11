@@ -1,0 +1,33 @@
+.builder-products-pane-search {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 20px;
+  line-height: 50px;
+  background-color: white;
+
+  input {
+    width: 240px;
+    border: none;
+    padding: 1rem 10px;
+    font-size: 14px;
+    outline: none;
+    vertical-align: top;
+  }
+
+  .ico-search::before {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  a.ico-close {
+    color: $side-nav-text-color;
+    cursor: pointer;
+    &:hover {
+      color: lighten($side-nav-text-color, 40%);
+      text-decoration: none;
+    }
+  }
+
+}

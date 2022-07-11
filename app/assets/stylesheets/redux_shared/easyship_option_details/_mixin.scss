@@ -1,0 +1,30 @@
+@mixin integration-field-control {
+  height: 50px;
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin seperator-line {
+  border-right: 1px solid #d4d4d4;
+}
+
+@mixin page-dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #dde5eb;
+  &.active {
+    background-color: #4ba4ea;
+  }
+}
+
+@mixin page-active-visibility {
+  display: none;
+  &.active {
+    display: block;
+  }
+}

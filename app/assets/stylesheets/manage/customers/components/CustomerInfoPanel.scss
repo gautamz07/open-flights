@@ -1,0 +1,40 @@
+$staticHeight: 140px;
+
+@mixin CustomerInfoPanel {
+  padding: 0;
+  font-size: 0.87rem;
+  line-height: 1.42857;
+  color: $textVariationOne;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  min-height: $staticHeight;
+  max-height: $staticHeight;
+  border-radius: $borderRadiusMinor;
+  box-shadow: $boxShadowMinor;
+
+  .thumbnail {
+    min-height: $staticHeight;
+    min-width: $staticHeight;
+  }
+
+  .panel-info {
+    padding: 1.87rem 1.25rem;
+    overflow: hidden;
+  }
+  .title {
+    font-size: 21px;
+    font-family: $fontMedium;
+    &--small {
+      font-size: 1rem;
+    }
+  }
+  .dl-horizontal {
+    @include DlHorizontal(50px);
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: $textDarkVariationOne;
+  }
+}

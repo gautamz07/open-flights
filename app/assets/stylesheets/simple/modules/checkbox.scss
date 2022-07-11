@@ -1,0 +1,54 @@
+.form .checkbox, .simple_form .checkbox {
+
+  label { padding-left: 35px; }
+
+  input[type=checkbox] {
+
+    margin-left: -35px;
+
+    outline: 0;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+  }
+
+  input[type=checkbox]:before {
+
+    position: absolute;
+    top: -8px;
+    left: 0;
+
+    display: block;
+    cursor: pointer;
+
+    border-radius: 24px;
+    border: 1px solid #d7d7d7;
+    border: 2px solid rgba(white, 0.2);
+
+    width: 24px;
+    height: 24px;
+    
+    content: "";
+    background-color: transparent;
+
+  }
+
+  input[type=checkbox]:checked:before {
+
+    font-family: 'fontello';
+    content: '\e812';
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+    padding-top: 4px;
+    border: 1px solid #5ca3b7;
+    background: #5ca3b7;
+
+    text-align: center;
+    vertical-align: middle;
+
+  }
+
+} // end of .form .checkbox, .simple_form .checkbox

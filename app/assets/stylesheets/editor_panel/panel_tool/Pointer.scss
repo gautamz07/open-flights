@@ -1,0 +1,23 @@
+@mixin Pointer {
+  .pointer {
+    position: absolute;
+    top: 100%;
+    left: 18px;
+    @include arrow-down(6px, $edit-panel-background-color)
+  }
+}
+
+@mixin _pointer_vertical_bottom {
+  .pointer {
+    top: initial;
+    bottom: 100%;
+    @include arrow-up(6px, $edit-panel-background-color)
+  }
+}
+
+@mixin _pointer_horizontal_right {
+  .pointer {
+    left: initial;
+    right: 18px;
+  }
+}

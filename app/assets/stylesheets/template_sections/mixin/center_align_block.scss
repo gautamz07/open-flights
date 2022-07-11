@@ -1,0 +1,18 @@
+  /* 
+    !! If use this mixin to align middle content,
+    please must be sure
+     page_builder: edit correctly
+     shopfront: background image correctly
+  */
+
+@mixin CenterAlignBlock ($width: 80%) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  width: $width;
+  // !! z-index must be eqaul to conent of editable element, such as .H .P
+  z-index: 3; 
+}

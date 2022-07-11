@@ -1,0 +1,39 @@
+@mixin custom-checkbox($color, $bg-color) {
+  label {
+    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    font-size: 14px;
+    color: $color;
+    opacity: 0.85;
+    margin-left: 16px;
+    line-height: 10px;
+  }
+  input[type=checkbox] {
+    outline: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  input[type=checkbox]::before {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    display: block;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+  }
+  input[type=checkbox]:not(:checked)::before {
+    content: "";
+  }
+  input[type=checkbox]:checked::before {
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+    border: 1px solid $bg-color;
+    background: $bg-color;
+    text-align: center;
+    vertical-align: middle;
+  }
+}

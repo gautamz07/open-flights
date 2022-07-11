@@ -1,0 +1,66 @@
+@mixin css-user-select($val) {
+  -webkit-user-select: $val;
+     -moz-user-select: $val;
+      -ms-user-select: $val;
+          user-select: $val;
+}
+
+@mixin css-filter($val) {
+  -webkit-filter: $val;
+          filter: $val;
+}
+
+@mixin css-box-shadow($val) {
+  -webkit-box-shadow: $val;
+     -moz-box-shadow: $val;
+          box-shadow: $val;
+}
+
+@mixin css-transition($val) {
+  -webkit-transition: $val;
+     -moz-transition: $val;
+      -ms-transition: $val;
+       -o-transition: $val;
+          transition: $val;
+}
+
+@mixin css-transform($val) {
+  -webkit-transform: $val;
+     -moz-transform: $val;
+      -ms-transform: $val;
+       -o-transform: $val;
+          transform: $val;
+}
+
+@mixin transform-origin($val) {
+  -webkit-transform-origin: $val;
+     -moz-transform-origin: $val;
+      -ms-transform-origin: $val;
+       -o-transform-origin: $val;
+          transform-origin: $val;
+}
+
+@mixin css-transform-style($val) {
+  -webkit-transform-style: $val;
+     -moz-transform-style: $val;
+          transform-style: $val;
+}
+
+@mixin css-backface-visibility($val) {
+  -webkit-backface-visibility: $val;
+     -moz-backface-visibility: $val;
+          backface-visibility: $val;
+}
+
+@mixin css-perspective($val) {
+  -webkit-perspective: $val;
+     -moz-perspective: $val;
+          perspective: $val;
+}
+
+@mixin css-user-select($val) {
+  -webkit-user-select: $val;
+     -moz-user-select: $val;
+      -ms-user-select: $val;
+          user-select: $val;
+}

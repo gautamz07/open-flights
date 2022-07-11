@@ -1,0 +1,16 @@
+@mixin FbMessengerPanel {
+  .fb-messenger-panel {
+    @import "../components_shared/panel";
+    @import "../components_shared/panel_info";
+
+    .control {
+      @include Textarea
+      .textarea {
+        height: 78.5px;
+      }
+
+      @import "../components_shared/save_btn";
+      @import "../components_shared/enabled_pane";
+    }
+  }
+}

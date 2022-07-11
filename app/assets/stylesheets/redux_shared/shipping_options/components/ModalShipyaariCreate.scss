@@ -1,0 +1,32 @@
+.shipyaari{
+  &_logo{
+      width: 10rem;
+    }
+    &_form_field{
+          margin-bottom: 0.8rem;
+  }
+  &_create{
+      // display: inline-block;
+      // margin: 0.7rem 0;
+      padding-top: 1rem ;
+      & > *{
+          margin-bottom: 0.7rem;
+      }
+      &-loader_container{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 13rem
+      }
+  }
+  }
+  .change_phone{
+    font-family: 'Proxima Nova', 'ProximaNova-Regular';
+    font-size: .8rem;
+  }
+
+  .shipyaari_modal_logo{
+    @include mobile {
+      width: 5rem
+    }
+  }

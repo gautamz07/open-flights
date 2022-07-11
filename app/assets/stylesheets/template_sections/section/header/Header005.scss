@@ -1,0 +1,17 @@
+.Header005 {
+  .rwd-box {
+    @include min-desktop {
+      .logo {
+        margin: 0 auto;
+      }
+      .nav ul {
+        text-align: center;
+      }
+      .nav {
+        .nav-menu {
+          max-width: 90%;
+        }
+      }
+    }
+  }
+}

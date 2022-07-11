@@ -1,0 +1,35 @@
+.Layout018 {
+  .section-container {
+    @include wide-desktop {
+      display: table;
+      width: 100%;
+    }
+  }
+
+  .block_1 {
+    display: table;
+    width: 100%;
+    .block_1_2 {
+      padding: 0;
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .grid-image .Img {
+    margin: 0 0 -1px 0;
+    object-fit: cover;
+    object-position: left;
+
+    width: 100%;
+    @include mobile { height:80vw; object-fit: cover; float: none; }
+  }
+
+  .layout-description {
+    padding: 50px 20px 50px 8vw;
+    margin: 0 auto;
+
+    @include max-tablet { padding: 100px 60px 30px 60px; }
+    @include mobile { padding: 80px 30px 30px 30px; }
+  }
+}

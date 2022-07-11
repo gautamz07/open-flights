@@ -1,0 +1,39 @@
+.pagination {
+
+  span { white-space: normal; }
+
+  .prev, .next, .page {
+
+    a, &.current {
+      color: black;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      padding: 6px 12px;
+      margin: 0 5px;
+
+      &:hover {
+        color: white;
+        background-color: #ddd;
+        text-decoration: none;
+      }
+
+    }
+
+    &.current {
+      color: white;
+      background-color: #ddd;
+      text-decoration: none;
+    }
+
+  }
+
+  .page {
+
+    a, &.current {
+      border-radius: 20px;
+      margin: 0 1px;
+    }
+
+  }
+
+}

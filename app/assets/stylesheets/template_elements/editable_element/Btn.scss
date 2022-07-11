@@ -1,0 +1,16 @@
+.Btn {
+  position: relative; // for editor, hover-text parent
+  margin: 0 !important; // do not change margin, parse for edtior padding
+  display: inline-block;
+
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  padding: 14px 25px;
+
+  // !! below property is define by Btn.js
+  // color: black;
+  // background: white;
+  // text-align: center;
+  // border: 1px solid #bbbbbb;
+}
+

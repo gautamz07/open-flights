@@ -1,0 +1,38 @@
+@mixin RateInput($sign-width: 20px) {
+  .rate-input {
+    position: relative;
+    border: 1px solid #cad5da;
+    border-radius: 3px;
+    transition: border-color 0.25s ease-in-out;
+    padding: 10px;
+    line-height: normal;
+
+    .rate-input-field {
+      margin: 0;
+      padding: 0;
+      vertical-align: inherit;
+      width: calc(100% - #{$sign-width});
+      font-size: inherit;
+      text-align: inherit;
+      box-shadow: inherit;
+      border: none;
+      display: inline-block;
+      height: 100%;
+      &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+    .percent-sign {
+      width: $sign-width;
+      color: #0a0a0a;
+      vertical-align: inherit;
+      font-size: inherit;
+      display: inline-block;
+      text-align: center;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+      line-height: inherit;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@mixin TextAlign {
+  .text-align {
+
+    .icon-option { margin-right: 0; }
+
+    span { @include icon-size($edit-panel-tool-icon-size * 0.7); }
+    span.ico-arrow-down {
+      position: relative;
+      top: -2px;
+      left: -2px;
+      &:before{
+        font-size: 13px;
+      }
+    }
+
+    ul {
+      padding: 4px;
+      margin: 0;
+
+      li {
+        @include data-hover-controll;
+        @include data-active-controll;
+        &[data-active='false'] { cursor: pointer; }
+        list-style: none;
+        margin-bottom: 4px;
+      }
+    }
+
+  }
+}

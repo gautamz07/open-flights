@@ -1,0 +1,56 @@
+.social-link-list {
+  .pre-text {
+    @include css-user-select(none);
+    display: inline-block;
+    line-height: 30px;
+    margin: 0 10px;
+    cursor: default;
+  }
+  .social-icons {
+    display: inline-block;
+    margin-bottom: $text-default-margin-bottom/2;
+    a {
+      display: inline-block;
+      margin: 0 10px;
+      &:hover{ opacity: .7; }
+      span {
+        display: inline-block;
+        text-decoration: none;
+        vertical-align: middle;
+        border-radius: 100%;
+        // font-size: setting with text size value;
+        // line-height: setting with text size value;
+        &:before { margin: 0; }
+      }
+    }
+  }
+
+  @include mobile {
+    .pre-text {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .social-icons {
+      width: 100%;
+      text-align: center;
+      a { margin-top: 5px; margin-bottom: 5px; }
+    }
+  }
+}
+
+
+@mixin social-font-settings($font-size, $line-height){
+  .social-link-list .social-icons span {
+    font-size: #{$font-size}px;
+    line-height: $line-height;
+  }
+}
+.text-size-xxs { @include social-font-settings(17, 1.47) }
+.text-size-xs { @include social-font-settings(21, 1.42) }
+.text-size-s { @include social-font-settings(24, 1.37) }
+.text-size-m { @include social-font-settings(30, 1.33) }
+.text-size-l { @include social-font-settings(36, 1.3) }
+.text-size-xl { @include social-font-settings(48, 1.25) }
+.text-size-xxl { @include social-font-settings(60, 1.1) }

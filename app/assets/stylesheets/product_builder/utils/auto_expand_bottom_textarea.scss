@@ -1,0 +1,22 @@
+.auto-expand-bottom-textarea {
+  height: 100px;
+  position: relative;
+  cursor: text;
+
+  > textarea {
+    min-height: 0;
+    height: auto;
+    resize: none;
+    position: absolute;
+    bottom: 0;
+
+    &:not(.scrolling) {
+      overflow-y: hidden;
+    }
+  }
+
+  @include max-tablet {
+    height: 85px;
+    margin-bottom: 10px;
+  }
+}

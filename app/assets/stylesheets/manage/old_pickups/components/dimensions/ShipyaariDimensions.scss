@@ -1,0 +1,35 @@
+@mixin ShipyaariDimensions {
+  .shipyaari-dimensions {
+    text-align: left;
+    padding: 0 10px 10px 10px;
+    .weight-field, .dimension-field {
+      @include InlineField;
+      margin-bottom: 1rem;
+      label {
+        font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+        font-size: 14px;
+        color: #212121;
+        font-weight: bold;
+        abbr {
+          border-bottom: none !important;
+          cursor: inherit !important;
+          text-decoration: none !important;
+        }
+      }
+    }
+    .field {
+      margin-bottom: 1em;
+      @include PotraitField;
+      label {
+        color: #aaaaaa;
+        abbr {
+          color: #aaaaaa;
+        }
+      }
+      input.length, input.width, input.height {
+        color: #555555;
+      }
+    }
+    @include SubmitButton;
+  }
+}

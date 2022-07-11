@@ -1,0 +1,17 @@
+@mixin OrderInfo {
+  .order-info {
+    table {
+      margin: 0;
+      thead, tbody { border: none }
+      thead {
+        background-color: $pick-ups-modal-background-grey;
+        font-weight: bold;
+        th { text-align: center; }
+      }
+      tbody {
+        border-bottom: 1px solid #d7d7d7;
+        td:first-child { font-weight: bold; }
+      }
+    }
+  }
+}

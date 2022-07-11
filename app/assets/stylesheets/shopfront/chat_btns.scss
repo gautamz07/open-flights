@@ -1,0 +1,39 @@
+#chat-btns {
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+
+  .chat-btn {
+    width: 55px;
+    height: 55px;
+    margin-left: 10px;
+    vertical-align: bottom;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  #whatsapp {
+  }
+
+  #fb-messengermessageus-wrapper {
+    // hacking fb's messenge us widget:
+    // 1. let overflow hidden to scope the range of the button
+    // 2. scale the widget to very very big, we wants its
+    //   click/touch area to fill up the btn,
+    // 3. make the original widget disappear, opacity: 0
+    // 4. cover the btn with the icon we want, make sure it is
+    //   transparent for click/touch
+    .fb-messengermessageus {
+      transform: scale(10);
+      opacity: 0;
+    }
+    .showing-icon {
+      pointer-events: none;
+      position: absolute;
+    }
+  }
+
+}
+

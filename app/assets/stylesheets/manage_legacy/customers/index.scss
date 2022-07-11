@@ -1,0 +1,29 @@
+@import '../common/common';
+
+#customers {
+  @import '../common/index';
+  @import '../common/legacy/table_navbar';
+  @import '../common/legacy/form';
+  @import '../common/legacy/form_control';
+
+  @include leave-top-for-flash-messages;
+
+  .index > .row { @include top-nav-tabs-with-search; }
+
+  .table-customers {
+    @include index-table;
+    @include no-content-placeholder('manage/customers/icon-no-customer.svg');
+
+    tr {
+      td:first-child, th:first-child {
+        padding-left: 50px;
+      }
+    }
+
+    @import './export_btn';
+  }
+
+  .table-customers {
+    @include no-content-placeholder('manage/customers/icon-no-customer.svg')
+  }
+}

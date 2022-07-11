@@ -1,0 +1,49 @@
+.Element001 {
+
+  .flex-table { align-items: flex-end; }
+  img { margin: 0 auto; }
+
+  @include min-desktop {
+    .flex-table {
+      display: flex;
+      justify-content: center;
+      .cell {
+        flex: auto 0;
+        padding: 5px 0 ;
+      }
+    }
+  }
+  @include tablet {
+    .flex-table {
+      position: relative;
+      .cell {
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        padding: 20px 0 ;
+      }
+    }
+  }
+  @include mobile {
+    .flex-table {
+      position: relative;
+      .cell {
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        padding: 20px 0 ;
+      }
+    }
+  }
+
+  @include small-mobile {
+    .flex-table {
+      position: relative;
+      .cell {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0 ;
+      }
+    }
+  }
+}

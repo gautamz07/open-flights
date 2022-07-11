@@ -1,0 +1,24 @@
+@mixin SettingLink {
+  .setting-link {
+    font-size: 0.875rem;
+
+    .ico-editor-tool-link:before{
+      transform: scale(0.7);
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: $edit-panel-color;
+      margin-bottom: 8px;
+      &.active { color: $edit-panel-tool-active-color; }
+    }
+
+    .dropdown-content {
+      width: 100%;
+      padding: 10px 15px 25px;
+      text-align: left;
+      font-family: 'ProximaNova-Light';
+    }
+
+  }
+}

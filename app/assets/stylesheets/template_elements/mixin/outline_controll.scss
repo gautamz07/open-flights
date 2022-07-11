@@ -1,0 +1,12 @@
+@mixin outline_controll($space) {
+  &:hover {
+    cursor: pointer;
+    outline: 1px solid $editable-outline-color-light;
+    outline-offset: $space - 1px;
+  }
+  &[data-editable='true'] {
+    cursor: text;
+    outline: 2px solid $editable-outline-color;
+    outline-offset: $space -2px;
+  }
+}

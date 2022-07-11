@@ -1,0 +1,12 @@
+.floating-brand-name-containter {
+  z-index: 2147483647;
+  position: absolute;
+  &.sites, &.user_sessions {
+    position: fixed;
+  }
+  bottom: 0;
+  left: 15px;
+  width: 139px;
+  height: 20px;
+  background: image_url('white_label/floating_powered_by_shopmatic.svg') no-repeat 100% 100%;
+}

@@ -1,0 +1,35 @@
+.FooterM01 {
+
+  .FooterContainer {
+    > .row {
+      width: 90%;
+      padding: 30px 0;
+      border-top: 1px solid rgba(151,151,151,0.2);
+    }
+  }
+
+  .power-by-shopmatic {
+    opacity: .7;
+    margin: auto;
+  }
+
+  @include min-desktop {
+    .social { float: right; }
+  }
+
+  @include max-tablet {
+    .power-by-shopmatic {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .social-link-list {
+      text-align: center !important;
+      span.follow-us {
+        line-height: 60px;
+        display: block;
+      }
+    }
+  }
+
+}

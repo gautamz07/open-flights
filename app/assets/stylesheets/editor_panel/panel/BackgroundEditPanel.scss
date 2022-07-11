@@ -1,0 +1,9 @@
+@mixin BackgroundEditPanel {
+  &.background-edit-panel{
+
+    .icon-option.ico-editor-tool-image{
+      margin-right: 0px;
+    }
+
+  }
+}

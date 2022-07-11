@@ -1,0 +1,20 @@
+@import './mixin/*';
+@import './components/PromoTitle';
+@import './components/PromoCode';
+@import './components/LimitCapacity';
+@import './components/DateRange';
+@import './components/Description';
+
+@import './components/Regions';
+@import './components/Partners';
+@import './components/CustomerTypes';
+@import './components/PackagesOrPlans';
+@import './components/DiscountByPercentage';
+@import './components/DiscountByValue';
+@import './components/DiscountTypesReadOnly';
+
+@import './components/PromoForm';
+
+@import "common/fonts";
+@import "common/font/index";
+@import './popupCallout';

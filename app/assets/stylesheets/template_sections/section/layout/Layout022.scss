@@ -1,0 +1,30 @@
+.Layout022 {
+
+  .Img { object-fit: cover; width: 100%; }
+
+  .layout-image { padding: 0; }
+
+  .layout-description {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .content-control {
+    padding: 20px 90px;
+    vertical-align: middle;
+  }
+
+  @include min-tablet {
+    .section-container { width: 100%; display: table; }
+    .content-control { padding: 20px 40px; }
+    .layout-image .Img { width: 100%; }
+    .layout-vertical-middle {
+      display: table-cell !important;
+    }
+  }
+
+  @include mobile {
+    .content-control { padding: 50px 30px; }
+  }
+
+}

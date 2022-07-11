@@ -1,0 +1,14 @@
+@mixin Customer {
+  .page-header {
+    margin: 15px;
+    .btn-link {
+      color: #424b5b;
+      font-size: 24px;
+    }
+  }
+
+  .customer-info-panel {
+    @include CustomerInfoPanel;
+    margin-bottom: 1.87rem;
+  }
+}

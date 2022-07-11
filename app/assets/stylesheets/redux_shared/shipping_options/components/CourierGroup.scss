@@ -1,0 +1,38 @@
+@mixin CourierGroup {
+  .group {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9fafc;
+    margin-bottom: 10px;
+    @include mobile {
+      padding: 15px 10px;
+    }
+    @include ShippingOptions;
+    @include MoneyInputField;
+    .courier-group-name {
+      @include OptionAlias(300px);
+      margin: 10px 0;
+      display: inline-block;
+      @include mobile {
+        margin: 0 0 10px 0;
+      }
+      .name-field {
+        &.editing {
+          .text-input {
+            width: 200px;
+            margin-right: 10px;
+            text-align: left;
+          }
+          .floating-controls {
+            position: relative;
+            width: auto;
+            display: inline-block;
+            .save-btn {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

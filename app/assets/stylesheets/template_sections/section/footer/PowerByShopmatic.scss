@@ -1,0 +1,21 @@
+.power-by-shopmatic {
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  .mask {
+    mask: asset_url('page_builder/power_by_shopmatic.svg') no-repeat 100% 100%;
+    -webkit-mask: asset_url('page_builder/power_by_shopmatic.svg') no-repeat 100% 100%;
+    background-color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.text-size-xxs .power-by-shopmatic { width: 135px; height: 27px; }
+.text-size-xs .power-by-shopmatic { width: 135px; height: 27px; }
+.text-size-s .power-by-shopmatic { width: 150px; height: 30px; }
+.text-size-m .power-by-shopmatic { width: 150px; height: 30px; }
+.text-size-l .power-by-shopmatic { width: 165px; height: 33px; }
+.text-size-xl .power-by-shopmatic { width: 180px; height: 36px; }
+.text-size-xxl .power-by-shopmatic { width: 195px; height: 39px; }

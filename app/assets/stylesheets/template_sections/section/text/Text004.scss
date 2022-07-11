@@ -1,0 +1,26 @@
+.Text004 {
+  .section-container {
+    padding: 50px 55px;
+
+    @include mobile {
+      padding: 50px 5px;
+    }
+  }
+
+  .H1.text-size-xl{
+    line-height: 3.375rem;
+  }
+
+  .P.text-size-xl{
+    line-height: 1.6875rem;
+  }
+
+  .block_1_btn {
+    text-align: center;
+
+    .Btn {
+      &:hover{ filter: contrast(1.2) }
+    }
+  }
+
+}

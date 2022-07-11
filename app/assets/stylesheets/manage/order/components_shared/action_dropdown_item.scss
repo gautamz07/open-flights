@@ -1,0 +1,30 @@
+
+@mixin action-dropdown-item {
+  padding: 10px 15px;
+  color: #363E4A;
+  white-space: nowrap;
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
+
+  > a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0 !important;
+    color: #363E4A;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $textDarkVariationOne;
+  }
+}
+
+@mixin disabled {
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+

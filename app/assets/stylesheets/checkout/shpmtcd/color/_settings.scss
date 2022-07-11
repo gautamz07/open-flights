@@ -1,0 +1,84 @@
+// Primary Color Palettes
+$PrimaryColor: #4285F4;
+$PrimaryColorDarken01: #1266f1;
+$PrimaryColorDarken02: #0a47ac;
+$PrimaryColorLighten01: #72a4f7;
+$PrimaryColorLighten02: #C5D9FA;
+
+// Sub Color Palettes
+$SubColor: #727BD6;
+$SubColorDarken01: #3945c3;
+$SubColorDarken02: #2d379b;
+$SubColorLighten01: #adb2e7;
+$SubColorLighten02: #d5d7f3;
+
+// Functional Color Palettes
+$FunColorDanger: #F85359;
+$FunColorWarning: #FFEEBF;
+$FunColorSuccess: #D4ECE6;
+$FunColorInfo: #2A73CC;
+$FunColorAdmin: #0D47A1;
+
+// Neutral Color Palettes
+$NeutralColor01: #FAFBFC;
+$NeutralColor02: #f0f4f7;
+$NeutralColor03: #EFF3F7;
+$NeutralColor04: #C4CDD5;
+$NeutralColor05: #A4AFBB;
+$NeutralColor06: #627382;
+$NeutralColor07: #363E4A;
+$NeutralColor08: #212B36;
+
+// Dark Color Palettes
+$DarkColor: rgba(33,43,54,1);
+$DarkColor80a: rgba(33,43,54,0.8);
+$DarkColor60a: rgba(33,43,54,0.6);
+$DarkColor40a: rgba(33,43,54,0.4);
+$DarkColor20a: rgba(33,43,54,0.2);
+$DarkColor10a: rgba(0,0,0,0.1);
+$DarkColor5a: rgba(0,0,0,0.05);
+
+// Light Color Palettes
+$LightColor: rgba(255,255,255,1);
+$LightColor80a: rgba(255,255,255,0.8);
+$LightColor60a: rgba(255,255,255,0.6);
+$LightColor40a: rgba(255,255,255,0.4);
+$LightColor20a: rgba(255,255,255,0.2);
+$LightColor10a: rgba(255,255,255,0.1);
+$LightColor5a: rgba(255,255,255,0.05);
+
+// Alpha Color
+$AlphaColor: rgba(0,0,0,0);
+
+// Gradient Color Palettes
+%GradientPrimary{
+  background: #4285f4;
+  background: -moz-linear-gradient(top, #4285f4 0%, #397bea 100%);
+  background: -webkit-linear-gradient(top, #4285f4 0%,#397bea 100%);
+  background: linear-gradient(to bottom, #4285f4 0%,#397bea 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4285f4', endColorstr='#397bea',GradientType=0 );
+}
+
+%GradientGrey{
+  background: #a5b0bf;
+  background: -moz-linear-gradient(top, #a5b0bf 0%, #9ba7b8 100%);
+  background: -webkit-linear-gradient(top, #a5b0bf 0%,#9ba7b8 100%);
+  background: linear-gradient(to bottom, #a5b0bf 0%,#9ba7b8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5b0bf', endColorstr='#9ba7b8',GradientType=0 );
+}
+
+%GradientLight{
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #f9fafb 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%,#f9fafb 100%);
+  background: linear-gradient(to bottom, #ffffff 0%,#f9fafb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f9fafb',GradientType=0 );
+}
+
+%GradientLightDarken{
+  background: #f9fafb;
+  background: -moz-linear-gradient(top, #f9fafb 0%, #f4f6f8 100%);
+  background: -webkit-linear-gradient(top, #f9fafb 0%,#f4f6f8 100%);
+  background: linear-gradient(to bottom, #f9fafb 0%,#f4f6f8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fafb', endColorstr='#f4f6f8',GradientType=0 );
+}

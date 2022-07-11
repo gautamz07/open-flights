@@ -1,0 +1,74 @@
+.shipping-details {
+  .dim-block{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .dim-input-group {
+    $icon-width: 24px;
+    $padding-width: 10px;
+    padding-left: $padding-width;
+    padding-right: $padding-width;
+    position: relative;
+
+    .string--cap{
+      text-transform: capitalize;
+    }
+
+    .input-addon{
+      top: 2.5px;
+      position: relative;
+
+      &__after{
+
+        &:after{
+          content: '';
+          font-size: 0.875rem;
+          text-align: center;
+          color: #627382;
+          width: 36px;
+          height: 35px;
+          line-height: 35px;
+          position: absolute;
+          right: 1px;
+          top: 1px;
+          border-radius: 0px 3px 3px 0px;
+          border-left: 1px solid #c4cdd5;
+          background-color: #fafafa;
+        }
+        &--size{
+          &:after{ content: 'cm'; }
+        }
+        &--weight{
+          &:after{ content: 'kg'; }
+        }
+
+      }
+
+      input{ padding-right: 46px !important; }
+
+    }
+
+    input {
+      position: relative;
+      text-align: left;
+      margin-bottom: 0 !important;
+    }
+
+    span.ico-close {
+      position: absolute;
+      top: 9px; bottom: 0;
+      left: -$icon-width/2;
+      margin: 0;
+      opacity: 0.56;
+      color: $defaultModalLabelText;
+      text-align: center;
+      width: $icon-width;
+      height: $icon-width;
+    }
+
+  }
+
+  .select2-container-disabled {
+    opacity: .362;
+  }
+}

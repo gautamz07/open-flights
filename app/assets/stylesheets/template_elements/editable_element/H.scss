@@ -1,0 +1,23 @@
+.H {
+  position: relative; // for editor, hover-text parent
+
+  font-weight: 200;
+  min-height: 20px; // need more update, for empty content of element
+
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-transform: none;
+}
+
+.H1 {
+  margin-bottom: $text-default-margin-bottom;
+}
+
+.H2 {
+  margin-bottom: $text-default-margin-bottom * 0.9;
+}
+
+.H3 {
+  margin-bottom: $text-default-margin-bottom * 0.8;
+}

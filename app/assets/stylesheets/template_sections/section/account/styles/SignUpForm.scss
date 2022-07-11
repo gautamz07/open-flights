@@ -1,0 +1,10 @@
+@mixin SignUpForm {
+  .sign-up-form {
+    .email-field {
+      margin-bottom: 12px;
+    }
+    .password-field {
+      margin-bottom: 12px;
+    }
+  }
+}

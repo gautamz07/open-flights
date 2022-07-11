@@ -1,0 +1,23 @@
+@mixin WhiteTabs($tab-height) {
+  border: 0;
+  background: transparent;
+  .tabs-title {
+    border: 0;
+    color: #4a4a4a;
+    padding: 0 30px;
+    height: $tab-height;
+    line-height: $tab-height;
+    font-size: 14px;
+    margin-right: 2px;
+    background-color: #f5f6f7;
+    &:hover {
+      font-family: ProximaNova-Semibold;
+      background-color: white;
+      cursor: pointer;
+    }
+    &.tab-link-active {
+      font-family: ProximaNova-Semibold;
+      background-color: white;
+    }
+  }
+}

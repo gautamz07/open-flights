@@ -1,0 +1,42 @@
+@mixin ColorPickerGroup {
+  .color-picker-group {
+    position: relative;
+    text-align: left;
+    
+    .picker-group {
+      &:not(:last-child) { margin-bottom: 8px; }
+    }
+
+    .color-display-btn {
+      display: inline-block;
+      vertical-align: middlem;
+      -webkit-border-radius: 2px;
+              border-radius: 2px;
+      border: 1px solid #fff;
+      width: 30px;
+      height: 14px;
+      margin-right: 8px;
+    }
+
+    .color-display-label {
+      display: inline-block;
+      vertical-align: middlem;
+      font-size: .875rem;
+    }
+
+    .collapse-content {
+      display: none;
+      &[data-is-open='true'] { display: block; }
+
+      &, .color-picker {
+        -webkit-border-radius: 3px;
+                border-radius: 3px;
+        
+      }
+      background-color: #222222;
+      position: absolute;
+      right: calc(100% + 30px);
+      bottom: -20px;
+    }
+  }
+}

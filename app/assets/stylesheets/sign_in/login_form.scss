@@ -1,0 +1,17 @@
+@mixin login-form-block-input {
+  .input_block .form-group:first-child > input {
+    border-radius: 3px 3px 0px 0px;
+  }
+  .input_block .form-group:not(:first-child):not(:last-child) > input {
+    border-radius: 0;
+  }
+  .input_block .form-group:last-child > input {
+    border-radius: 0px 0px 3px 3px;
+  }
+
+  .input_block .form-group > input {
+    &:focus, &:active {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@mixin ShippingMethod {
+  .selected-shipping-method {
+    padding-left: 10px;
+    padding-bottom: 1rem;
+    .title {
+      font-weight: bold;
+    }
+  }
+}

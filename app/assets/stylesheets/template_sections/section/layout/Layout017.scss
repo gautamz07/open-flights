@@ -1,0 +1,32 @@
+.Layout017 {
+
+  .block_1 {
+    display: table;
+    width: 100%;
+    .block_1_1 {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .block_1_2 {
+      padding: 0;
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .grid-image .Img {
+    margin: 0 0 -1px 0;
+    object-fit: cover;
+
+    width: 100%;
+    @include mobile { height: 60vh; }
+  }
+
+  .layout-description {
+    padding: 50px 8vw 50px 35px;
+    margin: 0 auto;
+
+    @include max-tablet { padding: 100px 60px 30px 60px; }
+    @include mobile { padding: 80px 30px 30px 30px; }
+  }
+}

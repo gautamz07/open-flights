@@ -1,0 +1,78 @@
+.Iframe {
+  position: relative; // for editor, hover-text parent
+  font-weight: 200;
+  min-height: 20px; // need more update, for empty content of element
+
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-transform: none;
+}
+
+.product-collection-4 {
+  height: 29rem;
+  @include product-collection-1 {
+    height: 65rem;
+  }
+  @include product-collection-2 {
+    height: 64rem;
+  }
+  @include product-collection-3 {
+    height: 59rem;
+  }
+  @include product-collection-4 {
+    height: 56rem;
+  }
+  @include product-collection-5 {
+    height: 53rem;
+  }
+  @include product-collection-6 {
+    height: 50rem;
+  }
+  @include product-collection-7 {
+    height: 48rem;
+  }
+  @include product-collection-8 {
+    height: 48rem;
+  }
+  @include product-collection-9 {
+    height: 46rem;
+  }
+  @include product-collection-10 {
+    height: 46rem;
+  }
+}
+
+.product-collection-8{
+  height: 53rem;
+  @media (min-width: 784px) and (max-width: 1007px) {
+    height: 70rem;
+  }
+  @media (min-width: 700px) and (max-width: 783px) {
+    height: 125rem;
+  }
+  @media (min-width: 650px) and (max-width: 699px) {
+    height: 115rem;
+  }
+  @media (min-width: 600px) and (max-width: 649px) {
+    height: 109rem;
+  }
+  @media (min-width: 550px) and (max-width: 599px) {
+    height: 102rem;
+  }
+  @media (min-width: 500px) and (max-width: 549px) {
+    height: 97rem;
+  }
+  @media (min-width: 450px) and (max-width: 499px) {
+    height: 91rem;
+  }
+  @media (min-width: 400px) and (max-width: 449px) {
+    height: 84rem;
+  }
+  @media (min-width: 350px) and (max-width: 399px) {
+    height: 79rem;
+  }
+  @media (max-width: 349px) {
+    height: 74rem;
+  }
+}

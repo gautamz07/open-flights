@@ -1,0 +1,41 @@
+.Text007 {
+  .section-container {
+    position: relative;
+  }
+
+  .block_1, .block_2, .block_3, .block_4, .block_5, .block_6 {
+    text-align: left;
+    padding: 20px;
+
+    &.row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .block-thumbnail {
+      padding: 0;
+
+      img {
+        margin: 0;
+        padding: 0;
+        height: 70px;
+        width: 70px;
+        object-fit: cover;
+      }
+    }
+
+    @include mobile {
+      p { margin-bottom: 50px; }
+      .block-thumbnail img { margin-bottom: 20px; }
+
+    }
+
+    @include tablet {
+      p { margin-bottom: 50px; }
+      .block-thumbnail img {
+        height: 100px;
+        width: 120px;
+      }
+    }
+  }
+}

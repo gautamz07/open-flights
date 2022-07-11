@@ -1,0 +1,11 @@
+@mixin DateRange {
+  .date-range {
+    .start-date-field, .end-date-field {
+      @include CommonField;
+      @include ReactDateTime;
+      .date-time-picker {
+        display: inline-block;
+      }
+    }
+  }
+}

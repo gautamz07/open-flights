@@ -1,0 +1,11 @@
+@import "redux_shared/shipping_options/mixin/row";
+
+@mixin OptionAramex {
+  .aramex {
+    @include custom-vertical-center(78px);
+    @include logo(130px);
+    .logo {
+      margin: 0;
+    }
+  }
+}

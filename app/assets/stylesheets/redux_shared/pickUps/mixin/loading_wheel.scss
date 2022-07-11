@@ -1,0 +1,10 @@
+@mixin loading_wheel {
+  content: '';
+  background-image: url(image_path('ajax-spinner.svg'));
+  -webkit-background-size: 30px;
+       -o-background-size: 30px;
+          background-size: 30px;
+  width: 30px; height: 30px;
+  position: absolute;
+  left: 8px; top: 8px;
+}

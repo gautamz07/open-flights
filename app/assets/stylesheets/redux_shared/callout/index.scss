@@ -1,0 +1,23 @@
+@import "InlineCallout";
+@import "PopupCallout";
+@import "ModalCallout";
+
+.ReactModalPortal__Callout {
+  @include InlineCallout;
+  @include PopupCallout;
+  .back-to-home-btn {
+    @include mobile {
+      display: none;
+    }
+    button {
+      border: none;
+      &:hover {
+        border: none;
+      }
+    }
+  }
+}
+
+.ReactModal__Content {
+  @include ModalCallout;
+}

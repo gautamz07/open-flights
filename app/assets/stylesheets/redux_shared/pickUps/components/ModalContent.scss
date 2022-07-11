@@ -1,0 +1,7 @@
+@mixin ModalContent {
+  .modal-content {
+    min-width: $pick-ups-modal-content-width;
+    min-height: $pick-ups-modal-content-height;
+    padding: 30px;
+  }
+}

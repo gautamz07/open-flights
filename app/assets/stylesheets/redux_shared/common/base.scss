@@ -1,0 +1,16 @@
+@import "redux_shared/common/variables";
+
+// TODO: new builder branch already reactor this file,
+// duplicate add reponsive.css at app/assets/stylesheets/on_board.scss
+@import "redux_shared/common/layout";
+@import "redux_shared/common/modals";
+@import "redux_shared/common/fonts";
+@import "redux_shared/common/utilities";
+@import "redux_shared/common/fontello";
+
+// mixin
+@import "redux_shared/common/compatibility";
+@import "redux_shared/common/responsive";
+@import "redux_shared/common/product_collection";
+@import "redux_shared/common/responsive_class";
+@import "redux_shared/common/triangle";

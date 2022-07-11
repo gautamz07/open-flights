@@ -1,0 +1,46 @@
+@mixin PageSectionListItem {
+  .page-section-list-item {
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    img {
+      width: 100%;
+    }
+    &:hover {
+      background-color: #f0f4f7;
+    }
+
+    &[data-activated='false'] {
+      opacity: .5; background-color: rgba(255, 0, 0, .3);
+      &:hover { background-color: rgba(255, 0, 0, .6); }
+    }
+
+    .video-section-icon {
+      height: 15px;
+      width: 15px;
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      background-color: #bababa;
+      -webkit-border-radius: 2px;
+              border-radius: 2px;
+      &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 0 4px 6px;
+        border-color: transparent transparent transparent #fff;
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        margin: auto;
+      }
+    }
+    .new-tag-section{
+      position: absolute;
+      top: 20%;
+      left: 1%;
+    }
+  }
+}

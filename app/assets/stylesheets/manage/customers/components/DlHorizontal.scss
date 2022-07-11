@@ -1,0 +1,17 @@
+@mixin DlHorizontal ($titleWidth) {
+  font-family: $fontMedium;
+  dt {
+    float: left;
+    width: $titleWidth;
+    clear: left;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: normal;
+    margin-bottom: 0.15rem;
+  }
+  dd {
+    float: left;
+  }
+}

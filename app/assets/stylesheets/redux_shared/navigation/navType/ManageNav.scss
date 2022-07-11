@@ -1,0 +1,9 @@
+@mixin ManageNav {
+  .top-bar-left { float: left; }
+  .top-bar-center {
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+  }
+  .top-bar-right { float: right; }
+}

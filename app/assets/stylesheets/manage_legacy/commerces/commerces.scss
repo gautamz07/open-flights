@@ -1,0 +1,29 @@
+@import '../common/fonts';
+
+#commerces {
+  .container-fluid .row:first-child {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
+
+  .cover-img {
+    text-align: center;
+    transition: .3s;
+    .main-img { width: 186px; }
+    .tick { width: 42px; margin-left: 15px; display: none; }
+  }
+
+  .commerce-panel {
+    @include commerce-panel;
+  }
+
+  .updated {
+    @include updated;
+  }
+
+  .row.commerce-content { position: absolute; left: 0; right: 0; margin: auto; margin-bottom: 80px; }
+
+  .commerce-description { width: 360px; left: 0; right: 0; margin: auto; }
+}

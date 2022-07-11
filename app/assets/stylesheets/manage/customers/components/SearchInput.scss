@@ -1,0 +1,30 @@
+$search-icon-width: 34px;
+
+@mixin SearchInput($height, $width) {
+  .search-input {
+    width: $width;
+    float: right;
+    height: $height;
+    input {
+      width: calc(100% - #{$search-icon-width});
+      border: 0;
+      border-radius: 4px;
+      padding: 9px 15px;
+      font-size: 14px;
+      background-color: #f5f6f7;
+      &:placeholder-shown {
+        color: #ddd;
+      }
+    }
+    .search-btn {
+      width: 34px;
+      height: $height;
+      line-height: $height;
+      text-align: center;
+      vertical-align: middle;
+    }
+    *:focus {
+      outline: 0;
+    }
+  }
+}

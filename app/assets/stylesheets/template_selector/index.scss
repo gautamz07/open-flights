@@ -1,0 +1,58 @@
+@import 'foundation_and_overrides';
+
+@import 'common/fonts';
+@import 'common/font/index';
+
+@import 'redux_shared/common/base';
+@import 'redux_shared/form/index';
+@import 'redux_shared/promiseModal/index';
+
+@import 'redux_shared/signUpModal/index';
+
+@import 'confirm_switch_template';
+@import 'categories';
+@import 'templates';
+@import 'site_preview';
+
+@import "white_label/floating_brand_name";
+
+$gradientBlue: #1781a1;
+
+#template_selector {
+  background-color: $gradientBlue;
+
+  &:after {
+    content: '';
+    transition: 1s;
+    opacity: 0;
+  }
+
+  &.loading {
+    & > *:first-child:after {
+      content: '';
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 10;
+    }
+    position: relative;
+    height: 100vh;
+    pointer-events: none;
+    &:after {
+      opacity: 1;
+      background: image-url('ajax-spinner.svg') no-repeat right;
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      color: white;
+      z-index: 10;
+    }
+  }
+}

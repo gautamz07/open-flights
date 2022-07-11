@@ -1,0 +1,38 @@
+@import "redux_shared/common/responsive";
+@import "redux_shared/common/variables";
+@import "redux_shared/mixin/z_index";
+
+@mixin InlineCallout {
+
+  .ReactModal__Overlay.inline-callout-overlay {
+    z-index: $z-index-inline-callout-modal;
+    top: $topNavHeight;
+    bottom: initial;
+    box-shadow: 0 1px 4px 0 rgba(99,114,130,0.15);
+    @include small-mobile {
+      top: 0;
+    }
+  }
+
+  .ReactModal__Content.inline-callout {
+    padding: 0.5rem 2rem;
+    height: 100%;
+    .name {
+      display: inline;
+      padding-right: 1rem;
+      font-size: 1rem;
+    }
+    .message {
+      display: inline;
+      margin-bottom: 0;
+    }
+    .close-button {
+      top: 0; bottom: 0;
+      font-size: 20px;
+      height: 100%;
+      width: 40px;
+      &:focus { outline: none; font-size: 24px; }
+    }
+  }
+
+}

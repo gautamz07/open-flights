@@ -1,0 +1,103 @@
+.Header001 {
+
+  // commerce hacking:
+  // when commerce is disabled, the product category list will be gone
+  // this will add a margin-top to make the page list center of the header
+  .nav {
+    .table {
+      @mixin UlMarginTop ($top) {
+        ul {
+          margin-top: $top !important;
+        }
+      }
+
+      .nav-page-list {
+        @include UlMarginTop(20px);
+        &:nth-last-child(3) {
+          @include UlMarginTop(initial);
+        }
+      }
+    }
+  }
+
+  // grid settings
+  .header-flex {
+    display: flex;
+    @include min-desktop {
+      .menu { display: none; }
+      .logo { flex: 0 0 auto; max-width: 210px; }
+      .nav { flex: 1; }
+      .cart { flex: 0 0 auto; }
+    }
+    @include max-tablet {
+      align-items: center;
+      .menu { flex: 0 0 60px; }
+      .logo { flex: 6; }
+      .nav { display: none; }
+      .cart { flex: 0 0 auto; }
+    }
+  }
+  // grid settings
+
+  .HeaderContainer { padding: 15px; }
+  .announcement-bar { margin: -15px -15px 15px;}
+
+  .header-flex {
+    position: relative;
+    margin: auto;
+    > div {
+      padding: 0 15px 0 0;
+      &:last-child { padding: 0; }
+    }
+  }
+
+  .nav {
+    .table {
+      display: table;
+      nav { display: table-row; }
+      hr { margin: 0 10px; opacity: 0.2;}
+    }
+  }
+
+  .logo {
+    max-height: 90px;
+    img {
+      display: inline-block;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      max-height: 90px;
+    }
+  }
+
+  .cart {
+    text-align: right;
+  }
+
+  @include max-tablet {
+    .HeaderContainer { padding: 0 10px; }
+    .announcement-bar { margin: 0px -15px 0px; }
+
+    .header-flex {
+      height: 60px;
+      > div { padding: 0; }
+    }
+
+    .logo {
+      text-align: center;
+      .Img {
+        width: auto;
+        height: 60px;
+      }
+    }
+
+    .cart {
+      font-size: 20px !important;
+      .ico-fontello-cart {
+        line-height: 40px;
+      }
+      .cart-btn-trigger p { display: none; }
+    }
+  }
+
+}

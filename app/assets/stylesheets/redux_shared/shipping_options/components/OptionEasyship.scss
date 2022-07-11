@@ -1,0 +1,70 @@
+@import "redux_shared/shipping_options/mixin/row";
+@import "redux_shared/shipping_options/components/SingleSelect";
+
+@mixin OptionEasyship {
+  .easyship {
+    @include custom-vertical-center(111px);
+    @include logo(120px);
+    @include EasyshipDescription;
+
+    .partner-logos {
+      @include custom-vertical-center(42px);
+      img {
+        height: 100%;
+        margin-left: -10px;
+      }
+
+      @include mobile {
+        .v-wrap {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+  .details-btn-with-menu {
+    display: inline-block;
+    position: relative;
+  }
+}
+
+// product type select
+.easyship {
+  .easyship-product-type.single-select {
+    @include single-select(14px);
+  }
+}
+
+// more menu
+.ReactModal__Overlay.control-unit-details-button-menu-overlay {
+  background-color: transparent;
+  .ReactModal__Content.control-unit-details-button-menu {
+    .menu {
+      list-style: none;
+      background-color: white;
+      box-shadow: silver 0px 0px 2px 1.5px;
+      margin: 3px;
+      padding: 0;
+      .menu-item {
+        margin: 0;
+        padding: 10px 20px;
+        text-align: left;
+        font-size: 14px;
+        a {
+          margin: -14px -20px;
+          padding: 14px 20px;
+          font-size: inherit;
+          color: inherit;
+          &:hover {
+            background-color: #1583cc;
+            color: #fefefe;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: #1583cc;
+          color: #fefefe;
+        }
+      }
+    }
+  }
+}

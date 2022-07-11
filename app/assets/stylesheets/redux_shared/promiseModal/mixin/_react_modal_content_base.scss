@@ -1,0 +1,26 @@
+@mixin react-modal-content-base {
+  h4, p {
+    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    color: #000;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 10px 0 12px 0;
+    font-weight: bold;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  input {
+    padding: 8px;
+    width: 100%;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px #cacaca;
+      transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    }
+  }
+}

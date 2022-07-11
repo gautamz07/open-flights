@@ -1,0 +1,46 @@
+@mixin actions-responsive {
+  $breakpoint: 512px;
+  overflow: auto;
+  .column {
+    float: left;
+    overflow: auto;
+    .try-it {
+      margin-right: 5px;
+    }
+    .watch-video {
+      margin-left: 5px;
+    }
+    .btn {
+      &.try-it {
+        border-radius: 30px;
+        width: 221px;
+        height: 40px;
+      }
+      &.btn.watch-video {
+        border-radius: 30px;
+        width: 180px;
+        height: 40px;
+      }
+    }
+  }
+  @media screen and (max-width: $breakpoint) {
+    .column {
+      width: 100%;
+      float: none;
+    }
+    .column:first-child {
+      .try-it {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 21px;
+      }
+    }
+    .column:last-child {
+      .watch-video {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+}

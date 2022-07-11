@@ -1,0 +1,116 @@
+$font-color: rgba(#191919, 0.85);
+
+@mixin round-shape ($diameter) {
+  width: $diameter;
+  height: $diameter;
+  border-radius: 100%;
+}
+.confirm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: image_url('upgrade/notes-background');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .dialog {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.16);
+    border-radius: 5px;
+    max-width: 400px;
+    min-height: 521px;
+    margin-top: 9%;
+    @media screen and (max-height: 568px) {
+      margin-top: 0;
+    }
+    padding: 1em;
+    @include block-align-center;
+    h2.heading {
+      font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif;
+      font-size: 28px;
+      color: $font-color;
+      letter-spacing: 0px;
+      line-height: 30px;
+      text-align: center;
+      width: 265px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      @include block-align-center;
+    }
+    .content {
+      margin-top: 12px;
+      margin-bottom: 12px;
+      ol.notes {
+        @include block-align-center;
+        font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+        font-size: 15px;
+        color: $font-color;
+        letter-spacing: 0.16px;
+        line-height: 21px;
+        text-align: left;
+        max-width: 350px;
+        list-style: none;
+        li.entry {
+          position: relative;
+          margin-bottom: 25px;
+          .round-number {
+            @include round-shape(17px);
+            position: absolute;
+            top: 0;
+            left: -30px;
+            display: inline-block;
+            background: #766398;
+            font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+            font-size: 12px;
+            color: #ffffff;
+            letter-spacing: 0.13px;
+            line-height: 17px;
+            text-align: center;
+          }
+
+        }
+      }
+    }
+    .actions {
+      margin-bottom: 2em;
+      .btn {
+
+        font-size: 12px;
+        letter-spacing: 0.54px;
+        text-align: center;
+        line-height: 45px - 6px * 2;
+        border-radius: 3px;
+        height: 45px;
+        max-width: 350px;
+        min-width: 240px;
+      }
+      .btn.proceed {
+        font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+        color: #ffffff;
+        background-image: linear-gradient(138deg, #766398 0%, #1781a1 100%);
+        box-shadow: 0px 6px 11px 0px rgba(0,0,0,0.18);
+        // width: 350px;
+        margin-bottom: 16px;
+        @include block-align-center;
+        position: relative;
+        .forward {
+          display: inline-block;
+          font-size: 20px;
+          position: absolute;
+          top: 6px;
+          right: 12px;
+        }
+      }
+      .btn.cancel {
+        font-family: 'ProximaNova-Bold', 'Helvetica', 'Arial', sans-serif;
+        color: #262626;
+        border: 1px solid #cccccc;
+        // width: 350px;
+        @include block-align-center;
+      }
+    }
+  }
+}
+

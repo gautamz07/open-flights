@@ -1,0 +1,26 @@
+@mixin SettingAnnouncement {
+  .setting-announcement {
+    // font-family: 'ProximaNova-Regular';
+    
+    .dropdown-controll {
+      overflow: visible !important;
+    }
+
+    .dropdown-content {
+      padding: 20px 15px;
+    }
+
+    .checkbox-primary  {
+      margin-bottom: 10px;
+    }
+
+    .text-input-group {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .color-picker-group:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  } 
+}

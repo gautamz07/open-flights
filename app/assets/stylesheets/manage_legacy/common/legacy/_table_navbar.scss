@@ -1,0 +1,30 @@
+.navbar.table-navbar {
+
+  border-radius: 0;
+  border: 0;
+  background-color: transparent;
+  margin-bottom: 0;
+
+  li {
+    a {
+      color: #666666;
+      background-color: #f5f6f7;
+      border-bottom: 1px solid #f5f6f7;
+      border-radius: 0;
+      padding: 15px 30px;
+      text-decoration: none;
+      line-height: 20px;
+    }
+
+    &.active, &:hover {
+      @include bold;
+
+      a {
+        border-bottom: 1px solid white;
+        background-color: white;
+        color: #4a4a4a;
+      }
+    }
+  }
+
+}

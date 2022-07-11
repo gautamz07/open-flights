@@ -1,0 +1,142 @@
+// overwrites for shopfront_redux_products
+
+.shopfront.products {
+  .container {
+    width: 1170px;
+    @include desktop {width: 970px}
+    @include tablet {width: 750px}
+    @include mobile {width: 100%}
+
+    &.main {
+      background: initial;
+    }
+  }
+
+  // clear bootstrap .row define
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // for bootstrap .row
+  .bs-row {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    // clearfix
+    &:before, &:after {
+      content: ' ';
+      display: table;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+
+  .product-copy-name {
+    margin-bottom: 5px;
+  }
+
+  input {
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+
+  @include min-desktop {
+    .nav {
+      .table {
+        width: initial;
+        max-width: initial;
+      }
+    }
+  }
+
+  nav {
+    a:hover, a:active, a:focus {
+      text-decoration: none;
+    }
+  }
+
+  .side-menu-content {
+    .columns:last-child {
+      float: right;
+    }
+  }
+}
+
+/* Product builder - Looks over write */
+.shopfront.products.builder-previewing {
+  background-color: #f5f6f7;
+
+  #shopfront_redux_extra_header,
+  #shopfront_redux_extra_footer,
+  #chat-btns,
+  .all-product-header,
+  .product_related{
+    display: none;
+  }
+
+  .product-details{
+    padding: 10px 20px 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(27,39,51,0.1);
+  }
+
+  .product-listing{
+    padding-top: 30px;
+    position: relative;
+    display: block;
+
+    .product-column {
+      width: 25%;
+      margin-bottom: 30px;
+      & > a{
+        height: 100%;
+      }
+      @include tablet {
+        width: 50%;
+      }
+      @include mobile {
+        width: 50%;
+      }
+    }
+
+  }
+  
+  .featured-products {
+    padding-top: 0;
+  }
+
+  .thumbnail{
+    height: inherit;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(27,39,51,0.1);
+    overflow: hidden;
+    padding: 0;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 10px;
+    &:hover{ box-shadow: 0 12px 24px rgba(27, 39, 51, 0.2); }
+    .product_sale_label{ border-bottom-left-radius: 5px; }
+    .product-image{ border: none; }
+    .caption{
+      padding: 15px;
+      h1{
+        font-size: 14px;
+        line-height: 18px;
+        // font-family: 'ProximaNova-Regular';
+        font-weight: 600;
+      }
+      span{
+        font-size: 14px;
+        font-weight: 500;
+        // font-family: 'ProximaNova-Regular';
+      }
+    }
+  }
+}

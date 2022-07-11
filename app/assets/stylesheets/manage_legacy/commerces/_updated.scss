@@ -1,0 +1,50 @@
+@mixin updated {
+  .cover-img {
+    position: relative;
+    .tick {
+      display: inline;
+      width: 42px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -21px;
+      margin-left: 107px;
+    }
+  }
+  .commerce-updated {
+    h1 {
+      font-size: 32px;
+      font-weight: normal;
+      @include light;
+    }
+    .table {
+      width: 80%; margin-left: 10%; margin-right: 10%;
+      &:before { display: none; }
+
+      & > div:first-child > .options {
+        float: right;
+      }
+      .options {
+        position: relative;
+        width: 280px;
+        height: 280px;
+        margin: 30px 0 0 0;
+        padding: 30px;
+        img.sub {
+          width: 35%;
+          max-width: 150px;
+          margin: 33px auto;
+        }
+        .btn {
+          @include default-button;
+          max-width: 100%;
+          position: absolute;
+          bottom: 36px;
+          right: 33px;
+          left: 33px;
+        }
+      }
+    }
+  }
+}
+

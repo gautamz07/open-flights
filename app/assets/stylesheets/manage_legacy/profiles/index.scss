@@ -1,0 +1,93 @@
+#profiles {
+  @import '../common/legacy/form_actions';
+  @import '../common/legacy/form_control';
+  @import '../common/legacy/label';
+  @import '../common/legacy/checkbox';
+  @import '../common/legacy/popover_message';
+
+  #messages .container-fluid { margin-top: 95px; margin-left: 0; }
+
+  .input-group-addon { padding-left: 0; padding-right: 5px; }
+
+  .application-container { padding-left: 0; padding-right: 0; }
+
+  .panel {
+    &.my-account .panel-heading { background-color: rgba(58, 173,210, 0.8); }
+    &.business-info .panel-heading { background-color: #727c8f; }
+    &.shipping-info .panel-heading { background-color: rgba(120, 129, 184, 0.9); }
+    &.financial-info .panel-heading { background-color: #edad4e; }
+
+    border-radius: 3px;
+
+    .panel-heading {
+      padding: 20px 30px;
+      border-radius: 3px 3px 0 0;
+
+      h3 {
+        font-size: 21px;
+        margin: 0;
+        color: white;
+
+        i[class^="ico-"]:before {
+          font-size: 40px;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .panel-body {
+      label { margin-bottom: -7px; }
+      padding: 35px 15px;
+
+      .ico-message:before {
+        font-size: 15px;
+        vertical-align: baseline;
+      }
+
+      .change-password {
+        color: rgba(58, 173,210, 0.8);
+      }
+    }
+
+    p { color: #aaa; }
+  }
+
+  .form-actions.form-actions-top {
+    background-color: #fafcfc;
+    padding: 10px 23px;
+    margin-top: 0;
+    top: 50px;
+    left: 0px;
+    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+
+    .save-button {
+      float: right;
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 15px;
+      border: none;
+      border-radius: 15px;
+      color: white;
+      background-color: #4ba4ea;
+      &:hover, &:focus, &:active {
+        outline: none;
+      }
+    }
+
+    .cancel-button {
+      float: right;
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      padding: 0;
+      margin-right: 26px;
+      color: #181818;
+      text-decoration: none;
+      &:hover, &:focus, &:active {
+        outline: none;
+      }
+    }
+  }
+
+}

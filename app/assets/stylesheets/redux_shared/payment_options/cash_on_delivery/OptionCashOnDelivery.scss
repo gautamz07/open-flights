@@ -1,0 +1,8 @@
+@import 'redux_shared/payment_options/mixin/row';
+
+@mixin OptionCashOnDelivery {
+  .option-cash-on-delivery {
+    @include custom-vertical-center(107px);
+    @include logo(44px);
+  }
+}

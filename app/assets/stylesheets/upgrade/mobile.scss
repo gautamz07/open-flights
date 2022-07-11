@@ -1,0 +1,161 @@
+.upgrade {
+  .upgrading-block, .waiting-list-block{
+    padding-top: 38px;
+    height: 664px;
+    .shopmatic-logo {
+      width: 182px;
+      height: 41px;
+      margin-bottom: 21px;
+    }
+    .heading {
+      font-size: 32px;
+      line-height: 36px;
+      max-width: 482px;
+      @media screen and (min-width: $iphone6-width) and (max-width: $iphone6plus-width) {
+        width: 345px;
+      }
+      @media screen and (max-width: $iphone5-width) {
+        width: 95%;
+      }
+      margin-bottom: 23px;
+    }
+    .description {
+      font-size: 16px;
+      line-height: 21px;
+      width: 314px;
+      margin-bottom: 28px;
+      @media screen and (max-width: 320px) {
+        max-width: 95%;
+      }
+    }
+    .actions {
+      @include actions-responsive;
+      @media screen and (min-width: $iphone6plus-width) and (max-width: $ipad-width - 1) {
+        width: 411px;
+      }
+      @media screen and (min-width: $iphone5-width) and (max-width: $iphone6plus-width - 1) {
+        width: 221px;
+      }
+    }
+    .device-image {
+      @media screen and (min-width: $iphone5-height) and (max-width: $ipad-width - 1) {
+        @include device-image(550px, -3px, -22px);
+      }
+      @media screen and (min-width: $iphone6plus-width) and (max-width: $iphone5-height - 1) {
+        @include device-image(400px, -3px, -22px);
+      }
+      @media screen and (min-width: $iphone6-width) and (max-width: $iphone6plus-width - 1) {
+        @include device-image(361px, -3px, -22px);
+      }
+      @media screen and (min-width: $iphone5-width) and (max-width: $iphone6-width - 1) {
+        @include device-image(320px, -3px, -21px);
+      }
+      @media screen and (max-width: $iphone5-width - 1) {
+        @include device-image(240px, -3px, -21px);
+      }
+    }
+  }
+
+  .waiting-list-block {
+    height: 630px;
+    @media screen and (max-width: $iphone5-width) {
+      height: 550px;
+    }
+    .heading {
+      font-family: ProximaNova-Light;
+      font-size: 32px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 36px;
+      width: 335px;
+      @media screen and (min-width: $iphone6-width) and (max-width: $iphone6plus-width) {
+        width: 345px;
+      }
+      @media screen and (max-width: $iphone5-width) {
+        width: 95%;
+      }
+    }
+    .description {
+      font-size: 16px;
+      line-height: 24px;
+      width: 273px;
+      margin-bottom: 19px;
+      @media screen and (max-width: 320px) {
+        max-width: 95%;
+      }
+    }
+    .form-block {
+      width: 345px;
+      @media screen and (min-width: $iphone5-width) and (max-width: $iphone6plus-width - 1) {
+        width: 290px;
+      }
+      .form {
+        .email {
+          width: 225px;
+          height: 45px;
+          opacity: 0.89;
+          background: #FFFFFF;
+          border: 1px solid #C5C5C5;
+          border-radius: 3px;
+          margin-right: 10px;
+          float: left;
+          @media screen and (min-width: $iphone5-width) and (max-width: $iphone6plus-width - 1) {
+            margin-right: 5px;
+            width: 170px;
+          }
+        }
+
+        .notify-btn {
+          font-size: 13px;
+          font-family: 'ProximaNova-Bold';
+          background-color: #E11A36;
+          border-radius: 3px;
+          color: #FFFFFF;
+          width: 108px;
+          height: 45px;
+          @media screen and (min-width: $iphone5-width) and (max-width: $iphone6plus-width - 1) {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  .features-block {
+    .heading {
+      font-size: 29px;
+      margin-top: 45px;
+      margin-bottom: 8px;
+    }
+    .description {
+      max-width: 282px;
+      font-size: 16px;
+      line-height: 23px;
+    }
+    .cases {
+      $gap-width: 20px;
+      $block-width: 334px;
+      $block-height: 387px;
+      $min-support-width: $block-width + 2 * $gap-width;
+      margin-bottom: 29px;
+      .tabs {
+        @media screen and (min-width: $min-support-width) and (max-width: $ipad-width) {
+          width: $block-width;
+          @include grouped-tabs($block-width, 50px, $theme-color, #4098df, 5px);
+        }
+        @media screen and (max-width: $min-support-width - 1) {
+          width: 90%;
+          @include grouped-tabs(100%, 50px, $theme-color, #4098df, 5px);
+        }
+        height: 50px;
+        margin-top: 19px;
+        margin-bottom: 19px;
+        .tab {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

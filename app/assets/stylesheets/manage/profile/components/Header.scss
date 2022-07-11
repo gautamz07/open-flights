@@ -1,0 +1,7 @@
+@mixin Header {
+  .pageBanner {
+    @include mobile {
+      padding-bottom: 10px;
+    }
+  }  
+}

@@ -1,0 +1,11 @@
+.shopfront.products {
+  .product-extensions {
+    .banner {
+      .image {
+        display: block;
+        width: 100%;
+        &[src=""]{ display: none; }
+      }
+    }
+  }
+}

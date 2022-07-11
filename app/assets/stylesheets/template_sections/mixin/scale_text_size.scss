@@ -1,0 +1,9 @@
+@mixin ScaleTextSize($base: 16, $scale: 1) {
+  &.text-size-xxs { font-size: #{17 / $base * $scale}rem }
+  &.text-size-xs { font-size: #{21 / $base * $scale}rem }
+  &.text-size-s { font-size: #{24 / $base * $scale}rem }
+  &.text-size-m { font-size: #{30 / $base * $scale}rem }
+  &.text-size-l { font-size: #{36 / $base * $scale}rem }
+  &.text-size-xl { font-size: #{48 / $base * $scale}rem }
+  &.text-size-xxl { font-size: #{60 / $base * $scale}rem }
+}

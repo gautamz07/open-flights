@@ -1,0 +1,21 @@
+@mixin DiscountByPercentage {
+  .discount-by-percentage {
+    .discount-by-percentage-field {
+      &.selected {
+        background-color: pink;
+        border-radius: 5px;
+      }
+      @include CommonField;
+      input {
+        width: 50px;
+        text-align: right;
+      }
+      .percentage-sign {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 50px;
+      }
+    }
+  }
+}

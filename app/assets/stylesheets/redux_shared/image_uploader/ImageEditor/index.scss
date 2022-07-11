@@ -1,0 +1,40 @@
+#image-editor {
+
+  @import "./cropper";
+  @import "./cropperTools";
+  @import "./imageEditor";
+  
+  .cropper-container-size-buffer {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    margin: auto;
+  }
+  
+  &.loading {
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+    cursor: progress;
+    &:after {
+      content: 'Please wait, image is loading';
+      position: relative;
+      display: block;
+      text-align: center;
+      top: calc(50% - 50px);
+      font-size: 2rem;
+      color: #bbbbbb;
+    }
+  }
+
+  // cropper.scss overwrite
+  .cropper-container {
+    .cropper-wrap-box { overflow: visible; }
+  }
+}

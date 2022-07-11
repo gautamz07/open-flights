@@ -1,0 +1,38 @@
+@mixin nav-list-common {
+  display: inline-block;
+  a, .icon-caret {
+    display: inline-block;
+    &:hover { opacity: .7; }
+  }
+  a { padding: 10px 15px; }
+  .icon-caret {
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: -10px;
+    padding: 0 5px;
+    &:before {
+      font-size: 20px;
+      line-height: 45px;
+    }
+  }
+}
+
+@mixin nav-list-dropdown {
+  position: relative;
+  ul.dropdown {
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+
+    &[data-open='true'] {
+      height: initial;
+      @include css-filter(brightness(90%));
+    }
+
+    li { display: block; }
+  }
+}

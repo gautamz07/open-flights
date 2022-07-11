@@ -1,0 +1,85 @@
+@mixin FlipContainer {
+  .flip-container {
+    background-color: $edit-panel-background-color;
+    // width: controll by props;
+
+    .flip-nav {
+      ul {
+        background: inherit;
+        list-style: none;
+        margin: 0 0 0 0;
+        padding: 0 20px;
+        li {
+          cursor: pointer;
+          width: 50%;
+          font-size: 0.875rem;
+          // font-family: 'ProximaNova-Regular';
+          padding: 10px 0;
+          display: inline-block;
+          color: $edit-panel-color;
+          border-bottom: 2px solid transparent;
+          @include css-transition(color .5s ease);
+          &:hover { color: $edit-panel-color }
+          &.active {
+            cursor: default;
+            // font-family: 'ProximaNova-Regular';
+            border-bottom: 2px solid;
+            border-color: $edit-panel-tool-active-color-deep;
+          }
+        }
+      }
+    }
+
+    .flipper {
+      background-color: lighten($edit-panel-background-color, 10%);
+      position: relative;
+      width: inherit;
+      > div {
+        width: inherit;
+        overflow: hidden;
+      }
+    }
+
+  }
+
+  @include flip-toggle-without-animate;
+  // @include flip-toggle-rotation-animate;
+}
+
+@mixin flip-toggle-without-animate {
+  .flip-container {
+    .flipper { > div { display: none; } }
+    &[data-rotate='front'] .flipper { > div:first-child { display: block; } }
+    &[data-rotate='back'] .flipper { > div:last-child { display: block; } }
+  }
+}
+
+@mixin flip-toggle-rotation-animate {
+  .flip-container {
+    @include css-perspective(1000px);
+
+    .flipper {
+      @include css-transform-style(preserve-3d);
+      @include css-transition(.6s);
+      > div {
+        @include css-backface-visibility(hidden);
+        &:first-child { @include css-transform(rotateY(0deg) translateZ(1px)); }
+        &:last-child { @include css-transform(rotateY(180deg) translateZ(1px)); }
+      }
+    }
+
+    // rotate display controll
+    &[data-rotate='front'] {
+      .flipper {
+        > div:last-child { position: absolute; top: 0; }
+        @include css-transform(rotateY(0));
+      }
+    }
+    &[data-rotate='back'] {
+      .flipper {
+        > div:first-child { position: absolute; top: 0; }
+        @include css-transform(rotateY(180deg));
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import 'redux_shared/payment_options/mixin/row';
+
+@mixin OptionCitruspay {
+  .option-citruspay {
+    @include custom-vertical-center(200px);
+    @include logo(110px);
+  }
+}

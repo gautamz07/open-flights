@@ -1,0 +1,35 @@
+@mixin SourceChoosePage {
+  .source-choose-page {
+    .row:first-child {
+      margin-top: 10px;
+      width: 500px;
+      @include mobile {
+        width: auto;
+      }
+    }
+    .candidate-blocks {
+      display: block;
+      height: 80px;
+      line-height: 80px;
+      border-radius: 3px;
+      border: solid 1px #e4ebef;
+      -webkit-transition: all .3s ease;
+         -moz-transition: all .3s ease;
+          -ms-transition: all .3s ease;
+           -o-transition: all .3s ease;
+              transition: all .3s ease;
+      opacity: .8;
+      width: 33.33%;
+      margin: 0 auto;
+      &:hover {
+        border-color: $newManageBlue;
+        opacity: 1;
+      }
+    }
+    .more-details {
+      font-size: 1rem;
+      line-height: 30px;
+      margin: 20px 0 0 0;
+    }
+  }
+}

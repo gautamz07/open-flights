@@ -1,0 +1,174 @@
+@import "./OfflinePaymentNameInput";
+
+@mixin OptionOfflinePayment {
+  @include OfflinePaymentNameInput;
+
+  .option-offline-payment {
+    @include custom-vertical-center(166px);
+    @include logo(40px);
+
+    @include min-tablet {
+      .logo {
+        margin-bottom: 8px;
+      }
+
+      .cell {
+        padding-top: 13px;
+        padding-bottom: 13px;
+      }
+    }
+
+    .offline-payment-name {
+      display: inline-block;
+      width: 100%;
+      height: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 30px;
+      color: #444444;
+      text-align: center;
+    }
+
+    .offline-payment-instructions-label {
+      padding-left: 13px;
+      margin-bottom: 8px;
+    }
+
+    .offline-payment-instructions-editor {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 110px;
+      padding: 0px;
+      padding-bottom: 25px;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: left;
+      border: solid 1px #e8eef2;
+      border-radius: 3px;
+      transition: border-color .25s ease-in-out;
+
+      .offline-payment-instructions-textarea {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+        padding: 13px;
+        padding-bottom: 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #4c5667;
+        text-align: left;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        resize: none;
+      }
+
+      .offline-payment-status {
+        position: absolute;
+        bottom: 0;
+        right: 9px;
+        height: 17px;
+        font-size: 11px;
+        line-height: 1.55;
+        color: #575757;
+        opacity: 0.7;
+
+        &.error {
+          color: #ef7d8a
+        }
+      }
+
+      .offline-payment-instructions-placeholder {
+        position: absolute;
+        max-height: 100%;
+        padding: 13px;
+        font-size: 14px;
+        line-height: 20px;
+        overflow: hidden;
+        color: #575757;
+        opacity: 0.7;
+        pointer-events: none;
+      }
+
+      &.focus {
+        border-color: #4ba4ea;
+      }
+
+      &.error {
+        .offline-payment-instructions-placeholder { color: #e5364b; opacity: 1; }
+        border-color: #ef7d8a;
+        background-color: #fff7f8;
+      }
+
+      &.saved {
+        background-color: #f6f7f8;
+        .offline-payment-instructions-textarea { cursor: default; }
+      }
+    }
+
+    .offline-payment-name-edit {
+      display: block;
+      text-align: center;
+      height: 26px;
+    }
+
+    .offline-payment-instructions-edit {
+      position: absolute;
+      left: 10px;
+      bottom: 0px;
+    }
+
+    .ico-menu-edit-site {
+      display: inline-block;
+      font-size: 11px;
+      line-height: 17px;
+      color: #575757;
+      opacity: .7;
+      cursor: pointer;
+      transform: translate(-3px, -3px);
+
+      &:before {
+        font-size: 17px !important;
+        transform: translateY(-3px);
+        line-height: 17px  !important;
+        margin-right: 2px  !important;
+      }
+    }
+
+    @include min-tablet {
+      &.option-container > div:nth-child(2) {
+        padding-left: 38px !important;
+        padding-right: 15.6 !important;
+      }
+    }
+
+    .button.enable {
+      padding-right: 15px !important;
+      padding-left: 15px !important;
+    }
+
+    @include mobile {
+      .offline-payment-name-editor {
+        display: inline-block;
+        width: 200px;
+        margin-left: 17px;
+
+        input { text-align: left; }
+      }
+
+      .offline-payment-name {
+        width: 150px;
+        vertical-align: middle;
+      }
+
+      .offline-payment-name-edit {
+        display: inline-block;
+        width: 50px;
+        transform: translateY(12px);
+      }
+
+      br { display: none; }
+    }
+  }
+}

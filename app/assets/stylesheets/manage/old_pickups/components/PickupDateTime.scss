@@ -1,0 +1,39 @@
+@import '../react_datetime';
+
+@mixin PickupDateTime {
+  @include ReactDateTime;
+
+  .pick-up-datetime {
+    margin-bottom: 1rem;
+    .title {
+      text-align: left;
+      font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+      font-size: 16px;
+      color: #212121;
+      margin-top: 7px;
+      margin-bottom: 26px;
+    }
+    .rdt.rdtOpen {
+      .rdtPicker {
+        bottom: 50px;
+        width: auto;
+        font-size: 14px;
+        .rdtDays {
+          .dow {
+            padding-top: 4px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 2px;
+          }
+          .rdtDay {
+            padding-top: 4px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 2px;
+          }
+        }
+      }
+    }
+  }
+
+}

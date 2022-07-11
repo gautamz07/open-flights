@@ -1,0 +1,85 @@
+@mixin menu-drop {
+  .menu {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $defaultDdMenuBG;
+
+    &.top, &.middle, &.bottom{
+      width: calc(100% - 20px);
+      left: 10px;
+      background-color: #fff;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+    &.top {
+      top: 50px;
+      a {
+        padding: 15px;
+        text-align: left;
+      }
+    }
+    &.middle { bottom: 50%; }
+    &.bottom { bottom: 50px; }
+
+    a {
+      font-size: 0.875rem;
+      display: block;
+      padding: 10px 0;
+      color: $defaultDdMenuTextColor;
+      text-align: center;
+
+      &:first-child { border-top: none; }
+
+      &:hover, &:focus, &:active {
+        background-color: #f0f4f7;
+        color: $defaultDdMenuTextColor;
+      }
+    }
+
+    [class^="ico-"], [class*=" ico-"] {
+      &:before {
+        font-size: 24px;
+        vertical-align: bottom;
+        margin-right: 5px;
+      }
+    }
+
+    span {
+      display: block;
+      margin: 0 10px;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 12px;
+      white-space: pre;
+      color: $defaultDdMenuTextColor;
+    }
+
+  }
+
+  .menu-pointer {
+    position: absolute;
+    z-index: 2;
+    border: 8px solid transparent;
+    margin-left: 4px;
+    &.up {
+      bottom: 0;
+      border-bottom-color: $defaultSiteDisableTextColor;
+    }
+    &.down {
+      top: 0;
+      border-top-color: $defaultSiteDisableTextColor;
+    }
+  }
+
+  .menu-backdrop {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

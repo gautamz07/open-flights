@@ -1,0 +1,30 @@
+/* To add new icons 
+	1. use ikons.svg 
+	2. generate fonts useing fontello
+   
+   P.S. icons to be left untouched as its for old icons
+   
+   TODO : merge icons from ikons into icons.
+*/
+
+
+@font-face {
+	font-family:"icons";
+	src:font-url("icons.eot");
+	src:font-url("icons.eot?#iefix") format("embedded-opentype"),
+		font-url("icons.woff") format("woff"),
+		font-url("icons.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
+
+
+@font-face {
+	font-family:"ikons";
+	src:font-url("ikons.eot");
+	src:font-url("ikons.eot?#iefix") format("embedded-opentype"),
+		font-url("ikons.woff") format("woff"),
+		font-url("ikons.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}

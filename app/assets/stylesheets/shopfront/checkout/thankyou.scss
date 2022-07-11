@@ -1,0 +1,49 @@
+.thankyou-title {
+  font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
+  letter-spacing:0px;
+  padding: 55px 20px 44px 20px;
+
+  div { margin-bottom: 17px; }
+
+  h1 {
+   // font-family: 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif;
+   font-size:24px;
+   color:#333333;
+  }
+
+  p {
+    margin-bottom: 10px;
+    opacity:0.69;
+    font-size:15px;
+    color:#333333;
+  }
+
+  a {
+    font-size:14px;
+    color:#333333;
+    span { font-size: 18px; }
+  }
+
+}
+
+.thankyou-container {
+  .checkout-summary { margin-top: 20px; }
+  .summary-title {
+    letter-spacing:0px;
+    color:#333333;
+
+    h3 {
+    // font-family: 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif;
+    font-size:18px;
+    color:#333333;
+    }
+
+    p {
+    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    opacity:0.69;
+    font-size:13px;
+    }
+
+  }
+}

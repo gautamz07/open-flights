@@ -1,0 +1,56 @@
+@import "redux_shared/navigation/_variables";
+@import "./pageDropdown/*";
+
+@mixin PageDropdown {
+
+  .page-dropdown {
+    width: 25%;
+    .title {
+      @include disable-select;
+      cursor: pointer;
+      line-height: inherit;
+      span.ico-arrow-down { font-size: 16px; margin-left: 3px;}
+    }
+
+    .page-drop-list-group {
+      @include transition-ease-back(transform, opacity, visibility);
+
+      z-index: $z-index-nav-dropdown;
+      position: absolute;
+      top: $nav-height;
+      // left: calc(50% - 150px);
+      transform: translate(-50%);
+      text-align: center;
+      margin: auto;
+
+      background-color: #FFF;
+      width: 300px;
+
+      visibility: hidden;
+      opacity: 0;
+      transform: translate3d(0px, -10px, 0px);
+      border-radius: 5px;
+      box-shadow: 0 0 0 1px rgba(99,114,130,0.15), 0 8px 32px rgba(27,39,51,0.20);
+
+      &.checked {
+        transform: translate3d(0px, 0px, 0px);
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .page-add {
+        @include PageAdd;
+      }
+
+      #page-list-sortable {
+        @include PageDropList;
+      }
+    }
+
+    @include max-tablet {
+      padding-left: 8px;
+      padding-right: 3px;
+    }
+  }
+
+}

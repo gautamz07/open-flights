@@ -1,0 +1,55 @@
+@import './styles/SignUpModal.scss';
+@import './styles/LoginModal.scss';
+@import './styles/ForgotPasswordModal.scss';
+@import './styles/ResetPasswordModal.scss';
+@import './styles/AccountDropdown.scss';
+
+
+@import "../../mixin/LoginForm.scss";
+@import "./shpmtcd/*";
+
+.my-account {
+  font-size: 13px;
+  line-height: 60px;
+  top: 0;
+  display: inline-block;
+  position: relative;
+  // font-family: 'ProximaNova-Regular';
+  .user-auth-section {
+    top: 3px;
+  }
+  .register-btn, .login-btn, .logout-btn {
+    // padding: 5px;
+    cursor: pointer;
+    outline: none;
+    color: inherit;
+  }
+  .login, .logout {
+    color: inherit;
+    font-size: 14px;
+    line-height: 22px;
+    display: inline;
+    // font-family: 'ProximaNova-Semibold';
+    .shpmtc-button__content__text {
+      display: flex;
+      .shpmtcdicon-menu-profile {
+        font-size: 20px;
+        margin-right: 5px;
+        &::before {
+          font-weight: bold;
+        }
+      }
+    }
+    .shpmtc-button--text:hover span {
+      text-decoration: none;
+    }
+  }
+  
+}
+
+body {
+  @include SignUpModal;
+  @include LoginModal;
+  @include ForgotPasswordModal;
+  @include ResetPasswordModal;
+}

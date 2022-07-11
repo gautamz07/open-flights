@@ -1,0 +1,40 @@
+body {
+  #product_builder {
+    #content {
+      .navbar-container {
+        @include transition-basic(left);
+        left: 64px;
+        @media only screen and (max-width: 767px){
+          &_mobile {
+            left: 0;
+          }
+        }
+      }
+      .builder {
+        @include transition-basic(left);
+        left: $side-nav-width;
+      }
+      .reveal-overlay {
+        left: $side-nav-width;
+      }
+    }
+  }
+}
+
+body.fullpage {
+  #product_builder {
+    #content {
+      .navbar-container {
+        @include transition-basic(left);
+        left: -1 * $side-nav-width;
+      }
+      .builder {
+        @include transition-basic(left);
+        left: 0;
+      }
+      .reveal-overlay {
+        left: 0;
+      }
+    }
+  }
+}

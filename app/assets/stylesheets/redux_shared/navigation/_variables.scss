@@ -1,0 +1,20 @@
+$nav-height: 50px;
+$nav-left-padding: 50px;
+$nav-left-padding-mobile: 50px;
+$nav-right-padding: 20px;
+
+$nav-red: #E0243C;
+$nav-hover-color: #000000;
+
+$manage-drop-list-width: 200px;
+$inactive-text-color: #aaa;
+
+// for doodle to control these properties by just overwriting this file,
+// TODO: there should be a cleaner way to separate pro and doodle logo and nav style
+$logo-border-right: 1px solid #eee;
+$logo-size: 60%;
+$nav-btn-padding: 10px 5px;
+$trial-count-down-padding-left: 10px;
+$next-step-btn-margin: 10px 0;
+$next-step-height: 30px;
+$next-step-line-height: 10px;

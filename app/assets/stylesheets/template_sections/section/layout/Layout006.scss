@@ -1,0 +1,16 @@
+.Layout006 {
+  .block_2 {
+    margin-top: 50px;
+  }
+
+  .ImageWithVideo {
+    max-width: 530px;
+  }
+
+  @include mobile {
+    .block_1, .block_2 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@mixin fill-window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  & > div {
+    min-height: 100%;
+  }
+}
+
+@mixin editable-block ($block-width) {
+  width: $block-width;
+  max-width: 100%;
+  background-color: white;
+  padding: 2em;
+  margin-bottom: 1em;
+  box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.17);
+  word-wrap: break-word;
+  .title {
+    font-size: 16px;
+    color: #2c3344;
+    margin-bottom: 1em;
+  }
+  form, & > div {
+    position: relative;
+    input.field {
+      padding-left: 0;
+      padding-right: 0;
+      border: none;
+      border-bottom: 2px solid #dadada;
+      font-size: 16px;
+      line-height: 1.8em;
+      background-color: transparent;
+      display: inline-block;
+      box-shadow: none;
+      margin: 0;
+      &:focus {
+        outline: none;
+      }
+    }
+    input[type="submit"] {
+      padding-left: 0;
+      padding-right: 0;
+      color: #ffffff;
+      font-size: 13px;
+      border-radius: 3px;
+      background-color: #5dadec;
+      border: none;
+    }
+  }
+  &.active, &:hover {
+    outline: solid 0.5px #5dadec;
+  }
+}
+
+@mixin border-btn ($border-color, $bg-color, $radius) {
+  border: 1px solid $border-color;
+  border-radius: $radius;
+  background-color: $bg-color;
+  padding: 0.25em;
+}

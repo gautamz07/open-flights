@@ -1,0 +1,47 @@
+@mixin DropOffSuccess {
+  .drop-off-success {
+    width: $pick-ups-modal-content-width;
+    
+    .content-title {
+      height: 200px;
+      padding-bottom: 20px;
+      .columns { height: 100%; }
+
+      .columns.left {
+        padding-top: 20px;
+        .conbine-img {
+          display: inline-block;
+          position: relative;
+          .img-main{
+            width: 131px;
+            height: 131px;
+            opacity: .3;
+          }
+          .img-tick-on {
+            position: absolute;
+            bottom: 15px;
+            right: -20px;
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      .columns.right {
+        text-align: left;
+        padding-top: 40px;
+        padding-left: 0;
+        h3 {
+          font-size: 21px;
+          color: #212121;
+          line-height: 1.33;
+        }
+        p {
+          font-size: 14px;
+          line-height: 1.5;
+          color: #434343;
+        }
+      }
+    }
+  }
+}

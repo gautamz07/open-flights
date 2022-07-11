@@ -1,0 +1,110 @@
+.Footer001 {
+
+  // commerce hacking:
+  // when commerce is disabled, the product category list will be gone
+  // this will hide the split line (hr element) in the footer
+  .nav {
+    .table {
+      hr {
+        display: none !important;
+        &:nth-child(2) {
+          display: block !important;
+        }
+      }
+    }
+  }
+
+  // grid settings
+  .footer-flex {
+    @include min-desktop {
+      display: flex;
+      .logo { flex: 0 0 auto; width: 100px; }
+      .nav { flex: 1; }
+    }
+    @include max-tablet {
+      display: block;
+      .logo { width: 100%; float: left; }
+      .nav { width: 100%; float: left; }
+      &:after {
+        content: '';
+        clear: both;
+      }
+    }
+  }
+  .social {
+    float: right;
+  }
+  .shopmatic {
+    float: right;
+  }
+  // grid settings
+
+  .FooterContainer > .row {
+    padding: 50px 30px 75px;
+    > .columns { height: 100%; }
+  }
+
+  .logo {
+    padding-top: 10px;
+  }
+
+  .nav {
+    .table {
+      float: right;
+      display: table;
+
+      nav { display: table-row; }
+      ul { text-align: right; }
+    }
+  }
+
+  .shopmatic {
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .social {
+    margin-top: 10px;
+  }
+
+  @include min-desktop {
+    .shopmatic {
+      left: -10px;
+    }
+  }
+
+  @include max-tablet {
+    .FooterContainer > .row {
+      padding-bottom: 20px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 0 80px;
+      .img-controll {
+        max-width: 200px;
+        display: inline-block;
+      }
+    }
+    .nav {
+      .table {
+        width: 100%;
+        .nav-page-list, .nav-product-category-list {
+          ul { text-align: center !important; }
+          li { display: block !important; }
+        }
+      }
+    }
+    .shopmatic {
+      text-align: center;
+    }
+    .social {
+      text-align: center;
+      .social-link-list {
+        display: inline-block;
+      }
+    }
+  }
+
+}

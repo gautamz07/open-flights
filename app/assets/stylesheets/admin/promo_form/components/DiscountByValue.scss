@@ -1,0 +1,21 @@
+@mixin DiscountByValue {
+  .discount-by-value {
+    .discount-by-value-field {
+      @include CommonField;
+      &.selected {
+        background-color: pink;
+        border-radius: 5px;
+      }
+      input {
+        width: 50px;
+        text-align: right;
+      }
+      .currency {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 50px;
+      }
+    }
+  }
+}

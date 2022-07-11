@@ -1,0 +1,67 @@
+$icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>";
+
+@mixin single-select($font-size) {
+  padding: 0.5rem;
+  border: 1px solid #cacaca;
+  margin: 0 0 1rem;
+  font-size: $font-size;
+  font-family: inherit;
+  line-height: normal;
+  color: #0a0a0a;
+  background-color: #fefefe;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url($icon);
+  background-size: 9px 6px;
+  background-position: right -1rem center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  padding-right: 1.5rem;
+  border-radius: 3px;
+  height: 48px;
+  padding-left: 1em;
+  &:hover {
+    cursor: pointer;
+  }
+  .select-text {
+    font-size: $font-size;
+    line-height: 30px;
+    text-align: left;
+  }
+  .fixed-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    overflow-y: scroll;
+    .select-options {
+      border: 0.5px solid #dddddd;
+      border-radius: 3px;
+      padding: 1em 1.2em;
+      padding-right: calc(30px + 1.2em);
+      overflow: hidden;
+      background-color: white;
+      &.hidden {
+        display: none;
+      }
+      .option {
+        text-align: left;
+        line-height: 1.5em;
+        background-color: inherit;
+        &:hover {
+          color: #4aa4e9;
+        }
+        &.selected {
+          color: #4aa4e9;
+        }
+        .selected-sign {
+          width: 30px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+}

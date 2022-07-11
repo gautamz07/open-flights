@@ -1,0 +1,16 @@
+@import 'react-table';
+
+.promotions {
+  .rt-table {
+    .rt-tbody {
+      text-transform: capitalize;
+    }
+    @include TdPromoOption;
+    @include TdPackages;
+  }
+
+  .new-promotion-btn {
+    margin: 1rem 0;
+    display: inline-block;
+  }
+}

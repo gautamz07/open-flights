@@ -1,0 +1,52 @@
+@mixin AddressOptionSelector {
+  .address-option-selector {
+    margin-bottom: 1rem;
+
+    @import "../components_shared/label";
+
+    .help-text.error {
+      margin-top: 5px;
+      margin-bottom: 0px;
+    }
+
+    .Select {
+      .Select-control {
+        height: 36px;
+        margin-top:2px;
+      }
+
+      &:not(.is-open) {
+        .Select-control {
+          border-radius: 3px;
+          border: solid 1px #dcdcdc;
+        }
+      }
+
+      .Select-input {
+        height: 30px;
+      }
+      .Select-arrow-zone {
+        border-left: solid 1px #dcdcdc;
+        padding-left: 6px;
+        width: 30px;
+        padding-top: 5px;
+
+        .Select-arrow {
+          position: relative;
+          border-color: #000 transparent transparent;
+
+          &:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-color: #FFF transparent transparent;
+            border-width: 5px 5px 2.5px;
+            left: -5px;
+            top: -7px;
+          }
+        }
+      }
+    }
+
+  }
+}

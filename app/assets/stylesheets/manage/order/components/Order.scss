@@ -1,0 +1,17 @@
+@mixin Order {
+  .order {
+    .page-header {
+      margin: 15px;
+      .btn-link {
+        color: #424b5b;
+        font-size: 24px;
+      }
+    }
+    .actions-panel {
+      @include ActionsPanel;
+    }
+    .invoice {
+      @include Invoice;
+    }
+  }
+}

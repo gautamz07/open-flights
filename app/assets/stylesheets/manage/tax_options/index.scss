@@ -1,0 +1,10 @@
+@import "./components/**/*";
+
+#tax_options {
+  margin-top: 15px;
+  @include FormIndia;
+  @include FormSingapore;
+  @include FormHongKong;
+  @include FormUnitedArabEmirates;
+  @include ButtonLinkStyles;
+}

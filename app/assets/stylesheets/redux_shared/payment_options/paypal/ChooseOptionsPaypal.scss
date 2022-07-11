@@ -1,0 +1,12 @@
+@mixin ChooseOptionsPaypal {
+  .choose-options-paypal {
+    width: 500px;
+    
+    ._integrate {
+      img {
+        width: 100px;
+        vertical-align: baseline;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@mixin InvalidAlert {
+  .invalid-alert {
+    border-radius: 3px;
+    color: #a94442;
+    font-weight: bold;
+    p {
+      margin-bottom: 0;
+    }
+    button {
+      &:focus {
+        outline: none;
+      }
+    }
+    .close-btn {
+      position: absolute;
+      right: 16px;
+      top: 14px;
+      float: right;
+      font-size: 20px;
+      font-weight: bold;
+      color: #aaaaaa;
+    }
+    .change-for-me-btn {
+      margin-top: 10px;
+      border-radius: 3px;
+      padding: 8px 10px;
+    }
+  }
+}

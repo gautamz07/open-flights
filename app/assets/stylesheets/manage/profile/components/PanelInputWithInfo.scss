@@ -1,0 +1,84 @@
+@mixin PanelInputWithInfo {
+  .profileFormWrapper {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 0 rgba(99,114,130,0.15);
+
+    .input__custom {
+      position: relative;
+    }
+    #phoneNumber {
+      + .input__linksuffix {
+        position: absolute;
+        top: 0;
+        right: 0;
+        > a {
+          font-size: 0.8rem;
+        }
+      }  
+    }
+
+    .label {
+      color: $textVariationOne;
+      margin-bottom: 2px;   
+    }
+
+    .btn-link {
+      @include ButtonLink;
+      color: $textVariationOne;
+    }
+
+    @include min-tablet {
+      .profile__changepwd {
+        margin-top: 1.65rem;
+      }  
+    }
+    @include mobile {
+      .profile__delete,
+      .profile__changepwd {
+        width: 100%;
+      }
+    }
+  }
+
+  @include min-tablet {
+    .profile__businessAddressWrapper {
+      .postcode {
+        clear: both;
+      }
+    }
+  }
+
+  .upload__logo {
+    color: $textVariationOne;
+    margin-bottom: 1rem;
+  }
+  .panel-inputWithInfo {
+    box-shadow: none;
+    overflow: visible;
+
+    .panel-inputWithInfo__right {
+      padding: 20px 20px 10px 20px;
+    }
+    .divide-line  {
+      &:before {
+        display: none;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 20px;
+      right:20px;
+      height: 1px;
+      bottom:0;
+      background: #E5ECF0;
+    }
+
+    @include mobile {
+      &__right {
+        padding-top:0;
+      }  
+    }
+  }
+}

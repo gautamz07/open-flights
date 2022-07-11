@@ -1,0 +1,30 @@
+@import "redux_shared/mixin/base";
+@import "redux_shared/mixin/z_index";
+@import "redux_shared/navigation/_variables";
+
+@mixin DisableMask {
+  .disable-mask {
+    @include disable-select;
+    z-index: $z-index-disable-mask-content;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);  // make disableMask transparent
+    position: fixed;
+    top: $nav-height;
+    left: 0; right: 0;
+    bottom: 0;
+    visibility: hidden;
+    pointer-events: auto;
+
+    &[data-visible~='true'] { visibility: visible; }
+    &[data-scope~='content'] { top: 0; } // default
+    &[data-scope~='nav'] {
+      top: 0;
+      height: 50px;
+      z-index: $z-index-disable-mask-full-body;
+    }
+    &[data-scope~='all'] {
+      top: 0;
+      z-index: $z-index-disable-mask-full-body;
+    }
+  }
+}

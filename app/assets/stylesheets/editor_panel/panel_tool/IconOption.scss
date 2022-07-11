@@ -1,0 +1,14 @@
+@mixin IconOption {
+  .icon-option {
+    @include data-hover-controll;
+    @include data-active-controll;
+    @include data-disable-controll;
+
+    @include icon_option_react_tooltip_overwrite;
+
+    display: inline-block;
+    padding: 8px 3px;
+    margin-right: 5px;
+
+  }
+}

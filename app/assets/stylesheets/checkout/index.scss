@@ -1,0 +1,138 @@
+
+/* @import "./components/*"; */
+@import "./components/CartDropdownBtn";
+@import "./components/QuantitySelect";
+@import "./components/FreeShippingStatus";
+@import "./components/EmptyCart";
+// @import "./components/LineItem";
+@import "./shpmtcd/settings";
+
+.checkout-block {
+    padding: 15px 20px 15px 20px;
+
+    .line-item-list {
+        
+        .line-items {
+            /* Cart List [start] */
+            $photo-w: 60px;
+            $photo-w-mobile: 60px;
+            text-align: unset;
+            padding-right: 10px;
+            .shpmtc-cart-list{
+                position: relative;
+                padding: $spacing-rg 0px !important;
+                display: block;
+            
+                /* List Photo [start] */
+                img.shpmtc-cart-list__photo{
+                    width: $photo-w;
+                    height: $photo-w;
+                    display: inline-block;
+                    object-fit: cover;
+                    @include respond-to(screenXS){
+                        width: $photo-w-mobile;
+                        height: $photo-w-mobile;
+                    }
+                }   /* List Photo [end] */
+            
+                /* List Content [start] */
+                &__content{
+                    width: calc(100% - #{$photo-w} - #{$spacing-md});
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-left: $spacing-md;
+                    @include respond-to(screenXS){
+                        margin-left: $spacing-rg;
+                        width: calc(100% - #{$photo-w-mobile}  - #{$spacing-rg});
+                    }
+            
+                    &__info{
+                        width: calc(100% - 30px);
+                        .title{
+                            color: $DarkColor;
+                            // font-family: 'ProximaNova-Semibold';
+                            margin-bottom: $spacing-xs;
+                            @extend %fontSize15px;
+                            line-height: 18px;
+                        }
+                        .desc{
+                            display: inline-block;
+                            width: 100%;
+                            vertical-align: middle;
+                            color: $NeutralColor06;
+                            // font-family: 'ProximaNova-Regular';
+                            @extend %fontSize12px;
+                            line-height: 14px;
+                            &__thumb{
+                                display: inline-block;
+                                vertical-align: middle;
+                                width: $spacing-rg;
+                                height: $spacing-rg;
+                                margin-right: $spacing-xs;
+                                border-radius: $borderRadius-full;
+                                background-color: $DarkColor;
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                            }
+                            &__info{
+                                width: calc(100% - 20px);
+                                display: inline-block;
+                                vertical-align: text-top;
+                            }
+                        }
+                    }
+            
+                    &__bottom{
+                        display: block;
+                        margin-top: $spacing-sm;
+            
+                        .ant-select{
+                            vertical-align: middle;
+                        }
+                        .price{
+                            color: $DarkColor;
+                            // font-family: 'ProximaNova-Medium';
+                            display: inline-block;
+                            width: calc(100% - 105px);
+                            vertical-align: middle;
+                            text-align: right;
+                            margin-left: $spacing-md;
+                            @extend %fontSize14px;
+                            line-height: 16px;
+                        }
+            
+                    }
+            
+                }   /* List Content [end] */
+            
+                /* List Delete Button [start] */
+                &__delete{
+                    position: absolute;
+                    top: $spacing-xs;
+                    right: - $spacing-xs;
+                    .shpmtc-button__content {
+                        font-size: 20px;
+                        &__text {
+                            i {
+                                color: $NeutralColor06;
+                            }
+                        }
+                    }
+                }   /* List Delete Button [end] */
+            
+            }   /* Cart List  [end] */
+        }
+    }
+
+    .total-price {
+        div {
+            display: inline-block;
+        }
+    }
+
+
+
+    
+    
+}

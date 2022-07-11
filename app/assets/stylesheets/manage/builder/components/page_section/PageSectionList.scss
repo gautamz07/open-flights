@@ -1,0 +1,19 @@
+@import 'redux_shared/mixin/transition';
+
+@mixin PageSectionList {
+  .page-section-list {
+    list-style-type: none;
+    margin: 0;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 300px;
+    right: 0;
+    bottom: 0;
+    @include PageSectionListItem;
+    @include transition-basic(left);
+    &.slide-left {
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import "redux_shared/shipping_options/mixin/row";
+
+@mixin OptionNinjavan {
+  .ninjavan {
+    @include custom-vertical-center(120px);
+    @include logo(45px);
+    &_common-logo{
+      width: 90% !important;
+    }
+
+    .partner-logos{
+      [class|=logo]{
+        width: auto;
+        height: 20px;
+        display: inline-block;
+        vertical-align: bottom;
+        margin-right: 15px;
+        position: relative;
+        @include mobile {
+          margin: 10px;
+        }
+      }
+      .logo-aramex{ height: 12px; }
+      .logo-dotzot{ top: 5px; }
+      .logo-india-post{ height: 22px; }
+    }
+
+    .logo{
+      width: auto; height: 44px;
+    }
+
+    .provider-name {
+      margin-left: 10px;
+    }
+
+    .shipping-rates-link {
+      margin-left: 5px;
+    }
+
+    .partner-logos {
+      @include custom-vertical-center(45px);
+
+      @include mobile {
+        .v-wrap {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
+
+#ninjavan-account-modal{
+  input[type=submit]:disabled{
+      background-color: #2199e8;
+      color: #fefefe;
+    }
+}
+
+.page-indicator {
+  overflow: auto;
+  line-height: 30px;
+  .ico-dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: #dde5eb;
+    &.active {
+      background-color: #4ba4ea;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+.page-next {
+  line-height: 30px;
+  .go-next-page {
+    .ico-arrow-right:before {
+      vertical-align: baseline;
+    }
+    float: right;
+  }
+}
+
+.page-window {
+  position: relative;
+  .page {
+    display: none;
+    &.active {
+      display: block;
+    }
+    .header {
+      font-size: 24px;
+      .page-number {
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+        padding-right: 10px;
+        margin-right: 10px;
+        border-right: 1px solid #d4d4d4;
+      }
+    }
+    &.guide-1 {
+      .button {
+        border-radius: 4px;
+      }
+    }
+  }
+}

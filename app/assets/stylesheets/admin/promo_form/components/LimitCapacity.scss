@@ -1,0 +1,8 @@
+@mixin LimitCapacity {
+  .limit-capacity {
+    @include CommonField;
+    .field {
+      vertical-align: middle;
+    }
+  }
+}

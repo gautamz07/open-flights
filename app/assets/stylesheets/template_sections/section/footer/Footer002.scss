@@ -1,0 +1,33 @@
+.Footer002 {
+
+  .FooterContainer > .row {
+    text-align: center;
+    padding: 20px 70px 30px;
+  }
+
+  .nav {
+    padding-bottom: 20px;
+    
+  }
+
+  hr { border-color: inherit; opacity: .4; }
+
+  .paragraph-1 {
+    margin-top: 30px;
+  }
+  .paragraph-2 {
+    margin-top: -20px;
+  }
+
+  @include max-tablet {
+    .FooterContainer > .row {
+      padding: 20px 30px 30px;
+    }
+
+    .nav-page-list {
+      ul { text-align: center !important; }
+      li { display: block !important; }
+    }
+  }
+
+}

@@ -1,0 +1,33 @@
+body .panel.panel-default {
+
+  margin: 35px 0 50px;
+  background-color: #392F40;
+  border-radius: 8px;
+  box-shadow: none;
+
+  h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .panel-body, .panel-footer { padding: 25px; }
+
+  .panel-footer {
+    background-color: #312a37;
+    border: 0;
+  }
+
+  .brand {
+    width: 100%;
+    margin: 15px 0 30px;
+    box-shadow: none;
+    background-size: auto 72px;
+    background-image: image-url('navbar/logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 72px;
+  }
+
+}

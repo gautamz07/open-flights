@@ -1,0 +1,7 @@
+@mixin icon-size($size) {
+  [class^="ico-"], [class*=" ico-"] {
+    font-size: $size;
+    line-height: 1;
+    &:before { font-size: $size; }
+  }
+}

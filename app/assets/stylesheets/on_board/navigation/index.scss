@@ -1,0 +1,21 @@
+@import "./components/*";
+
+#navigation {
+  nav {
+    @include NextStepBtn;
+    @include ContactUsPrompt;
+    @include TutorialTooltip;
+    @include TutorialPageEditSampleButtons;
+    @include FullContentMask;
+    @include ManageDropdown;
+    @include PageDropdown;
+    @include SkipThisButton;
+    @include DisableMask;
+
+    &.on-board-nav {
+      .top-bar-center { pointer-events: none; }
+    }
+    &.tutorial-nav {
+    }
+  }
+}

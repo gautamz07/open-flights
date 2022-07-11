@@ -1,0 +1,121 @@
+#categories {
+  position: relative;
+  width: 230px;
+  height: auto;
+  margin: 1rem auto;
+  padding: 0;
+  border-radius: 3px;
+  box-shadow: 0px 6px 11px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  background-color: #f9fafb;
+  h2 {
+    display: none;
+    font-size: 1.125rem;
+    font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif;
+    font-weight: normal;
+    color: #333333;
+  }
+  ul {
+    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    font-weight: bold;
+    list-style: none;
+    line-height: 2.5rem;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  li {
+    margin: 0.2rem 0;
+    > a {
+      display: inline-block;
+      padding: 0 1rem;
+      width: 100%;
+      font-size: 0.875rem;
+      font-weight: normal;
+      cursor: pointer;
+      color: #666666;
+      border-radius: 0;
+      &:hover, &:active, &:focus, &.active {
+        text-decoration: none;
+        color: #e11236;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .brand {
+    display: none;
+    @media screen and (min-width: 55em) {
+      display: block;
+      background: image-url('web_layout/logo_wide.svg') left no-repeat;
+      background-size: contain;
+      width: 162px;
+      height: 36px;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .dropdown-pane {
+    top: 32px !important;
+    left: 0px !important;
+    width: 230px;
+    border: none;
+    padding: 1rem 0;
+    overflow: auto;
+    max-height: 1600px;
+  }
+}
+
+#current-category {
+  display: block;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1.2rem;
+  border-bottom: 1px solid rgba(216, 216, 216, 0.5);
+  background-color: #f9fafb;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 55em) {
+  #categories {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    margin: 0;
+    padding: 30px 30px 30px 30px;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: auto;
+    h2 {
+      display: block;
+    }
+    ul {
+      line-height: 1.8rem;
+      margin-top: 1.4rem;
+    }
+    li {
+      > a {
+        width: auto;
+        border-radius: 0.9rem;
+        transition: .3s;
+        padding: 0 0;
+        &:hover, &:active, &:focus, &.active {
+          color: #e11236;
+          background-color: transparent;
+        }
+      }
+    }
+    .dropdown-pane {
+      visibility: visible;
+      position: relative;
+      left: 0px !important;
+      top: 0px !important;
+      padding: 0;
+      background-color: #f9fafb;
+    }
+  }
+  #current-category {
+    display: none;
+  }
+}

@@ -1,0 +1,414 @@
+@import "common/variables";
+@import "common/third_party_login_concern";
+@import "common/google-optimize-anti-flicker";
+
+@import "./login_form";
+
+@include third-party-access;
+@include third-party-login-divider;
+@include login-form-block-input;
+
+html {
+  background: #E7E6EB;
+}
+
+body {
+  background-color: transparent;
+  font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  color: #838ca1;
+  // to fix the bug in firefox because min-width/min-height/max-width/max-height does not work for table elements
+  // refer https://bugzilla.mozilla.org/show_bug.cgi?id=1221721
+  // refer https://bugzilla.mozilla.org/show_bug.cgi?id=307866
+  // display: table; 
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &[data-home-country=in] {
+    @media screen and ( min-width: 992px ){ background-image: image_url('login/in-index-desktop.jpg'); }
+  }
+  &[data-home-country=sg] {
+    @media screen and ( min-width: 992px ){ background-image: image_url('login/sg-index-desktop.jpg'); }
+  }
+  &[data-home-country=hk] {
+    @media screen and ( min-width: 992px ){ background-image: image_url('login/hk-index-desktop.jpg'); }
+  }
+}
+
+.content-container {
+  float: none;
+  width: 100%;
+  // to fix the bug in firefox because min-width/min-height/max-width/max-height does not work for table elements
+  // refer https://bugzilla.mozilla.org/show_bug.cgi?id=1221721
+  // refer https://bugzilla.mozilla.org/show_bug.cgi?id=307866
+  // display: table-cell;
+  vertical-align: middle;
+  @media screen and ( max-width: 992px ){
+    vertical-align: top;
+  }
+
+  .background-index {
+    @media screen and ( max-width: 991px ) and ( min-width: 415px ){
+      &[data-home-country=in] { background-image: image_url('login/in-index-tablet.jpg'); }
+      &[data-home-country=sg] { background-image: image_url('login/sg-index-tablet.jpg'); }
+      &[data-home-country=hk] { background-image: image_url('login/hk-index-tablet.jpg'); }
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 380px;
+    }
+    @media screen and ( max-width: 414px ){
+      &[data-home-country=in] { background-image: image_url('login/in-index-mobile.jpg'); }
+      &[data-home-country=sg] { background-image: image_url('login/sg-index-mobile.jpg'); }
+      &[data-home-country=hk] { background-image: image_url('login/hk-index-mobile.jpg'); }
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 380px;
+    }
+    @media screen and ( max-device-width: 414px ){
+      &[data-home-country=in] { background-image: image_url('login/in-index-mobile.jpg'); }
+      &[data-home-country=sg] { background-image: image_url('login/sg-index-mobile.jpg'); }
+      &[data-home-country=hk] { background-image: image_url('login/hk-index-mobile.jpg'); }
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 380px;
+    }
+  }
+
+  .col-xs-12 {
+    margin: 0;
+    padding: 0;
+    padding-left: 5%;
+    @media screen and ( min-width: 992px ){
+      padding-top: 5%;
+    }
+    @media screen and ( max-width: 992px ) and ( min-width: 415px ){
+      padding-right: 5%;
+    }
+    @media screen and ( max-device-width: 414px ){
+      padding: 0;
+    }
+  }
+
+  .browser_suggest {
+    display: block;
+    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    font-size: 12px;
+    color: #727487;
+    line-height: 22px;
+    text-align: center;
+    min-width: 100%;
+    margin-top: 40px;
+  }
+
+  .copyright-index {
+    position: absolute;
+    bottom: 28px;
+    font-size: 13px;
+    line-height: 1.62;
+    color: white;
+    opacity: .6;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 0.1px;
+
+  }
+
+  @include mobile {
+    position: relative;
+
+    .copyright-index {
+      bottom: 10px;
+    }
+  }
+}
+
+a {
+
+  opacity: 0.89;
+  font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+  font-size: 15px;
+  color: #000000;
+  line-height: 22px;
+  text-align: center;
+
+  &:hover { color: lighten(#000000, 1.5); }
+
+}
+
+#messages {
+
+  position: absolute;
+  width: 100vw;
+  z-index: 999;
+
+  .container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+
+  .alert {
+
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 0;
+    color: white;
+    text-align: center;
+
+    .close {
+      color: white;
+      opacity: 1;
+    }
+
+    &.alert-success, &.alert-info { background-color: $defaultBlue; }
+
+    &.alert-danger { background-color: #d62a41; }
+
+    &.alert-warning { background-color: #f2c500; }
+
+  }
+
+}
+
+$form-width: 402px;
+.user-sessions.archive_reactivate {
+  background-image: none;
+  background-color: #eef3f5;
+  .archive-content {
+    text-align: center;
+    .description {
+      width: 730px;
+      margin: auto;
+      margin-bottom: 100px;
+      h1 {
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 1.05;
+        text-align: center;
+        color: #000000;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        color: #000000;
+      }
+      .logo-black { width: 180px; }
+      .reactivate-btn {
+        font-size: 15px;
+        padding: 10px 16px;
+        border-radius: 3px;
+        color: #fff;
+        background-color: #e11a36;
+        opacity: 0.8;
+        &:hover { opacity: 1; }
+        -webkit-transition: all ease .3s;
+           -moz-transition: all ease .3s;
+            -ms-transition: all ease .3s;
+             -o-transition: all ease .3s;
+                transition: all ease .3s;
+      }
+    }
+    .image { width: 930px; margin: auto; }
+  }
+  .copyright-index { display: none; }
+}
+
+.user-sessions.new,
+.user-sessions.create,
+.password-resets.new,
+.password-resets.edit {
+
+  background-image: image-url('login/template-select-flow.jpg');
+
+  .background-index { display: none; }
+
+  .panel.panel-default {
+    width: $form-width;
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+
+    p {
+     font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+     font-size: 15px;
+     color: #878787;
+     letter-spacing: 0.19px;
+     line-height: 21px;
+     text-align: center;
+     opacity: 0.85;
+    }
+
+    .panel-body {
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+      border-radius: 5px;
+      width: $form-width;
+      max-width: 100%;
+      padding: 28px 26px 55px 24px;
+
+      h2 {
+        font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif;
+        font-size: 30px;
+        color: #333333;
+        line-height: 30px;
+        text-align: center;
+      }
+
+      .subtitle {
+        font-size: 13px;
+        margin-top: 10px;
+      }
+
+      .brand {
+        background: image-url('web_layout/logo_wide.svg') 100% 100% no-repeat;
+        width: 164px;
+        height: 37px;
+        margin: auto;
+      }
+
+      .link-to-signup {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #d8e0e4;
+        height: 55px;
+        padding: 18px 26px 20px 24px;
+
+        font {
+          color: $defaultLinkTextColor;
+        }
+        @media (max-width: $form-width - 1) { font-size: 14px; }
+      }
+
+
+    }
+  }
+
+  .form-group {
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px 3px 0px 0px;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 0px;
+  }
+
+  .form-control {
+    background: #ffffff;
+    border: 0.5px solid #e1e1e1;
+    width: 100%;
+    height: 45px;
+
+    &:active, &:hover, &:focus {
+      border: 1px solid #766398;
+    }
+  }
+
+  .input_block {
+    margin-bottom: 15px;
+
+    input {
+      &:active, &:hover, &:focus { opacity:0.8; background:#f6f8fa; }
+    }
+  }
+
+  .row .checkbox { margin-top: 7px; }
+
+  .ico-forward.pull-right.large {
+    font-size: 20px;
+    line-height: 29px;
+  }
+
+  a.btn-default.btn-block.btn-lg { border: none; }
+
+  .content-container > .col-xs-12 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0;
+    top: 50%;
+    width: 350px;
+    transform: translateY(-50%);
+  }
+
+  .browser_suggest {
+    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    color: white;
+    line-height: 21px;
+    margin-top: 15px;
+  }
+}
+
+.user-sessions.new, .user-sessions.create {
+  .panel.panel-default {
+    @include mobile {
+      top: 0;
+      transform: none;
+      height: 100%;
+      display: block;
+      position: static;
+      width: 100%;
+      overflow: auto;
+      .panel-body {
+        position: relative;
+        width: initial;
+      }
+      -webkit-overflow-scrolling: touch;
+    }
+
+    // note: costum breaking point cuz third party login buttons
+    @media (max-width: $form-width - 3) {
+      padding: 20px 10px 70px;
+    }
+  }
+}
+
+.form-group.env {
+  .env-passcode {
+    width: 45%;
+    height: 60px;
+    margin-top: 11px;
+    margin-right: 10px;
+    input#env_passcode {
+      text-indent: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      height: 44px;
+    }
+  }
+}
+
+
+.btn.btn-login {
+  background-image: linear-gradient(-138deg, #766398 0%, #1781a1 100%);
+  box-shadow: 0px 6px 11px 0px rgba(0,0,0,0.18);
+  border-radius: 3px;
+  width: 100%;
+  height: 45px;
+  font-family: 'ProximaNova', 'Helvetica', 'Arial', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  color: #ffffff;
+  letter-spacing: 0.54px;
+  text-align: center;
+  line-height: 33px;
+}
+
+.btn-password {
+  background-image: linear-gradient(-138deg, #766398 0%, #1781a1 100%);
+  box-shadow: 0px 6px 11px 0px rgba(0,0,0,0.18);
+  border-radius: 3px;
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+}

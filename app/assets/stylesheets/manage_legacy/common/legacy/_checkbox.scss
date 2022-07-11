@@ -1,0 +1,80 @@
+@import '../variables';
+
+.checkbox {
+
+  label { padding-left: 25px; }
+
+  input[type=checkbox] {
+
+    margin-left: -25px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:before {
+
+      position: absolute;
+      top: -4px;
+      left: 0;
+
+      display: block;
+      cursor: pointer;
+
+      border-radius: 2px;
+      border: 1px solid #d7d7d7;
+
+      width: 18px;
+      height: 18px;
+
+      content: "";
+      background: $colorWhite;
+
+    }
+
+  }
+
+  input[type=checkbox]:checked:before {
+    font-family: 'fontello';
+    content: '\2713';
+    color: white;
+    font-weight: 200;
+    border: 1px solid $newManageCheckboxColor;
+    background: $newManageCheckboxColor;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  input:focus{
+  outline: none;
+  }
+
+} // end of .checkbox
+
+// custom checkbox for new product form
+.product-details {
+  .checkbox{
+    label {
+      padding-left: 36px;
+      line-height: 20px;
+      font-size: 14px;
+    }
+    input[type=checkbox] {
+      margin-left: -32px;
+      &:before {
+        width: 20px;
+        height: 20px;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+      }
+    }
+  }
+  input[type=checkbox]:checked:before {
+    font-family: 'icons';
+    content: '\f10c';
+    font-weight: 100;
+    line-height: 20px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+  }
+} // end of product-details

@@ -1,0 +1,34 @@
+$tooltip-bg-color: white;
+$tooltip-shadow-color: rgba(0,0,0,0.12);
+$squares-width: 10px;
+$triangle-height: ($squares-width * 1.414 / 2 - 1);
+
+@mixin custom-tooltips {
+  background-color: white !important;
+  opacity: 1 !important;
+  box-shadow: $tooltip-shadow-color 0 1px 2px 1px;
+  &.place-top:after {
+    display: none;
+  }
+  &.place-bottom:after {
+    display: none;
+  }
+  .triangle-shape {
+    height: $squares-width;
+    width: $squares-width;
+    background-color: $tooltip-bg-color;
+    transform: rotateZ(45deg);
+    transform-origin: center;
+    position: absolute;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    &.at-top {
+      box-shadow: -0.5px -0.5px 0 0 $tooltip-shadow-color;
+    }
+    &.at-bottom {
+      box-shadow: 2px 2px 1px 0 $tooltip-shadow-color;
+    }
+  }
+}

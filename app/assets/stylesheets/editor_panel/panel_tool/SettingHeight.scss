@@ -1,0 +1,17 @@
+@mixin SettingHeight {
+  .setting-height {
+    .silder-container {
+      width: 250px;
+    }
+    .abso-right {
+      position: absolute;
+      top: 0;
+      right: 5px;
+      .ico-close-thin {
+        &:before {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

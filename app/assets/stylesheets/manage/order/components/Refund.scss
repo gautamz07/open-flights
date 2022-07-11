@@ -1,0 +1,75 @@
+@mixin Refund {
+  .refund {
+    @include RefundTable;
+
+    .refundBackWrapper {
+      padding: 0.375rem 0 1.25rem 0;
+
+      @include mobile {
+        max-width: 90vw;
+      }
+    }
+
+    .refundMainWrapper {
+      background: #fff;
+      border-radius: $borderRadiusMinor;
+      box-shadow: $boxShadowMinor;
+      padding-top: 1.56rem;
+      padding-bottom: 1.56rem;
+      
+      @include mobile {
+        max-width: 90vw;
+      }
+    }
+
+    .refundHeader {
+      font-size: 21px;
+      font-family: $fontMedium;
+      color: $fontBase;
+    }
+
+    .refundForm {
+      padding: 1.25rem !important;
+      background: $bgLightVariationOne;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 0.625rem;
+
+      
+      @include min-tablet {
+        >* {
+          margin-right: 0.625rem;
+          margin-left: 0.625rem;  
+        }
+  
+        >*:last-child {
+          margin-right: 0;
+        }
+  
+        >*:first-child {
+          margin-left: 0;
+        }
+
+        button {
+          max-width: 84px;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      @include mobile {
+        flex-direction: column;
+
+        >*:not(:last-child) {
+          margin-bottom: 1.25rem;
+        }
+      }
+
+      button {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

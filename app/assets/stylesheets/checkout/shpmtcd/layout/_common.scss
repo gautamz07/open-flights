@@ -1,0 +1,71 @@
+/* Box shadow */
+.box-shadow{
+    &--xs{
+        @extend %boxShadow-xs;
+    }
+    &--sm{
+        @extend %boxShadow-sm;
+    }
+    &--rg{
+        @extend %boxShadow-rg;
+    }
+}
+
+/* Row Spacing */
+%row-spacing-common{
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+}
+
+.row-spacing{
+    &--xl{
+        height: $spacing-xl;
+        @extend %row-spacing-common;
+    }
+    &--lg{
+        height: $spacing-lg;
+        @extend %row-spacing-common;
+    }
+    &--md{
+        height: $spacing-md;
+        @extend %row-spacing-common;
+    }
+    &--rg{
+        height: $spacing-rg;
+        @extend %row-spacing-common;
+    }
+    &--sm{
+        height: $spacing-sm;
+        @extend %row-spacing-common;
+    }
+    &--xs{
+        height: $spacing-xs;
+        @extend %row-spacing-common;
+    }
+}
+
+/* Divide Line */
+.spmtc-divide-line{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $NeutralColor03;
+}
+
+/* Visible and Hidden */
+.hidden-sm{
+    display: block;
+    @include respond-to(screenSM){
+        display: none;
+    }
+}
+
+.visible-sm{
+    display: none;
+    @include respond-to(screenSM){
+        display: block;
+    }
+}

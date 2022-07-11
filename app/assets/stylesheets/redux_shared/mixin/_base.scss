@@ -1,0 +1,27 @@
+@import "./z_index";
+
+@mixin clearfix {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+@mixin disable-select {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@mixin disable-mask {
+  &:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 50px;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: $z-index-disable-mask-content;
+  }
+}

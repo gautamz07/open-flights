@@ -1,0 +1,38 @@
+@mixin BulkActionsDropdown {
+  .bulk-actions-dropdown {
+    .dropdown {
+      width: 100%;
+
+      .dropdown-trigger {
+        width: 100%;
+        position: relative;
+        padding: 9px 13px 7px;
+        background-color: #fff;
+        color: #666666;
+        border-radius: 4px;
+        box-shadow: 0 1px 2px 0 #ddd, 1px -1px 2px 0 rgba(221, 221, 221, 0.2);
+        
+        font-weight: 200;
+        display: inline-block;
+        white-space: nowrap;
+
+        span.caret {
+          position: absolute;
+          right: 14px;
+          top: 12px;
+        }
+      }
+
+      .dropdown-content {
+        margin-top: 4px;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      & {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

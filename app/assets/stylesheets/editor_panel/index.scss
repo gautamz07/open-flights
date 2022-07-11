@@ -1,0 +1,49 @@
+@import "./variables";
+@import "./mixin/*";
+@import "./panel/*";
+@import "./panel_tool/*";
+
+.editor-panel {
+
+  .panel-container {
+    @include panel-container-base;
+    &.vertical { @include _panel_container_vertical; }
+    &.horizontal-center { @include _horizontal_center; }
+
+    @include positionManager;
+
+    // panel-container overwrite
+    @include ImageEditPanel;
+    @include SectionEditPanel;
+    @include BackgroundEditPanel;
+    @include FooterEditPanel;
+    @include SliderEditPanel;
+  }
+
+  .panel-tool {
+    @include panel-tool-base;
+    @include icon-size($edit-panel-tool-icon-size);
+  }
+  // Panel Tool component
+  @include IconOption;
+  @include Dropdown;
+  @include ColorPicker;
+  @include SelectDropdown;
+  @include FlipContainer;
+  @include SliderInput;
+  @include HeightInput;
+  @include SettingLinkGroup;
+  @include TextInputGroup;
+  @include ColorPickerGroup;
+
+  @include Pointer;
+  @include FontBold;
+  @include TextAlign;
+  @include SettingLink;
+  @include SettingBackground;
+  @include SettingHeight;
+  @include VisualSliderEdit;
+  @include SettingAnnouncement;
+  @include SettingHeaderSetup;
+  @include SettingField;
+}

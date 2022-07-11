@@ -1,0 +1,44 @@
+@mixin dropdownManager($className) {
+  .#{$className} {
+    &[data-dropdown-open] {
+      position: relative;
+      > .dropdown-controll {
+        background-color: $edit-panel-background-color;
+        color: $edit-panel-color;
+        position: absolute;
+        top: calc(100% - 6px); left: 0;
+        overflow: hidden;
+        cursor: default;
+        -webkit-border-radius: 5px;
+                border-radius: 5px;
+        @include transform-origin(top);
+        z-index: 1;
+      }
+      > .dropdown-controll.reverse-H { left: initial; right: 0; }
+      > .dropdown-controll.reverse-V {
+        top: initial; bottom: calc(100% - 4px);
+        @include transform-origin(bottom);
+      }
+    }
+
+    &[data-dropdown-open='true'] {
+      // > .dropdown-controll { max-height: 999px; transition: max-height .7s linear; }
+      > .dropdown-controll {
+        display: block;
+        //transform: scaleY(1); transition: transform 0s linear;
+      }
+    }
+    &[data-dropdown-open='false'] {
+      // > .dropdown-controll { max-height: 0; transition: max-height 0.3s linear; }
+      > .dropdown-controll {
+        display: none;
+        //transform: scaleY(0); transition: transform 0s linear;
+      }
+    }
+
+  }
+}
+
+@mixin Dropdown {
+  @include dropdownManager('dropdown')
+}

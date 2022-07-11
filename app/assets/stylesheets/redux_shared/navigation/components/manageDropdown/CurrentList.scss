@@ -1,0 +1,27 @@
+@import "redux_shared/navigation/_variables";
+
+@mixin CurrentList {
+  .current-list {
+    @include disable-select;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: $nav-height;
+    line-height: $nav-height;
+    font-size: 14px;
+    color: #000;
+    &:hover { color: $nav-hover-color; text-decoration: none; }
+
+    span {
+      margin-right: 8px;
+      &.ico-arrow-down { margin-left: 5px; position: relative; font-size: 16px; top: -1px; }
+    }
+
+    @include max-tablet {
+      span {
+        margin-right: 3px;
+        &.ico-arrow-down { margin-left: 0px; }
+      }
+    }
+  }
+}

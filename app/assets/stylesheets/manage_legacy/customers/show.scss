@@ -1,0 +1,46 @@
+#customers .show {
+  @import '../common/legacy/dropdown_menu';
+  & > .row { @include top-nav-tabs-with-search; }
+
+  .thumbnail {
+    border: 0;
+    margin-bottom: 0;
+    padding: 0;
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+  }
+
+  .panel-body {
+    height: 130px;
+    padding: 15px 30px;
+
+    h5 {
+      font-size: 16px;
+    }
+
+    .dl-horizontal, .address {
+      font-size: 15px;
+      color: #999999;
+    }
+
+    dl.dl-horizontal {
+      dt {
+        width: 50px;
+        text-align: left;
+      }
+      dd {
+        margin-left: 10px;
+      }
+      dt, dd {
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .table-orders {
+    @include index-table;
+  }
+}

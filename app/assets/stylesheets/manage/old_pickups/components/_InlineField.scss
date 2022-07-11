@@ -1,0 +1,16 @@
+@mixin InlineField {
+  label {
+    display: inline-block;
+    width: 100px;
+    font-size: 12px;
+    abbr {
+      margin-right: 3px;
+    }
+  }
+  select, input, textarea {
+    display: inline-block;
+    font-size: 14px;
+    width: calc(100% - 100px);
+    margin: 0;
+  }
+}

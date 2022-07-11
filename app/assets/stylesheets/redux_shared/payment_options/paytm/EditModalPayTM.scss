@@ -1,0 +1,48 @@
+@mixin EditModalPayTM {
+    .edit-modal-paytm {
+        .paytm-sub-heading {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        img {
+            height: 30px;
+            vertical-align: sub;
+            padding-right: 10px;
+            border-right: 1px solid rgba(151, 151, 151, 0.4);
+        }
+        span {
+            padding-left: 10px;
+        }
+    }
+    .right-block {
+        .__guide-base {
+            .paytm-guide-content {
+                margin-top: 30px;
+                color: #627382;
+                
+                a {
+                    font-size: 1rem;
+                    color: #3C7FEE;
+                }
+
+                p {
+                    color: #627382;
+                }
+
+                .paytm-steps-row {
+                    display: flex;
+                    span.steps {
+                        color: #627382;
+                        font-weight: bold;
+                        white-space: pre;
+                    }
+                    a {
+                        color: #3C7FEE;
+                        text-decoration: none;
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+    }
+  }

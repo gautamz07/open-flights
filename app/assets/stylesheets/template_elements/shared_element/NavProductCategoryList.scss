@@ -1,0 +1,14 @@
+.nav-product-category-list {
+  ul {
+    list-style: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+  li {
+    @include nav-list-common;
+    @include nav-list-dropdown;
+    li a { width: 100%; }
+  }
+}

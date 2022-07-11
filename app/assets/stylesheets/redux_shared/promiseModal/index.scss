@@ -1,0 +1,28 @@
+@import "./mixin/*";
+@import "./components/*";
+@import "./partial/*";
+
+.ReactModalPortal__Promise {
+  @include react-modal-base;
+  @include react-modal-animate(200ms);
+
+  .ReactModal__Overlay {
+    &.sign-out { background-color: rgba(0 ,0, 0, 0.8); }
+  }
+
+  .ReactModal__Content {
+    .context {
+      background-color: #FFF;
+      @include react-modal-content-base;
+    }
+
+    .button-list { @include ButtonList; }
+
+    // custom overwrite
+    &.confirm-box { @include ConfirmBox; }
+    &.message-box { @include MessageBox; }
+    &.add-video-form { @include AddVideoForm; }
+    &.input-box { @include InputBox; }
+    &.password-input-box { @include PasswordInputBox; }
+  }
+}

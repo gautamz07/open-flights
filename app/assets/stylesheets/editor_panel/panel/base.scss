@@ -1,0 +1,31 @@
+@import "../../redux_shared/mixin/z_index";
+
+@mixin panel-container-base {
+  background-color: $edit-panel-background-color;
+  color: $edit-panel-color;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0 10px;
+  width: initial;
+  height: 40px;
+  box-shadow: 0 0 0 #222, 0 8px 16px rgba(27,39,51,0.3);
+}
+
+@mixin _panel_container_vertical {
+  width: 40px;
+  height: initial;
+  padding: 10px 0;
+  .panel-tool > span { padding: 2.5px 8px; }
+}
+
+@mixin _horizontal_center {
+  left: 50% !important;
+  right: initial !important;
+  @include css-transform(translateX(-50%));
+  .pointer {
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto;
+  }
+}

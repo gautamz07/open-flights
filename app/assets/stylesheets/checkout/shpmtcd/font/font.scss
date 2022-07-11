@@ -1,0 +1,125 @@
+/* Font Face */
+// @font-face {
+//     // font-family: 'ProximaNova-Regular';
+//     src: asset-url('../../assets/fonts/ProximaNova-Regular.woff2') format('woff2'),
+//          asset-url('../../assets/fonts/ProximaNova-Regular.woff') format('woff'),
+//          asset-url('../../assets/fonts/ProximaNova-Regular.ttf') format('ttf');
+// }
+
+// @font-face {
+//     // font-family: 'ProximaNova-Medium';
+//     src: asset-url('../../assets/fonts/ProximaNova-Medium.woff2') format('woff2'),
+//          asset-url('../../assets/fonts/ProximaNova-Medium.woff') format('woff'),
+//          asset-url('../../assets/fonts/ProximaNova-Medium.ttf') format('ttf');
+// }
+
+// @font-face {
+//     // font-family: 'ProximaNova-Semibold';
+//     src: asset-url('../../assets/fonts/ProximaNova-Semibold.woff2') format('woff2'),
+//          asset-url('../../assets/fonts/ProximaNova-Semibold.woff') format('woff'),
+//          asset-url('../../assets/fonts/ProximaNova-Semibold.ttf') format('ttf');
+// }
+
+// @font-face {
+//     font-family: 'ProximaNova-Bold';
+//     src: asset-url('../../assets/fonts/ProximaNova-Bold.woff2') format('woff2'),
+//          asset-url('../../assets/fonts/ProximaNova-Bold.woff') format('woff'),
+//          asset-url('../../assets/fonts/ProximaNova-Bold.ttf') format('ttf');
+// }
+
+/* Font Size */
+.font-h1{ @extend %fontSize32px; }
+.font-h2-md{ @extend %fontSize28px; }
+.font-h2{ @extend %fontSize26px; }
+.font-h3{ @extend %fontSize21px; }
+.font-p-lg{ @extend %fontSize18px; }
+.font-p-md{ @extend %fontSize15px; }
+.font-p{ @extend %fontSize14px; }
+.font-p-sm{ @extend %fontSize12px; }
+
+/* Font Weight */
+.font-w{
+    &--rg{
+        font-weight: $fontWeightRegular !important;
+        font-family: 'ProximaNova-Regular' !important;
+    }
+    &--med{
+        font-weight: $fontWeightMedium !important;
+        font-family: 'ProximaNova-Medium' !important;
+    }
+    &--semibold{
+        font-weight: $fontWeightSemibold !important;
+        font-family: 'ProximaNova-Semibold' !important;
+    }
+    &--bold{
+        font-weight: $fontWeightSemibold !important;
+        font-family: 'ProximaNova-Bold' !important;
+    }
+}
+
+/* Elements */
+.shpmtcd, .ant-modal-wrap{
+    font-family: 'Proxima Nova', 'ProximaNova-Regular';
+
+    h1, h2, h3, h4, h5, h6, p{
+        margin-bottom: 0;
+        font-weight: initial;
+    }
+
+    /* Typo */
+    h1 {
+        // font-family: 'ProximaNova-Semibold';
+        font-weight: $fontWeightSemibold;
+        @extend %fontSize32px;
+    }
+
+    h2.med {
+        // font-family: 'ProximaNova-Medium';
+        font-weight: $fontWeightMedium;
+        @extend %fontSize28px;
+    }
+
+    h2 {
+        // font-family: 'ProximaNova-Medium';
+        font-weight: $fontWeightMedium;
+        @extend %fontSize26px;
+    }
+
+    h3 {
+        // font-family: 'ProximaNova-Medium';
+        font-weight: $fontWeightMedium;
+        @extend %fontSize21px;
+    }
+
+    p.large{
+        // font-family: 'ProximaNova-Medium';
+        font-weight: $fontWeightMedium;
+        @extend %fontSize18px
+    }
+
+    p.med{
+        // font-family: 'ProximaNova-Medium';
+        font-weight: $fontWeightMedium;
+        @extend %fontSize15px;
+    }
+
+    p{
+        // font-family: 'ProximaNova-Medium';
+        font-weight: $fontWeightMedium;
+        @extend %fontSize14px;
+    }
+    
+}
+
+/* Text Align */
+.text-align{
+    &--center{
+        text-align: center;
+    }
+    &--left{
+        text-align: left;
+    }
+    &--right{
+        text-align: right;
+    }
+}

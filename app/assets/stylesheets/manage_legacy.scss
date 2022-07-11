@@ -1,0 +1,78 @@
+//= require 'react-select'
+//= require 'slick.min'
+//= require 'slick-theme.min'
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'bootstrap-datetimepicker';
+@import "select2";
+@import "select2-bootstrap";
+
+@import "magnific-popup/dist/magnific-popup";
+@import "chartist/dist/chartist.min";
+
+@import "common/variables";
+@import "common/**/*";
+// overwrite .ReactModalPortal__Callout for show flash message on rails & redux mixed layout
+@import 'common/overwrite_callout';
+
+@import "manage_legacy/dashboards/*";
+@import "manage_legacy/orders/*";
+@import "manage_legacy/refunds/*";
+@import "manage_legacy/customers/*";
+@import "manage_legacy/discounts/*";
+// @import "manage_legacy/seos/*";
+@import "manage_legacy/tax_options/index";
+@import "manage_legacy/commerces/*";
+@import "manage_legacy/profiles/*";
+
+@import "redux_shared/common/base";
+@import "redux_shared/signInModal/index";
+@import "redux_shared/promiseModal/index";
+@import "redux_shared/callout/index";
+@import "redux_shared/navigation/index";
+@import "redux_shared/explanationVideoLink/index";
+@import "redux_shared/tutorial_guide/index";
+
+@import "white_label/floating_brand_name";
+
+html,body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+html {
+  body {
+    background: #f0f4f7;
+  }
+}
+
+#manage {
+  height: 100%;
+  #content {
+    padding-top: 15px;
+    padding-left: $paddingHorizontal;
+    padding-right: $paddingHorizontal;
+    width: 100%;
+    > div {
+      font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  #messages .alert {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border: 0;
+    border-radius: 0;
+    z-index: 999;
+  }
+  #discounts #messages .alert div{
+    padding-left: 17%;
+  }
+}

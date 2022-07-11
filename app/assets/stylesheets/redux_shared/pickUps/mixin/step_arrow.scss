@@ -1,0 +1,14 @@
+@mixin step_arrow {
+  content: '';
+  background-image: url(image_path('manage/pick_ups/arrow-right-large.svg'));
+  -webkit-background-size: 20px;
+       -o-background-size: 20px;
+          background-size: 20px;
+  width: 20px; height: 20px;
+  opacity: .3;
+  display: block;
+  position: absolute;
+  left: -25px;
+  top: 0; bottom: 0;
+  margin: auto;
+}

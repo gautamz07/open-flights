@@ -1,0 +1,115 @@
+$wrap-break: 680px;
+$placeholderColor: #798c9c;
+
+@mixin FormIndia {
+  .form-india {
+    @include RateInput;
+    @include RadioTextCheckbox;
+    @include TextInputOverwrite;
+    @include SaveButton;
+
+    margin: 0 auto;
+    & > .title {
+      font-size: 21px;
+      margin-bottom: 19px;
+    }
+    .panel {
+      background-color: white;
+      min-width: 300px;
+      color: #333333;
+      padding: 15px;
+      overflow: auto;
+      padding: 2rem 2.6rem 2.6rem;
+      margin-bottom: 20px;
+
+      .title {
+        font-size: 16px;
+        font-weight: 400px;
+        .custom-tooltip {
+          margin-left: 5px;
+          color: silver;
+          cursor: pointer;
+        }
+        @include DefaultGstInTips;
+      }
+
+      .choice-group {
+        * {
+          vertical-align: middle;
+        }
+        &.yes {
+          display: inline-block;
+          @media screen and (max-width: $wrap-break) {
+            display: block;
+          }
+          .choice-yes {
+            width: 60px;
+            display: inline-block;
+            margin: 0.5rem 0;
+            .text {
+              color: #444444;
+            }
+          }
+          .gst-number {
+            @include PlaceholderColor($placeholderColor);
+            width: 290px;
+            height: 41px;
+            display: inline-block;
+            @media screen and (max-width: 414px) {
+              width: 270px;
+              margin-left: 1.5rem;
+              display: block;
+            }
+            margin: 0.5rem 0;
+            border: 1px solid #cad5da;
+            border-radius: 3px;
+            box-shadow: none;
+            font-size: 14px;
+            padding-left: 10px;
+          }
+          .gst-rate {
+            @media screen and (max-width: 414px) {
+              margin-left: 1.5rem;
+              display: block;
+            }
+            width: 60px;
+            height: 41px;
+            display: inline-block;
+            margin: 0.5rem 0;
+            margin-left: 0.5rem;
+            padding-left: 10px;
+            padding-right: 1px;
+            font-size: 14px;
+            .percent-sign {
+              text-align: right;
+            }
+          }
+        }
+        &.no {
+          display: inline-block;
+          margin: 0.5rem 0;
+          margin-left: 65px;
+          @media screen and (max-width: $wrap-break) {
+            display: block;
+            margin-left: 0;
+          }
+          .choice-no {
+            width: 60px;
+            display: inline-block;
+            margin: 0.5rem 0;
+            .text {
+              color: #444444;
+            }
+          }
+        }
+      }
+
+      .control {
+        button {
+          margin: 0;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

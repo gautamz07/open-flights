@@ -1,0 +1,92 @@
+/* Bg Colors */
+.bgPrimaryColor{ background-color: $PrimaryColor; }
+.bgPrimaryColorDarken01{ background-color: $PrimaryColorDarken01; }
+.bgPrimaryColorDarken02{ background-color: $PrimaryColorDarken02; }
+.bgPrimaryColorLighten01{ background-color: $PrimaryColorLighten01; }
+.bgPrimaryColorLighten02{ background-color: $PrimaryColorLighten02; }
+
+.bgSubColor{ background-color: $SubColor; }
+.bgSubColorDarken01{ background-color: $SubColorDarken01; }
+.bgSubColorDarken02{ background-color: $SubColorDarken02; }
+.bgSubColorLighten01{ background-color: $SubColorLighten01; }
+.bgSubColorLighten02{ background-color: $SubColorLighten02; }
+
+.bgFunColorDanger{ background-color: $FunColorDanger; }
+.bgFunColorWarning{ background-color: $FunColorWarning; }
+.bgFunColorSuccess{ background-color: $FunColorSuccess; }
+.bgFunColorInfo{ background-color: $FunColorInfo; }
+.bgFunColorAdmin{ background-color: $FunColorAdmin; }
+
+.bgNeutralColor01{ background-color: $NeutralColor01; }
+.bgNeutralColor02{ background-color: $NeutralColor02; }
+.bgNeutralColor03{ background-color: $NeutralColor03; }
+.bgNeutralColor04{ background-color: $NeutralColor04; }
+.bgNeutralColor05{ background-color: $NeutralColor05; }
+.bgNeutralColor06{ background-color: $NeutralColor06; }
+.bgNeutralColor07{ background-color: $NeutralColor07; }
+.bgNeutralColor08{ background-color: $NeutralColor08; }
+
+.bgDarkColor{ background-color: $DarkColor; }
+.bgDarkColor80a{ background-color: $DarkColor80a; }
+.bgDarkColor60a{ background-color: $DarkColor60a; }
+.bgDarkColor40a{ background-color: $DarkColor40a; }
+.bgDarkColor20a{ background-color: $DarkColor20a; }
+.bgDarkColor10a{ background-color: $DarkColor10a; }
+.bgDarkColor5a{ background-color: $DarkColor5a; }
+
+.bgLightColor{ background-color: $LightColor; }
+.bgLightColor80a{ background-color: $LightColor80a; }
+.bgLightColor60a{ background-color: $LightColor60a; }
+.bgLightColor40a{ background-color: $LightColor40a; }
+.bgLightColor20a{ background-color: $LightColor20a; }
+.bgLightColor10a{ background-color: $LightColor10a; }
+.bgLightColor5a{ background-color: $LightColor5a; }
+
+/* Gradient Colors */
+.bgGradientPrimary{ @extend %GradientPrimary }
+.bgGradientGrey{ @extend %GradientGrey }
+.bgGradientLight{ @extend %GradientLight }
+
+/* Font Colors */
+.PrimaryColor{ color: $PrimaryColor !important; }
+.PrimaryColorDarken01{ background-color: $PrimaryColorDarken01 !important; }
+.PrimaryColorDarken02{ background-color: $PrimaryColorDarken02 !important; }
+.PrimaryColorLighten01{ background-color: $PrimaryColorLighten01 !important; }
+.PrimaryColorLighten02{ background-color: $PrimaryColorLighten02 !important; }
+
+.SubColor{ color: $SubColor !important; }
+.SubColorDarken01{ color: $SubColorDarken01 !important; }
+.SubColorDarken02{ color: $SubColorDarken02 !important; }
+.SubColorLighten01{ color: $SubColorLighten01 !important; }
+.SubColorLighten02{ color: $SubColorLighten02 !important; }
+
+.FunColorDanger{ color: $FunColorDanger !important; }
+.FunColorWarning{ color: $FunColorWarning !important; }
+.FunColorSuccess{ color: $FunColorSuccess !important; }
+.FunColorInfo{ color: $FunColorInfo !important; }
+.FunColorAdmin{ color: $FunColorAdmin !important; }
+
+.NeutralColor01{ color: $NeutralColor01 !important; }
+.NeutralColor02{ color: $NeutralColor02 !important; }
+.NeutralColor03{ color: $NeutralColor03 !important; }
+.NeutralColor04{ color: $NeutralColor04 !important; }
+.NeutralColor05{ color: $NeutralColor05 !important; }
+.NeutralColor06{ color: $NeutralColor06 !important; }
+.NeutralColor07{ color: $NeutralColor07 !important; }
+.NeutralColor08{ color: $NeutralColor08 !important; }
+
+.DarkColor{ color: $DarkColor !important; }
+.DarkColor80a{ color: $DarkColor80a !important; }
+.DarkColor60a{ color: $DarkColor60a !important; }
+.DarkColor40a{ color: $DarkColor40a !important; }
+.DarkColor20a{ color: $DarkColor20a !important; }
+.DarkColor10a{ color: $DarkColor10a !important; }
+.DarkColor5a{ color: $DarkColor5a !important; }
+
+.LightColor{ color: $LightColor !important; }
+.LightColor80a{ color: $LightColor80a !important; }
+.LightColor60a{ color: $LightColor60a !important; }
+.LightColor40a{ color: $LightColor40a !important; }
+.LightColor20a{ color: $LightColor20a !important; }
+.LightColor10a{ color: $LightColor10a !important; }
+.LightColor5a{ color: $LightColor5a !important; }

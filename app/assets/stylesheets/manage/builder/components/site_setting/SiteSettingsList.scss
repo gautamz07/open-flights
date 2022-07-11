@@ -1,0 +1,70 @@
+@import 'redux_shared/mixin/transition';
+
+@mixin SiteSettingsList {
+  $headbar_height: 50px;
+
+  .site-settings-list-header {
+    height: $headbar_height;
+    border-bottom: 1px solid #eeeeee;
+    padding-left: 30px;
+    padding-right: 30px;
+    .title {
+      color: #3f3f3f;
+      font-size: 14px;
+      font-family: "ProximaNova-Semibold", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      line-height: 50px;
+    }
+    button {
+      &:focus, &:active {
+        outline: none;
+      }
+      &.dismiss-btn {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        font-size: 20px;
+        cursor: pointer;
+        .ico-close{ font-size: 16px; }
+      }
+    }
+  }
+
+  .site-settings-list {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    @include transition-basic(left);
+    &.slide-left {
+      left: -300px;
+    }
+    @include ScrollWindow($headbar_height);
+    .site-settings-list-item {
+      padding: 0 30px;
+      line-height: 50px;
+      color: #3f3f3f;
+      font-size: 20px;
+      transition: background-color 0.3s ease-in-out;
+      .icon {
+        margin-left: 0;
+        margin-right: 10px;
+        color: black;
+      }
+      .name {
+        font-size: 14px;
+        vertical-align: top;
+      }
+      .next-arrow {
+        font-size: 16px;
+        float: right;
+      }
+      &:hover {
+        background-color: #f7f9fa;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "redux_shared/navigation/_variables";
+$topNavHeight: $nav-height;
+
+$fontBase: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+$fontMedium: 'ProximaNova-Medium';
+$fontSemiBold: 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif;
+ 
+/* rails view pages */
+$newManageBlue: #4ba4ea;
+$newManageBlack: #181919;
+$newManageGray: #dce4ea;
+$newManagePanelHeadingGray: #e3eaef;
+$newManageCheckboxColor: #4ba4ea; /*old: #69be7b;*/
+$iconDarkBlue: #445d71;
+
+/* react pages */
+$descriptionColor: #454545;
+$descriptionLightColor: rgba(69, 69, 69, 0.8);
+
+
+/* generic body font variations */
+$textLightVariationOne: #F4F6F8;
+$textVariationOne: #627382;
+$textDarkVariationOne: #212B36;
+
+/* generic bg colors */
+$bgLightVariationOne: #EFF3F7;
+
+
+/* generic measures for border radius/box shadow etc */
+$borderRadiusMinor: 3px;
+$boxShadowMinor: 0 1px 3px 0 rgba(99,114,130,0.15);

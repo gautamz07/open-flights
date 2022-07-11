@@ -1,0 +1,15 @@
+@import "redux_shared/navigation/_variables";
+
+@mixin FormActions {
+  .formActions {
+    text-align: right;
+    background: #FAFBFC;
+    text-align: right;
+    padding: 10px 20px;
+
+    .btn__cancel {
+      margin-right: 1rem;
+    }
+  }
+}
+

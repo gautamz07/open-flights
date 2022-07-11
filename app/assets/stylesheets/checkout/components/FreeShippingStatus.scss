@@ -1,0 +1,37 @@
+.free-shipping-status {
+
+  margin-top: 15px;
+  .free-shipping-text-info {
+    font-size: 12px;
+    color: #212B36;
+    font-weight: 600;
+  }
+
+  .progress {
+    height: 6px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: #D8D8D8;
+    border-radius: 4px;
+    display: inline-block;
+    .progress-meter {
+      height: 100%;
+      box-shadow: none;
+      border-radius: 4px;
+      transition: width 0.6s ease;
+    }
+    .free-enabled {
+      background: #00bb28;
+    }
+    .free-eligible {
+      background: #2196F3;
+    }
+  }
+  .ico-tick {
+    font-size: 22px;
+    color: #00bb28;
+    display: inline-block;
+    margin-bottom: 3px;
+    vertical-align: text-bottom;
+  }
+}

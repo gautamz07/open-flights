@@ -1,0 +1,14 @@
+@mixin tooltip_overwrite {
+  .edit-group-of-tooltip {
+    font-family: 'ProximaNova-Light';
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    background: #eeeeee;
+    color: #000000;
+    line-height: 1.6;
+    font-size: .75rem;
+    padding: 5px 12px;
+    opacity: 1;
+    &:after { border-top-color: #eeeeee !important; }
+  }
+}

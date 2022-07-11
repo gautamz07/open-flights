@@ -1,0 +1,218 @@
+$tooltip-bg-color: white;
+$tooltip-shadow-color: rgba(0,0,0,0.12);
+$squares-width: 10px;
+$triangle-height: ($squares-width * 1.414 / 2 - 1);
+
+
+#product-form-modal {
+  del{
+    color: #979797;
+  }
+  a.tooltips {
+    color: #9f9f9f;
+    margin-left: 4px;
+    border-bottom: 0;
+    position: relative;
+    top: -1px;
+    &:hover {
+      color: gray;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .product-tips {
+    padding: 20px;
+    background-color: $tooltip-bg-color !important;
+    opacity: 1 !important;
+    box-shadow: $tooltip-shadow-color 0 1px 2px 1px;
+    &:after {
+      display: none;
+    }
+    .triangle-shape {
+      height: $squares-width;
+      width: $squares-width;
+      background-color: $tooltip-bg-color;
+      transform: rotateZ(45deg);
+      transform-origin: center;
+      position: absolute;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      &.at-top {
+        box-shadow: $tooltip-shadow-color -0.5px -0.5px 0 0;
+      }
+      &.at-bottom {
+        box-shadow: $tooltip-shadow-color 1px 1px 2px 0;
+      }
+    }
+  }
+
+  @include mobile {
+    a.tooltips {
+      top: -1px;
+    }
+  }
+}
+
+.product-name-tips {
+  .triangle-shape {
+    bottom: -$triangle-height !important;
+    left: 70px !important;
+  }
+}
+
+.product-price-tips {
+  max-width: 550px;
+  .triangle-shape {
+    bottom: -$triangle-height !important;
+    left: 117px !important;
+  }
+}
+
+.product-list-price-tips {
+  max-width: 550px;
+  .triangle-shape {
+    bottom: -$triangle-height !important;
+    left: 437px !important;
+  }
+}
+
+.product-description-tips {
+  max-width: 550px;
+  .triangle-shape {
+    bottom: -$triangle-height !important;
+    left: 237px !important;
+  }
+}
+
+.product-category-tips {
+  max-width: 550px;
+  .triangle-shape {
+    bottom: -$triangle-height !important;
+    left: 82px !important;
+  }
+}
+
+.product-quantity-tips {
+  max-width: 550px;
+  .triangle-shape {
+    bottom: -$triangle-height !important;
+    left: 172px !important;
+  }
+}
+
+.color-option-tips {
+  .triangle-shape {
+    top: -$triangle-height !important;
+    left: 55px !important;
+  }
+}
+
+.text-option-tips {
+  .triangle-shape {
+    top: -$triangle-height !important;
+    left: 86px !important;
+  }
+}
+
+.product-sku-tips {
+  max-width: 550px;
+  .triangle-shape {
+    bottom: -$triangle-height !important;
+    left: 122px !important;
+  }
+}
+
+.product-upc-tips {
+  max-width: 550px;
+  .triangle-shape {
+    bottom: -$triangle-height !important;
+    left: 252px !important;
+  }
+}
+
+.product-product-type-tips {
+  .triangle-shape {
+    bottom: -$triangle-height !important;
+    left: 60px !important;
+  }
+}
+
+.product-seo-title-tips {
+  max-width: 550px;
+  @include mobile {
+    left: 0px !important;
+  }
+  .triangle-shape {
+    bottom: -$triangle-height !important;
+    left: 110px !important;
+    @include mobile {
+      left: 103px !important;
+    }
+  }
+}
+
+.product-seo-description-tips {
+  max-width: 550px;
+  @include mobile {
+    left: 0px !important;
+  }
+  .triangle-shape {
+    bottom: -$triangle-height !important;
+    left: 112px !important;
+    @include mobile {
+      left: 147px !important;
+    }
+  }
+}
+
+.product-seo-url-tips {
+  max-width: 550px;
+  @include mobile {
+    left: 0px !important;
+  }
+  .triangle-shape {
+    bottom: -$triangle-height !important;
+    left: 110px !important;
+    @include mobile {
+      left: 71px !important;
+    }
+  }
+}
+
+.gst-in-tips {
+  width: 550px;
+  pointer-events: all !important;
+  .triangle-shape {
+    top: -$triangle-height !important;
+    left: 42px !important;
+  }
+}
+
+.color-option-tips{
+
+  .using-color-tips{
+    .block{
+      display: inline-block;
+      margin-right: 20px;
+      &:last-child{
+        margin-right: 0px;
+      }
+      @include mobile {
+        margin-right: 0px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @include mobile {
+    max-width: 280px;
+    left: calc( 50vw - 150px ) !important;
+    .triangle-shape {
+      left: 42px !important;
+    }
+  }
+
+}

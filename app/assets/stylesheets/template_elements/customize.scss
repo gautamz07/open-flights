@@ -1,0 +1,83 @@
+// Text Align
+.text-align-right { text-align: right; }
+.text-align-left { text-align: left; }
+.text-align-center { text-align: center; }
+.text-align-justify { text-align: justify; }
+
+// Font Bold
+.font-bold { font-weight: 700; }
+
+// Btn Size
+.btn-size-s {
+  font-size: .75rem;
+  padding: .656rem 1.5625rem;
+}
+.btn-size-m {
+  font-size: 0.875rem;
+  padding: .875rem 1.5625rem;
+}
+.btn-size-l {
+  font-size: 1.125rem;
+  padding: 1.1125rem 1.5625rem 1.25rem 1.5625rem;
+}
+
+// Font Size
+@mixin font-size($size) {
+  font-size: #{$size / $default_rem_to_px}rem;
+}
+
+@mixin header-size-generator($size, $line_height) {
+  &.H1 { line-height: $line_height; @include font-size($size) }
+  &.H2 { line-height: $line_height; @include font-size($size * 0.9) }
+  &.H3 { line-height: $line_height; @include font-size($size * 0.8) }
+}
+
+.text-size-xxs { @include header-size-generator(17, 25px) }
+.text-size-xs { @include header-size-generator(21, 30px) }
+.text-size-s { @include header-size-generator(24, 33px) }
+.text-size-m { @include header-size-generator(30, 40px) }
+.text-size-l { @include header-size-generator(36, 47px) }
+.text-size-xl { @include header-size-generator(48, 60px) }
+.text-size-xxl { @include header-size-generator(60, 65px) }
+
+@include tablet {
+  .text-size-xxs { @include header-size-generator(18, 26px) }
+  .text-size-xs { @include header-size-generator(21, 29px) }
+  .text-size-s,
+  .text-size-m {
+    @include header-size-generator(24, 33px)
+  }
+  .text-size-l,
+  .text-size-xl,
+  .text-size-xxl {
+    @include header-size-generator(36, 47px)
+  }
+}
+
+@include mobile {
+  .text-size-l,
+  .text-size-xl,
+  .text-size-xxl {
+    @include header-size-generator(36, 47px)
+  }
+}
+
+.P {
+  &.text-size-xxs { @include font-size(12); line-height: 18px }
+  &.text-size-xs { @include font-size(13); line-height: 20px }
+  &.text-size-s { @include font-size(15); line-height: 23px }
+  &.text-size-m { @include font-size(16); line-height: 25px }
+  &.text-size-l { @include font-size(19); line-height: 29px }
+  &.text-size-xl { @include font-size(21); line-height: 32px }
+  &.text-size-xxl { @include font-size(24); line-height: 35px }
+}
+
+.HeaderContainer, .FooterContainer {
+  &.text-size-xxs { @include font-size(12) }
+  &.text-size-xs { @include font-size(14) }
+  &.text-size-s { @include font-size(15) }
+  &.text-size-m { @include font-size(16) }
+  &.text-size-l { @include font-size(18) }
+  &.text-size-xl { @include font-size(19) }
+  &.text-size-xxl { @include font-size(20) }
+}

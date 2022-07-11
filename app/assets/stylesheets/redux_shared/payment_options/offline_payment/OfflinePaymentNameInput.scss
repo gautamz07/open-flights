@@ -1,0 +1,33 @@
+@mixin OfflinePaymentNameInput {
+  .OfflinePaymentNameInput {
+    position: relative;
+
+    .OfflinePaymentNameInput-textarea {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      display: block;
+      overflow: hidden;
+      border: solid 1px #e8eef2;
+      transition: border-color .25s ease-in-out;
+      cursor: text;
+      border-radius: 3px;
+      outline: none;
+
+      &[disabled] {
+        cursor: default;
+        border: solid 1px transparent;
+        background: none;
+      }
+
+      &:focus {
+        border-color: #4ba4ea;
+      }
+    }
+  }
+
+}

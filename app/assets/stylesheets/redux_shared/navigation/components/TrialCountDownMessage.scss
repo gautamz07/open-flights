@@ -1,0 +1,33 @@
+@import "redux_shared/navigation/_variables";
+
+@mixin TrialCountDownMessage {
+  .trial-count-down-message {
+
+    color: #333;
+    padding-left: $trial-count-down-padding-left;
+
+    @include max-tablet {
+      padding-left: 0px;
+      span.trial-count-down-days-text { display: none; }
+    }
+
+    a {
+      &:hover, &:active, &:focus {
+        color: inherit;
+        opacity: 0.8;
+      }
+      strong {
+        margin-left: 5px;
+        color: $nav-red;
+        span.ico-arrow-right {
+          font-size: 16px;
+          @include max-tablet {
+            display: inline-block;
+            margin-left: -2px;
+          }
+        }
+      }
+    }
+
+  }
+}

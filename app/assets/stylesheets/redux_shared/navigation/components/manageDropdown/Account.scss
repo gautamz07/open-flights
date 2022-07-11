@@ -1,0 +1,18 @@
+@import "../../mixin/list_decoration";
+
+@mixin Account {
+  li.account {
+    @include manage-list-decoration;
+    color: #7f7f7f;
+    background-color: #f7f9fa;
+    margin-top: -10px;
+    padding: 10px 20px;
+    pointer-events: none;
+    font-size: 12px;
+    word-break: break-all;
+    .email {
+      display: block;
+      font-size: 16px;
+    }
+  }
+}

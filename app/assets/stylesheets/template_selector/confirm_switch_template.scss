@@ -1,0 +1,59 @@
+$red: #d62a41;
+$darkRed: rgba(214, 42, 65, 0.8);
+
+@mixin fade-in {
+  opacity: 0;
+  &.ReactModal__Overlay--after-open {
+    opacity: 1;
+    transition: opacity 0.15s linear;
+  }
+  .ReactModal__Content{
+    transform: translate(0, -25%);
+    &.ReactModal__Content--after-open {
+      transform: translate(0, 0);
+      transition: transform .3s ease-out;
+    }
+  }
+}
+
+.confirm-switch-template {
+  @include fade-in;
+  .confirm-box {
+    &.ReactModal__Content{
+      width: 380px;
+    }
+    .context {
+      i {
+        color: $red;
+        font-size: 5rem;
+        line-height: 1;
+      }
+      h4 {
+        color: $red;
+      }
+      p {
+        color: #666666;
+      }
+    }
+    .button-list {
+      height: 60px;
+      button.confirm-btn {
+        padding: 0 1rem;
+        text-align: left;
+        white-space: normal;
+        line-height: 1rem;
+        font-weight: bold;
+        font-size: 0.85rem;
+        background-color: $red;
+        &:focus, &:hover {
+          background-color: $darkRed
+        }
+      }
+      button.cancel-btn {
+        padding: 0 1rem;
+        float: left;
+        text-align: left;
+      }
+    }
+  }
+}

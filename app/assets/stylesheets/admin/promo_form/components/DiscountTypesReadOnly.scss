@@ -1,0 +1,8 @@
+@mixin DiscountTypesReadOnly {
+  .amount {
+    font-weight: bold;
+  }
+  .type {
+    margin-left: 5px;
+  }
+}

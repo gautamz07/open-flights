@@ -1,0 +1,57 @@
+@mixin OrderActionBlock {
+  .order__action {
+    &__list {
+      font-size: 0.87rem;
+      padding: 1rem 1.25rem;
+      list-style: none;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+
+      @include min-desktop {
+        >li:not(:last-child),>div:not(:last-child) {
+          margin-right: 1.25rem;
+        }
+      }
+
+      >li,>div {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          font-family: $fontSemiBold;
+          text-decoration: none;
+          color: #363E4A;
+
+          &.disabled {
+            pointer-events: none;
+            cursor: not-allowed;
+            opacity: 0.65;
+          }
+          i {
+            display: inline-block;
+            margin-right: 0.5rem;
+            font-family: $fontSemiBold;
+            font-size: 1.15rem;
+          }
+        }
+        &.delivered {
+          @include min-desktop {
+            margin-left: auto;
+          }
+        }
+      }
+
+      @include max-tablet {
+        flex-direction: column;
+        align-items: flex-start;
+
+        >li:not(:last-child),>div:not(:last-child) {
+          margin-bottom: 0.5rem;
+        } 
+      }
+    }
+  }    
+}

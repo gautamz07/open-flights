@@ -1,0 +1,23 @@
+@import "redux_shared/common/variables";
+@import "redux_shared/mixin/z_index";
+
+@mixin PopupCallout {
+
+  .ReactModal__Overlay.popup-callout-overlay {
+    z-index: $z-index-popup-callout-modal;
+    height: 100%;
+  }
+
+  .ReactModal__Content.popup-callout {
+    .message {
+      margin-bottom: 0;
+    }
+    .close-button {
+      top: 0; bottom: 0;
+      font-size: 20px;
+      width: 40px;
+      &:focus { outline: none; font-size: 24px; }
+    }
+  }
+
+}

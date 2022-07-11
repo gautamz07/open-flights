@@ -1,0 +1,60 @@
+@import "redux_shared/navigation/_variables";
+
+@mixin NextStepBtn {
+  .next-step-btn {
+    position: relative;
+    a {
+      color: #FFF;
+      opacity: 0.9;
+      border-radius: 50px;
+      background-color: $nav-hover-color;
+      margin: $next-step-btn-margin;
+      line-height: $next-step-line-height;
+      height: $next-step-height;
+      width: 80px;
+      text-align: center;
+      -webkit-font-smoothing: initial; // reset for /page_builder
+      animation: nextStepBtnAni 2s linear infinite;
+      animation-delay: 15s;
+      &:hover {
+        color: #FFF;
+        animation: nextStepBtnAniStop 0.2s linear;
+      }
+    }
+  }
+
+  /* Keyframes */
+  @keyframes nextStepBtnAni {
+    0%, 7% {
+      transform: translateX(0px);
+    }
+    15% {
+      transform: translateX(-10px);
+    }
+    20% {
+      transform: translateX(8px);
+    }
+    25% {
+      transform: translateX(-8px);
+    }
+    30% {
+      transform: translateX(5px);
+    }
+    35% {
+      transform: translateX(-5px);
+    }
+    40%, 100% {
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes nextStepBtnAniStop {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+}

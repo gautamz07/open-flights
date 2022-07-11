@@ -1,0 +1,73 @@
+@mixin buttonColor($textColor, $bgColor) {
+  &:hover, &:active, &:focus {
+    border: none;
+    opacity: 0.85;
+    color: $textColor;
+  }
+}
+
+.cropper-tools {
+  position: absolute;
+  top: 90px; right: calc( 50vw - 148px );
+  height: 38px; line-height: 38px;
+  z-index: 999;
+  display: inline-block;
+  padding:0 8px;
+  border-radius: 5px;
+  background-color: #222222;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.4);
+
+  &[data-saving='true'] { > a:not(.btn-saving) { display: none; } }
+  &[data-saving='false'] { a.btn-saving { display: none; } }
+
+  .button {
+    padding: 10px 10px;
+    margin: 0 0;
+    border: none;
+    border-radius: 6px;
+    // font-family: 'ProximaNova-Regular';
+    font-size: 14px;
+    font-weight: 300;
+    @include buttonColor(#fff, #34495E);
+
+    &.button--icon{
+      font-size: 18px;
+      background-color: transparent;
+    }
+
+    &.button--font{
+      background-color: transparent;
+    }
+
+    &.btn-danger { @include buttonColor(#fff, #d9534f); }
+    &.btn-success {
+      position: relative;
+      top: -1px;
+      border-radius: 3px;
+      padding: 5px 10px;
+      margin-left: 10px;
+    }
+    &.btn-saving {
+      text-align: center;
+      font-size: 14px;
+      padding: 5px 10px;
+      width: 100px;
+      cursor: not-allowed;
+      border-radius: 3px;
+      background-color: #f0ad4e;
+    }
+  }
+
+  .only-mobile {
+    display: none;
+    @include mobile { display: inline-block !important; }
+  }
+  .only-tablet {
+    display: none;
+    @include tablet { display: inline-block !important; }
+  }
+  .only-desktop {
+    display: none;
+    @include min-desktop { display: inline-block !important; }
+  }
+}

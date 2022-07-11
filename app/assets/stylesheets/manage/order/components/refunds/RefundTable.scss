@@ -1,0 +1,142 @@
+@mixin RefundTable {
+
+  .ant-table-tbody, .ant-table-thead {
+    >tr {
+      >td {
+        border-bottom: none;
+      }
+    }
+    >tr {
+      >th {
+        border-bottom: none;
+      }
+    }
+  }
+  .ant-table-tbody {
+    >tr:nth-of-type(odd) {
+      background-color: rgba($bgLightVariationOne,0.4);
+    }
+  }
+
+  .refundInfo {
+    text-align: right;
+    &__costing {
+      >span {
+        display: block;
+      }
+      >span:not(:last-child) {
+        margin-bottom: 0.625rem;
+      }
+      >span:last-child {
+        color: $textDarkVariationOne;
+        font-size: 1.12rem;
+        font-family: $fontSemiBold;
+        margin-top: 1rem;
+      }
+    }
+
+    &__name {
+      font-family: $fontSemiBold;
+      margin-left: 0.7rem;
+    }
+  }
+
+  .refundTable {
+    box-shadow: none;
+    padding: 0;
+
+    thead {
+      >tr {
+        >th:first-child {
+          padding-left: 0;
+        }
+        >th:nth-last-of-type(2) {
+          text-align: right;
+        }
+      }
+    }
+    tbody {
+      >tr {
+        >td {
+          padding-top: 0.31rem;
+          padding-bottom: 0.31rem;
+        }
+      }
+      >tr {
+        >td:nth-last-of-type(2) {
+          text-align: right;
+        }
+      }
+      >tr:last-child {
+        >td:first-child {
+          vertical-align: top;
+        }
+        
+        >td {
+          padding-top: 1.25rem;
+          padding-bottom: 1.25rem;
+          border-bottom: none;
+        }
+      }
+    }
+
+    .refundTable__Quantity {
+      max-width: 60px;
+    }
+
+    @include ProductThumbnail;
+    .variant-expression-group {
+      @include ProductVariant;
+      /*
+        below 2 selectors can be directly
+        moved to ProductVarient later, can't 
+        right now as the mixin is being used 
+        in multiple place.
+      */
+      >* {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      >.visual {
+        margin-right: 0.45rem;
+      }
+    }
+  }
+
+
+  .custom-table {    
+    .ant-table-thead,
+    .ant-table-tbody {
+      >tr {
+        >th:first-child {
+          text-align: left;
+        }
+        >th {
+          text-align: center;
+        }
+        >th:last-child {
+          text-align: right;
+        }
+
+        >td:first-child {
+          text-align: left;
+        }
+        >td {
+          text-align: center;
+        }
+        >td:last-child {
+          text-align: right;
+        }
+      }
+    }
+
+    .no__record {
+      >p {
+        color: #637381;
+        font-size: 1.31rem;
+        margin-bottom: 1rem;
+        font-family: $fontBase;
+      }
+    }
+  }
+}

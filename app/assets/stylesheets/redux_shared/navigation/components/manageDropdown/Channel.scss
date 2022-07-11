@@ -1,0 +1,16 @@
+@import "../../mixin/list_decoration";
+
+@mixin Channel {
+  li.channel {
+    @include manage-list-decoration;
+    margin-Bottom: -10px;
+    padding: 10px 20px;
+    pointer-events: none;
+    font-size: 12px;
+    word-break: break-all;
+    .email {
+      display: block;
+      font-size: 16px;
+    }
+  }
+}

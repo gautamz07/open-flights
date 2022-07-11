@@ -1,0 +1,9 @@
+@mixin PickupScheduledTime {
+  .pickup-scheduled-time {
+    padding-left: 10px;
+    padding-bottom: 1rem;
+    .title {
+      font-weight: bold;
+    }
+  }
+}

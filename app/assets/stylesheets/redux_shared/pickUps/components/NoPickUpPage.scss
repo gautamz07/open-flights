@@ -1,0 +1,18 @@
+@mixin NoPickUpPage {
+  .no-pick-up-page {
+    width: 750px;
+    text-align: center;
+    padding: 100px 0;
+    h3 {
+      font-size: 18px;
+      color: #000;
+      line-height: 1.56;
+      margin: 16px 0 0 0;
+    }
+    p {
+      font-size: 15px;
+      color: #494949;
+      line-height: 1.87;
+    }
+  }
+}

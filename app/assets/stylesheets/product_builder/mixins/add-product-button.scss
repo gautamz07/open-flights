@@ -1,0 +1,41 @@
+@mixin add-product-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-stretch: normal;
+  font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  color: #222;
+  line-height: 30px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 4px;
+  position: relative;
+  .ico-add-square {
+    font-size: 24px;
+    color: #4ba4ea;
+    margin-right: 4px;
+    &:before {
+      vertical-align: middle;
+    }
+  }
+  .ico-product-add {
+    font-size: 24px;
+    color: #222;
+    margin-right: 4px;
+    &:before {
+      vertical-align: middle;
+    }
+  }
+  &:before{
+    content:'';
+    width: 1px;
+    height: 17px;
+    display: block;
+    position: absolute;
+    background-color: #ddd;
+    right: 0px;
+    top: 16px;
+  }
+}

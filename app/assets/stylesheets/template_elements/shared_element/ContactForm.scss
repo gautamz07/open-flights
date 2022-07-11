@@ -1,0 +1,22 @@
+.ContactForm {
+  textarea, input { padding: .5rem .75rem; }
+  label {
+    font-size: 1.125rem;
+    color: #34495e;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  input[type='submit'] {
+    width: auto;
+    line-height: 1.5;
+    background-color: #35495D;
+    margin: 10px 0 40px;
+    padding: 10px 40px;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
+  }
+
+  @include mobile {
+    input[type='submit'] { width: 100%; }
+  }
+}

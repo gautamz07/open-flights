@@ -1,0 +1,5 @@
+@mixin Description {
+  .promo-description {
+    @include CommonField;
+  }
+}

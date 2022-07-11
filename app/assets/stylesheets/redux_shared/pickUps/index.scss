@@ -1,0 +1,25 @@
+@import "./_variables";
+@import "./components/*";
+@import "./components/currentPage/*";
+
+.ReactModalPortal {
+  .ReactModal__Overlay.schedule-shipping-overlay {
+    overflow: scroll;
+    .ReactModal__Content.schedule-shipping-content {
+      background-color: #FFF;
+
+      // Component
+      @include ModalHeader;
+      @include ModalContent;
+      @include NoPickUpPage;
+      @include ProgressLists;
+      @include OrderInfo;
+      @include AddressInfo;
+      @include DateTimeSelection;
+      
+      // Current Page
+      @include PickUpSuccess;
+      @include DropOffSuccess;
+    }
+  }
+}

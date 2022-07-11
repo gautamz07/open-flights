@@ -1,0 +1,18 @@
+@mixin editable_outline {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+@mixin set_editable_outline($width, $offset) {
+  outline: $width solid;
+  outline-offset: $offset;
+
+  @if $width == 1px {
+    outline-color: lighten($editable-outline-color, .7);
+  } @else {
+    outline-color: $editable-outline-color;
+  }
+}
+

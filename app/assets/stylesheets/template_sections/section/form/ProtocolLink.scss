@@ -1,0 +1,13 @@
+.protocol-link {
+  color: inherit;
+  .P, .H {
+    &:hover, &:active {
+      text-decoration: underline;
+      color: $newManageBlue !important;
+    }
+    &:before {
+      text-decoration: none;
+      margin: 0 8px 0 0;
+    }
+  }
+}

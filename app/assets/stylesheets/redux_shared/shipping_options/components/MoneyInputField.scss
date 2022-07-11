@@ -1,0 +1,123 @@
+@mixin MoneyInputField {
+  $bg-dark: #fafafa;
+  $border-color: hsl(208, 17%, 80%);
+  .money-input-field {
+    padding: 0 20px;
+    @include mobile {
+      padding: 5px 0 10px 0;
+    }
+
+    .label {
+      font-size: 15px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    .field {
+      display: inline-table;
+      padding: 0;
+      margin-left: 10px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border: solid 1px $border-color;
+      overflow: hidden;
+      vertical-align: middle;
+      height: 36px;
+      @include mobile {
+        margin-left: 0;
+        width: calc(100% - 100px);
+        max-width: 200px;
+      }
+      .currency-code {
+        background-color: $bg-dark;
+        display: table-cell;
+        span {
+          color: #627382;
+          font-size: 0.875rem;
+          float: left;
+          margin: 7px 8px;
+        }
+      }
+      .input__postfix {
+        background-color: $bg-dark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 100%;
+        span {
+          color: #627382;
+          font-size: 0.875rem;
+        }
+      }
+      .number-input {
+        border-left: 1px solid $border-color;
+        display: table-cell;
+        vertical-align: middle;
+        background-color: white;
+
+        &.right {
+          border-left: none;
+          border-right: 1px solid $border-color;
+        }
+
+        .shpmtc-input {
+          height: 100%;
+          &__group {
+            height: 100%;
+            border:none;
+          }
+        }
+
+        input {
+          border: none;
+          outline: none;
+          margin: 0;
+          padding: 0 10px;
+          box-shadow: none;
+          transition: none;
+          height: 100%;
+        }
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+    .save-btn {
+      padding: 10px 20px;
+      display: inline-block;
+      border-radius: 4px;
+      border: solid 1px $border-color;
+      color: #363e4a;
+      font-size: 0.875rem;
+      background-color: $bg-dark;
+      &[disabled] {
+        opacity: 0.25;
+        cursor: not-allowed;
+      }
+    }
+
+    @include min-tablet {
+      .input__wrapper {
+        display: inline-block;
+      }
+
+      >*:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    @include mobile {
+      text-align: center;
+      .input__wrapper {
+        margin-bottom: 10px;
+      }
+      .label {
+        display: block;
+      }
+    }
+  }
+}

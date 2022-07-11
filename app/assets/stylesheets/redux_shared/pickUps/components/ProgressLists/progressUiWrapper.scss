@@ -1,0 +1,66 @@
+@mixin progressUiWrapper {
+  .progress-ui-wrapper {
+    &[data-current='true'] {
+      border: 2px solid $pick-ups-modal-background-blue;
+    }
+    &[data-current='false'] {
+      border: 2px solid transparent;
+    }
+    &[data-enable='true'] {
+      opacity: 1;
+    }
+    &[data-enable='false'] {
+      opacity: .3;
+      cursor: default;
+      a, button { pointer-events: none; }
+      @include disable-select;
+    }
+    &[data-complete='true'] {
+      img.img-tick-on { display: block; }
+    }
+    &[data-complete='false'] {
+      img.img-tick-on { display: none; }
+    }
+
+    &[data-await='true'] {
+      &:after { display: block; }
+    }
+
+    button.generate-btn {
+      &[data-btn-type='await'] {
+        color: #f19b23;
+        background-color: transparent;
+        pointer-events: none;
+        position: relative;
+        outline: none;
+        &:before {
+          content: '';
+          background-image: url(image_path('manage/pick_ups/icon-time-generating.svg'));
+          -webkit-background-size: 15px;
+               -o-background-size: 15px;
+                  background-size: 15px;
+          width: 15px; height: 14px;
+          position: absolute;
+          left: -5px;
+          top: 0; bottom: 0;
+          margin: auto;
+        }
+      }
+      &[data-btn-type='complete'] {
+        color: #53ca3d;
+        background-color: transparent;
+        pointer-events: none;
+        outline: none;
+      }
+    }
+
+    button.print-btn, button.schedule-pick-up-btn {
+      &[data-btn-type='await'] {
+        opacity: .3;
+        pointer-events: none;
+        outline: none;
+      }
+    }
+
+  }
+}

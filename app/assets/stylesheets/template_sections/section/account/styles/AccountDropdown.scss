@@ -1,0 +1,69 @@
+@import '../../../../checkout/shpmtcd/settings.scss';
+
+#template-header .dropdown-wrapper section {
+  padding-bottom: 15px !important;
+}
+
+.dropdown-wrapper{
+  z-index: 100;
+  height: fit-content;
+  max-height: 275px;
+  width: 240px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 1px 0 rgba(99,114,130,0.15), 0 8px 32px 0 rgba(27,39,51,0.2);
+  position: absolute;
+  right: 0;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 12px;
+  font-family: "ProximaNova-Regular";
+  text-transform: none;
+  .welcome-message{
+    color: #627382;
+    letter-spacing: 0;
+    line-height: 14px;
+    font-family: 'ProximaNova-Light';
+    h6{
+      color: #222222;
+      font-family: "ProximaNova-Semibold";
+      font-size: 14px;
+      line-height: 14px;
+      margin-bottom: 4px;
+    }
+  }
+  button{
+    width: 100%;
+    margin: 10px 0;
+    font-family: 'ProximaNova-Light';
+  }
+  .new-register{
+    font-family: "ProximaNova-Regular";
+    color: #232A36;
+    span{
+      color: $PrimaryColor;
+    }
+  }
+  .line-separator{
+    margin: 5px 0;
+    border: 1px solid #F0F4F7;
+    width: 100%;
+    // height: 1px;
+  }
+  .menu-wrapper, .logout-wrapper{
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 36px;
+    color: #222222;
+    font-family: 'ProximaNova-Light';
+    a{
+      color: #222222;
+      width: 100%;
+      display: block;
+    }
+    .logout-btn{
+      cursor: pointer;
+    }
+  }
+  
+}

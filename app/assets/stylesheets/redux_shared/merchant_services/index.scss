@@ -1,0 +1,107 @@
+.MerchantServicesPage {
+  transition: padding-top .3s;
+  &.top-padding {
+    padding-top: 30px;
+  }
+}
+.MerchantServiceDisclaimer {
+    max-width: 1167px;
+    margin: 10px auto 0px;
+    font-size: 14px;
+    color: #627382;
+    text-align: justify;
+}
+
+.MerchantService {
+  margin-top: 30px;
+  background: white;
+  padding-left: 340px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 60px;
+  }
+
+  .MerchantService-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 340px;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .MerchantService-content {
+    float: left;
+    padding: 36px;
+    white-space: pre-wrap;
+    min-height: 285px;
+  }
+
+  .MerchantService-title {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.07;
+    color: #000000;
+    margin-bottom: 13px;
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  .MerchantService-desc {
+    font-size: 14px;
+    line-height: 1.43;
+    color: #454545;
+    margin-bottom: 25px;
+  }
+
+  .MerchantService-btn {
+    height: 40px;
+  }
+
+  .button {
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 14px;
+    outline: none;
+    border-radius: 3px;
+  }
+
+  .icon-check {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #69be7b;
+    font-weight: 600;
+  }
+
+  .icon-check:before {
+    content: '';
+    // background: image_url('ui/icon-check.svg') no-repeat 100% 100%;
+    display: inline-block;
+    vertical-align: top;
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  @include mobile {
+    padding-left: 0px;
+    .MerchantService-image {
+      position: static;
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+    }
+
+  }
+}

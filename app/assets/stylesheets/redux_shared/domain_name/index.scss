@@ -1,0 +1,262 @@
+@import "./mixin";
+@import "./modal";
+@import "./confirm-content";
+@import "./custom-tooltips";
+
+.ReactModalPortal { @include react-domain-modal-overlay; }
+.ReactModalPortal__Promise { @include confirm-content; }
+
+#domain_names {
+  .on-board-new-domain-name {
+    @include fill-window;
+  }
+
+  $editable-block-width: 750px;
+
+  .domain-name-setup-layout {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #eff3f7;
+    .content {
+      padding-top: 5em;
+      padding-bottom: 5em;
+      .centered-block {
+        width: 685px;
+        margin: 0 auto;
+      }
+
+      .description {
+        margin-top: 1em;
+        margin-bottom: 2em;
+        text-align: center;
+        .title {
+          font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif;
+          font-weight: normal;
+          color: #212121;
+          font-size: 34px;
+          margin: 18px 0;
+        }
+        .seperator {
+          width: 42px;
+          height: 6px;
+          border: 0px;
+          background-color: #a9b8c5;
+          margin: 18px auto;
+        }
+        .notice {
+          font-size: 14px;
+          line-height: 2em;
+          color: #4c5667;
+          margin: 18px 0;
+          .domain-name-video {
+            color: #5ca3b7;
+            text-decoration: none;
+          }
+          .domain-name-question {
+            font-size: 0.9em;
+            color: #efefef;
+            width: 1.2em;
+            height: 1.2em;
+            line-height: 1.2em;
+            padding: 0.1em;
+            display: inline-block;
+            text-align: center;
+            vertical-align: baseline;
+            background-color: #a9b8c5;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+      .private-domain-name {
+        @include editable-block($editable-block-width);
+        &.in {
+          .canonical-name, .host-name {
+            color: #4fa5e6;
+          }
+        }
+        &:not(.in) {
+          .canonical-name {
+            color: #4fa5e6;
+          }
+          .host-name {
+            color: black;
+          }
+        }
+      }
+      .assign-subdomain-name {
+        @include editable-block($editable-block-width);
+        form {
+          input.field {
+            width: 260px;
+            text-align: right;
+            padding-left: 30px;
+            padding-right: 6px;
+            letter-spacing: 1px;
+            color: #4fa5e6;
+            &.valid {
+              color: #69be7b;
+            }
+            &.invalid {
+              color: #e95665;
+            }
+          }
+          input[type='submit'] {
+            width: 150px;
+            height: 40px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            &[disabled] {
+              opacity: 0.4;
+            }
+          }
+          .ico-available {
+            position: absolute;
+            color: #69be7b;
+            top: 3px;
+            left: 0;
+            font-size: 30px;
+            line-height: 30px;
+          }
+          .circle-spinner {
+            background: url(/assets/ajax_spinner-e92cd60a8ff51749904d91a20ac02d03f77454b0b216076ff42d880a8218d987.gif) no-repeat;
+            background-size: contain;
+            background-size: contain;
+            background-size: contain;
+            position: absolute;
+            top: 6px;
+            left: 0;
+            width: 30px;
+            height: 30px;
+          }
+          .validation-msg {
+            color: #d62a41;
+          }
+        }
+      }
+      .use-free-domain-name {
+        @include editable-block($editable-block-width);
+        form {
+          input.field {
+            width: 340px;
+          }
+          input[type='submit'] {
+            width: 100px;
+            height: 40px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+          }
+          .appended-domain-text {
+            font-size: 16px;
+            // font-family: 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif;
+            color: #2c3344;
+            .or-seperator {
+              font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+              color: #9b9b9b;
+            }
+          }
+        }
+        .query-result {
+          margin-top: 0;
+          margin-left: -2rem;
+          margin-right: -2rem;
+          margin-bottom: 0;
+          .entry:first-child {
+            margin-top: 1.5rem;
+          }
+          .entry:last-child {
+            margin-bottom: -1.6rem;
+          }
+          .entry {
+            padding: 1rem;
+            border-top: 1px solid #cccccc;
+            .cell {
+              display: table-cell;
+              vertical-align: middle;
+            }
+            .domain-name {
+              width: 300px;
+            }
+            .availability {
+              width: 120px;
+              .available {
+                color: green;
+              }
+              .not-available {
+                color: red;
+              }
+            }
+            .cell:last-child {
+              width: 150px;
+              .border-btn {
+                @include border-btn(#cccccc, white, 3px);
+              }
+            }
+          }
+        }
+      }
+      .use-own-domain-name {
+        @include editable-block($editable-block-width);
+        form {
+          input.field {
+            width: 400px;
+          }
+        }
+        .own-domain-name {
+          input.field {
+            width: 400px;
+            &.read-only {
+              border-bottom: 2px solid transparent;
+            }
+          }
+        }
+        .edit-btn, .submit-btn {
+          padding-left: 14px;
+          padding-right: 10px;
+          color: #ffffff;
+          font-size: 13px;
+          border-radius: 3px;
+          background-color: #5dadec;
+          border: none;
+          min-width: 123px;
+          height: 40px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          &:focus {
+            outline: none;
+          }
+          .ico-info {
+            font-size: 20px;
+            margin-left: 6px;
+          }
+        }
+        .domain-add-tooltips, .domain-edit-tooltips {
+          @include custom-tooltips;
+          max-width: 422px;
+          .triangle-shape {
+            right: 17px;
+            bottom: -5px;
+          }
+        }
+      }
+      .guide {
+        width: $editable-block-width;
+        padding: 2em;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #4c5667;
+        background-color: #fdecb7;
+        box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.17);
+        .cname {
+          color: black;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+}

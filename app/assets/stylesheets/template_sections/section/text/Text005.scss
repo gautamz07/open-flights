@@ -1,0 +1,37 @@
+.Text005 {
+  .section-container {
+    position: relative;
+  }
+
+  .block_1, .block_2, .block_3 {
+    text-align: left;
+    padding: 20px;
+
+    &.row {
+      max-width: inherit;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .block-thumbnail {
+      padding: 0;
+
+      img {
+        margin: 0;
+        padding: 0;
+        height: 120px;
+        width: 120px;
+        object-fit: cover;
+      }
+    }
+
+    @include mobile {
+      p { margin-bottom: 50px; }
+      .block-thumbnail img { margin-bottom: 20px; }
+    }
+
+    @include tablet {
+      p { margin-bottom: 50px; }
+    }
+  }
+}

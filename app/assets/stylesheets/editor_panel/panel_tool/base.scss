@@ -1,0 +1,47 @@
+@import "../../redux_shared/mixin/base";
+
+@mixin panel-tool-base {
+  @include disable-select;
+
+  margin: 0;
+  color: inherit;
+  width: inherit;
+  height: inherit;
+  display: inline-block;
+  
+  hr.or {
+    height: auto;
+    position: relative;
+    overflow: inherit;
+    margin: 20px 0 15px 0;
+    border: none;
+    text-align: center;
+    &::before, &::after { content: ''; display: inline-block; height: inherit; }
+    &::before {
+      width: calc(100% + 30px);
+      height: 1px;
+      position: absolute;
+      top: calc(50% - 2px);
+      left: -15px;
+      background-color: #444;
+    }
+    &::after {
+      content: 'Or';
+      color: #555;
+      position: relative;
+      padding: 0 10px;
+      background-color: $edit-panel-background-color;
+    }
+  }
+
+  .checkbox-primary {
+    text-align: left;
+    label {
+      font-size: 14px;
+      color: #FFF;
+      margin: 0;
+      line-height: 1.25em;
+      height: 1.25em;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "redux_shared/mixin/z_index";
+@import "redux_shared/mixin/triangle";
+
+@mixin ContactUsPrompt {
+  .contact-us-prompt {
+    z-index: $z-index-nav-tutorial-prompt;
+    position: absolute;
+    top: $nav-height + 20px;
+    width: 340px;
+    right: 0px;
+
+    text-align: left;
+    background: #fff;
+    line-height: 1.4;
+    font-size: 14px;
+    padding: 20px 20px 20px 20px;
+    -webkit-font-smoothing: initial; // reset for /page_builder
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    &:hover { color: inherit !important; }
+
+    .arrow {
+      @include triangle-regular(16px , #fff, transparent, 135deg);
+      position: absolute;
+      top: 0;
+      right: 23px;
+    }
+    .got-it {
+      display: none;
+      width: 100px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@mixin PaymentOptionPopupModal {
+  .ReactModal__Overlay.option-popup-modal-overlay {
+    overflow: scroll;
+    padding: (50px - 1px) 0 0 0;
+    
+    &.full-screen {
+      .ReactModal__Content {
+        height: 100%;
+        width: 100%;
+        -webkit-border-radius: 0;
+                border-radius: 0;
+        overflow: initial;
+      }
+    }
+
+    &.center-screen {
+      .ReactModal__Content {
+        -webkit-border-radius: 5px;
+                border-radius: 5px;
+      }
+    }
+
+    .ReactModal__Content.option-popup-modal-content {
+      background-color: #FFF;
+    }
+  }
+}

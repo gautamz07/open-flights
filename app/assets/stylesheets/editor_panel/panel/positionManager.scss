@@ -1,0 +1,23 @@
+@mixin positionManager {
+  position: absolute;
+  top: initial;
+  bottom: initial;
+  left: initial;
+  right: initial;
+  z-index: $z-index-editor-panel;
+
+  @include directionHandle;
+}
+
+@mixin directionHandle {
+  &[data-vertical='top'] {
+  }
+  &[data-vertical='bottom'] {
+    @include _pointer_vertical_bottom;
+  }
+  &[data-horizontal='left'] {
+  }
+  &[data-horizontal='right'] {
+    @include _pointer_horizontal_right;
+  }
+}

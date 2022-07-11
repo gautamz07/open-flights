@@ -1,0 +1,32 @@
+@mixin ModalEasyship {
+  .easyship {
+    .close-btn {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: #bebebe;
+      &:before {
+        margin: 0;
+      }
+    }
+    .modal-title {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      .logo {
+        width: 130px;
+        margin-left: -9px;
+      }
+    }
+    .easyship-product-type {
+      border-radius: 3px;
+      height: 48px;
+      padding-left: 1em;
+    }
+    .button {
+      border-radius: 3px;
+    }
+  }
+}

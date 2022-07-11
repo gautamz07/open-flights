@@ -1,0 +1,27 @@
+
+@mixin SkipThisButton {
+  .SkipThisButton {
+    position: absolute;
+    bottom: 22px;
+    right: 24px;
+
+    &.with-intercom {
+      bottom: 15px;
+      right: 98px;
+    }
+
+    .button {
+      border-radius: 3px;
+      padding: 0 10px 0 19px;
+      line-height: 35px;
+      height: 35px;
+      // font-family: 'ProximaNova-Semibold';
+      background-color: #4ba4ea;
+
+      .ico-arrow-right:before {
+        margin-left: 5px;
+        transform: translateY(1px);
+      }
+    }
+  }
+}

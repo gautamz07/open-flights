@@ -1,0 +1,9 @@
+@mixin SectionEditPanel {
+  &.section-edit-panel {
+    .dropdown .dropdown-controll {
+      top: 0;
+      left: initial;
+      right: calc(100% + 8px);
+    }
+  }
+}

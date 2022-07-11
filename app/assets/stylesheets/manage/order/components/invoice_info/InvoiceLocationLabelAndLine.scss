@@ -1,0 +1,12 @@
+@mixin InvoiceLocationLabelAndLines {
+  padding: 0 15px;
+  .label {
+    font-size: 14px;
+    margin: 0;
+    font-weight: bold;
+  }
+  .line, p {
+    margin: 0;
+    // // font-family: 'ProximaNova-Medium';
+  }
+}

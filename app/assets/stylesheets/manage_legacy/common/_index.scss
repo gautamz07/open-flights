@@ -1,0 +1,31 @@
+.page-header {
+  // overlay bootstrap
+  margin: 0;
+  border: none;
+
+  h4 {
+    // overlay bootstrap
+    font-weight: normal;
+
+    color: black;
+  }
+}
+
+.ico-back {
+  font-size: 24px;
+  color: #424b5b;
+}
+
+td, th {
+  border-bottom: 1px solid #ededed;
+}
+
+// overlay app/assets/stylesheets/common/bootstrap/panel.scss
+body .panel.panel-default {
+  box-shadow: none;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: none;
+  outline: none;
+}

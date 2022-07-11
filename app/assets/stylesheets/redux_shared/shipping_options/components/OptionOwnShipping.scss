@@ -1,0 +1,22 @@
+@import "redux_shared/shipping_options/mixin/row";
+@import './self_collect/OptionAlias';
+
+@mixin OptionOwnShipping {
+  .own-shipping {
+    @include custom-vertical-center(86px);
+    &.name-editable {
+      @include custom-vertical-center(111px);
+    }
+    .cell {
+      .description {
+        text-align: left;
+        @include mobile {
+          text-align: center;
+        }
+      }
+      .option-alias-as-courier-group-name {
+        @include OptionAlias;
+      }
+    }
+  }
+}

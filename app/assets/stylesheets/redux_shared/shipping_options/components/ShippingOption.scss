@@ -1,0 +1,50 @@
+@mixin ShippingOptions {
+  .option-container {
+    border-radius: 5px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .option {
+      @include ShippingOptionControlUnit;
+      border: 0.5px solid #e4ebef;
+      border-radius: 5px;
+      overflow-y: auto;
+      background-color: white;
+      color: #666666;
+      font-size: 14px;
+      @include mobile {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .provider-name {
+        color: #444444;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      & > div {
+        border-right: 1px solid #f4f7f9;
+        &:last-child {
+          border: none;
+        }
+        @include mobile {
+          padding-left: 20px;
+          padding-right: 20px;
+          text-align: center;
+          border-right: 1px solid transparent;
+          &:last-child {
+            border-top: 1px solid #f4f7f9;
+            margin-top: 5px;
+            padding-top: 15px;
+          }
+        }
+      }
+
+    }
+  }
+
+  .flat-shipping-fee {
+    span { font-size: 14px; }
+  }
+}

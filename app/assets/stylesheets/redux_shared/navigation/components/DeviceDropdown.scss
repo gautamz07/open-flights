@@ -1,0 +1,52 @@
+@import "redux_shared/mixin/z_index";
+@import "redux_shared/navigation/mixin/navigation_base";
+@import "redux_shared/mixin/transition";
+
+@mixin DeviceDropdown {
+  .device-dropdown {
+    position: relative;
+    button.resizer-btn:focus { outline: none; }
+    button.resizer-btn{
+      .ico-arrow-down{
+        font-size: 16px;
+        margin-left: -3px;
+        position: relative;
+        top: -2px;
+        vertical-align: middle;
+      }
+    }
+    ul.device-drop-list {
+      @include transition-ease-back(top, opacity, visibility);
+
+      z-index: $z-index-nav-dropdown;
+      position: absolute;
+      top: 42px;
+      left: initial;
+      right: initial;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background-color: #fff;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 5px;
+      box-shadow: 0 0 0 1px rgba(99,114,130,0.15), 0 8px 32px rgba(27,39,51,0.20);
+      li {
+        @include nav-hover;
+        width: 40px;
+        height: 40px;
+        button {
+          padding: 0 5px;
+          height: inherit;
+          color: inherit;
+        }
+      }
+
+      &.checked {
+        top: 50px;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}

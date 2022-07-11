@@ -1,0 +1,101 @@
+.form, .simple_form {
+
+  margin-top: 10px;
+
+  width: 100%;
+
+  .form-group { margin-bottom: 1px; }
+
+  .form-actions { margin-top: 8px; margin-bottom: 15px; }
+
+  input[type=text], input[type=email], input[type=password], input[type=tel] {
+
+    background-color: white;
+    color: #343434;
+    opacity: .6;
+    font-size: 14px;
+    text-indent: 15px;
+    line-height: 40px;
+    padding: 0;
+    height: 50px;
+    box-shadow: none;
+    border: 0;
+    border-bottom: 1px solid rgba(white, 0.2);
+    -webkit-border-radius: 0;
+            border-radius: 0;
+
+    &:active, &:focus, &:hover, &:blur { border-bottom: none; }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:-webkit-autofill {
+      background-color: white;
+      -webkit-box-shadow: 0 0 0px 1000px white inset;
+      border: 1px solid white;
+    }
+
+    &::-webkit-input-placeholder {
+      color: #838ca1;
+      text-shadow: none;
+      -webkit-text-fill-color: initial;
+    }
+
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color: #838ca1;
+    }
+
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #838ca1;
+      opacity: 1;
+    }
+
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #838ca1;
+      opacity: 1;
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #838ca1;
+    }
+
+  }
+
+  input[type=submit].btn.btn-primary {
+    background-color: #786497;
+  }
+
+  .input_block {
+    div:first-child {
+      input {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+      }
+    }
+    div:last-child {
+      input {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+  }
+
+  div.form-group:nth-child(1) { margin-bottom: 1px; }
+
+  div.form-group.tel {
+    position: relative;
+    label.tel {
+      color: #343434;
+      font-weight: 600;
+      position: absolute;
+      left: 15px;
+      line-height: 50px;
+    }
+    input[type=tel]{ text-indent: 45px; }
+  }
+
+}
+
+body[data-home-country=hk] div.form-group.tel input[type=tel] { text-indent: 50px; }

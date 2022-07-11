@@ -1,0 +1,17 @@
+@import "../../../../stylesheets/shared/btnLink.scss";
+
+@mixin ButtonLinkStyles {
+  .btn--link {
+    margin-left: 2rem;
+    position: relative;
+
+    &:after {
+      content: '|';
+      left: -1rem;
+      top:0;
+      position: absolute;
+      color: #627382;
+    }
+    @include ButtonLink()    
+  }
+}

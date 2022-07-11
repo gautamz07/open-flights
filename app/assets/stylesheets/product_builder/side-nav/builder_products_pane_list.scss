@@ -1,0 +1,134 @@
+@import './variables';
+@import './menu-drop';
+@import '../mixins/add-product-button';
+
+.builder-products-pane-list {
+  @include menu-drop;
+
+  $list-item-height: 48px;
+
+  height: 100%;
+  padding-top: 50px;
+
+  &.searching { padding-top: 100px; }
+
+  a.nav-heading {
+    color: $side-nav-text-color;
+    display: block;
+    padding: 0 20px;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: center;
+    background-color: darken($side-nav-item-active-bg-color, 20%);
+  }
+
+  .add-product-btn {
+    @include add-product-button;
+  }
+
+  ul.product-list {
+    height: calc(100% - 50px);
+    padding: 0 0 50px;
+    overflow-y: auto;
+    list-style: none;
+  }
+
+  .product-item {
+    cursor: pointer;
+    padding: 8px;
+    line-height: $list-item-height;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover, &.active {
+      background-color: #f0f4f7;
+    }
+    .product-name {
+      color: $side-nav-text-color;
+      font-size: 14px;
+    }
+
+    .product-text {
+      color: lighten($side-nav-text-color, 50%);
+      font-size: 13px;
+    }
+
+    .ico-nav-top-reorder {
+      float: left;
+      font-size: 12px;
+      padding-left: 9px;
+      padding-right: 3px;
+      opacity: 0.6;
+      cursor: move;
+    }
+  }
+
+  .product-select {
+    display: none;
+    float: left;
+    margin: 16px 8px 0 0;
+    font-size: 16px;
+  }
+  .product-image {
+    float: left;
+    width: $list-item-height * 0.8;
+    height: $list-item-height * 0.8;
+
+    margin: 5px 15px 0 5px;
+    border-radius: 3px;
+    background: image-url('missing.jpg') center / cover;
+  }
+
+  .flagged-img {
+    background: image-url('red-flag.png') center / cover;
+  }
+
+  .product-actions {
+
+    float: right;
+    margin-left: 8px;
+    line-height: $list-item-height / 2;
+    display: none;
+
+    a {
+
+      display: block;
+      font-size: 20px;
+      color: $side-nav-text-color;
+
+      &:hover, &:focus, &:active {
+        color: $defaultSiteTextColor;
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+  .product-info {
+
+    line-height: $list-item-height / 2;
+
+    span {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+  }
+
+
+
+  .visible-off {
+    .product-name, .product-image, .product-text { opacity: 0.3; }
+  }
+
+  .selecting {
+    .product-select { display: block; }
+    .product-actions { display: none; }
+  }
+
+  .product-item.active, .product-item:hover {
+    .product-actions { display: block; }
+  }
+}

@@ -1,0 +1,25 @@
+// overwrite .ReactModalPortal__Callout for show flash message on rails & redux mixed layout
+.ReactModalPortal__Callout {
+  .name {
+    font-size: 16px !important;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+  .message {
+    font-size: 16px;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+  }
+  .close-button {
+    background: transparent;
+    border: 0 none;
+    position: absolute;
+    right: 1rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  [class^="ico-close"]:before, [class*=" ico-close"]:before {
+    font-size: 20px !important;
+    vertical-align: middle;
+  }
+}

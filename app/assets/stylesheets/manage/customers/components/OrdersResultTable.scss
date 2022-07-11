@@ -1,0 +1,28 @@
+@mixin OrdersResultTable {
+  .orders-result-table {
+    &.all, &.processing {
+      .order-date { display: table-cell; }
+      .pickup-time { display: none; }
+    }
+    &.awaiting-pickup {
+      .order-date { display: none; }
+      .pickup-time { display: table-cell; }
+    }
+
+    .order-actions {
+      overflow: visible;
+      @include ActionsDropdown;
+      @include ActionsDropdownItem;
+      @include ActionsDropdownLinkItem;
+      @include ActionsDropdownPostItem;
+      @include BulkActionsDropdown;
+      @include ActionsDropdownTd;
+    }
+
+    /*
+    .rt-noData {
+      display: none;
+    }
+    */
+  }
+}

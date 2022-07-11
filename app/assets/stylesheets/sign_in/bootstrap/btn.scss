@@ -1,0 +1,33 @@
+.btn { border-radius: 3px; }
+
+.btn.btn-primary {
+
+  border: 0;
+  background-color: #E95664;
+  color: white;
+
+  &:hover, &:active, &:focus { background-color: darken(#E95664, 1.5); }
+
+}
+
+.btn.btn-default {
+
+  background:rgba(206, 192, 188, .35);
+  border: 1px solid rgba(white, 0.2);  
+  border-radius:3px;
+  // font-family: 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif;
+  color:#343434;
+  line-height:21px;
+  font-size:14px;
+  @media screen and ( max-device-width: 414px ){
+    font-size:10px;
+  }
+
+  &:hover, &:active, &:focus { background:rgba(206, 192, 188, 1); }
+
+}
+a.btn.btn-default { min-width: 100%; }
+
+.btn.btn-link { color: #343434; }
+
+.btn-lg { font-size: 14px; }

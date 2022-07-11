@@ -1,0 +1,73 @@
+.nav-slide-menu.nav-slide-menu-a .side-menu-content {
+  padding: 20px 0 40px;
+
+  .slider-controll.ico-close {
+    padding-right: 40px;
+    &:before {
+      font-size: 24px;
+    }
+  }
+
+  nav.nav-menu {
+
+    li {
+      display: block;
+      & > a { position: relative; }
+      & > span.icon-caret { background: none; }
+
+      // cancel NavMenu hover effect
+      &:hover:after { display: none; }
+
+      // slide-menu hover effect
+      & > a:hover:after {
+        content: ' ';
+        position: absolute;
+
+        // ensure hover effect spread from left to right:
+        left: -100vw;
+        right: -100vw;
+
+        top: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.04);
+        pointer-events: none;
+      }
+    }
+
+    // menu item leveling
+    ul {
+      &[data-nav-level='0'] li a {
+        padding-left: 45px;
+      }
+      &[data-nav-level='1'] li a {
+        padding-left: 65px;
+      }
+      &[data-nav-level='2'] li a {
+        padding-left: 85px;
+      }
+    }
+
+    // dropdown overwrite
+    ul.dropdown {
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      box-shadow: none;
+      display: block;
+      top: initial !important;
+      left: initial !important;
+      li a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      max-height: 0;
+      @include css-transition(0.3s ease-in-out max-height);
+      &[data-open='true'] {
+        max-height: 100%;
+      }
+    }
+    .icon-caret {
+      padding: 0 10px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@mixin SubmitButton {
+  .submit-btn {
+    border-radius: 3px;
+    font-weight: bold;
+    color: white;
+    background-color: #69be7b;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}

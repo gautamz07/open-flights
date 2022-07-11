@@ -1,0 +1,105 @@
+$buyer-login-form-max-width: 375px;
+$buyer-bg-color: #F8F8F8;
+
+.contact-infos.buyer-login,
+.buyer-password-resets.new,
+.buyer-password-resets.edit {
+  background: $buyer-bg-color;
+  .cart-shipping-details .checkout-navbar { display: none; }
+
+  #checkout-content-container {
+    h1,h2,h3,h4,p { font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif; letter-spacing: 0px; text-align: center; }
+    padding: 0 20px;
+    background: inherit;
+
+    .header, form {
+      max-width: $buyer-login-form-max-width;
+      width: 100%;
+      margin: auto;
+    }
+
+    .header {
+      padding-top: 50px;
+      a {
+        font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+        font-size:13px;
+        color:#333333;
+      }
+      h1 {
+        font-size: 24px;
+        color: #000000;
+        line-height: 21px;
+        text-align: center;
+        margin: 36px 0 30px 0;
+      }
+    }
+
+    form {
+      font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+      label { font-size:12px; color:#b0b0b0; margin-bottom: 8px; }
+      input {
+        font-size:15px;
+        color:#333333;
+        border-bottom-width: 2px ;
+        background: $buyer-bg-color;
+        &:-webkit-autofill { background-color: transparent; -webkit-box-shadow: 0 0 0 1000px $buyer-bg-color inset ; }
+        &:hover, &:focus { border-bottom-color: #69be7b; }
+      }
+      .form-actions {
+        position: relative;
+        input.submit-common { margin-top: 30px; }
+        span {
+          position: absolute;
+          top: 0;
+          line-height: 45px;
+          font-size: 20px;
+          &.forgot-password { right: 38%; }
+          &.recover-password { right: 20px; }
+        }
+      }
+
+      .fortgot-password { font-size:13px; color:#333333; }
+
+      .divider {
+        font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+        text-align:center;
+        line-height: 40px;
+        opacity:0.4;
+        font-size:13px;
+        color:#333333;
+        margin-top: 20px;
+        hr {
+          margin: 20px auto;
+          width:40%;
+          border-color: #333333;
+        }
+        .left { float: left; }
+        .right { float: right; }
+      }
+
+      .dont-have-account {
+        h3 { font-size:18px; color:#000000; line-height:21px; }
+        p { font-size:13px; color:#333333; line-height:21px; text-align:center; display: block; }
+        p:hover { text-decoration: underline; cursor: pointer; }
+      }
+
+      .carts_check_email_form_email { text-align: left; }
+
+    }
+  }
+
+}
+
+.contact-infos.show {
+  .carts_check_email_form_email {
+    color: red;
+    text-align: left;
+    &:after {
+      content: attr(data-invalid) '';
+      font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+      font-size: 14px;
+      color: $defaultRed;
+      display: block;
+    }
+  }
+}

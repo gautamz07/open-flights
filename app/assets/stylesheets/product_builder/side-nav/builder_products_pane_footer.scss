@@ -1,0 +1,45 @@
+@import './menu-drop';
+
+.builder-products-pane-footer {
+
+  @include menu-drop;
+
+  .pane-footer {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    color: $colorWhite;
+    background-color: $defaultBlue;
+    @include transition-basic(bottom);
+    &.selection {
+      padding: 0 25px;
+    }
+    &.show {
+      bottom: 0;
+    }
+
+    a {
+      color: $colorWhite;
+      &:hover, &:focus, &:active {
+        color: $defaultSiteActiveTextColor;
+      }
+      &.pull-left {
+        float: left;
+      }
+      &.pull-right {
+        float: right;
+      }
+    }
+  }
+
+  [class^="ico-"], [class*=" ico-"] {
+    &:before {
+      margin-right: 2px;
+      font-size: 24px;
+      vertical-align: sub;
+    }
+  }
+}

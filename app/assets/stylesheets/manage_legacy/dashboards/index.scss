@@ -1,0 +1,390 @@
+@import '../common/variables';
+@import '../common/common';
+@import "../../redux_shared/mixin/*";
+@import '../../redux_shared/foundation_and_overrides';
+@import "../../product_builder/redux_component/ImportProductModal/index";
+
+#content {
+  @media only screen and (max-width: 1400px) {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    & > div {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+  }
+  @include desktop {
+    padding-left: 2% !important;
+    padding-right: 2% !important;
+  }
+  @include mobile {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    height: calc(100% - 50px) !important;
+  }
+}
+
+#dashboards {
+  @import '../common/icons';
+  @import '../common/index';
+
+  .page-header.hint-area {
+    height: 45px;
+    margin: 0;
+    border: none;
+
+    a {
+      font-size: 13px;
+      line-height: 3em;
+      &:hover, &:focus { text-decoration: none; color: #838ca0; border: none; outline: none; }
+    }
+
+    a.explanation-video.ico-video {
+      display: none;
+      color: #444;
+      float: left;
+      -webkit-transition: color 0.3s ease-out;;
+         -moz-transition: color 0.3s ease-out;;
+          -ms-transition: color 0.3s ease-out;;
+           -o-transition: color 0.3s ease-out;;
+              transition: color 0.3s ease-out;;
+      &:before {
+        color: $newManageBlue;
+        font-size: 2em;
+        margin-right: 5px;
+        // font-weight: 600;
+      }
+      &[href=""] { display: none !important; } // if vedio not have link & not display
+    }
+  }
+
+  h3 {
+    @include max-desktop {
+      margin-top: 8px;
+    }
+  }
+
+  h4{
+    line-height: 30px;
+  }
+
+  .panel-heading {
+    overflow: hidden;
+    background-color: $newManagePanelHeadingGray;
+    color: $newManageBlack;
+    border-radius: 0;
+    border: 0;
+    small { margin-top: 7px; }
+
+    .ico-info:before { color: $iconDarkBlue; }
+
+    .btn-link {
+      color: $newManageBlack;
+      text-decoration: none;
+    }
+  }
+
+  .page-views-chart {
+    .panel-body {
+      span { font-size: 1em; }
+    }
+  }
+
+  .ct-series-a .ct-line {
+    stroke: $newManageBlue;
+    stroke-width: 3px;
+  }
+
+  /* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+  .ct-series-a .ct-point {
+    stroke: $newManageBlue;
+    stroke-width: 10px;
+  }
+
+  .ct-series-a .ct-area {
+    fill: $newManageBlue;
+  }
+
+  .orders-chart {
+
+    .panel-body {
+      padding: 100px 15px 21px 15px;
+      span { font-size: 1em; }
+      @include mobile {
+        padding: 100px 15px 21px 0px;
+      }
+    }
+
+    .switch-region {
+      .chartist-filter {
+        display: inline-block;
+        margin-left: 5px;
+        &:last-of-type a { margin-left: 30px; }
+        &.active {
+          a{
+            @include bold;
+          }
+        }
+      }
+      a {
+        color: $newManageBlack;
+        text-decoration: none;
+        line-height: 30px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .region-arrow {
+    position: absolute;
+    left: 80px;
+    border: 8px solid transparent;
+    border-top-color: $newManagePanelHeadingGray;
+
+    &.international { left: 270px; }
+    @include mobile {
+      left: 45px;
+      &.international {
+        left: 145px;
+      }
+    }
+    @media only screen and (max-width: 360px) {
+      &.international {
+        left: 115px;
+      }
+    }
+  }
+
+  .thumbnail {
+
+    border: 0;
+
+    width: 50px;
+    height: 50px;
+    margin: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  .no-top-product {
+    height: 365px;
+    background: image-url('manage/dashboards/icon-no-top-product.svg') no-repeat 50% 30%;
+  }
+
+  .no-sold-out-product {
+    height: 365px;
+    background: image-url('manage/dashboards/icon-no-sold-out-product.svg') no-repeat 50% 30%;
+  }
+
+  .empty-message {
+    padding: 220px 50px 15px;
+    color: #aeb7c8;
+  }
+
+  .scorecard {
+
+    margin-bottom: 25px;
+    box-shadow: 0 1px 2px 0 #ddd, 1px -1px 2px 0 rgba(#ddd, 0.2);
+
+    .scorecard-card {
+
+      padding: 50px 15px 15px;
+      background-size: auto 25px !important;
+
+      strong {
+        display: block;
+        font-size: 22px;
+        color: $newManageBlue;
+      }
+
+    }
+
+    .scorecard-card-a { background: #ffffff image_url('manage/dashboards/scorecard-bg-a.png') no-repeat 50% 15px; }
+    .scorecard-card-b { background: #fbfbfc image_url('manage/dashboards/scorecard-bg-b.png') no-repeat 50% 15px; }
+    .scorecard-card-c { background: #f6f8f9 image_url('manage/dashboards/scorecard-bg-c.png') no-repeat 50% 15px; }
+
+  }
+
+  .next-steps-section {
+
+    .list-group-item {
+      padding: 16px 25px 14px 25px;
+
+      .btn.btn-primary {
+        padding: 10px 15px;
+        font-weight: normal !important;
+        background-color: $newManageBlue;
+        border-width: 0px;
+        border-radius: 3px;
+      }
+    }
+
+    .panel-heading {
+      padding: 7px 15px 12px 15px;
+
+      .list-group-item {
+        border: 1px solid #E8EDF1;
+      }
+
+      small {
+        font-size: 14px;
+        margin-left: 10px;
+      }
+    }
+
+    strong {
+      margin-left: 15px;
+      color: #212121;
+      @include bold;
+    }
+
+  }
+
+  .faq-section {
+
+    .panel-body {
+      background: image_url('manage/dashboards/icon-faq.svg') no-repeat 50% 30px;
+      background-size: 60px;
+    }
+
+    h3 {
+      color: black;
+      padding-top: 80px;
+      margin-bottom: 0;
+      font-size: 21px;
+    }
+
+    .list-group {
+
+      margin-bottom: 25px;
+
+      li {
+        border: 0;
+        padding: 5px;
+      }
+
+      a {
+        text-decoration: none;
+        color:#777777;
+
+        &:hover {
+          color:#5CA3B7;
+        }
+      }
+
+    }
+
+  }
+
+  .products-listing strong { color: black; }
+
+  .order_content { height: 600px; }
+  .product_content, .page-views-chart { height: 461px; }
+  .order_content, .product_content {
+    .col-md-4 {
+      @media only screen and (max-width: 1350px) {
+        .pull-left{ font-size: 14px; }
+      }
+      .products-listing {
+        font-size: 14px;
+        height: 78px;
+        a {
+          position: absolute; margin: auto;
+          top: 0; bottom: 0; right: 0; left: 0;
+          .col-xs-2 {
+            height: 100%;
+            padding-right: 0;
+            .thumbnail {
+              margin: auto;
+              position: absolute;
+              top: 0; bottom: 0; right: 0; left: 0;
+            }
+          }
+          .col-xs-10 {
+            height: 100%;
+            padding-left: 10px;
+            .center {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              -webkit-transform: translateY(-50%);
+              p { margin: 5px 0 0 0; }
+            }
+          }
+        }
+        &.more-out-of-stock-link {
+          text-align: center;
+          height: 50px;
+          a { position: relative; width: 100%; }
+        }
+      }
+      .panel-heading { height: 50px; }
+    }
+    .col-md-8 {
+      @include max-desktop {
+        .pull-left{ font-size: 14px; }
+      }
+      padding-bottom: 25px;
+      height: inherit;
+      .orders-chart, .page-views-chart, .panel-body { height: 100%; }
+      .panel-heading {
+        height: 50px;
+        @include mobile {
+          padding: 10px 0px;
+          .chartist-filter{
+            width: 80px;
+            &:last-of-type{
+              a{
+                margin-left: 0px;
+              }
+            }
+            &.period{
+              width: 60px;
+              a{
+                padding: 6px 10px;
+                text-align: center;
+              }
+            }
+          }
+          .select-order{
+            font-size: 14px;
+            line-height: 14px;
+            display: block;
+          }
+        }
+        @media only screen and (max-width: 360px) {
+          .chartist-filter{
+            width: 60px;
+          }
+          .select-order{
+            font-size: 12px;
+            line-height: 12px;
+          }
+        }
+      }
+      &.page_view_block{
+        height: auto;
+        .page-views-chart{
+          height: 436px;
+          @include mobile {
+            .panel-heading{
+              padding: 10px 10px;
+            }
+            .panel-body {
+              padding: 15px 15px 15px 0px;
+              .row{
+                left: -10px;
+                position: relative;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

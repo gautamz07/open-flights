@@ -1,0 +1,77 @@
+@mixin modal-content-choose-options-base {
+  .modal-content-choose-options-base {
+    padding: 50px;
+    
+    ._options-base-title {
+      text-align: left;
+      &._integrate {
+        h6 {
+          display: inline-block;
+          color: #000;
+          font-size: 24px;
+          padding: 0 10px 0 0;
+          margin: 0;
+        }
+        img {
+          width: 100px;
+          margin: 0 0 0 10px;
+          vertical-align: bottom;
+        }
+      &._payu {
+          img {
+            margin: 0 0 -5px -5px;
+          }
+        }
+      }
+    }
+
+    ._options-base-description {
+      text-align: left;
+      margin: 20px 0;
+      p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 0;
+      }
+    }
+
+    ._options-base-buttons {
+      button {
+        text-align: left;
+        line-height: 1.5;
+        width: 100%;
+        outline: none;
+        -webkit-border-radius: 3px;
+                border-radius: 3px;
+        &:last-child { margin-bottom: 0; }
+
+        background: #4aa4e9;
+        color: #fff;
+        &:hover {
+          background-color: #1583cc;
+          color: #fefefe;
+        }
+
+        &.edit {
+          background: white;
+          color: #222222;
+          border: 1px solid #d1d1d1;
+          &:hover {
+            background-color: #f9f9f9;
+            color: #000;
+          }
+        }
+
+        span:before {
+          content: "\f1a7";
+          font-size: 25px;
+          line-height: 0;
+          vertical-align: sub;
+          margin-right: 10px;
+        }
+      }
+    }
+
+  }
+}

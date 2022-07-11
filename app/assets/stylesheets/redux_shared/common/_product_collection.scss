@@ -1,0 +1,50 @@
+@mixin  product-collection-1 {
+    @media (min-width: 784px) and (max-width: 1007px) {
+        @content;
+    }
+  }
+  @mixin  product-collection-2 {
+    @media (min-width: 700px) and (max-width: 783px) {
+        @content;
+    }
+  }
+  @mixin  product-collection-3 {
+    @media (min-width: 650px) and (max-width: 699px) {
+        @content;
+    }
+  }
+  @mixin  product-collection-4 {
+    @media (min-width: 600px) and (max-width: 649px) {
+        @content;
+    }
+  }
+  @mixin  product-collection-5 {
+    @media (min-width: 550px) and (max-width: 599px) {
+        @content;
+    }
+  }
+  @mixin  product-collection-6 {
+    @media (min-width: 500px) and (max-width: 549px) {
+        @content;
+    }
+  }
+  @mixin  product-collection-7 {
+    @media (min-width: 450px) and (max-width: 499px) {
+        @content;
+    }
+  }
+  @mixin  product-collection-8 {
+    @media (min-width: 400px) and (max-width: 449px) {
+        @content;
+    }
+  }
+  @mixin  product-collection-9 {
+    @media (min-width: 350px) and (max-width: 399px) {
+        @content;
+    }
+  }
+  @mixin  product-collection-10 {
+    @media (max-width: 349px) {
+        @content;
+    }
+  }

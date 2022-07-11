@@ -1,0 +1,23 @@
+@import './variables';
+
+.builder-products-pane {
+  @include fill-parent;
+  @include transition-basic(left);
+  width: 100%;
+  left: 100%;
+  overflow: hidden;
+  &.show {
+    left: 0;
+    .product-list{ margin-left: 0; }
+    .add-product-btn::before{ visibility: hidden; }
+  }
+  background-color: #fff;
+  a {
+    color: black;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}

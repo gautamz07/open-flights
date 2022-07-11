@@ -1,0 +1,41 @@
+.easyship-modal-overlay {
+  .easyship-successful-modal {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    border: none;
+    background: white;
+    overflow: hidden;
+    border-radius: 4px;
+    outline: none;
+    padding: 0;
+    width: 300px;
+    transform: translate(-50%, -50%);
+    .successful-sign {
+      color: #69be7b;
+      font-size: 50px;
+      padding-top: 20px;
+    }
+    .title {
+      color: #444444;
+      text-align: center;
+      font-size: 20px;
+      padding: 0 30px;
+    }
+    .content {
+      color: #666666;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px 38px;
+    }
+    .ok-btn{
+      width: 100%;
+      margin: 10px 0 0 0;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

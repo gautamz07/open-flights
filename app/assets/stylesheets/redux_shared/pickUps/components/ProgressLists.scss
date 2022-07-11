@@ -1,0 +1,8 @@
+@import "./ProgressLists/*";
+
+@mixin ProgressLists {
+  .progress-lists {
+    @include common;
+    @include progressUiWrapper;
+  }
+}

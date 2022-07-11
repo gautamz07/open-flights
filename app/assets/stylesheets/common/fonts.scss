@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: asset-url('ProximaNova-Bold.eot');
+    src: asset-url('ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+         asset-url('ProximaNova-Bold.woff2') format('woff2'),
+         asset-url('ProximaNova-Bold.woff') format('woff'),
+         asset-url('ProximaNova-Bold.ttf') format('truetype'),
+         asset-url('ProximaNova-Bold.otf') format('opentype'),
+         asset-url('ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Light';
+    src: asset-url('ProximaNova-Light.eot');
+    src: asset-url('ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+         asset-url('ProximaNova-Light.woff2') format('woff2'),
+         asset-url('ProximaNova-Light.woff') format('woff'),
+         asset-url('ProximaNova-Light.ttf') format('truetype'),
+         asset-url('ProximaNova-Light.otf') format('opentype'),
+         asset-url('ProximaNova-Light.svg#ProximaNova-light') format('svg');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    // font-family: 'ProximaNova-Medium';
+    src: asset-url('ProximaNova-Medium.eot');
+    src: asset-url('ProximaNova-Medium.eot?#iefix') format('embedded-opentype'),
+         asset-url('ProximaNova-Medium.woff2') format('woff2'),
+         asset-url('ProximaNova-Medium.woff') format('woff'),
+         asset-url('ProximaNova-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    // font-family: 'ProximaNova-Regular';
+    src: asset-url('ProximaNova-Regular.eot');
+    src: asset-url('ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+         asset-url('ProximaNova-Regular.woff2') format('woff2'),
+         asset-url('ProximaNova-Regular.woff') format('woff'),
+         asset-url('ProximaNova-Regular.ttf') format('truetype'),
+         asset-url('ProximaNova-Regular.otf') format('opentype'),
+         asset-url('ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    // font-family: 'ProximaNova-Semibold';
+    src: asset-url('ProximaNova-Semibold.eot');
+    src: asset-url('ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+         asset-url('ProximaNova-Semibold.woff2') format('woff2'),
+         asset-url('ProximaNova-Semibold.woff') format('woff'),
+         asset-url('ProximaNova-Semibold.ttf') format('truetype'),
+         asset-url('ProximaNova-Semibold.otf') format('opentype'),
+         asset-url('ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    // font-family: 'ProximaNova-Medium';
+    src: asset-url('ProximaNova-Medium.eot');
+    src: asset-url('ProximaNova-Medium.eot?#iefix') format('embedded-opentype'),
+         asset-url('ProximaNova-Medium.woff2') format('woff2'),
+         asset-url('ProximaNova-Medium.woff') format('woff'),
+         asset-url('ProximaNova-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: asset-url('OpenSans-SemiBold.ttf');
+    src: asset-url('OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,47 @@
+@import "./_variables";
+@import "./components/**/*";
+
+.ReactModalPortal {
+  .ReactModal__Overlay.import-product-modal-overlay {
+    overflow: scroll;
+    &.fake-page-layout-modal {
+      padding: 50px 0 0 0;
+      .ReactModal__Content.import-product-modal {
+        height: 100%;
+        width: 100%;
+        -webkit-border-radius: 0;
+                border-radius: 0;
+        overflow: initial;
+        > div:first-child {
+          height: 100%;
+          .modal-content {
+            height: 100%;
+            padding: 0;
+          }
+        }
+
+      }
+    }
+
+    .ReactModal__Content.import-product-modal {
+      background-color: #FFF;
+      .modal-content {
+        padding: 15px 30px;
+      }
+
+      // Component
+      @include ModalHeader;
+      @include Spinner;
+      
+      // Current Page
+      @include InitLoadingPage;
+      @include SourceChoosePage;
+      @include ImportWaitingPage;
+      @include ImportResultPage;
+      @include ShopifyImportPage;
+      @include AmazonImportPage;
+      @include CsvImportPage;
+    }
+  }
+
+}

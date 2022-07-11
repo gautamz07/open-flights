@@ -1,0 +1,31 @@
+ul.builder-product-category-pages-list, ul.product-list {
+  li {
+    position: relative;
+    .drop-zone {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 64px;
+      z-index: 1;
+      &.before {
+        top: 0;
+      }
+      &.nested {
+        left: 20px;
+        bottom: 0;
+        &.empty {
+          top: 20px;
+          bottom: inherit;
+        }
+      }
+      &.drop-hit {
+        &.before, &.after { border-top: 2px solid #4ba4ea; }
+        &.nested { border-bottom: 2px solid #4ba4ea; }
+      }
+    }
+  }
+  &.drag-edit, .drag-edit {
+    .drop-zone { display: block; }
+  }
+}

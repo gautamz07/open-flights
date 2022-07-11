@@ -1,0 +1,60 @@
+@mixin tab-content-blocks-responsive {
+  $gap-width: 20px;
+  $price-block-width: 264px;
+  $features-list-width: 428px;
+  $block-height: 387px;
+  $block-min-width: 340px;
+  $breakpoint_2_columns: $price-block-width + $features-list-width + ($gap-width * 3);
+  @media screen and (min-width: $breakpoint_2_columns) {
+    width: $price-block-width + $gap-width + $features-list-width;
+    .pricing-block {
+      float: left;
+      width: $price-block-width;
+      min-height: $block-height;
+    }
+    .features-list-block {
+      float: left;
+      margin-left: $gap-width;
+      width: $features-list-width;
+      min-height: $block-height;
+    }
+  }
+  @media screen and (min-width: $iphone5-width) and (max-width: $breakpoint_2_columns - 1) {
+    .pricing-block, .features-list-block {
+      max-width: $breakpoint_2_columns - 1 - $gap-width * 2;
+      min-height: $block-height;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: $gap-width;
+      @media screen and (min-width: $iphone5-width) and (max-width: $iphone6-width - 1) {
+        width: 90%;
+      }
+      @media screen and (min-width: $iphone6-width) and (max-width: $iphone6plus-width - 1) {
+        width: 334px;
+      }
+      @media screen and (min-width: $iphone6plus-width) and (max-width: $iphone5-height - 1) {
+        width: 374px;
+      }
+      @media screen and (min-width: $iphone5-height) and (max-width: $iphone6-height - 1) {
+        width: 400px;
+      }
+      @media screen and (min-width: $iphone6-height) and (max-width: $iphone6plus-height - 1) {
+        width: 400px;
+      }
+      @media screen and (min-width: $iphone6plus-height) {
+        width: 400px;
+      }
+    }
+  }
+  @media screen and (max-width: $iphone5-width - 1) {
+    .pricing-block, .features-list-block {
+      width: 90%;
+      min-width: 220px;
+      min-height: $block-height;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: $gap-width;
+    }
+  }
+
+}

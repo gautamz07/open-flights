@@ -1,0 +1,34 @@
+.Layout020 {
+  .section-container {
+    display: table;
+    height: 750px;
+  }
+
+  .layout-image {
+    padding: 0; height: 750px;
+    .Img { width:100%; height: 750px; object-fit: cover; }
+  }
+
+  .layout-description {
+    padding: 20px;
+    margin-bottom: 50px; vertical-align: middle; padding-right: 50px; padding-left: 50px;
+  }
+
+  .text-subtitle { margin-bottom: 10px; }
+
+  @include mobile {
+    .section-container { height: auto; }
+    .layout-image{ height: 320px; display: block; .Img { height: 320px; } }
+    .layout-description { margin: 50px auto 25px auto; padding-right: 20px; padding-left: 20px; display: block}
+  }
+
+  @include tablet {
+    .layout-description { margin: 0 auto 50px auto; padding-right: 50px; }
+  }
+
+  .layout-vertical-middle {
+    @include tablet {
+      display: table-cell !important;
+    }
+  }
+}

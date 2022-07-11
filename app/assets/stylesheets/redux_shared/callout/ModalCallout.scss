@@ -1,0 +1,52 @@
+@import "redux_shared/mixin/callout";
+
+@mixin ModalCallout {
+
+  .modal-callout {
+    z-index: 100;
+
+    &:before {
+      content: '';
+      width: 100%;
+      display: none;
+      height: 40px;
+    }
+    &[data-is-open="true"] {
+      .callout-container { display: block; }
+      &:before { display: block; }
+    }
+
+    .callout-container {
+      @include callout-color;
+
+      position: absolute;
+      top: 50px;
+      display: none;
+      width: 100%;
+      min-height: 40px;
+      padding: 0.5rem 3rem 0.5rem 2rem;
+      text-align: left;
+      font-size: .9rem;
+
+      .name {
+        display: inline;
+        padding-right: 1rem;
+        font-size: 1rem;
+      }
+      .message {
+        display: inline;
+        margin-bottom: 0;
+      }
+      .close-button {
+        top: 0; bottom: 0; right: 0;
+        font-size: 20px;
+        height: 100%;
+        width: 50px;
+        color: inherit !important;
+        &:focus { outline: none; font-size: 24px; }
+      }
+    }
+
+  }
+
+}

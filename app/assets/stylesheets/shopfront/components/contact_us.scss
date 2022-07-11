@@ -1,0 +1,7 @@
+.contact-info {
+  .contact-us-anchor{
+    &.email, &.phone {
+      color: inherit;
+    }
+  }
+}

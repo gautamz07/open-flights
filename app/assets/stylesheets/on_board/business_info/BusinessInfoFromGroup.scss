@@ -1,0 +1,94 @@
+.BusinessInfoFromGroup {
+
+  .label-group {
+    display: block;
+    width: 100%;
+    line-height: 22px;
+    padding: 0;
+    margin: 0 0 5px;
+
+    .label-group-text {
+      height: 22px;
+      font-size: 14px;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 22px;
+      color: #627382;
+    }
+  }
+
+  .input-group {
+    background: white;
+    display: table;
+    height: 36px;
+    max-height: 36px;
+    overflow: hidden;
+    line-height: 35px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    padding-left: 7px;
+    border: solid 1px #c4cdd5;
+    &:focus-within{
+      border: solid 1px #4ba4ea;
+    }
+  }
+
+  .input-group-input {
+    display: block;
+    height: 34px;
+    border: transparent !important;
+    margin: 0;
+    background: transparent;
+    line-height: 34px;
+    padding: 0px 5px !important;
+    outline: none !important;
+    box-shadow: none !important;
+    font-size: 14px;
+    color: #363e4a;
+  }
+
+  .input-group-input-wrapper {
+    display: table-cell;
+  }
+
+  .input-group-prefix {
+    display: table-cell;
+    padding: 0 0 0 5px;
+    width: 1px;
+    font-size: 14px;
+    color: #627382;
+  }
+
+  .input-group:hover,
+  .input-group:active,
+  &.hover .input-group,
+  &.active .input-group {
+    border-color: #4ba4ea;
+  }
+
+  &.error .input-group {
+    border-color: #f13d50;
+  }
+
+  &.readOnly .input-group {
+    background-color: #f4f6f8;
+  }
+
+  .error-group {
+    line-height: 22px;
+
+    .error-group-text {
+      width: 161px;
+      height: 22px;
+      font-size: 13px;
+      line-height: 22px;
+      color: #f13d50;
+    }
+  }
+
+  @include mobile {
+    .input-group-prefix, .input-group-input {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@mixin data-hover-controll {
+  &:hover { color: $edit-panel-tool-hover-color; }
+  &[data-hover='false']:hover { color: inherit !important; }
+}
+
+@mixin data-active-controll {
+  &[data-active='true'] { color: $edit-panel-tool-active-color; }
+}
+
+@mixin data-disable-controll {
+  &[data-disable='true'] {
+    opacity: .5;
+    cursor: default;
+    &:hover { color: inherit !important; }
+  }
+}

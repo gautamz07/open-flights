@@ -1,0 +1,100 @@
+.template-header, .template-footer {
+
+  background-color: #2e2e30;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 1px;
+
+  .template-header-title{
+
+    height: 80px;
+    line-height: 80px;
+    border-bottom: 1px solid #ddd;
+
+    .socialIcons {
+
+      line-height: 80px;
+      font-size: 15px;
+      color: #ddd;
+
+      a {
+        margin: 0 5px;
+        border-radius: 20px;
+        border: 1px solid #ddd;
+        padding: 2px;
+        font-size: 10px;
+      }
+
+    }
+
+    .btn-dark{
+      font-size: 10px;
+      padding: 6px 22px;
+      letter-spacing: 3px;
+    }
+
+  }
+
+  .template-nav, .template-footer-nav {
+
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+
+    .template-menu {
+      font-size: 18px;
+      border-right: 1px solid #ddd;
+    }
+
+    .template-search {
+      font-size: 18px;
+      border-left: 1px solid #ddd;
+    }
+
+    .template-navbar {
+      padding: 0;
+      font-size: 17px;
+    }
+
+    .navbar {
+
+      display: inline-block;
+      display: -webkit-inline-block;
+      float: none;
+      margin-bottom: 0;
+
+      .container-fluid { padding: 0; }
+
+      .navbar-collapse {
+        text-align: center;
+
+        li {
+          text-align: center;
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+
+  .template-footer-nav {
+
+    font-size: 10px;
+
+    ul {
+
+      list-style: none;
+      display: inline-block;
+      display: -webkit-inline-box;
+
+      li { padding: 0 15px; }
+
+    }
+
+  }
+
+  .demo-copyright{
+    border-top: 1px solid #ddd;
+    padding: 0 20px;
+  }
+
+}

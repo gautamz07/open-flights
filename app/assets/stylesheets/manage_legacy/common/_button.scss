@@ -1,0 +1,15 @@
+@mixin default-button($color: $newManageBlue) {
+  @include bold;
+  background-color: $color;
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: 13px;
+  height: 40px;
+  padding: 12px;
+
+  &:hover, &:active, &:focus {
+    background-color: darken($color, 20%);
+  }
+}

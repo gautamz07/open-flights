@@ -1,0 +1,254 @@
+$font-color: rgba(black, 0.8);
+$theme-color: rgba(#eaf0f3, 0.5);
+
+body {
+  background-color: white;
+}
+
+@mixin block-align-center {
+  display: block !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin rainbow-grad {
+  color: white;
+  font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif;
+  background-image:linear-gradient(121deg, #3b9be3 0%, #816aa6 100%);
+}
+
+@mixin btn-default {
+  text-align: center;
+  line-height: 26px;
+  font-family: 'ProximaNova-Bold', 'Helvetica', 'Arial', sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: $font-color;
+  opacity: 1;
+}
+
+.join-waiting-list-bg, .join-waiting-list-thank-you-bg {
+  height: 100vh;
+  background-color: rgba($theme-color, 0.8);
+}
+
+.upgrade {
+  .upgrading-block, .waiting-list-block {
+    background-color: rgba($theme-color, 0.8);
+    text-align: center;
+    position: relative;
+    .shopmatic-logo {
+      background-image: image_url('upgrade/logo-shopmatic.svg');
+      background-size: contain;
+      @include block-align-center;
+    }
+    .heading {
+      font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif;
+      color: $font-color;
+      letter-spacing: 0px;
+      text-align: center;
+      @include block-align-center;
+    }
+    .description {
+      font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+      color: $font-color;
+      letter-spacing: 0px;
+      text-align: center;
+      @include block-align-center;
+    }
+    .actions {
+      @include block-align-center;
+      .column {
+        padding: 0;
+      }
+      .btn {
+        @include btn-default;
+        &.try-it {
+          @include rainbow-grad;
+        }
+        &.btn.watch-video {
+          border: 1px solid rgba(#798891, 0.4);
+        }
+      }
+    }
+    .device-image {
+      position: absolute;
+      @include block-align-center;
+    }
+  }
+
+  .waiting-list-block {
+    .form-block {
+      width: 490px;
+      margin-left: auto;
+      margin-right: auto;
+      .form {
+        .email {
+          width: 371px;
+          height: 45px;
+          opacity: 0.89;
+          background: #FFFFFF;
+          border: 1px solid #C5C5C5;
+          border-radius: 3px;
+          margin-right: 10px;
+          float: left;
+        }
+
+        .notify-btn {
+          font-size: 13px;
+          font-family: 'ProximaNova-Bold';
+          background-color: #E11A36;
+          border-radius: 3px;
+          color: #FFFFFF;
+          width: 108px;
+          height: 45px;
+          letter-spacing:1px;
+        }
+
+        .homepage-btn {
+          font-size: 13px;
+          font-family: 'ProximaNova-Bold';
+          background-color: #E11A36;
+          border-radius: 3px;
+          color: #FFFFFF;
+          padding-top: 12px;
+          height: 45px;
+          letter-spacing:1px;
+        }
+      }
+    }
+  }
+
+  .features-block {
+    .heading {
+      font-family: 'ProximaNova-Light', 'Helvetica', 'Arial', sans-serif;
+      color: $font-color;
+      text-align: center;
+      @include block-align-center;
+    }
+    .description {
+      font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+      color: $font-color;
+      letter-spacing:0px;
+      text-align:center;
+      @include block-align-center;
+    }
+    .cases {
+      .tabs {
+        list-style: none;
+        padding: 0;
+        display: block;
+        @include block-align-center;
+        .tab {
+          a {
+            color: $font-color;
+            font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+          }
+          &.active {
+            a {
+              color: white;
+            }
+          }
+          &:nth-child(1), &:nth-child(2) {
+            border-right: 2px solid white;
+          }
+        }
+      }
+      .tab-content {
+        overflow: auto;
+        @include block-align-center;
+        @include tab-content-blocks-responsive;
+        .tab-pane > div {
+          border-radius: 5px;
+          background: $theme-color;
+        }
+
+        #case_1_month.tab-pane {
+          .pricing-block {
+            padding-top: 120px;
+          }
+        }
+
+        #case_3_months.tab-pane {
+          .pricing-block {
+            padding-top: 120px;
+          }
+        }
+
+        #case_6_months.tab-pane {
+          .pricing-block {
+            padding-top: 112px;
+          }
+        }
+
+        #case_12_months.tab-pane {
+          .pricing-block {
+            padding-top: 112px;
+          }
+        }
+        .tab-pane {
+          .pricing-block {
+            svg {
+              width: 90%;
+              height: 36px;
+            }
+          }
+        }
+        .pricing-block {
+          .dallar {
+            // font-family: 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif;
+            letter-spacing: -1.13px;
+            text-align: center;
+            svg {
+              display: block;
+              @include block-align-center;
+            }
+          }
+          .saved-money {
+            background:#f9e5ae;
+            // font-family: 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif;
+            color: #5f5f5f;
+            letter-spacing: 0px;
+            text-align: center;
+            @include block-align-center;
+          }
+          .note {
+            // font-family: 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif;
+            color: #5f5f5f;
+            letter-spacing: 0px;
+            text-align: center;
+
+            &.notice {
+              text-align: left;
+              margin-left: 35px;
+              margin-right: 30px;
+            }
+          }
+          hr {
+            opacity: 0.2;
+            border-top: 1px solid #48506c;
+            width: 50px;
+            height: 2px;
+          }
+          .btn.try-it {
+            @include btn-default;
+            @include rainbow-grad;
+            @include block-align-center;
+          }
+        }
+        .features-list-block {
+          .ico-available {
+            color: #30B975;
+          }
+          span {
+            display: table-cell;
+          }
+          .entry {
+            font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+            color: $font-color;
+          }
+        }
+      }
+    }
+  }
+}

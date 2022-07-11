@@ -1,0 +1,215 @@
+@mixin product-variant {
+  $height: 45px;
+  $padding: 10px;
+  $mobile-header-height: 34px;
+  $mobile-header-color: #999999;
+  $choose-width: 29px;
+
+  .product-variant-header {
+    display: table-row;
+    & > div {
+      display: table-cell;
+      font-size: 14px;
+      color: #627382;
+      line-height: 21px;
+      padding: 0 $padding;
+      // font-family: 'ProximaNova-Regular';
+    }
+
+  }
+
+  .product-variant-mobile-spaceholder,
+  .product-variant-mobile-header {
+    display: none !important;
+  }
+
+  .product-variant-mobile-header {
+    .price, .list-price {
+      margin: 0 !important;
+    }
+  }
+
+  .product-variant {
+    display: table-row;
+    font-size: 13px;
+    color: #333333;
+    line-height: 21px;
+    & > div {
+      display: table-cell;
+      height: $height;
+      padding: $padding;
+    }
+    * {
+      vertical-align: middle;
+    }
+    .choose {
+      input {
+        width: 14px;
+        height: 14px;
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+        margin: 0;
+      }
+    }
+    .visual {
+      .color {
+        width: 45px;
+        height: 45px;
+      }
+    }
+    .sku {
+      input {
+        width: 148px;
+        height: 43px;
+        border: 1px solid #c4cdd5;
+        border-radius: 2px;
+        padding: 12px;
+        margin: 0;
+        box-shadow: none;
+        &:focus{
+          border-color: #4BA4EA
+        }
+      }
+    }
+    .stock {
+      input {
+        width: 69px;
+        height: 43px;
+        border: 1px solid #c4cdd5;
+        border-radius: 2px;
+        padding: 12px;
+        margin: 0;
+        box-shadow: none;
+        &:focus{
+          border-color: #4BA4EA
+        }
+      }
+    }
+    .price {
+      input {
+        width: 148px;
+        height: 43px;
+        border: 1px solid #c4cdd5;
+        border-radius: 2px;
+        padding: 12px;
+        margin: 0;
+        box-shadow: none;
+        padding-left: 55px;
+        &:focus{
+          border-color: #4BA4EA
+        }
+      }
+      .input-group-addon {
+        height: 40px !important;
+        left: 11px !important;
+        top: 12px !important;
+        line-height: 42px !important;
+      }
+    }
+    .list-price {
+      input {
+        width: 148px;
+        height: 43px;
+        border: 1px solid #c4cdd5;
+        border-radius: 2px;
+        padding: 12px;
+        margin: 0;
+        box-shadow: none;
+        padding-left: 55px;
+        &:focus{
+          border-color: #4BA4EA
+        }
+      }
+      .input-group-addon {
+        height: 40px !important;
+        left: 11px !important;
+        top: 12px !important;
+        line-height: 42px !important;
+      }
+    }
+  }
+
+  @include mobile {
+    .product-variant-mobile-spaceholder {
+      display: inline-block;
+      width: $choose-width
+    }
+
+    .product-variant-header { display: none; }
+
+    .product-variant {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 14px;
+      & > div {
+        display: inline-block;
+        line-height: $height;
+        padding: 0px;
+      }
+
+      div.product-variant-mobile-header {
+        display: block !important;
+        font-size: 12px;
+        height: $mobile-header-height;
+        padding: 16px 0 0 $choose-width;
+        color: $mobile-header-color;
+        line-height: initial;
+
+        span { display: inline-block; }
+        &.uppercase { text-transform: uppercase; }
+      }
+
+      .choose {
+        width: $choose-width;
+        height: $height;
+        line-height: $height;
+      }
+
+      .color { width: 45px; margin-right: 8px;}
+      .option { width: 64px; }
+      .description { margin-left: 8px; }
+      .visual + .option,
+      .color + .option { text-align: center; }
+
+      .sku {
+        width: 150px;
+        margin-right: 10px;
+        input {
+          margin-left: 30px;
+          height: 45px;
+        }
+      }
+
+      .stock {
+        input {
+          margin-left: 30px;
+          height: 45px;
+        }
+      }
+      .price {
+        margin-left: 30px;
+        input {
+          height: 45px;
+        }
+        .input-group-addon {
+          height: 43px !important;
+          line-height: 42px !important;
+          top: 1px !important;
+          left: 1px !important;
+        }
+      }
+      .list-price {
+        margin-left: 30px;
+        input {
+          height: 45px;
+        }
+        .input-group-addon {
+          height: 43px !important;
+          line-height: 42px !important;
+          top: 1px !important;
+          left: 1px !important;
+        }
+      }
+    }
+  }
+}

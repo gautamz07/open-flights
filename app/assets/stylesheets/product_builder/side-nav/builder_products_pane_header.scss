@@ -1,0 +1,73 @@
+@import './menu-drop';
+
+.builder-products-pane-header {
+
+  @include menu-drop;
+
+  .pane-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 49px;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    @include transition-basic(left);
+
+    a {
+      color: black;
+      cursor: pointer;
+      &.pull-left {
+        float: left;
+      }
+      &.pull-right {
+        float: right;
+      }
+      &.ico-plus{
+        display: none;
+      }
+    }
+
+    &.next {
+      left: 100%;
+    }
+
+    [class^="ico-"], [class*=" ico-"] {
+      font-size: 26px;
+    }
+
+    .title {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .selecting-cancel {
+      font-size: 14px;
+      position: relative;
+      right: 7px;
+    }
+
+    .ico-arrow-left-thin{
+      font-size: 24px;
+    }
+
+    .ico-select{
+      font-size: 24px;
+    }
+
+  }
+
+  .menu.top {
+    .ico-search:before {
+      margin-right: 6px;
+      font-size: 20px;
+    }
+  }
+}

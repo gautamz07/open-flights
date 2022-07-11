@@ -1,0 +1,14 @@
+@mixin PotraitField {
+  label {
+    font-weight: 200;
+    font-size: 12px;
+    abbr {
+      margin-right: 3px;
+    }
+  }
+  input.length, input.width, input.height {
+    font-size: 14px;
+    line-height: 1.42857;
+    width: 100%;
+  }
+}

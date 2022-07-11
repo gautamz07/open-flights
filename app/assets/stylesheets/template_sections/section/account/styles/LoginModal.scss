@@ -1,0 +1,43 @@
+// @import '../../styles/layout/ReactModal';
+@import './LoginForm';
+
+@mixin LoginModal {
+  .customer-login-modal-portal {
+    @include ReactModal(450px, 400px);
+    .customer-login-modal {
+      @include LoginForm;
+      .new-to-shop {
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid lightgray;
+        font-size: 0.8rem;
+        .sign-up-btn {
+          margin-left: 5px;
+          border: none;
+          color: #5685e3;
+          font-size: 0.8rem;
+          cursor: pointer;
+        }
+      }
+      .new-customer-register{
+        p{
+          margin-top: 20px;
+          font-size: 0.8rem;
+          color: #242b34;
+          text-align: center;
+        }
+      }
+      .forgot-password {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.8rem;
+        .forgot-password-btn {
+          border: none;
+          color: #242b34;
+          font-size: 0.8rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

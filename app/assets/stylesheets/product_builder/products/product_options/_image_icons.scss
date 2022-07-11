@@ -1,0 +1,25 @@
+@mixin image-icons {
+  .icon-color {
+    display: block;
+    width: 21px;
+    height: 20px;
+    background: image-url('manage/product_options/icon-color.png') no-repeat;
+    background-position-x: -2px;
+    background-position-y: -2px;
+  }
+  .icon-image {
+    display: block;
+    width: 25px;
+    height: 19px;
+    background: image-url('manage/product_options/icon-image.png') no-repeat;
+  }
+  .icon-warning {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 5px;
+    margin-right: 8px;
+    width: 18px;
+    height: 16px;
+    background: image-url('manage/product_options/icon-warning.png') no-repeat;
+  }
+}

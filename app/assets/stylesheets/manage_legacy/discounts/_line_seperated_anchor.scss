@@ -1,0 +1,20 @@
+@mixin line-seperated-anchor($gap-width: 5px, $seperator-color: silver, $line-height: 1em) {
+  margin: 0;
+  padding: 0;
+  line-height: $line-height;
+  li {
+    list-style-type: none;
+    float: left;
+    margin: 0;
+    padding: 0 $gap-width * 2 + 1;
+    line-height: $line-height;
+    border-right: 1px solid $seperator-color;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+}

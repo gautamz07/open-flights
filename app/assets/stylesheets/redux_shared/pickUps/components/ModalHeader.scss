@@ -1,0 +1,29 @@
+@mixin ModalHeader {
+  .modal-header {
+    background-color: $pick-ups-modal-background-blue;
+    width: 100%;
+    height: $pick-ups-modal-header-height;
+    position: relative;
+    h3, span {
+      @include disable-select;
+      line-height: $pick-ups-modal-header-height;
+      color: #FFF;
+      font-size: 20px;
+    }
+    h3 {
+      padding: 0;
+      margin: 0;
+      font-weight: 100;
+    }
+    span {
+      position: absolute;
+      top: 0; bottom: 0;
+      margin: auto;
+      cursor: pointer;
+      width: 50px;
+      font-size: 24px;
+      &.back { left: 0; font-size: 30px; }
+      &.close { right: 0; }
+    }
+  }
+}

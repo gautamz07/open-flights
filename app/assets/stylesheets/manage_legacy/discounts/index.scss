@@ -1,0 +1,66 @@
+@import '../common/index';
+@import '../common/common';
+@import '../common/button';
+@import '../common/legacy/radio';
+
+#discounts {
+  margin-left: 15%;
+  @include leave-top-for-flash-messages;
+  .index {
+    table.table-hover.table-backend {
+      @include table;
+
+      thead tr {
+        th:first-child { padding-left: 2em; };
+        th {
+          height: 66px;
+          vertical-align: middle;
+          font-size: 15px;
+        }
+      }
+
+      tbody tr {
+        td:first-child a {
+          color: #4ba4ea;
+          font-weight: 600;
+        }
+
+        td:nth-child(2) {
+          // font-family: 'ProximaNova-Regular';
+        }
+      }
+    }
+
+    .xswitchery {
+      /* * * Main stylesheet for Switchery. * http://abpetkov.github.io/switchery/ * */
+      background-color: #fff;
+      border: 1px solid #dfdfdf;
+      border-radius: 20px;
+      cursor: pointer;
+      display: inline-block;
+      height: 21.3px;
+      position: relative;
+      vertical-align: middle;
+      width: 36px;
+      &.switchery-small {
+        background-color: #dfdfdf !important;
+      }
+      & > small {
+        background: #fff;
+        border-radius: 100%;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        height: 19.3px;
+        position: absolute;
+        top: 0;
+        width: 19.8px;
+      };
+    }
+
+
+    @include no-content-placeholder('manage/discounts/icon-no-discount.svg')
+  }
+
+  .add-a-discount {
+    @include default-button;
+  }
+}

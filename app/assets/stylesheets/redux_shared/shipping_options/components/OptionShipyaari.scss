@@ -1,0 +1,48 @@
+@import "redux_shared/shipping_options/mixin/row";
+
+@mixin OptionShipyaari {
+  .shipyaari {
+    @include custom-vertical-center(120px);
+    @include logo(45px);
+    &_common-logo{
+      width: 90% !important;
+    }
+
+    .partner-logos{
+      [class|=logo]{
+        width: auto;
+        height: 60px;
+        display: inline-block;
+        vertical-align: bottom;
+        margin-right: 15px;
+        position: relative;
+        @include mobile {
+          margin: 10px;
+        }
+      }
+    }
+
+    .logo{
+      width: auto; height: 44px;
+    }
+
+    .provider-name {
+      margin-left: 10px;
+    }
+
+    .shipping-rates-link {
+      margin-left: 5px;
+    }
+
+    .partner-logos {
+      @include custom-vertical-center(45px);
+
+      @include mobile {
+        .v-wrap {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
+

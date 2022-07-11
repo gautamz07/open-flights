@@ -1,0 +1,41 @@
+.table-orders {
+  @include no-content-placeholder('manage/orders/icon-no-order.svg');
+  @include index-table;
+  .no-content {
+    opacity: 0.5;
+  }
+}
+
+.region-tab { font-size: 16px; color: #979797; padding-left: 0; // font-family: 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif; }
+
+.region-option {
+  display: inline-block;
+  margin: 0 1px;
+  padding: 15px;
+  padding-right: 17px;
+  position: relative;
+  font-size: 14px;
+
+  &:first-child { margin-left: 0; }
+
+  a {
+    color: $defaultGrey; text-decoration: none;
+
+    i { margin: 0; &:before { font-size: 25px; vertical-align: middle; } }
+  }
+
+
+  &.active, &:focus, &:active, &:hover {
+    border-radius: 3px;
+    background-color: #ffffff;
+    padding: 10px 17px 10px 15px;
+    &:after {
+      content: '';
+      border: 8px solid transparent;
+      border-top-color: #ffffff;
+      position: absolute;
+      bottom: -15px;
+      left: 40%;
+    }
+  }
+}

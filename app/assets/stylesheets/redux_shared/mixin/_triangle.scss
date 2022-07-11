@@ -1,0 +1,28 @@
+// * Generator: http://apps.eky.hk/css-triangle-generator/zh-hant
+// * Calculator: http://zh.numberempire.com/isosceles_triangle_calculator.php
+
+@mixin triangle-regular($height, $color, $shadow-color: transparent, $rotate: 135deg) {
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border: $height/2 solid black;
+  border-color: transparent transparent $color $color;
+  transform-origin: 0 0;
+  transform: rotate($rotate) translate(-50%, -50%);
+  box-shadow: -1px 1px 1px 0 $shadow-color;
+}
+
+@mixin triangle-isosceles($height, $color, $top-degree: 120deg) {
+  $beta: $top-degree; // top degree
+  $alpha: (180-$beta)/2; // bottom each degree
+
+  $a: ($height/sin($alpha)); // left/right width
+  $b: (2*$a*cos($alpha)); // bottom width
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 $a $b $a;
+  border-color: transparent transparent $color transparent;
+}
+

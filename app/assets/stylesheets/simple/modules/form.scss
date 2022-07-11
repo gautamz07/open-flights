@@ -1,0 +1,51 @@
+.form, .simple_form {
+
+  .form-group { margin-bottom: 30px; }
+
+  .form-actions { margin-bottom: 15px; }
+
+  input[type=text], input[type=email], input[type=password] {
+
+    padding: 0; 
+
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(white, 0.2);
+    border-radius: 0;
+    box-shadow: none;
+
+    color: $defaultSiteTextColor;
+
+    &:active, &:focus, &:hover { border-bottom: 1px solid #E95664; }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: #838ca1;
+      text-shadow: none;
+      -webkit-text-fill-color: initial;
+    }
+
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color: #838ca1;
+    }
+
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #838ca1;
+      opacity: 1;
+    }
+
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #838ca1;
+      opacity: 1;
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #838ca1;
+    }
+
+  }
+}

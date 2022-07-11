@@ -1,0 +1,24 @@
+@import "redux_shared/mixin/z_index";
+@import "redux_shared/navigation/_variables";
+
+@mixin TutorialPageEditSampleButtons {
+  .page-edit-block.page-edit-tool.sample {
+    width: 40px;
+    border-radius: 3px;
+    background-color: #222222;
+    padding: 5px 0;
+    outline: 1px solid #63c9ef;
+    .page-edit-tool-group {
+      text-align: center;
+      i:before {
+        color: white;
+        font-size: 24px;
+        padding: 3px 8px;
+        display: block;
+      }
+      i.edit-background:before {
+        color: #65cef5;
+      }
+    }
+  }
+}

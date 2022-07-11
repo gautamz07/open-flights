@@ -1,0 +1,31 @@
+.btn { border-radius: 3px; }
+
+.btn.btn-primary {
+
+  border: 0;
+  background-color: #E95664;
+  color: white;
+
+  &:hover, &:active, &:focus { background-color: darken(#E95664, 1.5); }
+
+}
+
+.btn.btn-default {
+
+  background-color: transparent;
+  border: 1px solid rgba(white, 0.2);
+  color: #838ca0;
+
+  &:hover, &:active, &:focus { background-color: #3e3847; }
+
+}
+
+.btn.btn-link {
+
+  color: #5ca3b7;
+
+  &:hover { color: rgba(white, 0.7); }
+
+}
+
+.btn-lg { font-size: 14px; }

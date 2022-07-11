@@ -1,0 +1,55 @@
+.modal-header {
+
+  background-color: $defaultGreen;
+  color: $colorWhite;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+  .close {
+
+    font-size: 25px;
+    color: $colorWhite;
+    opacity: 1;
+
+    &:hover, &:focus { box-shadow: none; text-shadow: none; outline: none; color: $defaultSiteTextColor;}
+
+  }
+
+} // end of .modal-header
+
+.modal-title { font-weight: 200; }
+
+.modal-body {
+
+  label, p { color: $defaultModalLabelText; }
+
+  .btn-default {
+
+    background-color: $colorWhite;
+    border: 1px solid $defaultSubHeaderBG;
+    color: $defaultGrey;
+    font-size: 14px;
+
+    &:hover, &:focus, &:active { background-color: $defaultGreen; color: $colorWhite; border:0; }
+
+  }
+
+  .form-actions { margin: 30px 0 0 0; }
+
+} // end of .modal-body
+
+.modal-content {
+  box-shadow: none;
+  border: 0;
+}
+
+.modal-backdrop {
+  background-color: #2c3344;
+  &.in { opacity: 0.9; }
+}
+
+.modal-body #modal-messages {
+  overflow: hidden;
+  margin: -16px -45px 15px;
+  padding: 0px 30px
+}

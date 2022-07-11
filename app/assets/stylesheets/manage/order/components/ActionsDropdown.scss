@@ -1,0 +1,15 @@
+@import "redux_shared/mixin/base";
+
+@mixin ActionsDropdown {
+  .dropdown__action {
+    .ant-dropdown-menu {
+      .ant-dropdown-menu-item {
+        padding: 0;
+      }  
+    }
+
+    @include ActionsDropdownItem;
+    @include ActionsDropdownLinkItem;
+    @include ActionsDropdownPostItem;  
+  }
+}

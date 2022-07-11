@@ -1,0 +1,24 @@
+.Form002 {
+  .section-container { padding: 0; }
+  .store-info-block {
+    margin: 0 -15px; // legacy compatibility
+    max-width: none; // legacy compatibility
+    padding: 50px 80px;
+    @include mobile { padding: 50px 20px; }
+  }
+
+  .sub-header {
+    .P {
+      margin-bottom: 0.625rem;
+    }
+  }
+  .sub-description {
+    .P {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  .address-link {
+    .P:before { margin: 0 .4rem 0 0 ; }
+  }
+}

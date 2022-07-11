@@ -1,0 +1,21 @@
+@import 'legacy/pick_ups';
+
+#orders {
+  @import '../common/index';
+  @import '../common/legacy/dropdown_menu';
+  @import '../common/legacy/table_navbar';
+  @import '../common/legacy/form';
+  @import '../common/legacy/form_control';
+  @import 'legacy/table_invoice_lineitem';
+  @import 'legacy/invoice';
+
+  @include leave-top-for-flash-messages;
+
+  .index {
+    @import 'legacy/action_index';
+
+    & > .row { @include top-nav-tabs-with-search; }
+  }
+
+  .show { @import 'legacy/action_show'; }
+}

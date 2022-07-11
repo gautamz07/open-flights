@@ -1,0 +1,285 @@
+@mixin dialog($height, $bottom-radius) {
+
+  .dialog {
+    display: none;
+    z-index: 700;
+    &.image-dialog {
+      text-align: center;
+      background-color: #303030;
+      .color-description {
+        z-index: 10001;
+        width: 500px;
+        height: 45px;
+        padding: 12px;
+        border-radius: 3px;
+        border: 0;
+        position: absolute;
+        bottom: 0; right: 0; left: 0;
+        margin: auto;
+      }
+    }
+    &.color-dialog {
+      @import "spectrum/spectrum";
+      background-color: #fff;
+      .title {
+        font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        color: #363e4a;
+        line-height: 28px;
+        margin-bottom: 10px;
+      }
+      .color-palette-container{
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      .color-palette {
+        background: #ffffff;
+        border: 1px solid #dedede;
+        border-radius: 2px;
+        width: 175px;
+        height: auto;
+        position: relative;
+        .pigments {
+          padding: 11px 11px 0 11px;
+          overflow: auto;
+          .grid {
+            margin-bottom: 11px;
+            text-align: center;
+            width: 16.666667%;
+            float: left;
+          }
+        }
+        .custom-pigment {
+          opacity: 0.6;
+          border-top: 1px solid #e4e4e4;
+          width: 100%;
+          padding: 10px;
+          position: relative;
+          line-height: 18px;
+          font-size: 14px;
+          cursor: pointer;
+          .grid {
+            text-align: center;
+            width: 16.666667%;
+            float: left;
+            .pigment-circle {
+              background-color: #697786;
+            }
+            margin-right: 6px;
+          }
+          .ico-arrow-right {
+            float: right;
+            color: #ACACAC;
+            top: 2px;
+            position: relative;
+            @include mobile {
+              font-size: 24px;
+            }
+          }
+        }
+        .custom-color-menu {
+          display: none;
+          &.active {
+            display: inline-block;
+            position: absolute;
+            top: 100px;
+            left: 173px;
+          }
+          .sp-container {
+            border: 1px solid #e4e4e4;
+            .sp-picker-container {
+              background-color: white;
+            }
+          }
+        }
+        .pigment-circle {
+          height: 18px;
+          width: 18px;
+          border: 0px;
+          border-radius: 50%;
+          display: inline-block;
+          vertical-align: top;
+          &.framed {
+            border:2px solid #69be7b;
+          }
+        }
+      }
+      .color {
+        background-color: #697786;
+        width: 320px;
+        margin-bottom: 15px;
+
+        // keep square
+        &:before { content: ' '; padding-top: 100%; display: block; }
+      }
+      .color-description {
+        font-size: 14px;
+        background-color: #ffffff;
+        border-radius: 2px;
+        box-shadow: none;
+        padding: 0 15px;
+        width: 320px;
+        height: 45px;
+        color: #494949;
+        border: solid 1px #dedede;
+        &::placeholder { color:#666 !important; }
+      }
+      .next-btn {
+        width: 47px;
+        height: 47px;
+        border-radius: 50%;
+        background-color: #4ba4ea;
+        color: white;
+        display: inline-block;
+        text-align: center;
+        font-size: 24px;
+        line-height: 47px;
+        position: absolute;
+        right: 100px;
+        top: 233px;
+
+        .ico-forward:before { line-height: 47px }
+      }
+    }
+    &.color-description-dialog {
+      background-color: #f0f0f0;
+      .wrapper {
+        text-align: center;
+        .color {
+          display: inline-block;
+          width: 350px;
+          height: 350px;
+        }
+        .color-description {
+          font-size: 14px;
+          display: inline-block;
+          width: 350px;
+          border: 1px solid #dedede;
+          box-shadow: none;
+          border-radius: 2px;
+          margin-top: 24px;
+          margin-bottom: 24px;
+          padding: 0 15px;
+          color: #494949;
+          &::placeholder { color:#666 !important; }
+        }
+        .save-btn {
+          width: 350px;
+          height: 45px;
+          font-size: 20px;
+          padding: 12px;
+          border-radius: 2px;
+        }
+      }
+    }
+    &.text-key-name-dialog {
+      background-color: white;
+      input.text-key-name {
+        width: 100%;
+        height: 45px;
+        border: 1px solid #dedede;
+        padding: 12px;
+        border-radius: 2px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+      .save-btn {
+        width: 100%;
+        height: 45px;
+        font-size: 20px;
+        padding: 12px;
+        border-radius: 2px;
+      }
+    }
+    &.active {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: $height;
+      width: 100%;
+      padding: 28px;
+      border-bottom-left-radius: $bottom-radius;
+      border-bottom-right-radius: $bottom-radius;
+      a.close-dialog {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        display: block;
+        border-radius: 50%;
+        height: 24px;
+        width: 24px;
+        line-height: 23px;
+        text-align: center;
+        color: #fcfcfc;
+        background-color: #c9c9c9;
+        cursor: pointer;
+        text-decoration: none;
+        z-index: 110;
+
+        &:before { line-height: 24px; }
+      }
+    }
+
+    @include mobile {
+      &.color-dialog {
+        padding: 15px;
+        padding-bottom: 67px;
+        height: 100%;
+        overflow: auto;
+
+        .title { margin-bottom: 14px; }
+        .container-fluid > .row > .columns {
+          padding: 0;
+        }
+        .color-palette-container{
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+        .color-palette {
+          width: 100%;
+          .pigments {
+            padding: 18px 11px 7px 11px;
+            .grid { margin-bottom: 21px; }
+          }
+          .pigment-circle { width: 31px; height: 31px; }
+          .custom-pigment {
+            padding: 12px 11px;
+            line-height: 31px;
+            &:after { display: table; content: ' '; clear: both }
+          }
+          .custom-color-menu {
+            top: initial;
+            left: initial;
+            bottom: -7px;
+            right: 0;
+          }
+        }
+
+        .color {
+          width: 100%;
+          margin-top: 9px;
+        }
+
+        .color-description { width: 100%; }
+
+        a.close-dialog {
+          padding-left: 1px;
+          top: 16px;
+          right: 15px;
+        }
+
+        .next-btn {
+          transform: translateX(50%);
+          top: initial;
+          right: 50%;
+        }
+
+      }
+
+    }
+
+  }
+
+}

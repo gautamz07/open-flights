@@ -1,0 +1,54 @@
+@import 'redux_shared/navigation/_variables';
+@import './variables';
+
+.reveal-overlay {
+  margin-top: $nav-height;
+  z-index: 510;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  @include mobile {
+    z-index: 902;
+    padding: 15px;
+    margin-top: 0;
+  }
+}
+
+.builder {
+  .builder-container {
+    @include fill-parent;
+    z-index: 200;
+    background: white;
+    .builder-pane {
+      @include fill-parent;
+      .builder-page-pane {
+        @include fill-parent;
+        .ico-resize {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 24px;
+          width: 28px;
+          height: 28px;
+          line-height: 28px;
+          text-align: center;
+          color: #7C8A99;
+          background-color: $side-nav-bg-color;
+        }
+        .builder-page-view.desktop {
+          @include fill-parent;
+          overflow-y: hidden;
+          .product-actions {
+            position: absolute;
+            top: 100px;
+            left: 10%;
+          }
+          iframe#product-frame {
+            border: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

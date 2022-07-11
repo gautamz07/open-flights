@@ -1,0 +1,9 @@
+@mixin PrintableInvoice {
+  @media print {
+    .visual {
+      .color {
+        -webkit-print-color-adjust: exact !important;
+      }
+    }
+  }
+}

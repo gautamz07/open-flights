@@ -1,0 +1,5 @@
+@mixin DisableMask {
+  .disable-mask {
+    background-color: rgba(0, 0, 0, 0.5);  // Change on-board navigatin/components/DisableMask background-color
+  }
+}

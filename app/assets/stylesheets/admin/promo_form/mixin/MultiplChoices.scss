@@ -1,0 +1,23 @@
+@mixin MultipleChoices {
+  display: block;
+  vertical-align: top;
+  margin: 5px;
+  .choice {
+    padding: 5px;
+    margin-top: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    line-height: 30px;
+    &:hover {
+      background-color: lighten(skyblue, 20%);
+      border-color: blue;
+    }
+    &.selected {
+      background-color: orange;
+    }
+    &.read-only.selected {
+      background-color: skyblue;
+    }
+  }
+}

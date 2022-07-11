@@ -1,0 +1,29 @@
+body .panel.panel-default {
+
+  border-radius: 0;
+  border: 0;
+  box-shadow: 0 1px 2px 0 #ddd, 1px -1px 2px 0 rgba(#ddd, 0.2);
+
+  .panel-heading h4 {
+    color: #444;
+    margin-bottom: 5px;
+  }
+
+}
+
+body .panel.panel-default .nav-pills li {
+
+  a {
+    text-decoration: none;
+    padding: 6px 16px 3px;
+    color: #666;
+  }
+
+  &.active, &:hover, &:active, &:focus {
+    a {
+      border-radius: 16px;
+      background-color: white;
+    }
+  }
+
+}

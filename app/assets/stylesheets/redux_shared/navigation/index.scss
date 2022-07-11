@@ -1,0 +1,184 @@
+@import "redux_shared/mixin/base";
+@import "redux_shared/navigation/_variables";
+
+@import "./mixin/*";
+@import "./components/*";
+@import "./navType/*";
+
+#navigation {
+  box-shadow: 0 1px 4px 0 rgba(99,114,130,0.15);
+
+  nav {
+    font-family: 'ProximaNova-Regular', 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif;
+    height: $nav-height;
+    background-color: #FFF;
+    padding: 0 $nav-right-padding 0 $nav-left-padding;
+
+    &.isWebview.page-builder-nav{
+      &::before {
+        background: transparent;
+        border:none
+      }
+    }
+    .logo::before { @include shopmatic-logo('web_layout/logo-grey.svg'); }
+    &.blank-nav .logo::before { @include shopmatic-logo('web_layout/logo-grey.svg'); }
+
+    // Navigation base class
+    .nav-block { @include nav-block; }
+    .nav-btn { @include nav-btn; }
+    .top-bar-left { @include top-bar-left; }
+    .top-bar-right { @include top-bar-right; }
+    .top-bar-center { @include top-bar-center; }
+
+    .top-bar-right-toggle { display: none; }
+
+    // Component
+    @include DisableMask;
+    @include ManageDropdown;
+    @include DeviceDropdown;
+    @include PublishSwitch;
+    @include IconButton;
+    @include PageDropdown;
+    @include TrialCountDownMessage;
+    @include SaveBtn;
+
+    // NavType overwrite
+    &.manage-nav { @include ManageNav; }
+    &.page-builder-nav { @include PageBuilderNav; }
+    &.product-builder-nav { @include ProductBuilderNav; }
+
+    &.isWebview.page-builder-nav{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    &.isWebview.manage-nav{
+      display: flex;
+      padding: 0 10px;
+      .top-bar-left {
+        flex: 1;
+      }
+    }
+
+    // RWD overwrite
+    @include mobile {
+      padding: 0 $nav-right-padding 0 $nav-left-padding-mobile;
+    }
+
+    .upgrade-to-pro-btn {
+      button:hover {
+        color: white !important;
+      }
+    }
+
+    @include max-tablet {
+      height: initial;
+      min-height: $nav-height;
+
+      // clearfix
+      &:after {
+        display: table;
+        content: ' ';
+        clear: both;
+      }
+
+      .webview-nav-wrapper {
+        &:before {
+          content: '';
+          margin: -25px;
+        }
+
+        display: flex;
+        flex:1;
+        // flex-direction: row-reverse;
+        justify-content: space-around;
+      }
+
+      // folding menu
+      .top-bar-right.foldable {
+        z-index: 900;
+        position: absolute;
+        display: flex;
+        flex-flow: column-reverse;
+        background: white;
+        height: initial;
+        right: 0;
+        top: 50px;
+        padding-left: 12px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        min-width: 240px;
+        align-items: flex-start;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14);
+
+        &.present { padding-bottom: 16px; }
+        &:not(.present) > :not(.top-bar-right-toggle) { display: none; }
+
+        .top-bar-right-toggle {
+          display: block;
+          position: absolute;
+          right: -6px;
+          top: -50px;
+        }
+
+        .page-section-btn,
+        .page-setting-btn,
+        .preview-btn,
+        .site-share-btn { transform: translateX(-7px); }
+
+        .mobile-view-site-text,
+        .site-share-btn span {
+          display: inline-block;
+          margin-left: 5px;
+          font-size: 14px;
+        }
+        .site-share-btn span {
+          font-family: 'ProximaNova-Regular', 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .webview-nav-wrapper{
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+}
+.nav-block-seprator{
+  border-bottom: solid 1px #979797;
+  margin: 5px 0 5px 5px;
+  width: 126px;
+  height: 1px;
+  opacity: 0.2;
+}
+.vertical-divider{
+  border-bottom: solid 1px #919eab;
+  margin: 5px 11px 5px 5px;
+  width: 2px;
+  height: 50%;
+  opacity: 0.2;
+  background-color: #919eab;
+}
+.top_header{
+  display: flex;
+  justify-content: space-between;
+
+  &-left{
+    flex: 2;
+  }
+  &-right{
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    align-items: center,
+  }
+  &-tablet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

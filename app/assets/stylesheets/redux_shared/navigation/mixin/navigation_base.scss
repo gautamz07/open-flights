@@ -1,0 +1,123 @@
+@import "redux_shared/mixin/base";
+@import "redux_shared/mixin/z_index";
+@import "redux_shared/navigation/_variables";
+@import "./../plugin/react_tooltip";
+
+@mixin nav-block {
+  height: $nav-height;
+  line-height: $nav-height;
+  > div, > button, > a, > span {
+    font-size: 14px;
+    @include nav-hover;
+  }
+  a { text-decoration: none;  }
+  button { border: none; outline: none; background-color: transparent; }
+
+  [class^="ico-"], [class*=" ico-"],
+  [class^="shpmtcdicon-"], [class*=" shpmtcdicon-"] {
+    font-size: 22px;
+    color: rgb(145, 158, 171);
+    &:before {
+      margin: 0;
+      font-size: inherit;
+      vertical-align: middle;
+      line-height: inherit;
+    }
+  }
+}
+
+@mixin nav-btn {
+  text-align: center;
+  a, button {
+    @include disable-select;
+    @include react-tooltip;
+    cursor: pointer;
+    display: block;
+    height: $nav-height;
+    line-height: 30px;
+    padding: $nav-btn-padding;
+    color: #000;
+    &[class^="ico-"]:before, &[class*=" ico-"]:before,
+    &[class^="shpmtcdicon-"]:before, &[class*=" shpmtcdicon-"]:before {
+      line-height: 20px;
+      padding: 5px;
+    }
+  }
+}
+
+@mixin top-bar-left {
+  height: $nav-height;
+  width: initial;
+  float: left;
+
+  .nav-block {
+    float: left;
+    position: relative;
+
+    &:before {
+      content: '';
+      border-left: 1px solid #eee;
+      width: 1px;
+      height: 50%;
+      position: absolute;
+      top: 0; bottom: 0; left: 0;
+      margin: auto;
+    }
+
+    &.no-seperator:before {
+      display: none;
+    }
+
+    &.manage-dropdown:before { content: none; }
+  }
+}
+
+@mixin top-bar-right {
+  height: $nav-height;
+  width: initial;
+  float: right;
+  .nav-block { float: right; }
+}
+
+@mixin top-bar-center {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  text-align: center;
+
+  .nav-block { display: inline-block }
+}
+
+@mixin nav-hover {
+  -webkit-transition: color 0.2s ease-out;
+     -moz-transition: color 0.2s ease-out;
+      -ms-transition: color 0.2s ease-out;
+       -o-transition: color 0.2s ease-out;
+          transition: color 0.2s ease-out;
+  &.active, &:hover { color: $nav-hover-color; }
+}
+
+@mixin shopmatic-logo($logo: 'web_layout/logo.svg') {
+  @include disable-select;
+  position: absolute;
+  top: 0; left: 0;
+  width: $nav-left-padding;
+  height: $nav-height;
+  line-height: $nav-height;
+  content: '';
+  background: image-url($logo) no-repeat center;
+  -webkit-background-size: $logo-size;
+       -o-background-size: $logo-size;
+          background-size: $logo-size;
+  border-right: $logo-border-right;
+  @include mobile {
+    width: $nav-left-padding-mobile;
+  }
+}
+.page-dropdown{
+  @include max-tablet {
+    margin-left: 5%;
+  }
+}

@@ -1,0 +1,11 @@
+@mixin react_color_overwrite {
+  .circle-picker {
+    div[title='transparent']:before {
+      content: '';
+      background-color: #fff;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      @include abso-full-content;
+    }
+  }
+}

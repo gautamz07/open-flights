@@ -1,0 +1,51 @@
+@mixin table {
+  th, td {
+    line-height: 30px;
+    border: none;
+  }
+
+  thead {
+    tr {
+      background-color: #f7f9fa;
+      th {
+        @include bold;
+        color: #444444;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        color: #666666;
+      }
+      td:first-child {
+        padding-left: 2em;
+        span.label {
+          display: block;
+          line-height: 15px;
+          width: 60px;
+          height: 20px;
+        }
+      }
+      td:nth-child(2) {
+        color: black;
+        @include bold;
+      }
+      td:last-child {
+        .line-seperated-anchor {
+          @include line-seperated-anchor(5px, #e8e8e8);
+          a {
+            color: $newManageBlue;
+          }
+        }
+      }
+    }
+    tr:nth-child(odd) {
+      background-color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f3f7fa;
+    }
+  }
+}

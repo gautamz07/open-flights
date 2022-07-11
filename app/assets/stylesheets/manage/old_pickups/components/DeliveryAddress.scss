@@ -1,0 +1,15 @@
+@mixin DeliveryAddress {
+  .delivery-address {
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 14px;
+    .title {
+      font-size: 21px;
+      font-weight: 900;
+    }
+    .callout.alert {
+      margin: 0;
+    }
+  }
+}

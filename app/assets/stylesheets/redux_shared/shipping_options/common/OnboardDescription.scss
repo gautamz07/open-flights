@@ -1,0 +1,14 @@
+@mixin OnboardDescription {
+  text-align: left;
+  color: #171616;
+  font-size: 28px;
+  line-height: 1.3;
+  font-weight: 300;
+  font-style: normal;
+  font-family: 'ProximaNova-Light';
+  padding-top: 50px;
+  padding-bottom: 30px;
+  .logo {
+    margin-top: -28px;
+  }
+}

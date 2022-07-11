@@ -1,0 +1,81 @@
+@mixin commerce-panel {
+  width: 355px;
+  margin: auto;
+
+  & > .panel.panel-default {
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+
+    .panel-body { padding: 15px 20px 15px 30px; }
+
+    h4 { padding: 0; margin: 5px 0; font-size: 18px; }
+
+    .toggle-button {
+      position: relative;
+      padding: 0;
+      cursor: pointer;
+
+      span {
+        position: absolute;
+        margin: 4px 0;
+        height: 19px;
+
+        &:first-child {
+          background-color: #bbb;
+          width: 30px;
+          border-radius: 10px;
+          right: 0px;
+        }
+
+        &:last-child {
+          background-color: white;
+          width: 20px;
+          border: 1px solid #bbb;
+          border-radius: 50%;
+          right: 10px;
+          transition: all 0.2s ease-out;
+        }
+      }
+
+      &.active span {
+        &:first-child { background-color: $newManageBlue; }
+        &:last-child { right: 0px; border-color: $newManageBlue; }
+      }
+    }
+
+    .explanation {
+      display: block;
+      padding: 10px 30px;
+      background-color: #f3f7fa;
+      font-size: 11px;
+      color: rgba(44, 51, 68, 0.5);
+      cursor: default;
+    }
+
+    .item {
+      display: table;
+      padding: 18px 25px 18px 15px;
+      border-top: 1px solid rgba(237, 237, 241, 0.6);
+      cursor: pointer;
+      font-size: 15px;
+      // font-family: 'ProximaNova-Semibold', 'Helvetica', 'Arial', sans-serif;
+
+      p { font-size: 13px; opacity: 0.6; margin: 0; margin-top: 5px; }
+
+      i[class*='ico-']:before { vertical-align: middle; }
+
+      i.ico-available-bold { display: none; color: #69be7b; }
+
+      &.active, &:hover, &:active, &:focus { background-color: rgba(243, 247, 250, 0.6); }
+
+      &.active i { display: inline; }
+
+      &.enable-button {
+        @include default-button;
+        border-radius: 0;
+        padding-left: 30px;
+        position: absolute;
+        width: 355px;
+      }
+    }
+  }
+}

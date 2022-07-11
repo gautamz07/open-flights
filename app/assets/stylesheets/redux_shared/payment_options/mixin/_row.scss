@@ -1,0 +1,43 @@
+@mixin custom-vertical-center($wrapHeight) {
+  .v-wrap {
+    display: table;
+    width: 100%;
+    height: $wrapHeight;
+    .cell {
+      display: table-cell;
+      vertical-align: middle;
+
+      .button {
+        margin: initial;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  @include mobile {
+    .v-wrap {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+      height: initial;
+      .cell {
+        display: block;
+        vertical-align: middle;
+        .button {
+          margin: initial;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@mixin logo($size) {
+  .logo {
+    width: $size;
+    margin-bottom: 6px;
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import 'redux_shared/mixin/transition';
+
+@mixin SettingFonts {
+  $headbar_height: 50px;
+  .setting-fonts {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    @include transition-basic(left);
+    &.slide-left {
+      left: -300px;
+    }
+    @include SettingHeader($headbar_height);
+    @include ScrollWindow($headbar_height);
+    .text-font-selection {
+      padding: 1rem;
+      .title {
+        font-size: 14px;
+        font-family: "ProximaNova-Semibold", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+        margin-bottom: 5px;
+        color: #3f3f3f;
+        display: inline-block;
+      }
+      .Select-value-label{
+        font-size: 14px;
+        font-family: "ProximaNova-Regular";
+      }
+    }
+    .Select-control{
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,faf9fb+100 */
+      background: rgb(255,255,255); /* Old browsers */
+      background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(250,249,251,1) 100%); /* FF3.6-15 */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(250,249,251,1))); /* Chrome4-9,Safari4-5 */
+      background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(250,249,251,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(250,249,251,1) 100%); /* Opera 11.10-11.50 */
+      background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(250,249,251,1) 100%); /* IE10 preview */
+      background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(250,249,251,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#faf9fb',GradientType=0 ); /* IE6-9 */
+      .Select-arrow{
+        border-color: #ccc transparent transparent;
+        border-width: 4px 4px 2.5px;
+      }
+    }
+    .Select-option{
+      font-size: 14px;
+      color: #222;
+      // font-family: 'ProximaNova-Regular';
+      &.is-selected{ color: #222; background-color: #f0f4f7; }
+      &:hover{ color: #222; background-color: #f7f9fa; }
+    }
+  }
+}

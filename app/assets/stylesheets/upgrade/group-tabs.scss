@@ -1,0 +1,24 @@
+@mixin grouped-tabs ($total-width, $btn-height, $theme-bg-color, $active-bg-color, $radius) {
+  $avg-btn-width: $total-width / 3;
+  border: 0px solid transparent;
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  overflow: hidden;
+  background-color: $theme-bg-color;
+  .tab {
+    width: $avg-btn-width;
+    height: $btn-height;
+    text-align: center;
+    float: left;
+    a {
+      text-decoration: none;
+      display: block;
+      line-height: $btn-height;
+    }
+    &.active {
+      background-color: $active-bg-color;
+    }
+  }
+}

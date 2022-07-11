@@ -1,0 +1,40 @@
+@mixin Buttons {
+  .button {
+    font-size: 14px;
+    outline: none;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+  }
+
+  .button.disable, .button.edit {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0.9;
+    color: #575757;
+    line-height: 2;
+    padding: 10px 0 10px 10px;
+    &:after {
+      font-family: "icons";
+      content: " \f10a";
+    }
+    &:hover { opacity: 0.5; }
+  }
+
+  .button.enable {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .button.small-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 14px;
+    &:after { display: none; }
+  }
+
+  @include mobile {
+    .button.disable {
+      float: right;
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+// https://github.com/reactjs/react-modal
+@import "redux_shared/mixin/z_index";
+@import "redux_shared/mixin/callout";
+
+@mixin react-modal-animate($animate_time) {
+  & > * {
+    // When the modal is closed, overlay div has no css class
+    // This selector should be overridden by the `&--after-open` class below
+    opacity: 0;
+  }
+  .ReactModal__Overlay {
+    transition: opacity $animate_time ease-in-out;
+    &--after-open { opacity: 1; }
+    &--before-close { opacity: 0; }
+  }
+}
+
+.ReactModalPortal {
+  @include react-modal-animate(200ms);
+  .ReactModal__Overlay {
+    z-index: $z-index-content-modal-overlay;
+    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0 ,0, 0, 0.6);
+    padding: 80px 2%;
+    overflow: hidden;
+    text-align: center;
+    &:after {
+      content: '';
+      height: 100%;
+      width: 0px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .ReactModal__Content {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    overflow: hidden;
+    &:focus { outline: none; }
+    &:after, &:before {
+      content: '';
+      position: absolute;
+      top: 50px; bottom: 0; left: 0; right: 0;
+      background-repeat:no-repeat;
+      background-position: center;
+      z-index: 999999;
+      display: none;
+    }
+    &.lock:after {
+      display: block;
+      background-color: rgba(255, 255, 255, .6);
+      background-image: url(image_path('ajax-spinner.svg'));
+    }
+  }
+}
+
+.ReactModalPortal__Callout {
+  @include react-modal-animate(100ms);
+  .ReactModal__Overlay {
+    z-index: $z-index-content-modal-overlay;
+    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0 ,0, 0, 0.6);
+    padding: 0;
+    overflow: hidden;
+    text-align: left;
+    &:after {
+      content: '';
+      height: 100%;
+      width: 0px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .ReactModal__Content {
+    @include callout-color;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+    border: none;
+    &:focus { outline: none; }
+  }
+}

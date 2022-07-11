@@ -1,0 +1,30 @@
+.slider-arrow-button {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  &.--prev { left: 0; }
+  &.--next { right: 0; }
+  &[data-hidden='true'] { display: none; }
+  &:focus { outline: none; }
+
+  padding: 0 20px;
+  @include small-mobile { padding: 0; }
+
+  opacity: .5;
+  &:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  -webkit-transition: all .5s ease;
+     -moz-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+       -o-transition: all .5s ease;
+          transition: all .5s ease;
+
+  i {
+    font-size: 60px;
+    color: #FFF;
+  }
+}

@@ -1,0 +1,35 @@
+$img-border-width: 2px;
+$img-border-color: #ddd;
+$thumbnail-width: 50px;
+$thumbnail-padding: 4px;
+$scale: 100%;
+$line-height: ($thumbnail-width - 2*$thumbnail-padding - $img-border-width);
+
+@mixin ProductThumbnail {
+  .thumbnail {
+    width: $thumbnail-width;
+    height: $thumbnail-width;
+    line-height: $line-height;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: $thumbnail-padding;
+    border: 0;
+    background-color: transparent;
+    text-align: center;
+    img {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      vertical-align: middle;
+      // border: $img-border-width solid $img-border-color;
+      line-height: $line-height;
+      width: $scale;
+      height: $scale;
+      object-fit: cover;
+      &.img-circle {
+        border-radius: 10px;
+      }
+    }
+  }
+}

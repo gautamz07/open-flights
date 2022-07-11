@@ -1,0 +1,26 @@
+@mixin TabFilters {
+  @include mobile {
+    .ant-radio-group {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .ant-radio-button-wrapper {
+    height: 38px;
+    line-height: 36px;
+    &:hover {
+      color:#4285F4;
+    }
+
+    @include mobile {
+      padding: 0 8px;
+      font-size: 0.8rem;
+    }
+    &.ant-radio-button-wrapper-checked {
+      color:#4285F4;
+      border-color: #4285F4;  
+    }
+  }
+}
+

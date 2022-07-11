@@ -1,0 +1,27 @@
+@mixin OrderTable {
+  table.order-table {
+    width: 850px;
+    margin: 25px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    thead {
+      border: 1px solid #f1f1f1;
+      border-left: none;
+      border-right: none;
+      th {
+        font-weight: 900;
+      }
+    }
+    tbody {
+      border: 1px solid #f1f1f1;
+      border-left: none;
+      border-right: none;
+    }
+    th, td {
+      border-bottom: 1px dotted #d7d7d7;
+      border-left: 0;
+      border-right: 0;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import "../partial/ModalHeader";
+
+@mixin AddVideoForm {
+  @include ModalHeader;
+  
+  .image-upload-dropzone {
+    margin-bottom: 1rem;
+  }
+
+  .context {
+    width: 300px;
+    background-color: #ffffff;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  .content-form {
+    .input-group {
+      text-align: left;
+      margin-bottom: 1rem;
+      label {
+        color: #627382;
+      }
+      input, textarea, select {
+        font-size: .875rem;
+        -webkit-border-radius: 3px;
+                border-radius: 3px;
+        margin: 0;
+        -webkit-transition: border-color 0.25s ease-in-out;
+           -moz-transition: border-color 0.25s ease-in-out;
+            -ms-transition: border-color 0.25s ease-in-out;
+             -o-transition: border-color 0.25s ease-in-out;
+                transition: border-color 0.25s ease-in-out;
+        &:focus {
+          outline: none;
+          box-shadow: none;
+          border: 1px solid #4ba4ea;
+        }
+      }
+      input {
+        padding: 0 0.625rem;
+      }
+      select {
+        padding-left: 0.625rem;
+        padding-right: 1.625rem;
+      }
+    }
+  }
+
+  hr {
+    color: #D7DDE3;
+    padding: 0;
+    margin: 0 -20px 10px;
+  }
+
+  .content-submit {
+    margin-bottom: -10px;
+    text-align: left;
+    input[type='submit'] {
+      width: auto;
+      padding: 12px 20px;
+      font-size: .875rem;
+      color: #ffffff;
+      border: none;
+      -webkit-border-radius: 3px;
+              border-radius: 3px;
+      background-color: $newManageBlue;
+      -webkit-transition: all .3s ease-out;
+         -moz-transition: all .3s ease-out;
+          -ms-transition: all .3s ease-out;
+           -o-transition: all .3s ease-out;
+              transition: all .3s ease-out;
+      &:focus, &:hover { background-color: #2199e8; }
+    }
+  }
+}

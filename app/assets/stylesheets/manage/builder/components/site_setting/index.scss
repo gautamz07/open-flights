@@ -1,0 +1,17 @@
+@mixin SiteSettingSidebar {
+  .site-setting-sidebar {
+    width: 100%;
+    background: #ffffff;
+    border-right: 1px solid #eeeeee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    @include SiteSettingsList;
+    @include SettingFonts;
+    @include SettingCss;
+    @include SettingSocialMedia;
+  }
+}

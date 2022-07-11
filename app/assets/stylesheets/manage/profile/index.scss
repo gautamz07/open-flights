@@ -1,0 +1,25 @@
+@import "redux_shared/mixin/base";
+
+@import "./_variables";
+@import "./components/*";
+@import "../../redux_shared/image_uploader/index.scss";
+@import "../../shared/btnLink.scss";
+
+#profile {
+
+  @import "./_misc";
+
+  // Components
+  @include AddressOptionSelector;
+
+  @include FormActions;
+  @include LogoUploader;
+
+  @include PanelInputWithInfo;
+  @include Header;
+
+  @include mobile {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

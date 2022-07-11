@@ -1,0 +1,29 @@
+@import '../../redux_shared/callout/index';
+.ReactModalPortal__Callout {
+  .ReactModal__Overlay.popup-callout-overlay {
+    background-color: rgba(10, 10, 10, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .ReactModal__Content.popup-callout {
+      box-sizing: border-box;
+      width: 100%;
+      background-color: white;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      outline: none;
+      .message {
+        margin: 0;
+        display: inline-block;
+      }
+      .close-button {
+        float: right;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+}

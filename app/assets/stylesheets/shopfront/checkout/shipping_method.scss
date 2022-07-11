@@ -1,0 +1,70 @@
+.cart-shipping-details {
+  form.checkout-contact-info-form {
+    #carts_contact_info_form_phone {
+      @import '../../redux_shared/common/utilities';
+      @include hide-webkit-input-spinner;
+    }
+    .shipping_method {
+      h4 {
+        font-family: 'ProximaNova-Light';
+      }
+      .choices {
+        font-family: 'ProximaNova-Light';
+        > div {
+          border: 1px solid #cecfcf;
+          border-bottom: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          &:first-child {
+            border-radius: 5px 5px 0 0;
+          }
+          &:last-child {
+            border-bottom: 1px solid #cecfcf;
+            border-radius: 0 0 5px 5px;
+          }
+          .choice {
+            position: relative;
+            input {
+              font-size: 2rem;
+              width: 2.5rem;
+            }
+            .price {
+              font-family: 'ProximaNova-Bold';
+              position: absolute;
+              right: 0;
+              font-weight: bold;
+              margin-top: 0.5rem;
+            }
+          }
+          .note {
+            color: #adadad;
+            margin-left: 2.5rem;
+            :first-child {
+              color: #adadad;
+              margin: 0.5rem 0 0;
+              white-space: initial;
+            }
+          }
+        }
+        &.select-shipping-error {
+          border: 1px solid #e22727;
+          border-radius: 5px;
+        }
+      }
+      .alert-messages {
+        padding: 1rem;
+        p {
+          color: #e22727;
+          margin-bottom: 0.5rem;
+          .merchant-email {
+            color: #2196f3;
+          }
+        }
+        &.shipping-error {
+          color: #e22727;
+        }
+      }
+    }
+
+  }
+}

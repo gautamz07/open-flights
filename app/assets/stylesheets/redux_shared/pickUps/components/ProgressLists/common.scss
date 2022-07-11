@@ -1,0 +1,64 @@
+@import "redux_shared/pickUps/mixin/step_arrow";
+@import "redux_shared/pickUps/mixin/loading_wheel";
+
+@mixin common {
+
+  .img-tick-on {
+    position: absolute;
+    right: 15px; top: 15px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .img-step {
+    height: 50px;
+    width: auto;
+    margin-bottom: 18px;
+  }
+
+  h6 {
+    min-height: 40px;
+    font-size: 16px;
+    line-height: 1.31;
+    color: #212121;
+  }
+
+  p {
+    min-height: 80px;
+    font-size: 13px;
+    line-height: 1.46;
+    color: #666;
+    padding: 0 16px;
+  }
+
+  .step-list {
+    background-color: $pick-ups-modal-background-grey;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 230px;
+    height: 310px;
+    padding: 30px 15px 15px 15px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    &:before { @include step_arrow; }
+    &:first-child {
+      margin-left: 0;
+      &:before { content: none; }
+    }
+    &:after {
+      display: none;
+      @include loading_wheel;
+    }
+  }
+
+  .step-btn {
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    background-color: $pick-ups-modal-background-blue;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+  }
+}

@@ -1,0 +1,27 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "common/variables";
+@import "common/**/*";
+
+@import "magnific-popup/dist/magnific-popup";
+@import "upgrade/watch-video-modal";
+@import "upgrade/variables";
+@import "upgrade/actions-responsive";
+@import "upgrade/device-image";
+@import "upgrade/group-tabs";
+@import "upgrade/tab-content-blocks-responsive";
+@import "upgrade/theme";
+@import "upgrade/pricing-block-fixed-layout";
+@import "upgrade/features-list-block-fixed-layout";
+@import "upgrade/confirm";
+
+@media screen and (min-width: $ipad-height) {
+  @import 'upgrade/desktop';
+}
+@media screen and (min-width: $ipad-width) and (max-width: $ipad-height - 1) {
+  @import 'upgrade/tablet';
+}
+@media screen and (max-width: $ipad-width - 1) {
+  @import 'upgrade/mobile';
+}

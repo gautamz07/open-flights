@@ -1,0 +1,27 @@
+.Layout016 {
+  .layout-description {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .Img{
+    background-position: top center;
+    margin: 0 0 -1px 0;
+    padding: 0;
+    height: 640px;
+    width: 100%;
+    object-fit: none;
+  }
+
+  @include mobile {
+    .Img { height: 320px; object-fit: cover; }
+  }
+
+  @include tablet {
+    .Img { height: 640px; }
+  }
+
+  .block_2 {
+    padding: 0;
+  }
+}

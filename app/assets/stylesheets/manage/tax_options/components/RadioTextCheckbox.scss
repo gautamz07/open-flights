@@ -1,0 +1,78 @@
+@mixin RadioTextCheckbox {
+  .radio-text-checkbox {
+    display: inline-block;
+    line-height: normal;
+    cursor: pointer;
+    input[type='radio'] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin: 0;
+      padding: 0;
+      border-radius: 2px;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #cad5da;
+      outline: none;
+      position: relative;
+      background-color: #ffffff;
+      overflow: hidden;
+      &:before {
+        position: absolute;
+        top: -2px;
+        left: 2px;
+        display: block;
+        height: 18px;
+        content: "";
+      }
+      &:checked {
+        background: #4ba4ea;
+        &:before {
+          font-family: 'fontello';
+          content: '\2713';
+          color: white;
+          font-weight: 200;
+          border: 1px solid #4ba4ea;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+    }
+    .fallback-custom-radio {
+      display: inline-block;
+      width: 17.5px;
+      height: 17.5px;
+      line-height: normal;
+      border: 1px solid #cad5da;
+      border-radius: 2px;
+      background-color: #ffffff;
+      .ico-available-bold {
+        color: transparent;
+      }
+      &.checked {
+        background-color: #4ba4ea;
+        border-color: #4ba4ea;
+        .ico-available-bold {
+          color: white;
+        }
+        .fontello-checked {
+          font-family: 'fontello';
+          color: white;
+          font-weight: 200;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+      // fix line-height
+      [class^="ico-"]:before, [class*=" ico-"]:before {
+        font-size: 1rem;
+        line-height: 1rem;
+      }
+    }
+    .text {
+      margin-left: 0.625rem;
+      margin-right: 0.625rem;
+      line-height: normal;
+    }
+  }
+}

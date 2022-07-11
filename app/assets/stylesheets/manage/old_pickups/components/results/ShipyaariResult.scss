@@ -1,0 +1,24 @@
+@mixin ShipyaariResults {
+  .shipyaari-results {
+    @include PickupScheduledTime;
+    @include ShippingMethod;
+    @include TotalWeights;
+    text-align: left;
+    margin-bottom: 1rem;
+    .avn-shipping-id, .tracking-number {
+      padding-left: 10px;
+      padding-bottom: 1rem;
+      .title {
+        font-weight: bold;
+      }
+    }
+    .printable-labels {
+      padding-left: 10px;
+      .shipment-label, .cod-label {
+        .button {
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}

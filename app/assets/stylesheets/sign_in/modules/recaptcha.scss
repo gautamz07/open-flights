@@ -1,0 +1,22 @@
+.env-recaptcha {
+  $scale: 0.6;
+  $width: $scale * 302px;
+  $height: $scale * 16px; //temp-change, original is 76px
+  $min-margin-bottom: 30px;
+  width: 50%;
+  height: 60px;
+  float: left;
+
+  .g-recaptcha {
+    float: left;
+    padding: 10px 0px;
+    width: $width;
+    height: $height;
+    line-height: $height;
+    margin-right: 10px;
+    iframe {
+      transform-origin: top left;
+      transform: scale($scale);
+    }
+  }
+}

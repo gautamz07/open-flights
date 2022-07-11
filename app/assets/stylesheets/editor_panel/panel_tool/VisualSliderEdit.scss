@@ -1,0 +1,38 @@
+@import './VisualSliderEdit/*';
+
+@mixin VisualSliderEdit {
+  @include tooltip_overwrite;
+  .visual-slider-edit {
+    .dropdown-content {
+      font-family: 'ProximaNova-Light';
+      color: #ffffff;
+      text-align: left;
+      padding: 1rem;
+      width: 280px;
+      
+      .title {
+        font-size: 1rem;
+        position: relative;
+        &.center { text-align: center; }
+        .abso-left {
+          position: absolute;
+          top: 0; left: 0;
+        }
+        .abso-right {
+          position: absolute;
+          top: 0; right: 0;
+        }
+      }
+
+      hr.divider {
+        margin: 0.78125rem -1rem 0.9rem;
+        padding: 0;
+        border-color: #333333;
+      }
+    }
+    
+    @include EditSliderData;
+    @include EditSliderLink;
+    @include EditSliderSetting;
+  }
+}

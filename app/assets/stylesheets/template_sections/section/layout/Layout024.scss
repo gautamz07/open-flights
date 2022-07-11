@@ -1,0 +1,28 @@
+.Layout024 {
+  .grid-image {
+    margin: 0 auto 25px auto;
+    padding: 0 20px;
+    text-align: center;
+    .Img { object-fit: cover; height: 100%; width: 100%; margin: 25px auto;}
+  }
+
+  .grid-description {
+    padding: 0 50px;
+    margin: 0 auto 50px auto;
+    vertical-align: middle;
+  }
+
+  .block_1, .block_2 { min-height: 750px; padding: 50px 0; height: auto; overflow: hidden; }
+
+  .block_2 .grid-description {
+    margin: 12.5vw 0 50px 0;
+    @include max-tablet { margin: 30px 0; }
+  }
+
+  .block-layout {
+    display: table;
+    width: 100%;
+
+    @include max-tablet { display: block; }
+  }
+}

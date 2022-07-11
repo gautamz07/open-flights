@@ -1,0 +1,88 @@
+
+@mixin LoginForm {
+  .login-form {
+    .email-field {
+      margin-bottom: 12px;
+    }
+    .password-field {
+      margin-bottom: 12px;
+    }
+    .form-validation-result {
+      text-align: center;
+      background-color: #faf3f5;
+      border: 1px solid #eed3d7;
+      border-radius: 4px;
+      line-height: 40px;
+      height: 40px;
+      color: red;
+      .ico-info {
+        font-size: 24px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+
+@mixin ReactModal($modal-width: 450px, $modal-height: 450px) {
+  .ReactModal__Overlay {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(33, 43, 54, 0.8);
+    // Animation
+    & > .ReactModal__Content {
+      opacity: 0;
+      &.ReactModal__Content--after-open {
+        opacity: 1;
+        transition: opacity 250ms;
+      }
+      &.ReactModal__Content--before-close {
+        opacity: 0;
+      }
+    }
+    & > .ReactModal__Content {
+      position: absolute;
+      top: calc(50% - calc($modal-height / 2));
+      left: calc(50% - calc($modal-width / 2));
+      width: $modal-width;
+      min-height: $modal-height;
+      background-color: white;
+      outline: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 20px;
+
+      @include mobile {
+        width: 300px;
+        left: calc(50% - 150px);
+      }
+      .close-btn {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        color: darkgray;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      .header {
+        text-align: center;
+        .title {
+          margin: 10px 0 20px 0;
+          font-size: 1.6rem;
+        }
+      }
+      .submit-btn {
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+  }
+}

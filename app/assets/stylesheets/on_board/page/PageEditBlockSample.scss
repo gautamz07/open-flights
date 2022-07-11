@@ -1,0 +1,8 @@
+@import "editor_panel/index";
+
+// overwrites
+.editor-panel-dummy {
+  pointer-events: none;
+
+  .section-edit-panel { outline: 1px solid #63c9ef; }
+}

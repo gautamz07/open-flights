@@ -1,0 +1,9 @@
+@import "../../../redux_shared/common/utilities";
+
+@mixin ActionBtn {
+  .actions-dropdown {
+    .dropdown__trigger {
+      @include ButtonLink;
+    }  
+  }
+}

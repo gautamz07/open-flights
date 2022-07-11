@@ -1,0 +1,35 @@
+@import "redux_shared/navigation/_variables";
+@import "redux_shared/navigation/mixin/navigation_base";
+
+@mixin page-list-decoration {
+  color: inherit;
+  padding: 0 32px 0 30px;
+  text-align: left;
+  position: relative;
+  height: 40px; line-height: 40px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
+  transition: background-color 0.3s ease-in-out;
+
+  &.active, &:hover { background-color: #f0f4f7; }
+}
+
+@mixin manage-list-decoration {
+  @include nav-hover;
+
+  position: relative;
+  font-size: 14px;
+  color: #000;
+  line-height: 22px;
+  text-align: left;
+
+  a {
+    display: block;
+    padding: 10px 20px;
+    color: inherit;
+    font-size: inherit;
+    span { margin-right: 8px; }
+    &:hover { text-decoration: none; }
+  }
+}

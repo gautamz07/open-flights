@@ -1,0 +1,40 @@
+@import "redux_shared/mixin/z_index";
+
+@mixin react-modal-base {
+  .ReactModal__Overlay {
+    z-index: $z-index-promise-modal;
+    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0 ,0, 0, 0.6);
+    padding: 80px 2%;
+    // overflow: hidden;
+    overflow: scroll;
+    text-align: center;
+    &:after {
+      content: '';
+      height: 100%;
+      width: 0px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .ReactModal__Content {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    overflow: hidden;
+    &:focus { outline: none; }
+    &:after, &:before {
+      content: '';
+      position: absolute;
+      top: 50px; bottom: 0; left: 0; right: 0;
+      background-repeat:no-repeat;
+      background-position: center;
+      z-index: 999999;
+      display: none;
+    }
+  }
+}

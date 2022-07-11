@@ -1,0 +1,5 @@
+@mixin ImageEditPanel {
+  &.image-edit-panel {
+    .setting-link > .dropdown > .dropdown-controll { width: 230px !important; }
+  }
+}

@@ -1,0 +1,23 @@
+.Element002 {
+  .section-container {
+    padding: 20px 70px 10px;
+    text-align: center;
+  }
+
+  .block_1 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    .P { margin: 20px 30px; }
+    .Btn { white-space: nowrap; }
+  }
+
+  @include max-tablet {
+    .block_1 {
+      display: block;
+      padding-bottom: 20px;
+    }
+  }
+}

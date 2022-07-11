@@ -1,0 +1,27 @@
+@import "react-table";
+@import "./components/**/*";
+@import "../../redux_shared/common/_utilities.scss";
+@import "../../redux_shared/common/_variables.scss";
+
+
+#customers, #customer {
+  @media screen and (min-width: 1140px) {
+    margin: 25px auto;
+  }
+
+  .customer__actionpanel {
+    @include ActionPanel;
+  }
+  @include SearchTabs;
+} 
+
+#customers {
+  .customers__banner {
+    padding-bottom: 0;
+  }
+}
+
+#customer {
+  @include Customer;
+  @include PageBackButton;
+}

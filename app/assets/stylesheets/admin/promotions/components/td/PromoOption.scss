@@ -1,0 +1,10 @@
+@mixin TdPromoOption {
+  .promo-option {
+    .amount {
+      font-weight: bold;
+    }
+    .type {
+      margin-left: 3px;
+    }
+  }
+}

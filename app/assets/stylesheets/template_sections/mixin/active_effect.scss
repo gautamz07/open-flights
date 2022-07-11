@@ -1,0 +1,28 @@
+@mixin active-effect($effect_type, $class) {
+  @if ($effect_type == 'x-move') {
+    #{$class} {
+      transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      &[data-active=true], .active {
+        transform: translateX(0);
+        -ms-transform: translateX(0);
+        -webkit-transform: translateX(0);
+      }
+    }
+  } @else if($effect_type == 'opacity') {
+    #{$class} {
+      opacity: 0;
+      &[data-active=true], .active {
+        opacity: 1;
+      }
+    }
+  } @else if($effect_type == 'display') {
+    #{$class} {
+      display: none;
+      &[data-active=true], .active {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+/* Responsive Size */
+$responsive-xl: 1600px;
+$responsive-lg: 1200px;
+$responsive-md: 992px;
+$responsive-sm: 768px;
+$responsive-xs: 320px;
+
+/* Layout Container */
+$container-full: 100%;
+$container-xl: 1600px;
+$container-lg: 1200px;
+$container-md: 960px;
+
+/* Border Radius */
+$borderRadius-full: 50%;
+$borderRadius-lg: 8px;
+$borderRadius-md: 6px;
+$borderRadius-rg: 4px;
+$borderRadius-sm: 2px;
+
+/* Spacing */
+$spacing-xl: 40px;
+$spacing-lg: 30px;
+$spacing-md: 20px;
+$spacing-rg: 15px;
+$spacing-sm: 10px;
+$spacing-xs: 5px;
+
+/* Z Index */
+$zIndex-modal: 1000;
+$zIndex-overlay: 900;
+$zIndex-dropdown: 800;
+$zIndex-header: 700;
+$zIndex-footer: 700;
+$zIndex-base: 1;
+
+/* Card Block */
+%card-block{
+    position: relative;
+    overflow: hidden;
+    border-radius: $borderRadius-rg;
+    background-color: $LightColor;
+    @extend %boxShadow-xs;
+}
+
+/* Shadow */
+%boxShadow-rg{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+%boxShadow-sm{
+    border: 1px solid #DFE3E9;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+%boxShadow-xs{
+    box-shadow: 0px 1px 3px rgba(99, 114, 130, 0.15);
+}
+
+/* Responsive */
+@mixin respond-to($media) {
+    @if $media == screenXL {
+        @media only screen and (max-width: $responsive-xl - 1) { @content; }
+    }
+    @else if $media == screenLG {
+        @media only screen and (max-width: $responsive-lg - 1) { @content; }
+    }
+    @else if $media == screenMD {
+        @media only screen and (max-width: $responsive-md - 1) { @content; }
+    }
+    @else if $media == screenSM {
+        @media only screen and (max-width: $responsive-sm - 1) { @content; }
+    }
+    @else if $media == screenXS {
+        @media only screen and (max-width: $responsive-xs) { @content; }
+    }
+}

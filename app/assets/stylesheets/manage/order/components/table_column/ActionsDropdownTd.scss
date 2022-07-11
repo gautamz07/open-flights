@@ -1,0 +1,26 @@
+@mixin ActionsDropdownTd {
+  .order-actions-dropdown {
+    .dropdown {
+      .dropdown-trigger {
+        // padding: 10px 10px;
+        // background-color: #4ba4ea;
+        // color: #fff;
+        // border-radius: 3px;
+
+        // font-size: 12px;
+        // line-height: 1.5;        
+      }
+
+      @media screen and (max-width: 1280px) {
+        .dropdown-content {
+          right: 0;
+        }
+      }
+      @media screen and (min-width: 1280px) and (max-width: 1600px) {
+        .dropdown-content {
+          right: 5%;
+        }
+      }
+    }
+  }
+}

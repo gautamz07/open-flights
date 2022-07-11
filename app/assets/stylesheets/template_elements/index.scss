@@ -1,0 +1,109 @@
+@import "./_variables";
+@import "./mixin/*";
+
+@import "./editable_element/**/*";
+@import "./shared_element/**/*";
+@import "./customize/";
+
+// reset
+h1, h2, h3, h4, h5, h6, p, span {
+  padding: 0;
+  margin: 0;
+}
+
+#hover-text:before { @include hover_text; }
+
+[data-editable=false] {
+  position: relative;
+  cursor: pointer;
+  &:focus { outline: none; }
+  &:hover {
+    > #hover-text { @include hover_text_display(visible); }
+  }
+}
+
+[data-editable=true] {
+  position: relative;
+  cursor: auto;
+  &:focus { outline: none; }
+  &:hover {
+    > #hover-text { @include hover_text_display(hidden); }
+  }
+}
+
+[data-tag-name='Img'],
+[data-tag-name='ImageWithVideo'],
+[data-tag-name='DivContainer'],
+[data-tag-name='HeaderContainer'],
+[data-tag-name='FooterContainer'] {
+  &[data-editable=false] {
+    &:hover { @include set_editable_outline(1px, -1px) }
+  }
+  &[data-editable=true] {
+    @include set_editable_outline(2px, -2px)
+  }
+}
+
+[data-tag-name='ImageWithVideo'] {
+  // for video type
+  &[data-editable=false] {
+    &:hover .video-thumbnail { @include set_editable_outline(1px, -1px) }
+  }
+  &[data-editable=true] {
+    .video-thumbnail { @include set_editable_outline(2px, -2px) }
+  }
+}
+
+[data-tag-name='SectionContainer'] {
+  &[data-editable=false] {
+    &:hover {
+      > #hover-text { @include hover_text_display(hidden); }
+      @include set_editable_outline(1px, -1px)
+    }
+  }
+  &[data-editable=true] {
+    @include set_editable_outline(2px, -2px)
+  }
+}
+
+[data-tag-name='Iframe'] {
+  &[data-editable=false] {
+    &:hover {
+      > #hover-text { @include hover_text_display(visible); }
+      @include set_editable_outline(1px, -1px)
+    }
+  }
+  &[data-editable=true] {
+    @include set_editable_outline(2px, -2px)
+  }
+}
+
+[data-tag-name=H],
+[data-tag-name=P],
+[data-tag-name=Btn],
+[data-tag-name=Iframe] {
+  &[data-editable=false] {
+    &:hover { @include set_editable_outline(1px, 9px) }
+  }
+  &[data-editable=true] {
+    cursor: text;
+    @include set_editable_outline(2px, 8px)
+  }
+
+  #hover-text { @include hover_text_position(-10px); }
+} 
+
+[data-tag-name='SliderContainer'] {
+  &[data-editable=false] {
+    .slider-screens { z-index: -1; }
+    &:hover {
+      @include set_editable_outline(1px, -1px)
+    }
+  }
+  &[data-editable=true] {
+    .video-foreground, .picture-foreground {
+      // !! used border instead outline parse for z-index level problem
+      border: 2px solid $editable-outline-color;
+    }
+  }
+}

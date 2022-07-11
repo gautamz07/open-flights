@@ -1,0 +1,61 @@
+@mixin HeightInput {
+  .height-input {
+    padding: 27px 19px;
+
+    h4 {
+      object-fit: contain;
+      line-height: 1.57;
+      letter-spacing: normal;
+      text-align: left;
+      color: #ffffff;
+      font-size: 0.875rem;
+      // font-family: 'ProximaNova-Regular';
+    }
+
+    &[data-disable='true'] {
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    // rc_slider overwrite
+    @include rc_slider;
+    .rc-slider {
+      padding: 14px 0;
+    }
+    .rc-slider-handle {
+      margin-top: -6px;
+      width: 16px; height: 16px;
+      border: none;
+      box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.9);
+      background-color: #3b9be3;
+    }
+    .rc-slider-rail {
+      height: 2px;
+      background: #535353;
+    }
+    .rc-slider-track {
+      background-color: #3b9be3;
+      height: 2px;
+      // background-color: $edit-panel-tool-active-color-deep;
+      // background-color: $edit-panel-tool-active-color;
+    }
+
+    // custom-tooltip
+    .rc-slider-handle:hover .custom-tooltip { opacity: 0.5; }
+    .custom-tooltip {
+      $width: 30px;
+      $height: 24px;
+      $pointer-height: 4px;
+      $bgColor: rgba(0, 0, 0, 0);
+      position: absolute;
+      top: 20px;
+      left: -3px;
+      background-color: $bgColor;
+      font-size: 12px;
+      border-radius: 4px;
+      width: 24px; height: 24px; line-height: 24px;
+      &[data-dragging] { opacity: 0; transition: opacity .2s ease-in; }
+      &[data-dragging='true'] { opacity: 0.5; }
+    }
+  }
+}

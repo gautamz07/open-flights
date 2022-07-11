@@ -1,0 +1,15 @@
+/* Transtion Mixin */
+@mixin transtion($time:sm, $obj:all, $ease:ease-in-out) {
+  @if $time == xs {
+    transition: $obj 0.05s $ease;
+  }
+  @else if $time == sm {
+    transition: $obj 0.1s $ease;
+  }
+  @else if $time == rg {
+    transition: $obj 0.15s $ease;
+  }
+  @else if $time == md {
+    transition: $obj 0.2s $ease;
+  }
+}

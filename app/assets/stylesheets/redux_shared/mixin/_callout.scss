@@ -1,0 +1,68 @@
+@mixin callout-color {
+  &.alert {
+    background-color: #ed525e;
+    color: #fff;
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .close-button {
+      color: #fff;
+    }
+  }
+  &.warning {
+    background-color: #fff3d9;
+    color: #ffae00;
+    a {
+      color: #ffae00;
+      text-decoration: underline;
+    }
+    .close-button {
+      color: #ffae00;
+    }
+  }
+  &.success {
+    background-color: #2db041;
+    color: #fff;
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .close-button {
+      color: #fff;
+    }
+  }
+  &.success2 {
+    background-color: #2db041;
+    opacity: .9;
+    color: white;
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+    .close-button {
+      color: white;
+    }
+  }
+  &.secondary {
+    color: #777777;
+    a {
+      color: #777777;
+      text-decoration: underline;
+    }
+    .close-button {
+      color: #777777;
+    }
+  }
+  &.primary {
+    background-color: #def0fc;
+    color: #2199e8;
+    a {
+      color: #2199e8;
+      text-decoration: underline;
+    }
+    .close-button {
+      color: #2199e8;
+    }
+  }
+}

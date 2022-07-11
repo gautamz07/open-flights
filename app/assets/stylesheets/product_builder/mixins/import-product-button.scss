@@ -1,0 +1,23 @@
+@mixin import-product-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-stretch: normal;
+  font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  color: #222;
+  line-height: 30px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 4px;
+  .ico-product-import {
+    font-size: 24px;
+    color: #222;
+    margin-right: 4px;
+    &:before {
+      transform: scale(0.9);
+      vertical-align: middle;
+    }
+  }
+}

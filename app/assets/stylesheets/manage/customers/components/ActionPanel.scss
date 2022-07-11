@@ -1,0 +1,36 @@
+@mixin ActionPanel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 0.75rem;
+
+  .export {
+    font-family: $fontMedium;
+    margin-right: 1rem;
+    &-btn {
+      @include ButtonLink;
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .search-input {
+    position: relative;
+    button {
+      @include ButtonLink;
+      position: absolute;
+      left:0;
+      top:0;
+      bottom: 0;
+      padding: 0 1rem;
+    }
+    input {
+      padding-left: 3rem;
+      min-width: 300px;
+      @include placeholder-color {
+        font-family: $fontMedium;
+      }
+    }
+  }
+}

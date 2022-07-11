@@ -1,0 +1,12 @@
+@import "redux_shared/shipping_options/mixin/row";
+@import './self_collect/*';
+
+@mixin OptionSelfCollect {
+  .self-collect {
+    @include custom-vertical-center(136px);
+    .option-alias {
+      @include OptionAlias;
+    }
+    @include DescriptionEditor;
+  }
+}

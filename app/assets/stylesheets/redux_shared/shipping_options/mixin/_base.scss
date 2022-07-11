@@ -1,0 +1,8 @@
+@mixin icon-base {
+  [class^="ico-"]:before, [class*=" ico-"]:before {
+    line-height: 0;
+    font-size: 25px;
+    vertical-align: sub;
+    margin-right: 5px;
+  }
+}

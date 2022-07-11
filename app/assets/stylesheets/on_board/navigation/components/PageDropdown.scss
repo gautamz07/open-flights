@@ -1,0 +1,24 @@
+@mixin PageDropdown {
+  .page-dropdown {
+
+    &.tutoring {
+      .page-dropdown-title-prefix {
+        display: none;
+      }
+
+      .title {
+        cursor: default;
+        color: #aaa;
+        span:hover { color: #aaa; }
+      }
+      #page-list-sortable {
+        color: $inactive-text-color;
+        li:not(.highlighted) { pointer-events: none; }
+        li.highlighted {
+          color: #000;
+        }
+      }
+    }
+
+  }
+}

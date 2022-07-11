@@ -1,0 +1,28 @@
+.Layout013 {
+  .section-container {
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .block_1 {
+    text-align: center;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+  .block_2 {
+    padding: 0;
+    margin-bottom: 50px;
+    .Img, .ImageWithVideo {
+      width: 100%;
+    }
+  }
+
+  @include mobile {
+    .block_1 {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

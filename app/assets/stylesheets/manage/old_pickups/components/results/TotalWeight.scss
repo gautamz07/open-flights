@@ -1,0 +1,9 @@
+@mixin TotalWeights {
+  .total-weights {
+    padding-left: 10px;
+    padding-bottom: 1rem;
+    .title {
+      font-weight: bold;
+    }
+  }
+}

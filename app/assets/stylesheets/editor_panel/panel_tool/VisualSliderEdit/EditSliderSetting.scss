@@ -1,0 +1,40 @@
+@mixin EditSliderSetting {
+  .edit-slider-setting {
+    .input-group {
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+      &:last-child { margin-bottom: 0; }
+      label {
+        color: #ffffff;
+        font-size: inherit;
+        font-weight: 100;
+      }
+      select {
+        font-size: inherit;
+        cursor: pointer;
+        margin: 0;
+        border-radius: 3px;
+        background-color: #363636;
+        color: white;
+        border: none;
+        padding-left: .875rem;
+        padding-right: 1.875rem;
+        -webkit-transition: all .5s ease;
+           -moz-transition: all .5s ease;
+            -ms-transition: all .5s ease;
+             -o-transition: all .5s ease;
+                transition: all .5s ease;
+        &:disabled { opacity: .5; cursor: not-allowed; }
+      }
+    }
+
+    .checkbox-primary {
+      display: inline-block;
+      label {
+        margin-left: 0;
+        line-height: 1.3;
+      }
+    }
+
+  }
+}

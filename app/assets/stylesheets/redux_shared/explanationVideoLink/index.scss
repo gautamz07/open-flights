@@ -1,0 +1,38 @@
+@import "../mixin/z_index";
+
+.ReactModalPortal {
+  .react-video-link-modal-overlay {
+    z-index: $z-index-explanation-modal;
+    .react-video-link-modal {
+      position: relative;
+      margin-top: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 853px;
+      height: 480px;
+      &:focus {
+        outline: none;
+      }
+      .close-btn {
+        position: absolute;
+        right: 0;
+        top: -30px;
+        width: 30px;
+        height: 30px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.video-link {
+  display: none;
+}
+
+.explanation-video {
+  span {
+    color: #444;
+  }
+}

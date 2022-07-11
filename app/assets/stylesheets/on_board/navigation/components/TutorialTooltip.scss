@@ -1,0 +1,84 @@
+@import "redux_shared/mixin/z_index";
+@import "redux_shared/navigation/_variables";
+
+@mixin TutorialTooltip {
+  .tutorial-tooltip {
+    position: absolute;
+    padding: 0px 20px;
+    background-color: #50A5E7;
+    color: white;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    -webkit-font-smoothing: initial; // reset for /page_builder
+
+    &:before { // triangle
+      position: absolute;
+      content: '';
+      margin: auto;
+      @include triangle-regular(10px, #50A5E7, transparent, 45deg);
+      left: 0px;
+      top: 50%;
+    }
+
+    // overwrite class
+    &.page-drop-list-contact-us {
+      top: 0;
+      left: calc(300px + 5px); // width of .page-drop-list-group is 300
+      width: 230px;
+      text-align: center;
+
+      @include mobile {
+        left: 25px;
+        top: 42px;
+
+        &:before {
+          @include triangle-regular(10px, #50A5E7, transparent, 135deg);
+          left: 36px;
+          top: 0;
+        }
+      }
+    }
+    &.manange-drop-list-products {
+      top: 0;
+      left: calc(15px + #{$manage-drop-list-width});
+      width: 187px;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+      z-index: $z-index-nav-tutorial-prompt;
+      @include mobile {
+        left: -20px;
+        top: 44px;
+
+        &:before {
+          @include triangle-regular(10px, #50A5E7, transparent, 135deg);
+          left: 50%;
+          top: 0px;
+        }
+      }
+    }
+    &.edit-image-hint {
+      position: fixed;
+      top: 0; left: 0;
+      padding: 10px;
+      z-index: $z-index-nav-tutorial-prompt;
+      &:before {
+        @include triangle-regular(10px, #50A5E7, transparent, 225deg);
+        top: 50%;
+        left: 100%;
+      }
+    }
+    &.edit-text-hint {
+      position: fixed;
+      top: 0; left: 0;
+      padding: 10px;
+      z-index: $z-index-nav-tutorial-prompt;
+      &:before {
+        @include triangle-regular(10px, #50A5E7, transparent, 315deg);
+        top: 100%;
+        left: 50%;
+      }
+    }
+  }
+}

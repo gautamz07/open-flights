@@ -1,0 +1,16 @@
+.FormM01 {
+  .section-container {
+    > .row { position: relative; }
+    h3 { margin-bottom: 1rem; }
+    p { margin-bottom: 0; line-height: 25px; }
+    
+    > .row .columns { margin-bottom: 30px; }
+  }
+
+  .address-link {
+    .P:before { display: inline; }
+    &.tel .P:before { content: 'Phone：' }
+    &.mailto .P:before { content: 'Email：' }
+  }
+
+}

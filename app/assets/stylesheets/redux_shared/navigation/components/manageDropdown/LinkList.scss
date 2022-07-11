@@ -1,0 +1,45 @@
+@import "redux_shared/navigation/_variables";
+@import "./../../mixin/list_decoration";
+
+@mixin LinkList {
+  li.link-list {
+    @include manage-list-decoration;
+
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
+
+    &:hover {
+      color: black;
+      background-color: #f7f9fa;
+      >.sub-drop-list {
+        visibility: visible;
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+      }
+    }
+    &.active{ color: black; background-color: #f0f4f7; }
+    &.nested::before {
+      // nested arrow icon
+      font-size: 12px;
+      transform: scale(0.85);
+      position: absolute;
+      right: 12px;
+      top: 0;
+      line-height: 45px;
+    }
+  }
+}
+.new-tag {
+  background-color: #E0243C;
+  border-radius: 5px;
+  color: #ffffff;
+  line-height: 1.6;
+  padding: 2px 5px;
+  // font-family: 'ProximaNova-Medium';
+  font-size: 8px !important;
+}
+.new-tag-nav{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,20 @@
+
+
+@mixin PageBackButton {
+  .pageBackBtn {
+    color: #627382;
+    display: flex;
+    align-items: center;
+    justify-content: 'flex-start';
+  
+    &__text {
+     font-size: 0.87rem; 
+    }
+  
+    &__icon {
+      font-size: 1.75rem;
+      line-height: 0;
+     }
+  }  
+}
+

@@ -1,0 +1,31 @@
+@import './components/**/*';
+@import './confirmBox';
+
+.ReactModalPortal {
+  .ReactModal__Overlay.old-schedule-pickups-overlay {
+    overflow: scroll;
+    .ReactModal__Content.old-schedule-pickups-content {
+      background-color: #FFF;
+      width: 900px;
+      @include OldSchedulePickUpsModal;
+      @include Heading;
+      @include ReactDateTime;
+      @include OrderTable;
+      @include PickupAddress;
+      @include DeliveryAddress;
+      @include InvalidAlert;
+      hr {
+        width: 850px;
+        border-color: #d7d7d7;
+        opacity: .4;
+      }
+      @include PickupDateTime;
+      @include ShippingMethods;
+      @include AramexDimensions;
+      @include ShipyaariDimensions;
+      @include OwnShippingDimensions;
+      @include AramexResults;
+      @include ShipyaariResults;
+    }
+  }
+}

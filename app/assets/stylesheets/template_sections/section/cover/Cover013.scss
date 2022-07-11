@@ -1,0 +1,13 @@
+// left middle cover
+
+.Cover013 {
+  .cover-content {
+    left: 0;
+    top: 0; bottom: 0;
+    margin: auto;
+    height: 33.3vh;
+    @include mobile {
+      height: 100%;
+    }
+  }
+}

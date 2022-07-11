@@ -1,0 +1,6 @@
+.Element003 {
+  @include mobile {
+    // force overwrite merchant customize
+    .block_1 .H { text-align: center !important; }
+  }
+}

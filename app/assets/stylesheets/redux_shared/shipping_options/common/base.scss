@@ -1,0 +1,147 @@
+&.shipping-integration{
+  padding: 25px 15px;
+}
+
+.main-container {
+  background-color: transparent;
+  padding: 0;
+}
+
+.ant-tabs-custom {
+  @include mobile {
+    .ant-tabs-bar {
+      padding-top: 2.5rem;
+    }
+  }
+
+  .ant-tabs-nav-wrap {
+    .ant-tabs-tab {
+      padding: 1rem;
+      font-size: .9rem;
+      color: #4a4a4a;
+      background-color: #f5f7f9;
+      margin-right: 5px;
+      margin-left: 0;
+      font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    }
+  
+    .ant-tabs-ink-bar {
+      display: none !important;
+    }
+  
+    .ant-tabs-tab {
+      [aria-selected='true'], &:hover{
+        background-color: white;
+      }  
+    }
+  
+    .ant-tabs-tab-active.ant-tabs-tab {
+      background-color: white;
+      box-shadow: -1px -1px 1px 0 rgba(0, 0, 0, 0.07);
+      font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    }
+  }
+}
+
+.btn__wrapper {
+  text-align: right;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  position: absolute;
+  right:0;
+  top: 20px;
+  button {
+    font-size: 0.8rem;
+    color: #2199e8;
+  }
+
+  @include mobile {
+    top: 0.3125rem;
+    left:0;
+    text-align: center;
+  }
+}
+
+// tabs css also affect to product_builder/products/tabs
+.tabs {
+  background-color: #f0f4f7;
+  border-width: 0;
+
+  .tabs-title {
+    background-color: #f5f7f9;
+    padding: 5px;
+    margin-right: 5px;
+
+    a {
+      padding: 0.75rem 1rem;
+      font-size: .9rem;
+      color: #4a4a4a;
+    }
+
+    > a[aria-selected='true'], &:hover{
+      background-color: white;
+    }
+
+    &.is-active {
+      background-color: white;
+      box-shadow: -1px -1px 1px 0 rgba(0, 0, 0, 0.07);
+    }
+
+    &:active {
+      background-color: #e6e6e6;
+    };
+    .shipping-tabs-shipping-text {
+      text-transform: capitalize;
+      .hide-in-abbreviation {
+        text-transform: lowercase;
+      }
+    }
+  }
+
+  @include max-tablet {
+    .shipping-tabs-shipping-text {
+      .hide-in-abbreviation {
+        display: none;
+      }
+    }
+  }
+}
+
+.tabs-content {
+  border-width: 0;
+  background-color: transparent;
+  .tabs-panel {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    .panel {
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: white;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.17);
+    }
+  }
+}
+
+h4.row {
+  margin-bottom: 20px;
+}
+
+.ico-warning {
+  .description {
+    font-size: 12px;
+    color: $newManageBlack;
+  }
+}
+
+@include mobile {
+  .tabs-content {
+    border-width: 0;
+    padding: 0;
+    background: transparent;
+    
+    h4.row {
+      display: none;
+    }
+  }
+}

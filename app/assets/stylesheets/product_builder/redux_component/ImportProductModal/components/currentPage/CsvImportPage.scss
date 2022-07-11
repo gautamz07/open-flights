@@ -1,0 +1,39 @@
+@mixin CsvImportPage {
+  .csv-import-page {
+    .dropzone {
+      padding: 20px 80px;
+      border: 2px dashed #d9d9d9;
+      -webkit-border-radius: 5px;
+              border-radius: 5px;
+
+      img {
+        height: 50px;
+        margin-bottom: 20px;
+      }
+      p {
+        color: #999;
+      }
+      a.button {
+        padding: 14px 18px;
+        -webkit-border-radius: 5px;
+                border-radius: 5px;
+        background-color:  #4ba4ea;
+        &:hover { background-color: #2199e8; }
+      }
+    }
+
+    .sample-template {
+      margin-top: 20px;
+      svg {
+        fill: #4ba4ea;
+        margin-right: 5px;
+        line-height: 40px;
+        vertical-align: middle;
+      }
+      a {
+        font-size: .875rem;
+        color: #303030;
+      }
+    }
+  }
+}
