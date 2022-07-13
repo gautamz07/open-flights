@@ -18,16 +18,24 @@
 
 
 
-@import "chartist/dist/chartist.min";
-@import "magnific-popup/dist/magnific-popup";
-@import "cropper/dist/cropper";
+//@import "chartist/dist/chartist.min";
+//@import "magnific-popup/dist/magnific-popup";
+//@import "cropper/dist/cropper";
 
 @import "select2";
 @import "select2-bootstrap";
-@import "jquery.mCustomScrollbar";
+//@import "jquery.mCustomScrollbar";
 
 @import "product_collection";
 @import "common/variables";
 @import "common/**/*";
 
 @import 'plugins/image_cropper';
+
+
+$defaultGreen: #00FFFF;
+
+body {
+   background-color: darken($defaultGreen, 3);
+}
+

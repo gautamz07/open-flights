@@ -10,7 +10,7 @@ gem 'pg'
 # Use Puma as the app server
 gem 'puma'#, '~> 3.11'
 # Use SCSS for stylesheets
-#gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'#, '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'#, '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -38,6 +38,25 @@ gem 'jbuilder'#, '~> 2.5'
 gem 'fast_jsonapi'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap'#, '>= 1.1.0', require: false
+
+#FE dependencies
+#gem 'lodash-rails' #, '~> 3.10.1'
+#gem 'react-rails' #, '1.2.0'
+gem 'select2-rails' #, '~> 3.5.9'
+# gem 'foundation-rails' #, '~> 6.2.4'
+gem 'foundation-rails'#, '~> 6.6', '>= 6.6.2.0'
+gem 'bootstrap-sass' #, '~> 3.3.7'
+gem 'font-awesome-rails' #, '~> 4.3.0'
+gem 'jquery-rails'# ,['~> 4.3', '>= 4.3.3']#, '~> 4.0.4'
+gem 'rails-ujs'#, '~> 0.1.0' # rails 5 upgrade added
+gem 'jquery-ui-rails' #,'6.0.1'#, '~> 5.0.5'
+gem 'jquery-validation-rails'
+gem 'bootstrap3-datetimepicker-rails' #, '~> 4.14.30'
+gem 'switchery-rails'
+#gem 'momentjs-rails' #, '~> 2.10.3'
+#gem 'simple_form'
+#gem 'kaminari' #, '~> 0.16.3'
+gem 'country_select'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
