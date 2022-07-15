@@ -12,7 +12,8 @@
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.5",
     "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "shpmtcd": "git+ssh://git@github.com/Shopmatic/shpmtcd.git#v0.1.12"
   },
   "devDependencies": {
     "webpack-dev-server": "^3"

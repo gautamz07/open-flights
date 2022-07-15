@@ -50,6 +50,12 @@ module.exports = function(api) {
       '@babel/plugin-syntax-dynamic-import',
       isTestEnv && 'babel-plugin-dynamic-import-node',
       '@babel/plugin-transform-destructuring',
+      ["import", 
+        { 
+          "libraryName": "shpmtcd", 
+          "libraryDirectory": "dist" 
+        }
+      ]
       [
         '@babel/plugin-proposal-class-properties',
         {
