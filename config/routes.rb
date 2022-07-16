@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+
+  mount Saddlebag::Engine => '/saddlebag'
+
   root 'pages#index'
+
 
   namespace :api do
     namespace :v1 do
@@ -7,8 +11,6 @@ Rails.application.routes.draw do
       resources :reviews, only: [:create, :destroy]
     end
   end
-
-
 
   get '*path', to: 'pages#index', via: :all
 end

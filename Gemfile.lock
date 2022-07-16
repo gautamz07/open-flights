@@ -1,3 +1,10 @@
+PATH
+  remote: ../saddlebag
+  specs:
+    saddlebag (0.1.0)
+      rails (~> 5.2.8)
+      webpacker (~> 5.4.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -183,6 +190,7 @@ DEPENDENCIES
   pg
   puma (~> 3.11)
   rails (~> 5.2.8)
+  saddlebag!
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
