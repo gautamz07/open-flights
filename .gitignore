@@ -27,7 +27,7 @@
 /public/assets
 .byebug_history
 
-/vendor/
+/vendor/assets/bower_components/
 /vendor/assets/.bowerrc
 /vendor/assets/shop
 # Ignore master key for decrypting credentials and more.
