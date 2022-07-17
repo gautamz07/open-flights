@@ -1,0 +1,24 @@
+# A sample Bowerfile
+# Check out https://github.com/42dev/bower-rails#ruby-dsl-configuration for more options
+
+# group :vendor, assets_path: 'assets/shop' do
+
+group :vendor do
+  asset 'jquery', '2.2.1'
+  asset 'lodash', '4.6.1'
+  asset 'reflux', '0.3.0'
+  asset 'blueimp-file-upload', '9.12.1'
+  asset 'chartist', '0.9.7'
+  asset 'hopscotch', '0.2.5'
+  asset 'spectrum', '1.8.0'
+  asset 'bootbox', '4.4.0'
+  asset 'intl-tel-input', '8.4.6'
+  asset 'magnific-popup', '1.1.0'
+  asset 'cropper', '3.0.0'
+  asset 'infinite-scroll', '2.1.0'
+  asset 'jquery-cookie', '1.4.1'
+  asset 'jquery-zoom', '1.7.15'
+  asset 'uri.js', '1.18.1'
+  asset 'jquery.lazyload', '1.9.6'
+  asset 'classnames', '2.2.3'
+end

@@ -5,12 +5,14 @@ ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
+# https://github.com/rharriso/bower-rails
+gem "bower-rails", "~> 0.11.0"
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
 gem 'puma'#, '~> 3.11'
 # Use SCSS for stylesheets
-#gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'#, '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'#, '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -18,6 +20,25 @@ gem 'webpacker'
 gem 'sprockets', '~> 4.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+
+gem 'select2-rails'#, '~> 3.5.9'
+# gem 'foundation-rails'#, '~> 6.2.4'
+gem 'foundation-rails', '~> 6.6', '>= 6.6.2.0'
+# Front-end
+gem 'bootstrap-sass'#, '~> 3.3.7'
+gem 'font-awesome-rails'#, '~> 4.3.0'
+gem 'jquery-rails',['~> 4.3', '>= 4.3.3']#, '~> 4.0.4'
+gem 'rails-ujs', '~> 0.1.0'
+gem 'jquery-ui-rails' ,'6.0.1'
+# gem 'jquery-ui-rails'#, '~> 5.0.5'
+gem 'jquery-validation-rails'
+gem 'simple_form'
+gem 'country_select'
+gem 'momentjs-rails'#, '~> 2.10.3'
+gem 'bootstrap3-datetimepicker-rails'#, '~> 4.14.30'
+gem 'cocoon'
+gem 'kaminari'#, '~> 0.16.3'
+gem 'lodash-rails'#, '~> 3.10.1'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'#, '~> 4.2'

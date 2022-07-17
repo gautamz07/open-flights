@@ -181,7 +181,9 @@ $fontBase: 'ProximaNova-Regular';
 }
 
 @mixin light { font-family: 'ProximaNova-Light'; }
-@mixin bold { // font-family: 'ProximaNova-Semibold'; }
+@mixin bold { 
+  // font-family: 'ProximaNova-Semibold'; 
+}
 @mixin extra-bold { font-family: 'ProximaNova-Bold'; }
 
 // for Order index & Customer index
